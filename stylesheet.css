@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+text-align:center;
+} 
+
+#container {
+	top:125px;
+	width:800px;
+	background-color:#FFFFFF;
+	position: static;
+	left: auto;
+	right: auto;
+	margin: auto;
+
+	text-align: left
+	height: auto;
+	height: auto;
+}
+/*#header { 
+width:800px;
+height:175px; 
+margin:0 auto; 
+background-color:#66CCFF
+}*/
+#topbar {
+	width:auto;
+	height:125px;
+	margin: auto;
+	background-image: url(headerblue.jpg);
+	background-repeat: repeat;
+}
+
+#topinsertbar {
+	width: 800px;
+	height:125px;
+	background-color: #7E9CB4;
+	background-image: url(headerblue.jpg);
+	background-repeat: repeat;
+	margin: auto;
+}
+
+#menubar {
+	width:auto;
+	height:auto;
+	background-color:#62788B;
+}
+#toolbar {
+	width: 820px;
+	margin: auto;
+	background-color:#62788B;
+	height: 40px;
+}
+#body {
+	width:800px;
+	height:auto;
+	background-color:#FFFFFF;
+	position: static;
+	z-index: 150;
+}
+#slideshow {
+	position:inherit;
+	width:800px;
+	height:400px;
+	background-color: #FFFFFF;
+	z-index:1;
+}
+#newsbox {
+	position:relative;
+	left:80px;
+	top:75px;
+	width:800px;
+	height:250px;
+	background-color:#9999FF;
+}
+#highlights {
+	height: 250px;
+	width: 425px;
+	background-color:#CCFFCC;
+}
+#donate1{
+	width:225px;
+	height: 100px;
+	background-color:#990099;
+	right: 10px;
+}
+#donate2{
+width:225px;
+height: 100px;
+background-color:#FFFFFF;
+}
+#legal {
+	width:auto;
+	height:auto;
+	margin: auto;
+	background-image: url(Images/footerbeige.jpg)
+}
+
+#footer {
+	width: 800px;
+	height:auto;
+	margin: auto;
+	background-image: url(Images/footerbeige.jpg)
+}
+#donation1 {
+	position:absolute;
+	left:454px;
+	top:11px;
+	width:195px;
+	height:111px;
+	z-index:1;
+	background-color:#666666;
+}
+#donation2 {
+	position:absolute;
+	left:454px;
+	top:133px;
+	width:195px;
+	height:111px;
+	z-index:1;
+	background-color:#666666;
+}
+
+a:link {
+text-decoration: none;
+	color: #436A1B;
+}
+	
+a:visited {
+	text-decoration: none;
+	color: #436A1B;
+}
+a:hover {
+	text-decoration: underline;
+	color: #436A1B;
+}
+a:active {
+	text-decoration: none;
+	color: #436A1B;
+}#container #body div .style80 {
+	color: #000;
+	text-align: left;
+}
