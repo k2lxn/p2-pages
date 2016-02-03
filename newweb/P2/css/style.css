@@ -70,6 +70,46 @@ iframe{
 	border:0;
 }
 
+/* 
+	Jane's styles
+	                 */
+.img-sm {
+		width: 96%;
+		height: 200px;
+		margin: 15px auto;	
+}			
+.img-lg {
+	width: 96%;
+	height: 180px;
+	display: block;
+	margin: 15px auto;
+}
+
+@media screen and (min-width: 480px) {
+	.img-sm {
+		width: 55%;
+	}	
+	.img-lg {
+		height: 250px;
+	}
+}	
+@media screen and (min-width: 768px) {
+	.img-sm {
+			max-width: 50%;
+	}	
+}
+img.pull-left, .img-lg.pull-left, .img-sm.pull-left {
+	margin-right: 15px;
+}
+img.pull-right, .img-lg.pull-right, .img-sm.pull-right {
+	margin-left: 15px;
+}	
+.img-sm, .img-lg {
+	background-size: cover;
+	
+}                 
+
+
 /* ==================================================
    1. Basic Styles
 ================================================== */
