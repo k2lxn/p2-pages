@@ -35,6 +35,12 @@
 <link href="newweb/P2/css/custom.css" rel="stylesheet" type="text/css"><!-- CUSTOM STYLESHEET FOR STYLING -->
 <!-- Color Style -->
 <link href="newweb/P2/colors/color3.css" rel="stylesheet" type="text/css">
+
+<!-- Custom Stylesheet -->
+<link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="css/font-awesome.css" rel="stylesheet">
+
 <!-- SCRIPTS
   ================================================== -->
 <script src="newweb/P2/js/modernizr.js">jQuery(document).ready(function(){
@@ -58,31 +64,8 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
 }
 .style82 {font-weight: bold; color: #436A1B; font-size: 21px; }
 </style>
-</head>
-<body>
-<!--[if lt IE 7]>
-	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-<![endif]-->
 
-<div class="body">
-	<!-- Start Site Header -->
-<header class="site-header">
-    	<div class="top-header hidden-xs">
-        	<div class="container">
-            	<div class="row">
-                	<div class="col-md-5" style="padding:0;">
-                    	<div class="upcoming-event-bar">
-                        	<h4><i class="fa fa-calendar"></i> Pollinator Week</h4>
-                            <div id="counter" class="counter" data-date="June 20, 2016">
-                         		<div class="timer-col"> <span id="days"></span> <span class="timer-type">d</span> </div>
-                        		<div class="timer-col"> <span id="hours"></span> <span class="timer-type">h</span> </div>
-                      			<div class="timer-col"> <span id="minutes"></span> <span class="timer-type">m</span> </div>
-                         		<div class="timer-col"> <span id="seconds"></span> <span class="timer-type">s</span> </div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-md-2" style="padding:0;">
-			<div id='cse-search-form' style='width: 100%;'>Loading</div>
+			<!-- Google Search widget -->
 			<script src='//www.google.com/jsapi' type='text/javascript'></script>
 			<script type='text/javascript'>
 			google.load('search', '1', {language: 'en', style: google.loader.themes.V2_DEFAULT});
@@ -100,6 +83,7 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
 			  customSearchControl.draw('cse-search-form', options);
 			}, true);
 			</script>
+			
 			<style type='text/css'>
 			  input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
 				border-color: #292929;
@@ -112,80 +96,144 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
 				  background-repeat:no-repeat;
 				  background-position: 50% 50%;
 				filter: none;
-
-
 			  }
 			  #cse-search-form {height:10px;}
 			  .gsc-input-box {height:30px;}
 			</style>
-</div>
-                    <div class="col-md-5" style="padding:0;">
-                    	<ul class="top-menu">
-                        	<li><a href="http://www.pollinator.org/donate.htm">Donate Now</a></li>
-                        	<li class="secondary"><a href="http://www.pollinator.org/takeaction.htm">Join Us</a></li>
-                        </ul>
-                    	<ul class="social-links social-links-lighter">
-                        	<li><a href="http://www.facebook.com/ThePollinatorPartnership" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                        	<li><a href="http://twitter.com/Pollinators" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-                        	<li><a href="http://www.youtube.com/user/PollinatorPartners" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
-                        	<li><a href="https://plus.google.com/u/0/+PollinatorOrg/about" target="_blank"><i class="fa fa-google-plus-square"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-           	</div>
-       	</div>
-    	<div class="lower-header">
-        	<div class="container for-navi">
-             	<h1 class="logo">
-                	<a href="http://www.pollinator.org"><img src="Images/PollinatorLogo-Tag2.png"></a>
-             	</h1>
-              	<!-- Main Navigation -->
-              		 <nav class="main-navigation">
-                      <ul class="sf-menu">
-                      <li><a href="http://www.pollinator.org/about.htm">Who We Are</a>
-                             <ul>
-                        <li><a href="http://www.pollinator.org/about.htm">About Us</a></li>
-						<li><a href="http://www.pollinator.org/wherewework.htm">Where We Work</a></li>
-						<li><a href="http://www.pollinator.org/pollination.htm">What Are Pollinators?</a></li>
-                         </ul>
-                         </li>
-                          <li><a href="http://www.pollinator.org/programs.htm">Our Programs</a>
-                        </li>
+</head>
 
-                        <li><a href="http://www.pollinator.org/guides.htm">Planting Guides</a>
+<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->			
 
-                        </li>
-                        <li><a href="http://www.pollinator.org/takeaction.htm">Get Involved</a>
-
-                        </li>
-                        <li class="megamenu"><a href="http://www.pollinator.org/usefulresources.htm">Learning Center</a>
-                      </li>
-
-                         <li><a href="http://www.pollinator.org/shop.htm">Stuff</a>
-                        <ul>
-                        <li><a href="beesmartapp.htm" target="_self">App</a></li>
-                       <li><a href="books.htm" target="_self">Books</a></li>
-                       <li><a href="brochures.htm" target="_self">Brochures</a></li>
-                       <li><a href="cards.htm" target="_self">Cards</a></li>
-                       <li><a href="pamphlets.htm" target="_self">Pamphlets</a></li>
-                       <li><a href="posters.htm" target="_self">Posters</a></li>
-                       <li><a href="beesmart_give.htm" target="_self">School Garden Kit</a></li>
-                       </ul>
-                        </li>
-
-                        </li>
-                        <li><a href="http://pollinator.org/nappc/index.html">NAPPC</a>
-
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Mobile Menu Trigger Icon -->
-
-
-          </div>
+<body>
+<div id="wrapper" class="body">
+            <!-- Site Navigation
+    ======================================================================= -->
+    <nav class="site-header navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+      	<div id="top-bar">
+   				<div class="row">
+   					<div class="col-sm-6 col-md-5 hidden-xs">
+   						<h4><i class="fa fa-calendar"></i> Pollinator Week</h4>
+   						<div id="counter" data-date="June 20, 2016">
+   							<div class="timer-col">
+   								<span id="days"></span>
+   								<span class="timer-type">d</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="hours"></span>
+   								<span class="timer-type">h</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="minutes"></span>
+   								<span class="timer-type">m</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="seconds"></span>
+   								<span class="timer-type">s</span>
+   							</div>
+   						</div> <!-- end #counter -->
+   					</div>
+   					<div id="cse-search-form" class="col-md-2 hidden-sm"></div> 
+   					<div class="col-sm-6 col-md-5">
+   						<div class="col-xs-5">
+   						<ul class="social-links vert-center">
+   							<li>
+   								<a href="http://www.facebook.com/ThePollinatorPartnership" target="_blank"><i class="fa fa-facebook-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="http://twitter.com/Pollinators" target="_blank"><i class="fa fa-twitter-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="http://www.youtube.com/user/PollinatorPartners" target="_blank"><i class="fa fa-youtube-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="https://plus.google.com/u/0/+PollinatorOrg/about" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+   							</li>
+   						</ul> 
+   						</div>
+   						<div class="col-xs-7">
+   							<ul class="call-to-action">
+   								<li><a href="donate.htm">Donate Now</a></li>
+   								<li><a href="takeaction.htm">Join Us</a></li>	
+   							</ul>
+   						</div>
+   					</div>
+   				</div> <!-- end .row -->
+   			</div><!-- end #top-bar -->
+            
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" 
+            aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>    
+          <a class="navbar-brand" href="/"><img src="Images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
+      	</div>
+      	
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false"
+             style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="about.htm" class="dropdown-toggle" data-toggle="dropdown"
+                role="button" aria-haspopup="true" aria-expanded="false">
+                Who we are
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              	<div class="dropdown-foot">
+              		<span></span>
+              		<span></span>
+              	</div>
+                <li><a href="about.htm">About us</a></li>
+                <li><a href="wherewework.htm">Where we work</a></li>
+                <li><a href="pollination.htm">What are Pollinators?</a></li>
+              </ul>
+            </li> 
+            <li>
+              <a href="programs.htm">Our programs</a>
+            </li>
+            <li>
+              <a href="guides.htm">Planting guides</a>          
+            </li>
+            <li>
+              <a href="takeaction.htm">Get involved</a>
+            </li>
+            <li>   
+              <a href="usefulresources.htm">Learning center</a>
+            </li>
+            <li class="dropdown">
+              <a href="shop.htm" class="dropdown-toggle" data-toggle="dropdown"
+                	role="button" aria-haspopup="true" aria-expanded="false">
+                Stuff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              	<div class="dropdown-foot">
+              		<span></span>
+              		<span></span>
+              	</div>
+                <li><a href="beesmartapp.htm">App</a></li>
+                <li><a href="books.htm">Books</a></li>
+                <li><a href="brochures.htm">Brochures</a></li>
+                <li><a href="cards.htm">Cards</a></li>
+                <li><a href="pamphlets.htm">Pamphlets</a></li>
+                <li><a href="posters.htm">Posters</a></li>
+                <li><a href="beesmart_give.htm">School Garden Kit</a></li>
+              </ul> 
+            </li>
+            <li>
+              <a href="nappc/index.html">NAPPC</a>
+            </li>
+          </ul>
         </div>
-	</header>
-    <!-- End Site Header -->
+      </div>
+    </nav>
+    <!-- End Site Navigation -->
     
  <!-- Start Hero Slider -->
     <div class="hero-slider">
@@ -519,7 +567,7 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
                                 			<h3 class="post-title"><a href="http://pollinator.org/million-pollinator-garden-challenge.htm">Million Pollinator Garden Challenge</a></h3>
                                     		<span class="post-time meta-data">BEE Counted and BEE a part of the million</span>
                                     		<p class="post-excerpt">A nationwide call to action to preserve and create gardens and landscapes that help revive the health of bees, butterflies, birds, bats and other pollinators across America.</p>
-                                    		<a href="http://pollinator.org//million-pollinator-garden-challenge.htm"><em>BEE Counted&nbsp;&nbsp;<em>  <span class="fa fa-angle-right"></span></a>
+                                    		<a href="http://pollinator.org//million-pollinator-garden-challenge.htm"><em>BEE Counted&nbsp;&nbsp;</em>  <span class="fa fa-angle-right"></span></a>
                                        	</div>
                                    	</div>
                                 </li>
@@ -717,6 +765,7 @@ Without the actions of pollinators agricultural economies, our food supply, and 
 <script src="P2/vendor/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
 <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
 <script src="P2/js/bootstrap.js"></script> <!-- UI -->
+<script src="js/custom-js.js"></script>
 <script src="P2/js/init.js"></script> <!-- All Scripts -->
 <script src="P2/vendor/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
 <script src="P2/vendor/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
