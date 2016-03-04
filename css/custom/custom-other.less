@@ -310,20 +310,16 @@ p {
 }
 
 .sidebar {
+	p {
+		padding: 0 10px 0;
+	}
 	ul {
 		list-style: none;
 		list-style-position: outside;
 		padding-left: @padding-small-horizontal;
 	}	
 	.btn {
-		border-radius: 20px;
-		background-color: @brand-success;
-		color: @gray-lighter;
-		font-family: @font-family-sans-serif;
-		text-transform: uppercase;
-		letter-spacing: .07em;
-		font-weight: 700;
-		font-size: @font-size-small;
+		border-radius: 20px;	
 		margin-bottom: @padding-large-vertical;
 		margin-top: @padding-large-vertical;
 	}
@@ -378,8 +374,9 @@ footer {
 
 .light-box {
 	display: block;
-	background-color: @gray-lighter;
+	background-color: #D5E9F0;
 	padding: 10px;
+	margin-bottom: 10px;
 	ul {
 		list-style-postion: inside;
 		padding: 5px 5px 5px 25px;
@@ -526,6 +523,24 @@ a.btn-link:focus {
 	}
 }
 		
+.sidebar {
+	p {
+		font-family: @font-family-sans-serif;
+	}
+	.btn {
+		color: #fff;
+		background-color: @brand-success;
+		font-family: @font-family-sans-serif;
+		text-transform: uppercase;
+		letter-spacing: .07em;
+		font-weight: 700;
+		font-size: @font-size-small;
+	}
+	a.btn:hover,
+	a.btn:focus {
+		background-color: darken(@brand-success, 15%);
+	}
+}		
 footer {
 	#copyright,li,a {
 		font-family: @font-family-sans-serif;
