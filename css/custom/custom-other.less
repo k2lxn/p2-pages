@@ -390,6 +390,14 @@ footer {
 	}
 }
 
+.btn-link {
+	background-color: @brand-primary;
+	border: 2px solid @brand-primary; 
+	border-radius: 20px;
+	color: #fff;
+	padding: 7.5px 22px;
+}
+
 .twitter-widget {
 	ul {
 		margin: 20px 0;
@@ -436,7 +444,11 @@ p.lead{
 	font-weight: 400;
 }
 
-a:hover {
+p a {
+	text-decoration: underline;
+}
+a:hover,
+a:focus {
 	text-decoration: none;
 }
 a[href^="mailto"] {
@@ -446,6 +458,19 @@ a[href^="mailto"] {
 }
 a[href^="mailto"]:hover {
 	color: @brand-primary;
+}
+
+a.btn-link {
+	font-family: @font-family-sans-serif;
+	font-size: 100%;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}
+a.btn-link:hover,
+a.btn-link:focus {
+	text-decoration: none;
+	color: #fff;
+	background-color: @brand-secondary;
 }
 
 .site-header {
