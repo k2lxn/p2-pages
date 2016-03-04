@@ -273,8 +273,8 @@ ul.vert-center {
 p {
 	.img-sm {
 		width: 100%;
-		margin-top: @grid-gutter-width / 2;
-		margin-bottom: @grid-gutter-width / 2;
+		margin-top: 5px;
+		margin-bottom: 5px;
 		
 		@media (min-width: @screen-xs) {
 			max-width: 55%;
@@ -374,6 +374,20 @@ footer {
   		background: none;
   	}
   }
+}
+
+.light-box {
+	display: block;
+	background-color: @gray-lighter;
+	padding: 10px;
+	ul {
+		list-style-postion: inside;
+		padding: 5px 5px 5px 25px;
+		margin: 10px 0 0;
+		li {
+			margin-bottom: 10px;
+		}
+	}
 }
 
 .twitter-widget {
