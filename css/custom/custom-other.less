@@ -271,16 +271,21 @@ ul.vert-center {
 
 
 p {
-	.img-sm {
+
+}
+
+.img-sm {
+		display: inline-block;
 		width: 100%;
-		margin-top: 5px;
-		margin-bottom: 5px;
-		
+		height: 200px;
+		margin: 10px;
+		overflow: hidden;
 		@media (min-width: @screen-xs) {
-			max-width: 55%;
+			max-width: 50%;
 		}	
 		@media (min-width: @screen-sm) {
-			max-width: 50%;
+			max-width: 45%;
+			height: 160px;
 		}
 	}	
 	.img-lg {
@@ -294,7 +299,6 @@ p {
 	img.pull-right {
 		margin-left: @grid-gutter-width / 2;
 	}
-}
 
 .main {
 	position: relative;
@@ -374,9 +378,16 @@ footer {
 
 .light-box {
 	display: block;
-	background-color: #D5E9F0;
+	background-color: darken(#D5E9F0, 10%);
 	padding: 10px;
-	margin-bottom: 10px;
+	margin: 10px 0;
+	border-radius: @border-radius-large;
+	h3 {
+		color: #1A5D73;
+		text-align: center;
+		font-size: 105%;
+		margin: 5px 0;
+	}
 	ul {
 		list-style-postion: inside;
 		padding: 5px 5px 5px 25px;
