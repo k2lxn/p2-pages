@@ -106,6 +106,9 @@ html,body {
 				float: right;
 				margin-right: 15px;
 			}
+			@media (max-width: 400px) {
+				margin-right: 5px;
+			}
 		}
 		#counter {
 			display: inline-block;
@@ -135,6 +138,10 @@ html,body {
 	@media (min-width: @screen-sm) {
 		float: right;
 	}
+	@media (max-width: 382px) {
+		margin: 0 0 0 5px;
+		padding: 0;
+	}
 	li {
 		width: 17px;
 		margin-right: 10px;
@@ -154,6 +161,9 @@ html,body {
 		padding: 7px 0;
 		a {
 			padding: 10px 20px;
+			@media (max-width: 400px) {
+				padding: 10px 10px;
+			}
 		}
 		a:hover {
 			background: darken(@brand-primary, 6%);
