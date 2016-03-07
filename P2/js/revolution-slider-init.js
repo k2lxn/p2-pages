@@ -32,7 +32,7 @@ $(function(){var revapi;
 					fullScreen:"off",
 					onHoverStop:"on",
 					hideTimerBar:"on",
-					autoHeight: "off",
+					autoHeight: "on",
 					hideThumbsOnMobile: "on"
 				});
 
