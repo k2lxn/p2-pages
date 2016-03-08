@@ -11,6 +11,44 @@
     <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Page styles -->
+    <style>
+    	p.special-thanks {
+				font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+				font-style: italic;
+				background: #ddd;
+				padding: 5px 15px;			
+			}
+			@media only screen and (max-width: 560px) {
+				div.special-thanks {
+					width: 110%;
+					margin-left: -4%;
+				}
+			}	
+			#windowbox-logos-container {
+				max-width: 500px;
+				height: 100px;
+			}
+			@media only screen and (max-width: 460px) {
+				#windowbox-logos-container {
+					height: 90px;
+				}
+			}
+			@media only screen and (max-width: 380px) {
+				#windowbox-logos-container {
+					height: 70px;
+				}
+			}
+			.windowbox-logo-thumb-container {
+				width: 19%;
+				height: 100%;
+				display: inline-block;
+			}
+			.windowbox-logo-thumb-container #p2-logo {
+				right: -5px;
+			}
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -209,21 +247,26 @@
             	<br><br>            	         	
             	<!-- Logos -->
             
-            		<div class="row center-block" style="max-width:431px">
+            		<div class="row center-block special-thanks" style="max-width:500px">
             			<p class="special-thanks">		
 										The Pollinator Window Box project was created in conjunction with <a href="http://www.usda.gov/peoplesgarden" target="_blank">USDA People’s Garden</a> with support from USDA APHIS.
             			</p>
-            		  <div class="col-xs-3" style="padding: 2px;">
-            				<img src="Images/Logos/USDA_logo_thumb.png" class="logo-thumb" alt="">
-            			</div>
-            			<div class="col-xs-3" style="padding: 2px;">
-            				<img src="Images/Logos/Peoples_Garden_logo_thumb.png" class="logo-thumb" alt="">	
-            			</div>
-            			<div class="col-xs-3" style="padding: 2px;">
-            				<img src="Images/Logos/USDA-APHIS_logo_thumb.png" class="logo-thumb" alt="">
-            			</div>
-            			<div class="col-xs-3" style="padding: 2px;">
-            				<img src="Images/Logos/MPGC_logo_thumb.png" class="logo-thumb" alt="">
+            			<div id="windowbox-logos-container" class="row center-block">
+            		  	<div class="windowbox-logo-thumb-container">
+            					<img src="Images/Logos/USDA_logo_thumb.png" class="logo-thumb vert-center" alt="">
+            				</div>
+            				<div class="windowbox-logo-thumb-container">
+            					<img src="Images/Logos/Peoples_Garden_logo_thumb.png" class="logo-thumb vert-center" alt="">	
+            				</div>
+            				<div class="windowbox-logo-thumb-container">
+            					<img src="Images/Logos/USDA-APHIS_logo_thumb.png" class="logo-thumb vert-center" alt="">
+            				</div>
+            				<div class="windowbox-logo-thumb-container">
+            					<img src="Images/Logos/MPGC_logo_thumb.png" class="logo-thumb vert-center" alt="">
+            				</div>
+            				<div class="windowbox-logo-thumb-container">
+            					<img src="Images/P2.jpg" id="p2-logo" class="logo-thumb vert-center" alt="">
+            				</div>
             			</div>
             		</div>
             	<br><br>

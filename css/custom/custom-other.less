@@ -14,6 +14,10 @@ html,body {
   height: 100%;
 }
 
+div {
+	position: relative;
+}
+
 #wrapper {
 	position: relative;
 	min-height: 100%;
@@ -169,7 +173,13 @@ html,body {
 	}
 }
 
-ul.vert-center {
+.vert-center {  // Apply to the element you want centered (not the container)
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+ul.vert-center {   // For centering text within ul li
 	height: 100%;
 	position: relative;
 	li {
@@ -432,19 +442,11 @@ a.btn-default:hover {
 	padding: 7.5px 22px;
 }
 
-.logo-thumb {
+img.logo-thumb {
 	width: 100%;
 	max-width: 90px;
 	max-height: 90px;
 	display: inline-block;
-}
-
-p.special-thanks {
-	font-family: @font-family-sans-serif;
-	font-style: italic;
-	background: @gray-lighter;
-	padding: 5px 10px;
-	margin: 15px -15px;
 }
 
 .twitter-widget {
