@@ -211,9 +211,7 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
               <!-- SLIDE 2 -->
                 <li data-delay="5000" data-masterspeed="600" data-slotamount="7" data-transition="fade">
                   <!-- MAIN IMAGE -->
-                  <a href="windowbox_preview">
-                  	<img src="Images/Window_Box_hero_slider.png" alt="">
-                  </a>	
+                  <img src="Images/Window_Box_hero_slider.png" alt="">
                   <!-- LAYER NR. 1 -->
 					<div class="tp-caption sfr whiter h4 tp-resizeme"
 						data-x="right"
@@ -224,7 +222,7 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
 						data-start="500"
 						data-easing="Back.easeInOut"
 						data-endspeed="300">
-                        The Pollinator Window Box
+                        <a href="windowbox_preview">The Pollinator Window Box</a>
 					</div>
                   <!-- LAYER NR. 2 -->
 					<div class="tp-caption sfr whiter h2 tp-resizeme"
@@ -235,7 +233,8 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
 						data-speed="1000"
 						data-start="600"
 						data-easing="Back.easeInOut"
-						data-endspeed="300">
+						data-endspeed="300"
+						style="color:#555">
                         A window to the wild
 					</div>
                     <!-- LAYER NR. 3 -->
@@ -278,7 +277,7 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
 						data-start="1800"
 						data-easing="Back.easeInOut"
 						data-endspeed="300">
-                        <a href="windowbox" class="btn btn-default">Learn more</a>
+                        <a href="windowbox_preview" class="btn btn-default" style="color:#555;border-color:#555">Learn more</a>
 					</div>
                 </li>
               
