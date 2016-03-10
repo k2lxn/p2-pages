@@ -2,9 +2,6 @@
 $(document).ready(function(){
 	// Push content up above footer
 	$('.main').css('padding-bottom', $('.footer').height()); 
-	
-	// Set height of inline images
-	$('.img-sm')
 }); 
 
 
@@ -16,13 +13,24 @@ var bumpIt = function() {
 
 bumpIt();
 
+// Set height of inline images
+var sizeInlineImages = function() {
+		$('.img-sm').height($('.img-sm').width() * (2/3));
+		$('.img-lg').height($('.img-lg').width() * (1/2));
+	},
+	didResize = false;
+	
+sizeInlineImages();	
+
+
 $(window).resize(function() {
-	didResize = true;
+	didResize = true;	
 });
 
 setInterval(function() {
 	if(didResize){
 		didResize = false;
 		bumpIt();
+		sizeInlineImages();
 	}
 }, 250);
