@@ -288,12 +288,19 @@ ul.vert-center {   // For centering text within ul li
 	}
 }
 
+.main {
+	ul li {
+		margin-bottom: 10px;
+	}
+}
+
 .img-sm,
 .figure-sm {
 	display: inline-block;
 	width: 100%;
 	min-height: 150px;
 	overflow: hidden;
+	border-radius: 2px;
 	@media (min-width: 550px) {
 		width: 345px;
 		height: 230px;
@@ -328,6 +335,7 @@ ul.vert-center {   // For centering text within ul li
 	display: inline-block;
 	margin: 10px -10%;
 	overflow: hidden;
+	border-radius: 2px;
 	@media (min-width: 650px) {
 		width: 100%;
 		margin: 10px 0;
@@ -338,6 +346,10 @@ ul.vert-center {   // For centering text within ul li
 	@media (min-width: 650px) {
 		padding-left: 5px;
 	}
+}
+
+img {
+	max-width: 100%;
 }
 
 img.pull-left {
@@ -517,25 +529,40 @@ h3,h4 {
 	letter-spacing: .1em;
 }
 
-.main h2 {
-	padding-bottom: 5px;
-}
-.main h2 .heading-content {  // For <h2>s with class 'title'
-	margin-bottom: -6px;
-}
 h2.title .title-border {
 	margin-bottom: -6px;
 }
 
 p {
+	font-family: @font-family-serif;
 	font-weight: 300;
 	line-height: 1.75;
+	word-wrap: break-word;
 }
-
 p.lead{
 	font-family: @font-family-sans-serif;
 	font-weight: 400;
 }
+
+.main {
+	h2 {
+		padding-bottom: 5px;
+	}
+	h2 .heading-content {  // For <h2>s with class 'title'
+		margin-bottom: -6px;
+	}
+	p:not(.lead) {
+		@media (max-width: @screen-sm) {
+			text-align: justify;
+		}
+	}
+	small {
+		font-family: @font-family-sans-serif;
+		font-size: 10px;
+		text-transform: uppercase;
+	}
+}
+
 
 a {
 	color: inherit;
@@ -567,6 +594,11 @@ a.btn-link:focus {
 	text-decoration: none;
 	color: #fff;
 	background-color: @brand-secondary;
+}
+
+.main ul li {
+	font-family: @font-family-sans-serif;
+	font-weight: normal;
 }
 
 .site-header {
