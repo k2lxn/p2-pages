@@ -300,10 +300,11 @@ ul.vert-center {   // For centering text within ul li
 		margin: 10px 0;
 	}
 }	
-figure {
+.figure-sm, .figure-lg {
 	position: relative;
 }
-figcaption {
+.figure-sm > figcaption,
+.figure-lg > figcaption {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -515,6 +516,17 @@ h3,h4 {
 	text-transform: uppercase;
 	letter-spacing: .1em;
 }
+
+.main h2 {
+	padding-bottom: 5px;
+}
+.main h2 .heading-content {  // For <h2>s with class 'title'
+	margin-bottom: -6px;
+}
+h2.title .title-border {
+	margin-bottom: -6px;
+}
+
 p {
 	font-weight: 300;
 	line-height: 1.75;
