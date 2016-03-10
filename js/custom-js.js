@@ -16,7 +16,7 @@ bumpIt();
 // Set height of inline images
 var sizeInlineImages = function() {
 		$('.img-sm').height($('.img-sm').width() * (2/3));
-		$('.img-lg').height($('.img-lg').width() * (1/2));
+		$('.img-lg').height($('.img-lg').width() * (1/3));
 	},
 	didResize = false;
 	
