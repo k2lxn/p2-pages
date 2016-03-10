@@ -288,33 +288,37 @@ ul.vert-center {   // For centering text within ul li
 	}
 }
 
-
-p {
-
-}
-
-.img-sm, .img-sm-left {
+.img-sm {
 	display: inline-block;
-	width: 110%;
-	height: 200px;
-	margin: 10px -10px;
-	overflow: hidden;
+	width: 100%;
+	min-height: 150px;
 	@media (min-width: 400px) {
-		width: 340px;
+		width: 345px;
+		height: 230px;
 		margin: 10px 0;
 	}
 }	
-.img-lg {
-	max-width: 100%;
-	display: block;
-	margin: (@grid-gutter-width / 2) auto;
-}
-.img-sm-left, .img-lg-left {
-	float: left;
+.img-sm.pull-left {
 	@media (min-width: 400px) {
 		margin-right: 10px;
 	}
 }
+.img-sm.pull-right {
+	@media (min-width: 400px) {
+		margin-left: 10px;
+	}
+}
+.img-lg {
+	width: 120%;
+	min-height: 180px;
+	display: inline-block;
+	margin: 10px -10%;
+	@media (min-width: 650px) {
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+
 img.pull-left {
 	margin-right: @grid-gutter-width / 2;
 }
