@@ -14,9 +14,14 @@
     
     <!-- Page styles -->
     <style>
-    	.container-fluid {
+    	#thumb-grid {
      		margin: 0 30px;
      	}	
+     	@media only screen and (max-width: 600px) {
+     		#thumb-grid {
+     			margin: 0 10px;
+     		}	
+     	}
 		</style>    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -181,7 +186,7 @@
     </div>
   
     <!-- Main page content -->
-    <div class="container-fluid main">
+    <div class="container-fluid main" id="thumb-grid">
     	<h2><div class="heading-content">Learning Center</div></h2>   	
       <p class="lead">Explore and learn all about pollinators</p>
 
