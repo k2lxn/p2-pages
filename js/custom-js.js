@@ -19,6 +19,7 @@ var sizeInlineImages = function() {
 		$('.figure-sm').height($('.figure-sm').width() * (2/3));
 		$('.img-lg').height($('.img-lg').width() * (1/3));
 		$('.figure-lg').height($('.figure-lg').width() * (1/3));
+		$('div.resources-thumb').height($('div.resources-thumb').width() * (2/3));
 	},
 	didResize = false;
 	
