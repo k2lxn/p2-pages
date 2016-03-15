@@ -1,10 +1,39 @@
+// Darken background images. Takes a DOM element and a number between 0 - 1 
+function addBGTint(elem,tint) {
+	var bg = elem.attr("style");
+	var img_location = bg.match(/url\(+(.)+\)/)[0];
+	var style = "background-image: linear-gradient(to right,rgba(0,0,0," + tint.toString() +"), rgba(0,0,0,"+tint.toString()+")), " + img_location;
+	elem.attr("style",style);
+}
+function removeBGTint(elem) {
+	var bg = elem.attr("style");
+	var img_location = bg.match(/url\(+(.)+\)/)[0];
+	var style = "background-image: " + img_location;
+	elem.attr("style",style);
+}
 
+/* * * * * * * * *
+ * ON  READY * * *
+ * * * * * * * * */
 $(document).ready(function(){
 	// Push content up above footer
 	$('.main').css('padding-bottom', $('.footer').height()); 
+	
+	// Add hover function to thumbnails
+	if ($('.resources-thumb').length) {
+		$('div.resources-thumb > a').hover(
+			function() { addBGTint( $(this).prev(), .75 ) },
+			function() { addBGTint( $(this).prev(), .3 )}		
+		);
+	}
 }); 
 
 
+
+/* * * * * * * * *
+ * RESIZE  * * * *
+ * * * * * * * * */
+ 
 // Move footer down when page resizes
 var bumpIt = function() {  
   	$('.main').css('padding-bottom', $('.footer').height());
