@@ -507,7 +507,10 @@ div.resources-thumb {
 	position: relative;
 	margin-bottom: 15px;
 	padding: 0 10px;
-	
+	@media (max-width: 450px) {
+		padding: 0 3px;
+		margin-bottom: 6px;
+	}
 	a {
 		text-align: center;
 		width: 96%;
@@ -515,6 +518,10 @@ div.resources-thumb {
 		color: #fff;
 		z-index: 100;
 		transition: font-size .05s ease-in;
+		@media (max-width: 450px) {
+			margin-left: 0;
+			width: 100%;
+		}
 	}
 	a:hover,
 	a:focus {
