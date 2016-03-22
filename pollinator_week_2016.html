@@ -11,6 +11,48 @@
     <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Page styles -->
+    <style type="text/css">
+    	#special-header .col-xs-8 {
+    		position: relative;
+    		height: 80px;
+    		padding-right: 0;
+    	}
+			#special-header h3 {
+				text-align: center;
+			}
+			#title-img {
+				max-height: 180%;
+				z-index: 2000;
+				pointer-events: none;
+				position: absolute;
+				top: -60px;
+			}
+			@media only screen and (max-width: 550px) {
+				#special-header .col-xs-8,
+				#special-header .col-xs-4 {
+					width: 100%;
+				}
+				#title-img {
+					margin: 0 auto;
+					left:0;right:0;
+				}
+			}
+			@media only screen and (min-width: 995px) {
+				#page-nav ul li:nth-of-type(2) {
+					margin-left: 110px;
+				}
+			}
+			@media only screen and (min-width: 1200px) {
+				#title-img {
+					max-width: 405px;
+				}
+				#special-header h3 {
+					text-align: left;
+				}
+			}
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -206,9 +248,16 @@
     <div class="container main">
       <div class="row">
         <div class="col-sm-8">
-          <h2><div class="heading-content">Section heading</div></h2>
+          <div id="special-header" class="row" style="margin-bottom: 15px">
+          	<div class="col-xs-8">
+          		<img id="title-img" src="Images/NPW/2016/pw16_nobg.png" alt="Pollinator Week">
+          	</div>
+          	<div class="col-xs-4">
+          		<h3>June 20 -26,<br>2016</h3>
+          	</div>	
+          </div>  <!-- end .row -->
             	
-          <p class="lead">Headline or lead paragraph</p>
+          <p class="lead">Eight years ago the U.S. Senate’s unanimous approval and designation of a week in June as “National Pollinator Week” marked a necessary step toward addressing the urgent issue of declining pollinator populations.</p>
           
           <figure class="figure-sm pull-right" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;">
           	<figcaption>This is a <em>small</em> captioned image</figcaption>
@@ -217,25 +266,7 @@
             	<!--	<img src="Images/pwprogram1.jpg" class="img-sm pull-left" alt=""> -->
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <h2>Heading 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-           <!-- <img src="Images/pwprogram1.jpg" class="img-lg" alt="">		-->
-            <span class="img-sm pull-left" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;"></span>
-            		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
-          </p>
-          <h3>Heading 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-          
-          <figure class="figure-lg" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;">
-          	<figcaption>This is a <em>large</em> inline image</figcaption>
-          </figure> 
-        </div>
+        </div> 
           
             <!-- Sidebar -->
            <div class="col-sm-4 sidebar">
@@ -261,10 +292,33 @@
             				<button type="button" class="btn">Pollinator Store</button> 	
             			</a>
             		</li>
-				</ul>
+							</ul>
             </div>
         </div>
-    </div>
+        
+        <div class="row">
+        	          
+          
+          <h2><div class="heading-content">Find Events</div></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+           <!-- <img src="Images/pwprogram1.jpg" class="img-lg" alt="">		-->
+            <span class="img-sm pull-left" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;"></span>
+            		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+          </p>
+          <h3>Heading 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          
+          <figure class="figure-lg" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;">
+          	<figcaption>This is a <em>large</em> inline image</figcaption>
+          </figure> 
+        </div>  <!-- end .row -->
+    </div>  <!-- end .container.main -->
    
     <!-- Site Footer
     ============================================================= -->
