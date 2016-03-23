@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pollinator Week | Pollinator Partnership</title>
+
+    <!-- Bootstrap -->
+    <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Page styles -->
+    <style type="text/css">
+			#title-img {
+				width: 98%;
+				float: left;
+				padding: 0 15px;
+				position: relative;
+				top: -40px;
+				z-index: 1000;
+			}
+			#special-header h3 {
+				float: left;
+				font-size: 2em;
+				width: 100%;
+				text-align: center;
+				margin-top: -30px;
+				padding-top: 10px;
+				color: #5f5f5f;	
+			}
+			@media only screen and (max-width: 370px) {
+				#add-event {
+					border-radius: 0;
+					padding: 7.5px 10px; 
+				}
+			}
+			@media only screen and (min-width: 550px) {
+				#title-img {
+					width: 260px;
+					box-sizing: content-box;
+				}
+				#special-header h3 {
+					width: 205px;
+					/*line-height: 1.5; */
+					margin-top: 0;
+					margin-left: 15px;
+				}
+			}
+			@media only screen and (min-width: 768px) and (max-width: 995px) {
+				#special-header h3 {
+					font-size: 1.5em;
+					margin-left: 0;
+				}
+			}
+			@media only screen and (min-width: 995px) {
+				#page-nav ul li:nth-of-type(2) {
+					margin-left: 50px;
+				}
+			}
+			@media only screen and (min-width: 1200px) {
+				#title-img {
+					width: 360px;
+				}
+				#special-header h3 {
+					width: auto;
+					margin-top: 50px;
+					margin-left: 40px;
+				}
+				#page-nav ul li:nth-of-type(2) {
+					margin-left: 100px;
+				}
+			}
+			iframe {
+				margin: 15px 0;
+			}
+			ul.fa-ul > li {
+				font-size: 120%;
+				margin-left: 15px;
+			}
+			ul.fa-ul > li > a {
+				/*color: #303030;*/
+				color: #bd0097;
+				font-weight: bold;
+				font-size: 110%;
+				font-style: italic;	
+			}
+			ul.fa-ul > li > a:hover {
+				text-decoration: underline;
+			}
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div id="wrapper">
+   	
+   <!-- Site Navigation
+    ======================================================================= -->
+    <nav class="site-header navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+      	<div id="top-bar">
+   				<div class="row">
+   					<div class="col-sm-5 hidden-xs">
+   						<h4><i class="fa fa-calendar"></i> Pollinator Week</h4>
+   						<div id="counter" data-date="June 20, 2016">
+   							<div class="timer-col">
+   								<span id="days"></span>
+   								<span class="timer-type">d</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="hours"></span>
+   								<span class="timer-type">h</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="minutes"></span>
+   								<span class="timer-type">m</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="seconds"></span>
+   								<span class="timer-type">s</span>
+   							</div>
+   						</div> <!-- end #counter -->
+   					</div>
+   					
+   					<!-- Google Search -->
+   					<div class="col-sm-2 hidden-xs google-search-container">
+   						<script>
+  						(function() {
+    						var cx = '002964769701314051310:upsfmgvjvqw';
+    						var gcse = document.createElement('script');
+   							gcse.type = 'text/javascript';
+    						gcse.async = true;
+    						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    						var s = document.getElementsByTagName('script')[0];
+    						s.parentNode.insertBefore(gcse, s);
+  						})();
+							</script>
+							<gcse:searchbox-only></gcse:searchbox-only>
+   					</div>
+   					
+   					<!-- Social Links/Call to Action -->
+   					<div class="col-sm-5">
+   						<ul class="call-to-action">
+   							<li><a href="donate.htm">Donate Now</a></li>
+   							<li><a href="takeaction.htm">Join Us</a></li>	
+   						</ul>
+   							
+   						<ul class="social-links vert-center">
+   							<li>
+   								<a href="http://www.facebook.com/ThePollinatorPartnership" target="_blank"><i class="fa fa-facebook-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="http://twitter.com/Pollinators" target="_blank"><i class="fa fa-twitter-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="http://www.youtube.com/user/PollinatorPartners" target="_blank"><i class="fa fa-youtube-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="https://plus.google.com/u/0/+PollinatorOrg/about" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+   							</li>
+   						</ul> 
+   					</div>
+   					
+   				</div> <!-- end .row -->
+   			</div><!-- end #top-bar -->
+            
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" 
+            aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>    
+          <a class="navbar-brand" href="/"><img src="Images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
+      	</div>
+      	
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false"
+             style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="about.htm" class="dropdown-toggle" data-toggle="dropdown"
+                role="button" aria-haspopup="true" aria-expanded="false">
+                Who we are
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              	<div class="dropdown-foot">
+              		<span></span>
+              		<span></span>
+              	</div>
+                <li><a href="about.htm">About us</a></li>
+                <li><a href="wherewework.htm">Where we work</a></li>
+                <li><a href="pollination.htm">What are Pollinators?</a></li>
+              </ul>
+            </li> 
+            <li>
+              <a href="programs.htm">Our programs</a>
+            </li>
+            <li>
+              <a href="guides.htm">Planting guides</a>          
+            </li>
+            <li>
+              <a href="takeaction.htm">Get involved</a>
+            </li>
+            <li>   
+              <a href="usefulresources.htm">Learning center</a>
+            </li>
+            <li class="dropdown">
+              <a href="shop.htm" class="dropdown-toggle" data-toggle="dropdown"
+                	role="button" aria-haspopup="true" aria-expanded="false">
+                Stuff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              	<div class="dropdown-foot">
+              		<span></span>
+              		<span></span>
+              	</div>
+              	<li><a href="shop">All</a></li>
+                <li><a href="beesmartapp.htm">App</a></li>
+                <li><a href="books.htm">Books</a></li>
+                <li><a href="brochures.htm">Brochures</a></li>
+                <li><a href="cards.htm">Cards</a></li>
+                <li><a href="pamphlets.htm">Pamphlets</a></li>
+                <li><a href="posters.htm">Posters</a></li>
+                <li><a href="beesmart_give.htm">School Garden Kit</a></li>
+              </ul> 
+            </li>
+            <li>
+              <a href="nappc/index.html">NAPPC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Site Navigation -->
+    
+    <!-- Page Content 
+    =======================================================================-->
+    <div class="page-header" style="background-image: url(Images/NPW/2016/pw16_page_header.png)">
+    	<div class="container"></div> 
+    </div>
+    <!-- optional Page Navigation (for anchor links) -->
+    <nav id="page-navbar" class="navbar navbar-static-top navbar-default">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<div class="dropdown">
+        			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        				Jump to:
+        			</button> 
+        		</div>
+        	</div>
+        	<div id="page-nav" class="navbar-collapse collapse" aria-expanded="false">
+        		<ul class="nav navbar-nav">
+        			<li class="hidden-xs">
+        				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        				Jump to:
+        			</li>
+            	<li><a href="#">Find Events</a></li>
+            	<li><a href="#">Take Action</a></li>
+            	<li><a href="#">Resources</a></li>
+           		<li><a href="#">Poster</a></li>
+           		<li><a href="#">Fast Facts</a></li>
+           		<li><a href="#">Activities</a></li>
+        		</ul>
+        	</div> 
+        </div>	  
+    </nav>
+    
+    <!-- Main page content -->
+    <div class="container main">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="special-header" class="row">
+          	<img id="title-img" src="Images/NPW/2016/pw16_nobg.png" alt="Pollinator Week">
+          	<h3>June 20 -26, 2016</h3>
+          </div>  <!-- end .row -->
+          
+          <figure class="figure-sm pull-right" style="background-image: url(Images/NPW/2014/publicbeeevent.jpg); background-size: cover;">
+          	<figcaption>A local Pollinator Week event, 2014</figcaption>
+          </figure> 
+            	
+          <p class="lead">National Pollinator Week is a time to celebrate pollinators and spread the word about what <em>you</em> can do to protect them</p> 
+          <p>
+          Nine years ago the U.S. Senate’s unanimous approval and designation of a week in June as “National Pollinator Week” marked a necessary step toward addressing the urgent issue of declining pollinator populations. Pollinator Week has now grown into an international celebration of the valuable ecosystem services provided by bees, birds, butterflies, bats and beetles. </p>
+          <p>
+           The Pollinator Partnership is proud to announce that June 20-26, 2016 has been designated National Pollinator Week by the U.S. Department of Agriculture and the U.S. Department of the Interior.
+          </p>
+          <small>Pollinator Week was initiated and is managed by the Pollinator Partnership.</small>
+        </div> <!-- end .col-sm-8 -->      
+      </div>  <!-- end .row -->
+        
+      <div class="row">
+        <div class="col-sm-8"> 
+        <section>           
+          <h2 id="find-events">Find Events</h2>
+          <p>
+            It's not too early to start thinking about an event at your school, garden, church, store, etc. Pollinators positively affect all our lives, supporting wildlife, healthy watershed and more - let's SAVE and CELEBRATE them!  
+          </p> 
+          <div class="row text-center" style="background:#f6bb42; padding: 5px 0 15px">
+          	<h4 style="color:#fff">Hosting a Pollinator Week event?</h4>
+          	<a id="add-event" class="btn btn-link inverse" href="http://goo.gl/forms/sySfzj1GDV" target="_blank">Add your event to the map  <i class="fa fa-arrow-right"></i></a>
+          </div>
+          
+          <iframe src="https://www.google.com/maps/d/embed?mid=zLy9LwozVA6g.klOg0i4p1hBk" width="100%" height="400px"></iframe>
+          
+          <div class="row text-center">
+          	<a class="btn btn-link" href="#">View Events in list format  <i class="fa fa-arrow-right"></i></a>
+          </div>
+          <a class="to-top" href="#special-header"><i class="fa fa-angle-up"></i> top</a> 
+        </section>
+        <section>	
+        	<h2 id="pw-action">Take Action</h2>  
+        	<h3>Why should you contact your Governor?</h3> 
+        		<p>Many states require that one of their citizens request that events such as Pollinator Week be officially proclaimed. Thanks to wonderful citizens like you, in 2015 45 states officially declared Pollinator Week!</p>
+        		<p> Please take a moment to sign and mail the letter below to your governor. Your effort is making Pollinator Week 2016 a great success!</p>
+        		<br>
+        	<h3>How should you contact your Governor?</h3> 
+        		<h3>1. Write</h3>
+							<ul class="fa-ul">
+								<li><i class="fa-li fa fa-chevron-right"></i>Find your Governor's address on the <a href="PDFs/NPW/2016/State_Governors_Contact_Info_2016.pdf" target="_blank">Governor Contact List</a></li>
+								<li><i class="fa-li fa fa-chevron-right"></i>Use our <a href="PDFs/NPW/2016/Citizen_PWRequest_Letter_2016.doc" target="_blank">Sample Letter</a> as a base</li>
+								<li><i class="fa-li fa fa-chevron-right"></i>Be sure to include the <a href="PDFs/NPW/2016/PW_Proclamation_Text_2016.pdf" target="_blank">Proclamation Text</a> with your letter</li>
+							</ul>
+        		<h3>2. Call</h3>
+        		<div class="light-box">
+        			<h3>Suggested script for calling Governor's Office</h3>
+        			<ul>
+        				<li>
+        					Hello my name is <em>NAME</em>.  Can I speak to the person that handles proclamations?
+        				</li>
+        				<li>
+        					I am calling to follow up to a letter sent by the Pollinator Partnership requesting <em>STATE</em> proclaim Pollinator Week June 20-26, 2016.  The Pollinator Partnership would love to publicize <em>STATE'S</em> support of pollinators to their constituents.  Please let me know what I can do to move this proclamation forward.
+        				</li>
+        				<li>
+        					Thank you for taking the time to speak with me.  Have a great day.
+        				</li>
+        			</ul>
+        		</div> <!-- end .light-box -->
+        		<a class="to-top" href="#special-header"><i class="fa fa-angle-up"></i> top</a> 
+        </section>		
+        </div> <!-- end .col-sm-8 -->
+          
+      <!-- Sidebar -->
+        <div class="col-sm-4 sidebar">
+          <h3>RELATED</h3>
+            <ul>
+            	<li>
+            		<a href="guides">
+            			<button type="button" class="btn">Ecoregional Planting Guides</button> 	
+            		</a>
+            	</li>                	
+           		<li>
+          			<a href="beesmartapp">
+          				<button type="button" class="btn">BeeSmart&reg; Pollinator Gardener App</button> 	
+          			</a>
+          		</li>
+          		<li>
+          			<a href="monarchs.htm#guides">
+            				<button type="button" class="btn">Monarch Planting Guides</button> 	
+            		</a>
+            	</li>
+            	<li>
+          			<a href="shop">
+          				<button type="button" class="btn">Pollinator Store</button> 	
+          			</a>
+          		</li>
+						</ul>
+          </div> <!-- end sidebar -->
+      	</div>  <!-- end .row -->
+      	
+      	<div class="row">
+      		<div class="col-sm-8">
+      			<h2 id="pw-resources">Resources</h2>
+      		</div>
+      	</div>  <!-- end .row -->
+        
+    </div>  <!-- end .container.main -->
+   
+    <!-- Site Footer
+    ============================================================= -->
+    <footer class="footer">
+        <div class="row">
+           <div class="container">
+            	<div class="col-sm-4">
+            		<h4>Pollinator <span class="highlight">Partnership</span></h4>
+            		<p>A non-profit 501(c)3 organization-- the largest in the world dedicated exclusively to the protection and promotion of pollinators and their ecosystems.</p>
+            		<p><a href="PDFs/GRANTAWARDANDGIFTACCEPTANCEPOLICY0213.pdf">Our Giving Policy &nbsp;<i class="fa fa-angle-right"></i></a></p>
+            	</div>
+            	<div class="col-sm-4">
+            		<h4>Twitter <span class="highlight">Feeds</span></h4>
+            		<div class="twitter-widget" data-tweets-count="2"></div>
+            	</div>
+            	<div class="col-sm-4">
+            		<h4>Contact <span class="highlight">Us</span></h4>
+            		<p><a href="mailto:info@pollinator.org" target="_blank">info@pollinator.org</a></p>
+            		<p>423 Washington Street, 5th Floor<br>San Francisco, CA, 94111</p>
+            		<p>1(415)362-1137</p>
+            	</div>
+            </div> <!-- end .container -->	
+        </div> <!-- end .row -->
+        <div class="row well">
+        	<div class="container">
+            	<div class="col-sm-6">
+            		<p id="copyright">© 1996-2016 Pollinator Partnership</p>
+            	</div>
+           	<div class="col-sm-6">
+            		<ul class="nav" role="navigation">
+            			<li><a href="/">Home</a></li>
+            			<li><a href="about.htm">About</a></li>
+            			<li><a href="research_consulting.htm">Science & Consulting</a></li>
+            			<li><a href="donate.htm">Donate</a></li>
+            		</ul>
+            	</div> 
+            </div> <!-- end .container -->
+        </div> <!-- end .row -->
+    </footer>
+    
+   </div> <!-- end #wrapper --> 
+	</body>
+</html>	
+	   
+    <!-- SCRIPTS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="P2/js/init.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom-js.js"></script>
+    <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+    <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+    
+    <!-- Google Custom Search styles -->
+<style>
+	.google-search-container {
+		padding: 0;
+	}
+	table.gsc-search-box td {
+		padding: 0;
+	}
+	td.gsc-search-button {
+		padding: 0;
+		margin:0;
+	}
+	input.gsc-search-button,
+	input.gsc-search-button-v2 {
+		width: 26px;
+		height: 26px;
+		padding: 5px;
+		margin: 1px 0 0;
+		background-color: #292929;
+		border: 1px solid #292929;
+	}
+	input.gsc-search-button:hover,
+	input.gsc-search-button:focus,
+	input.gsc-search-button-v2:hover,
+	input.gsc-search-button-v2:focus {
+		background-color: #292929;
+		border: 1px solid #fff;
+	}
+	form.gsc-search-box {
+		margin-top: 3px;
+	}
+</style>
+
