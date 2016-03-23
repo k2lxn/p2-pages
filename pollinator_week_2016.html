@@ -31,6 +31,12 @@
 				padding-top: 10px;
 				color: #5f5f5f;	
 			}
+			@media only screen and (max-width: 370px) {
+				#add-event {
+					border-radius: 0;
+					padding: 7.5px 10px; 
+				}
+			}
 			@media only screen and (min-width: 550px) {
 				#title-img {
 					width: 260px;
@@ -66,6 +72,9 @@
 				#page-nav ul li:nth-of-type(2) {
 					margin-left: 100px;
 				}
+			}
+			iframe {
+				margin: 15px 0;
 			}
     </style>
 
@@ -281,19 +290,24 @@
       </div>  <!-- end .row -->
         
       <div class="row">
-        <div class="col-sm-8">            
-          <h2 id="find-events"><div class="heading-content">Find Events</div></h2>
+        <div class="col-sm-8"> 
+        <section>           
+          <h2 id="find-events">Find Events</h2>
           <p>
             It's not too early to start thinking about an event at your school, garden, church, store, etc. Pollinators positively affect all our lives, supporting wildlife, healthy watershed and more - let's SAVE and CELEBRATE them!  
           </p> 
-          <h4>Hosting a Pollinator Week event?</h4>
-          <a class="btn btn-link" href="http://goo.gl/forms/sySfzj1GDV" target="_blank">Add your event to the map  <i class="fa fa-arrow-right"></i></a>
+          <div class="row text-center" style="background:#f6bb42; padding: 5px 0 15px">
+          	<h4 style="color:#fff">Hosting a Pollinator Week event?</h4>
+          	<a id="add-event" class="btn btn-link inverse" href="http://goo.gl/forms/sySfzj1GDV" target="_blank">Add your event to the map  <i class="fa fa-arrow-right"></i></a>
+          </div>
           
           <iframe src="https://www.google.com/maps/d/embed?mid=zLy9LwozVA6g.klOg0i4p1hBk" width="100%" height="400px"></iframe>
           
-          <a class="btn btn-link" href="#">View Events in list format  <i class="fa fa-arrow-right"></i></a> 
-        	
-        	
+          <div class="row text-center">
+          	<a class="btn btn-link" href="#">View Events in list format  <i class="fa fa-arrow-right"></i></a>
+          </div> 
+        </section>
+        <section>	
         	<h2 id="pw-action">Take Action</h2>  
         	<h3>Why should you contact your Governor?</h3> 
         		<p>Many states require that one of their citizens request that events such as Pollinator Week be officially proclaimed. Thanks to wonderful citizens like you, in 2015 45 states officially declared Pollinator Week!</p>
@@ -303,7 +317,7 @@
         		<h3>2. Call</h3>
         		<div class="light-box">
         			<h3>Suggested script for calling Governor's Office</h3>
-        			<ul style="padding-left:35px;">
+        			<ul>
         				<li>
         					Hello my name is <em>NAME</em>.  Can I speak to the person that handles proclamations?
         				</li>
@@ -314,7 +328,8 @@
         					Thank you for taking the time to speak with me.  Have a great day.
         				</li>
         			</ul>
-        		</div>
+        		</div> <!-- end .light-box -->
+        </section>		
         </div> <!-- end .col-sm-8 -->
           
       <!-- Sidebar -->

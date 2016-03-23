@@ -31,6 +31,10 @@ div {
   }
 }
 
+section {
+	margin: 60px 0 15px;
+}
+
 .navbar-nav>li>a {
 	@media (min-width: @screen-sm) {
 		padding-top: 9px;
@@ -491,6 +495,11 @@ a.btn-default:hover {
 	color: #fff;
 	padding: 7.5px 22px;
 }
+.btn-link.inverse {
+	background-color: #fff;
+	border-color: #fff;
+	color: @brand-primary;
+}
 
 img.logo-thumb {
 	width: 100%;
@@ -636,6 +645,9 @@ a.btn-link:focus {
 	text-decoration: none;
 	color: #fff;
 	background-color: @brand-secondary;
+}
+a.btn-link.inverse:hover {
+	background-color: inherit;
 }
 
 .main ul li {
