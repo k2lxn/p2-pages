@@ -447,15 +447,12 @@ footer {
   }
 }
 
-.light-box {
+.light-box, .light-box-alert {
 	display: block;
-	background-color: darken(#D5E9F0, 10%);
-	color: @gray-dark;
 	padding: 10px;
 	margin: 20px 0;
 	border-radius: @border-radius-large;
 	h3 {
-		color: #1A5D73;
 		text-align: center;
 		font-size: 105%;
 		margin: 5px 0;
@@ -468,6 +465,20 @@ footer {
 			margin-bottom: 10px;
 		}
 	}
+	p {
+		padding: 10px 20px;
+	}
+}
+.light-box {
+	background-color: darken(#D5E9F0, 10%);
+	color: @gray-dark;
+	h3 { color: #1A5D73; }
+}
+.light-box-alert {
+	background-color: rgba(205, 122, 130, .8);
+	color: #fff;
+	border: 5px solid darken(#ca444d, 15%);
+	h3 { color: darken(#ca444d, 20%); }
 }
 
 .btn-default,
