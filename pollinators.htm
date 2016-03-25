@@ -288,18 +288,34 @@
       		<div class="row">   		
       			<div class="col-xs-6 col-sm-12" id="grid">
       				<div class="row">
-      					<div class="col-xs-6" style="padding-right:7.5px;padding-bottom:15px">
+      				<style>
+      					#grid .row:first-of-type .col-xs-6 {
+      						padding-bottom: 15px;
+      					}
+      					#grid .col-xs-6:first-of-type {
+      						padding-right: 7.5px;
+      					}
+      					#grid .col-xs-6:nth-of-type(2) {
+      						padding-left: 7.5px;
+      					}
+      					@media only screen and (min-width: 995px) {
+      						#grid .col-xs-6 > img {
+      							max-height: 125px;
+      						}	
+      					}
+      				</style>
+      					<div class="col-xs-6">
       						<img class="pull-right" src="Images/thumbs/bumblebee_200x145.png" alt="">
       					</div>
-      					<div class="col-xs-6" style="padding-left:7.5px;padding-bottom:15px">
+      					<div class="col-xs-6">
       						<img class="pull-left" src="Images/thumbs/bat_200x145.png" alt="">
       					</div>
       				</div>
       				<div class="row">
-      					<div class="col-xs-6" style="padding-right:7.5px">
+      					<div class="col-xs-6">
       						<img class="pull-right" src="Images/thumbs/hummingbirds_200x145.png" alt="">
       					</div>
-      					<div class="col-xs-6" style="padding-left:7.5px">
+      					<div class="col-xs-6">
       						<img class="pull-left" src="Images/thumbs/monarch_200x145.png" alt="">
       					</div>
       				</div>  <!-- end .row -->
