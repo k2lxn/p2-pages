@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pollinators | Pollinator Partnership</title>
+
+    <!-- Bootstrap -->
+    <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+		<!-- Page styles -->
+		<style>
+			h2 .heading-content {
+				line-height: 1.45;
+			}
+			#what-is > .col-xs-6:first-of-type,
+			#who-are > .col-xs-6:first-of-type {
+				padding: 0;
+			}
+			#what-is > .col-xs-6:first-of-type {
+				padding-left: 0;
+			}
+			#how-you-can-help ul {
+				width: 80%;
+				margin: 0 auto;
+			}
+			img.grid-4x4 {
+				width: 50%;
+				float: left;
+				padding: 5px;
+			}
+			@media only screen and (max-width: 450px) {
+				#what-is > .col-xs-6,
+				#who-are > .col-xs-6 {
+					width: 100%;
+				}
+			}
+			@media only screen and (min-width: 995px) {
+				#what-is > .col-xs-6:first-of-type,
+				#who-are > .col-xs-6:first-of-type {
+					width: 30%;
+				}
+				#what-is > .col-xs-6:first-of-type {
+					padding-left: 15px;
+				}
+			}	
+		</style>
+
+			
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div id="wrapper">
+   	
+   <!-- Site Navigation
+    ======================================================================= -->
+    <nav class="site-header navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+      	<div id="top-bar">
+   				<div class="row">
+   					<div class="col-sm-5 hidden-xs">
+   						<h4><i class="fa fa-calendar"></i> Pollinator Week</h4>
+   						<div id="counter" data-date="June 20, 2016">
+   							<div class="timer-col">
+   								<span id="days"></span>
+   								<span class="timer-type">d</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="hours"></span>
+   								<span class="timer-type">h</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="minutes"></span>
+   								<span class="timer-type">m</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="seconds"></span>
+   								<span class="timer-type">s</span>
+   							</div>
+   						</div> <!-- end #counter -->
+   					</div>
+   					
+   					<!-- Google Search -->
+   					<div class="col-sm-2 hidden-xs google-search-container">
+   						<script>
+  						(function() {
+    						var cx = '002964769701314051310:upsfmgvjvqw';
+    						var gcse = document.createElement('script');
+   							gcse.type = 'text/javascript';
+    						gcse.async = true;
+    						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    						var s = document.getElementsByTagName('script')[0];
+    						s.parentNode.insertBefore(gcse, s);
+  						})();
+							</script>
+							<gcse:searchbox-only></gcse:searchbox-only>
+   					</div>
+   					
+   					<!-- Social Links/Call to Action -->
+   					<div class="col-sm-5">
+   						<ul class="call-to-action">
+   							<li><a href="donate.htm">Donate Now</a></li>
+   							<li><a href="takeaction.htm">Join Us</a></li>	
+   						</ul>
+   							
+   						<ul class="social-links vert-center">
+   							<li>
+   								<a href="http://www.facebook.com/ThePollinatorPartnership" target="_blank"><i class="fa fa-facebook-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="http://twitter.com/Pollinators" target="_blank"><i class="fa fa-twitter-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="http://www.youtube.com/user/PollinatorPartners" target="_blank"><i class="fa fa-youtube-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="https://plus.google.com/u/0/+PollinatorOrg/about" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+   							</li>
+   						</ul> 
+   					</div>
+   					
+   				</div> <!-- end .row -->
+   			</div><!-- end #top-bar -->
+            
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" 
+            aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>    
+          <a class="navbar-brand" href="/"><img src="Images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
+      	</div>
+      	
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false"
+             style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="about.htm" class="dropdown-toggle" data-toggle="dropdown"
+                role="button" aria-haspopup="true" aria-expanded="false">
+                Who we are
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              	<div class="dropdown-foot">
+              		<span></span>
+              		<span></span>
+              	</div>
+                <li><a href="about.htm">About us</a></li>
+                <li><a href="wherewework.htm">Where we work</a></li>
+                <li><a href="pollination.htm">What are Pollinators?</a></li>
+              </ul>
+            </li> 
+            <li>
+              <a href="programs.htm">Our programs</a>
+            </li>
+            <li>
+              <a href="guides.htm">Planting guides</a>          
+            </li>
+            <li>
+              <a href="takeaction.htm">Get involved</a>
+            </li>
+            <li>   
+              <a href="usefulresources.htm">Learning center</a>
+            </li>
+            <li class="dropdown">
+              <a href="shop.htm" class="dropdown-toggle" data-toggle="dropdown"
+                	role="button" aria-haspopup="true" aria-expanded="false">
+                Stuff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              	<div class="dropdown-foot">
+              		<span></span>
+              		<span></span>
+              	</div>
+                <li><a href="shop">All</a></li>
+                <li><a href="beesmartapp.htm">App</a></li>
+                <li><a href="books.htm">Books</a></li>
+                <li><a href="brochures.htm">Brochures</a></li>
+                <li><a href="cards.htm">Cards</a></li>
+                <li><a href="pamphlets.htm">Pamphlets</a></li>
+                <li><a href="posters.htm">Posters</a></li>
+                <li><a href="beesmart_give.htm">School Garden Kit</a></li>
+              </ul> 
+            </li>
+            <li>
+              <a href="nappc/index.html">NAPPC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Site Navigation -->
+    
+    <!-- Page Content 
+    =======================================================================-->
+    <div class="page-header">
+    	<div class="container">
+       		<h1>Page header</h1>
+       	</div> 
+    </div>
+    <!-- optional Page Navigation (for anchor links) -->
+    <nav id="page-navbar" class="navbar navbar-static-top navbar-default">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<div class="dropdown">
+        			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        				Quick links:
+        			</button> 
+        		</div>
+        	</div>
+        	<div id="page-nav" class="navbar-collapse collapse" aria-expanded="false">
+        		<ul class="nav navbar-nav">
+        			<li class="hidden-xs">
+        				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        				Quick links:
+        			</li>
+            	<li><a href="#">Anchor 1</a></li>
+            	<li><a href="#">Anchor 2</a></li>
+           		<li><a href="#">Anchor 3</a></li>
+        		</ul>
+        	</div> 
+        </div>	  
+    </nav>
+    
+    <!-- Main page content -->
+    <div class="container main">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2><div class="heading-content">Pollinators need you.<br>You need pollinators.</div></h2>
+            	
+          <p class="lead">Without the actions of pollinators, agricultural economies, our food supply, and surrounding landscapes would collapse.</p>
+<!--          <figure class="figure-sm pull-left" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;">
+          	<figcaption>This is a <em>small</em> captioned image</figcaption>
+          </figure> 
+-->          
+          <p>Birds, bats, bees, butterflies, beetles, and other small mammals that pollinate plants are responsible for bringing us one out of every three bites of food. They also sustain our ecosystems and produce our natural resources by helping plants reproduce.</p>
+          <p>Pollinating animals travel from plant to plant carrying pollen on their bodies in a vital interaction that allows the transfer of genetic material critical to the reproductive system of most flowering plants – the very plants that</p> 
+          <ul class="fa-ul">
+          	<li><i class="fa fa-angle-right"></i> bring us countless fruits, vegetables, and nuts,</li>
+          	<li><i class="fa fa-angle-right"></i> ½ of the world’s oils, fibers and raw materials;</li>
+          	<li><i class="fa fa-angle-right"></i> prevent soil erosion,</li>
+          	<li><i class="fa fa-angle-right"></i> and increase carbon sequestration</li>
+          </ul>
+          <p>This nearly invisible ecosystem service is a precious resource that requires attention and support - - and in disturbing evidence found around the globe, is increasingly in jeopardy. <strong>Pollinator Partnership (P2) urges you know how this system supports you, and how your actions can help support healthy and sustainable pollination.</strong> </p>  
+        </div>         
+      </div>  <!-- end intro row -->
+      
+     
+      <div class="row">
+      	<div class="col-sm-8">
+        
+      		<div class="row" id="what-is">
+      			<h2>What is pollination?</h2> 
+      			<div class="col-xs-6 text-center">
+      				<img src="Images/flowermalefemale.png">
+      			</div>
+      			<div class="col-xs-6">
+      				<p>When a pollen grain moves from the anther (male part) of a flower to the stigma (female part), pollination happens. This is the first step in a process that produces seeds, fruits, and the next generation of plants. This can happen through self-pollination, wind and water pollination, or through the work of vectors that move pollen within the flower and from bloom to bloom.</p>
+      			</div>
+      		</div>  <!-- end #what-is-->
+      		
+      		<div class="row" id="who-are">
+      			<h2>Who are the pollinators?</h2>
+      			<div class="col-xs-6">
+      				<img class="grid-4x4" src="Images/thumbs/bumblebee_200x145.png">
+      				<img class="grid-4x4" src="Images/thumbs/bat_200x145.png">
+      				<img class="grid-4x4" src="Images/thumbs/hummingbirds_200x145.png">
+      				<img class="grid-4x4" src="Images/thumbs/monarch_200x145.png">
+      			</div>
+      			<div class="col-xs-6">
+      				<p style="clear:left">Birds, bats, butterflies, moths, flies, beetles, wasps, small mammals, and most importantly, bees are pollinators. They visit flowers to drink nectar or feed off of pollen and transport pollen grains as they move from spot to spot.</p>     
+      			</div>
+      		</div>
+      
+      	</div>  <!-- end .col-sm-8 -->
+      	
+      	<!-- Sidebar -->
+        <div class="col-sm-4 sidebar">
+          <h3 class="text-right">RELATED</h3>
+          <ul class="pull-right text-right">
+            <li>
+            	<a href="#">
+            		<button type="button" class="btn">???</button> 	
+            	</a>
+            </li>                	
+           	<li>
+            	<a href="#">
+            		<button type="button" class="btn">???</button> 	
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		<button type="button" class="btn">???</button> 	
+            	</a>
+            </li>
+				  </ul>
+        </div>  <!-- end sidebar-->
+      	
+      </div>  <!-- end .row -->
+
+       
+      <div class="row">
+      	<div class="col-xs-12">
+      		<h2>Why are pollinators important?</h2>
+      		<figure class="figure-sm pull-right" style="background-image: url(Images/pollinatedfoods.jpg); background-size: cover;">
+        <figcaption>Some of the many foods that rely on pollinators</figcaption>
+      </figure>
+      		<p>Somewhere between 75% and 95% [1] of all flowering plants on the earth need help with pollination – they need pollinators. Pollinators provide pollination services to over 180,000 different plant species and more than 1200 crops. That means that 1 out of every three bites of food you eat is there because of pollinators [2, 3]. If we want to talk dollars and cents, pollinators add 217 billion dollars to the global economy [4,5], and honey bees alone are responsible for between 1.2 and 5.4 billion dollars in agricultural productivity in the United States [6]. In addition to the food that we eat, pollinators support healthy ecosystems that clean the air, stabilize soils, protect from sever weather, and support other wildlife [7].</p>
+      	</div>  <!-- end .col-xs-12 -->
+      </div>  <!-- end .row -->
+      
+      <div class="row">
+      	<div class="col-xs-12">
+      		<h2>What do we know about their status?</h2>
+      		<p>Pollinator populations are changing. Many pollinator populations are in decline and this decline is attributed most severely to a loss in feeding and nesting habitats [8, 9]. Pollution, the misuse of chemicals, disease, and changes in climatic patterns are all contributing to shrinking and shifting pollinator populations. In some cases there isn’t enough data to gauge a response, and this is even more worrisome.</p>
+      	</div>  <!-- end .col-xs-12 -->
+      </div>  <!-- end .row -->
+      
+       <div id="how-you-can-help" class="row">
+      	<div class="col-sm-12">
+      		<h2 class="text-center">How can you help?</h2>
+      		<p>Pollinators need help, but we know how to help them! P2 scientists and research partners that have been studying pollinators for over three decades have been able to show that conservation techniques work. If everyone – home owners, local governments, national governments, and private industry – made the effort we could change the future for pollinators and secure our own.</p>
+      		<div class="row text-center">
+      			<a class="btn btn-link" href="donate">Donate  <i class="fa fa-arrow-right"></i></a>
+      		</div>	
+      		<ul class="fa-ul">
+      			<li><i class="fa-li fa fa-chevron-right"></i> 
+      				<h3>Habitat Area Counts</h3>
+      				
+      				<span class="img-lg" style="background-image: url(Images/gardenhabitat_crop400x200.png); background-size: cover;"></span>
+      				<p class="lead">Make room for pollinators on your land</p>
+      				<p>Adding natural habitat areas into farm systems works. Farms that are closer to natural habitat produce more crop yield [9] because they attract more pollinators [10]. Adding habitat to farms systems works too – farms that have turned a potion of their fields into green space have gained back more overall yield [11]. Home owners can help too! Home gardens can and do attract pollinators [12], and in many cases suburbs and cities have been shown to have more diverse pollinator communities than nearby wildlands [13,14]. Pollinators don’t seem to be phased by city life, as long as there are plots and patches of flowers they will be visited by hungry bees [15,16]. Pollinator gardening near community gardens also increases urban agricultural yields [17]. If you build it, they will come and help you get bigger and better crops too!</p>
+      			</li>
+      			<li><i class="fa-li fa fa-chevron-right"></i> 
+      				<h3>Plant the right plants</h3>
+      				<span class="img-lg" style="background-image: url(Images/NRCS1881_crop400x200.png); background-size: cover;"></span>
+      				<p class="lead">Research has shown that local native pollinators prefer local native plants <small>[18, 19]</small>.</p>
+      				<p> Fortunately P2 has complied planting guides and an APP that helps you select the right plant for the right spot [20]. Plant the right plants on highway rights of ways, farms, schools, home gardens, corporate landscapes and on public spaces. It really will matter for all of us.</p>
+      			</li>
+      			<li><i class="fa-li fa fa-chevron-right"></i> 
+      				<h3>Don't stop there!</h3>
+      				<span class="img-lg" style="background-image: url(Images/farmersmarket_crop400x230.png); background-size: cover;"></span>
+      				<ul>
+      					<li>Spread the word about the importance of pollinators.</li>
+      					<li>Support Farmers and Beekeepers by buying local honey and locally produced organic foods.</li>
+      					<li> Donate to support Researchers so that they can help fill in the blanks, the more we know the more we can help the bees! </li>
+      					<li>Join Pollinator Partnership as a member.</li>
+      				</ul>
+      			</li>
+      		</ul>
+      	</div>  <!-- end .col-sm-12 -->
+      </div>  <!-- end .row -->
+      
+    </div>  <!-- end .container.main -->
+   
+    <!-- Site Footer
+    ============================================================= -->
+    <footer class="footer">
+        <div class="row">
+           <div class="container">
+            	<div class="col-sm-4">
+            		<h4>Pollinator <span class="highlight">Partnership</span></h4>
+            		<p>A non-profit 501(c)3 organization-- the largest in the world dedicated exclusively to the protection and promotion of pollinators and their ecosystems.</p>
+            		<p><a href="PDFs/GRANTAWARDANDGIFTACCEPTANCEPOLICY0213.pdf">Our Giving Policy &nbsp;<i class="fa fa-angle-right"></i></a></p>
+            	</div>
+            	<div class="col-sm-4">
+            		<h4>Twitter <span class="highlight">Feeds</span></h4>
+            		<div class="twitter-widget" data-tweets-count="2"></div>
+            	</div>
+            	<div class="col-sm-4">
+            		<h4>Contact <span class="highlight">Us</span></h4>
+            		<p><a href="mailto:info@pollinator.org" target="_blank">info@pollinator.org</a></p>
+            		<p>423 Washington Street, 5th Floor<br>San Francisco, CA, 94111</p>
+            		<p>1(415)362-1137</p>
+            	</div>
+            </div> <!-- end .container -->	
+        </div> <!-- end .row -->
+        <div class="row well">
+        	<div class="container">
+            	<div class="col-sm-6">
+            		<p id="copyright">© 1996-2016 Pollinator Partnership</p>
+            	</div>
+           	<div class="col-sm-6">
+            		<ul class="nav" role="navigation">
+            			<li><a href="/">Home</a></li>
+            			<li><a href="about.htm">About</a></li>
+            			<li><a href="research_consulting.htm">Science & Consulting</a></li>
+            			<li><a href="donate.htm">Donate</a></li>
+            		</ul>
+            	</div> 
+            </div> <!-- end .container -->
+        </div> <!-- end .row -->
+    </footer>
+    
+   </div> <!-- end #wrapper --> 
+	</body>
+</html>	
+	   
+    <!-- SCRIPTS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="P2/js/init.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom-js.js"></script>
+    <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+    <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+    
+    <!-- Google Custom Search styles -->
+<style>
+	.google-search-container {
+		padding: 0;
+	}
+	table.gsc-search-box td {
+		padding: 0;
+	}
+	td.gsc-search-button {
+		padding: 0;
+		margin:0;
+	}
+	input.gsc-search-button,
+	input.gsc-search-button-v2 {
+		width: 26px;
+		height: 26px;
+		padding: 5px;
+		margin: 1px 0 0;
+		background-color: #292929;
+		border: 1px solid #292929;
+	}
+	input.gsc-search-button:hover,
+	input.gsc-search-button:focus,
+	input.gsc-search-button-v2:hover,
+	input.gsc-search-button-v2:focus {
+		background-color: #292929;
+		border: 1px solid #fff;
+	}
+	form.gsc-search-box {
+		margin-top: 3px;
+	}
+</style>
+
