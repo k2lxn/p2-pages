@@ -12,11 +12,15 @@ function removeBGTint(elem) {
 	elem.attr("style",style);
 }
 
+/* Variables */
+var navHeight = $("div#top-bar").height() + $("div.navbar-header").height(); 
+
+
+
 /* * * * * * * * *
  * ON  READY * * *
  * * * * * * * * */
 $(document).ready(function(){
-	var navHeight = $("div#top-bar").height() + $("div.navbar-header").height(); 
 	
 	// Push content up above footer
 	$('.main').css('padding-bottom', $('.footer').height()); 
@@ -26,7 +30,8 @@ $(document).ready(function(){
 		var target = $(this.hash);
 		target = target.length ? target : $('[name= ' + this.hash.slice(1) + ']');
 		if(target.length) {
-			var scrollTo = target.offset().top - (navHeight + 20);
+			var scrollTo = target.offset().top - 30;
+			scrollTo = $(window).width() <= 768 ? scrollTo : scrollTo - navHeight;
 			$('html, body').animate({
 				scrollTop: scrollTo
 			}, 1000);
@@ -83,9 +88,34 @@ setInterval(function() {
 }, 250);
 
 
+
 /* * * * * * * * *
  * SCROLL  * * * *
  * * * * * * * * */
  
- 
+// Hide/show toggle button on scroll
+var position, direction, previous;
+$(window).scroll(function() {
+
+if($(window).width() <= 768 ) {
+
+	if( $(this).scrollTop() >= position ) {
+  	direction = 'down';
+    if(direction !== previous) {
+    	$('nav.site-header').addClass('hide');
+      previous = direction;
+      navHeight = 0;
+     }
+   } else {
+     direction = 'up';
+     if(direction !== previous){
+     	$('nav.site-header').removeClass('hide');
+     	previous = direction;
+     	navHeight = $("div#top-bar").height() + $("div.navbar-header").height(); 
+     }
+   }
+	position = $(this).scrollTop(); 
+	
+}	
+}); 
  
