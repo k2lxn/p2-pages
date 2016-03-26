@@ -16,8 +16,23 @@ function removeBGTint(elem) {
  * ON  READY * * *
  * * * * * * * * */
 $(document).ready(function(){
+	var navHeight = $("div#top-bar").height() + $("div.navbar-header").height(); 
+	
 	// Push content up above footer
 	$('.main').css('padding-bottom', $('.footer').height()); 
+	
+	// Anchor Links
+	$('a[href^="#"]').click(function(){
+		var target = $(this.hash);
+		target = target.length ? target : $('[name= ' + this.hash.slice(1) + ']');
+		if(target.length) {
+			var scrollTo = target.offset().top - (navHeight + 20);
+			$('html, body').animate({
+				scrollTop: scrollTo
+			}, 1000);
+			return false;
+		}
+	});
 	
 	// Add hover function to thumbnails
 	if ($('.resources-thumb').length) {
@@ -66,3 +81,11 @@ setInterval(function() {
 		sizeInlineImages();
 	}
 }, 250);
+
+
+/* * * * * * * * *
+ * SCROLL  * * * *
+ * * * * * * * * */
+ 
+ 
+ 
