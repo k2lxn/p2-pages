@@ -35,7 +35,6 @@ $(document).ready(function(){
 			$('html, body').animate({
 				scrollTop: scrollTo
 			}, 1000);
-			return false;
 		}
 	});
 	
