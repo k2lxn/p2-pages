@@ -100,19 +100,24 @@ if($(window).width() <= 768 ) {
 
 	if( $(this).scrollTop() >= position ) {
   	direction = 'down';
-    if(direction !== previous) {
-    	$('nav.site-header').addClass('hide');
-      previous = direction;
-      navHeight = 0;
-     }
-   } else {
+  	if( $(this).scrollTop() > navHeight ) {
+    	if(direction !== previous) {
+    		$('nav.site-header').addClass('hide');
+      	previous = direction;
+      	navHeight = 0;
+     	}
+    }	else {
+    	$("nav.site-header").offset({top: -$(this).scrollTop()});
+    }
+  } else {
      direction = 'up';
+     $("nav.site-header").css("top", "0");
      if(direction !== previous){
      	$('nav.site-header').removeClass('hide');
      	previous = direction;
      	navHeight = $("div#top-bar").height() + $("div.navbar-header").height(); 
      }
-   }
+  }
 	position = $(this).scrollTop(); 
 	
 }	
