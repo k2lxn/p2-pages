@@ -519,12 +519,18 @@ a.btn-default:hover {
 	border-color: #fff;
 }
 
-.btn-link {
+.btn-link, .btn-download {
 	background-color: @brand-primary;
 	border: 2px solid @brand-primary; 
 	border-radius: 20px;
 	color: #fff;
+}
+.btn-link {
 	padding: 7.5px 22px;
+}
+.btn-download {
+	font-size: 110%;
+	padding: 2px 15px;
 }
 .btn-link.inverse {
 	background-color: #fff;
@@ -683,10 +689,15 @@ a.btn-link {
 	letter-spacing: 0.15em;
 }
 a.btn-link:hover,
-a.btn-link:focus {
+a.btn-link:focus,
+a.btn-download:hover, 
+a.btn-download:focus {
 	text-decoration: none;
 	color: #fff;
 	background-color: @brand-secondary;
+}
+a.btn-download:hover {
+	border-color: @brand-secondary;
 }
 a.btn-link.inverse:hover {
 	background-color: inherit;
