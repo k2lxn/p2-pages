@@ -311,6 +311,16 @@ ul.vert-center {   // For centering text within ul li
 }
 
 .main {
+	position: relative;
+	h2 {
+		border-bottom: 1px solid @gray-lighter;	
+		.heading-content {
+			width: fit-content;
+			padding-bottom: @padding-large-vertical;
+			border-bottom: 1px solid @brand-primary;
+			margin-bottom: -1px;
+		}
+	}
 	ul li {
 		margin-bottom: 10px;
 	}
@@ -390,18 +400,29 @@ img.pull-right {
 	margin-left: @grid-gutter-width / 2;
 }
 
-.main {
-	position: relative;
-	h2 {
-		border-bottom: 1px solid @gray-lighter;	
-		.heading-content {
-			width: fit-content;
-			padding-bottom: @padding-large-vertical;
-			border-bottom: 1px solid @brand-primary;
-			margin-bottom: -1px;
-		}
-	}
+.thumb-xs, .thumb-sm, .thumb-md, .thumb-lg {
+	display: inline-block;
+	background-size: cover;
+	border-radius: 2px;
 }
+.thumb-xs {   /* 1:1 ratio */
+	min-width: 10px;
+	min-height: 10px;
+	max-width: 100px;
+	max-height: 100px;
+}
+.thumb-sm {  /*  4:3 ratio */
+	min-width: 100px;
+	min-height: 75px;
+	max-width: 300px;
+	max-height: 225px;
+	padding: 5px;
+}
+.thumb-md {
+	min-width: 150px;
+	min-height: 112.5px;
+}
+
 
 .sidebar {
 	p {
