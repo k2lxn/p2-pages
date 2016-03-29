@@ -89,7 +89,27 @@
 			}
 			ul.fa-ul > li > a:hover {
 				text-decoration: underline;
-			}
+			} 
+			
+			.col-xs-4.sticker {
+      	min-width: 200px;
+      }
+      a.btn-download {
+      	margin-top: 10px;
+      }
+      #res-inst {
+      	padding-right: 0;
+      }
+      @media only screen and (max-width: 650px) {
+      	.col-xs-4.sticker {
+      		padding: 0 5px;
+      	}
+      	#res-inst, #res-fbshare {
+      		width: 100%;
+      		margin-bottom: 30px;
+      		padding: 0 15px;
+      	}
+      }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -380,67 +400,58 @@
           		</li>
 						</ul>
           </div> <!-- end sidebar -->
-      	</div>  <!-- end .row -->
-      	
-      	<style>
-      		.col-xs-4.sticker {
-      			min-width: 200px;
-      		}
-      		@media only screen and (max-width: 650px) {
-      			.col-xs-4.sticker {
-      				padding: 0 5px;
-      			}
-      		}
-      	</style>
+      	</div>  <!-- end .row --> 
       	
       	<div class="row">
-      		<div class="col-sm-10">
-      		<section>
-      			<h2 id="pw-resources">Resources</h2>
+      		<div class="col-sm-10 col-md-9">
+      		<section id="pw-resources">
+      			<h2>Resources</h2>
       			<p>Download and use any of the images below to spread the word on social media, event flyers, or your website.</p>
       			<div class="row">
-      				<div class="col-xs-4 sticker">
+      				<div class="col-xs-4 sticker text-center">
       					<a href="Images/NPW/2016/pw2016_stickerENG.jpg" target="_blank" alt="">
       						<img src="Images/NPW/2016/pw2016_stickerENG.jpg" alt="">
       					</a>	
       					<a class="btn btn-download hidden-xs" href="Images/NPW/2016/pw2016_stickerENG.jpg" download><i class="fa fa-download"></i></a>
       				</div>
-      				<div class="col-xs-4 sticker">
+      				<div class="col-xs-4 sticker text-center">
       					<a href="Images/NPW/2016/pw2016_stickerESP.jpg" target="_blank" alt="">
       						<img src="Images/NPW/2016/pw2016_stickerESP.jpg" alt="">
       					</a>	
       					<a class="btn btn-download hidden-xs" href="Images/NPW/2016/pw2016_stickerESP.jpg" download><i class="fa fa-download"></i></a>
       				</div>
-      				<div class="col-xs-4 sticker">
+      				<div class="col-xs-4 sticker text-center">
       					<a href="Images/NPW/2016/pw2016_stickerFRA.jpg" target="_blank" alt="">
       						<img src="Images/NPW/2016/pw2016_stickerFRA.jpg" alt="">
       					</a>	
       					<a class="btn btn-download hidden-xs" href="Images/NPW/2016/pw2016_stickerFRA.jpg" download><i class="fa fa-download"></i></a>
       				</div>
       			</div>
-      			
+      			<br>
       			<div class="row">
-      				<h4>851px x 315px (Facebook cover photo)</h4>
       				<div class="col-sm-11">
+      					<h4>851px x 315px (Facebook cover photo)</h4>
       					<a href="Images/NPW/2016/pw2016_FBbanner_851x315.jpg" target="_blank" alt="">
-      						<img src="Images/NPW/2016/pw2016_FBbanner_preview.jpg" alt="">
+      						<img src="Images/NPW/2016/pw2016_FBbanner_preview.jpg" style="width: 100%" alt="">
       					</a>
       				</div>
-      				<div class="col-sm-1 hidden-xs">
+      				<div class="col-sm-1 hidden-xs vert-center" style="right:0">
       					<a class="btn btn-download hidden-xs" href="Images/NPW/2016/pw2016_FBbanner_851x315.jpg" download><i class="fa fa-download"></i></a>
       				</div>
       			</div>
-      			
+      			<br>
       			<div class="row">
-      				<div class="col-xs-6">
+      				<div id="res-inst" class="col-xs-4 text-center">
+      					<h4>640px x 640px (Instagram)</h4>
       					<a href="Images/NPW/2016/pw2016_social_640x640.jpg" target="_blank" alt="">
       						<img src="Images/NPW/2016/pw2016_social_640x640.jpg" alt="">
       					</a>
       					<a class="btn btn-download hidden-xs" href="Images/NPW/2016/pw2016_social_640x640.jpg" download><i class="fa fa-download"></i></a>
       				</div>
-      				<div class="col-xs-6">
+      				<div id="res-fbshare" class="col-xs-8 text-center">
+      					<h4>1200px x 630px (Facebook shared photo)</h4>
       					<a href="Images/NPW/2016/pw2016_FBshared_1200x630.jpg" target="_blank" alt="">
-      						<img src="Images/NPW/2016/pw2016_FBshared_preview.jpg" alt="">
+      						<img src="Images/NPW/2016/pw2016_FBshared_preview.jpg" style="width:100%" alt="">
       					</a>
       					<a class="btn btn-download hidden-xs" href="Images/NPW/2016/pw2016_FBshared_1200x630.jpg" download><i class="fa fa-download"></i></a>
       				</div>
