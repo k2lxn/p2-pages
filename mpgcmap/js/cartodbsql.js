@@ -55,7 +55,7 @@ function search2() {
         map.fitBounds(bounds2)
         // restricts the map view to the given bounds
         //map.setMaxBounds(bounds2) (Enabling this will lock in search area to bounds
-    });
+            });
 
     sql.execute("SELECT * FROM mgpc_basemap_copy where city like '" + input_city +
             "'")

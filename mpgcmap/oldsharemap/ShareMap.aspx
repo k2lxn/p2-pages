@@ -131,7 +131,7 @@
     background-color:white!important;
 }
         #content	{
-            background:url(/images/logo/mgpc.png) top center no-repeat margin-bottom:50px; 
+            background:url(/images/logo/MPGC.png) top center no-repeat margin-bottom:50px;
             background-attachment:fixed; 
         
 }
@@ -205,7 +205,7 @@
                 </div>
         <!--End Search MPGC Database-->
         
-        <!-- Start Filter-Find By Org-->
+        <!-- Start Filter-Find BY PARTNER-->
             <div class="superrow" style="font-family: 'Dosis', sans-serif;" align="center">
                     <h2>Search Pollinators by Organization</h2>
                     <p>Click on the logo below to be taken to their landing page</p>
@@ -225,7 +225,7 @@
                 </div>
         <!--End of Second Half of the Page-->
         </div>
-    <!-- End Filter-Find By Org-->
+    <!-- End Filter-Find BY PARTNER-->
         <!--Form Header-->
         <div class="containerbt bottom">
         <div class="col-md-12">

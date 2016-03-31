@@ -14,7 +14,7 @@ function init(){
         attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
     }).addTo(map);
 
-    var layerUrl = 'https://massimpact.cartodb.com/api/v2/viz/029fb54e-ee43-11e5-8592-0e787de82d45/viz.json';
+    var layerUrl = 'https://massimpact.cartodb.com/api/v2/viz/305a2256-f2a5-11e5-9cc8-0e674067d321/viz.json';
 
     var sublayers = [];
 

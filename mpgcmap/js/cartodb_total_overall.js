@@ -1,6 +1,6 @@
 
 var sql = new cartodb.SQL({ user: 'massimpact' });
-sql.execute("select sum(rows) as total_rows from (select count(*) as rows from nwf_locations union all select count(*) as rows from mgpc_basemap union all select count(*) as rows from mpgc_submissions_1) as u")
+sql.execute("select sum(rows) as total_rows from (select count(*) as rows from nwf_locations union all select count(*) as rows from mpgc_submissions_final) as u")
     .done(function(data) {
         // do nothing
         for (var i = 0; i < data.total_rows; i++) {

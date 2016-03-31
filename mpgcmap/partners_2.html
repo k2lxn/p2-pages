@@ -12,52 +12,26 @@
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/mapcss.css" rel="stylesheet">
-    <link href="css/map_custom.css" rel="stylesheet">
 
     <!--CartoDB Mapping CSS and Scripts-->
 
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
-    <!--script src="js/cartodbsql_individual.js"></script-->
-    <link rel="stylesheet" type="text/css" href="css/map_custom.css"/>
+    <link rel="stylesheet" href="css/map_custom.css" />
+
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 
-    <script>
+    <!-- Custom CSS -->
+    <link href="css/bootstrap/3-col-portfolio.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-        var map;
-        function init(){
-            // initiate leaflet map
-            map = new L.Map('map', {
-                center: [40,-98],
-                zoom: 4
-            })
 
-            L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
-            }).addTo(map);
-
-            var layerUrl = 'https://massimpact.cartodb.com/api/v2/viz/305a2256-f2a5-11e5-9cc8-0e674067d321/viz.json';
-
-            // change the query for the first layer
-            var subLayerOptions = {
-                sql: "SELECT * FROM mpgc_submissions_final where referring_organization like 'American Public Garden Association'",
-                cartocss: "#mpgc_submissions_final {marker-fill: #ffce54; marker-width: 10; marker-line-color: white; marker-line-width: 0;}"
-            }
-
-            cartodb.createLayer(map, layerUrl,{
-                        scrollwheel:false,
-                        cartodb_logo:false,
-                    })
-                    .addTo(map)
-                    .on('done', function(layer) {
-                        layer.getSubLayer(0).set(subLayerOptions);
-                    }).on('error', function() {
-                //log the error
-            });
-        }
-    </script>
     <!-- Page styles -->
     <style>
+        .page-header{
+        margin-top:-110px!important}
+
         h3 {
             margin-top: 30px;
         }
@@ -90,81 +64,6 @@
             color: #f6bb42;
         }
 
-        /*CUSTOM MAP CSS*/
-
-        .form-control{
-            height:39px!important;
-        }
-
-        .input-group{
-            margin:10px;
-
-        }
-
-        h3.center{
-            margin-top:0px!important;
-            padding-top:5px!important;
-            background-color:#ffce54;
-            text-align:center;
-            padding-bottom:10px;
-            padding-top:10px!important;
-            border-top-left-radius:10px;
-            border-top-right-radius:10px;
-        }
-        div#results{
-            background: #FFF;
-        }
-        div#form-group h4{
-            margin:5px;
-
-
-        }
-
-        div#registerlist{
-            background-color: #d2eaef;
-            opacity: 0.8;
-            position: relative;
-            top: 10px;
-            left: 50px;
-            width: auto;
-            height: auto;
-            padding: 10px;
-            display: block;
-            z-index: 9000;
-            margin-right:800px;
-
-        }
-        div#registerlist{
-            background: #FFF;
-        }
-
-        div#registerlist2{
-            background-color: #d2eaef;
-            opacity: 0.8;
-            position: relative;
-            top: 10px;
-            left: 50px;
-            width: auto;
-            height: auto;
-            padding: 10px;
-            display: block;
-            z-index: 9000;
-            margin-right:800px;
-
-        }
-        #questions{
-            margin-bottom:20px;
-        }
-        
-        #searchbox{
-            position: absolute;
-        }
-        #map{
-        width:95%;
-        margin-left:2.5%}
-
-        
-
 
         /*HOVER ON THUMBNAILS*/
 
@@ -183,7 +82,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body onload="init()">
+<body>
 <div id="wrapper">
 
     <!-- Site Navigation
@@ -366,20 +265,75 @@
     </nav>
 
 
-
     <!-- Main page content -->
-    <!-- START MAP SECTION-->
+    <!--START NEW MAP-->
 
     <div class="row">
+        <!-- HIDE SMALL SEARCH-->
         <div class="col-lg-3 col-md-3 col-sm-12" id="searchbox">
-            <h3 class="center">American Public Gardens Association</h3>
-            <span id="countertotal"></span>
+            <h3 class="center">Search for Your Site</h3>
+            <span id="counter_overall"></span>
+            <div class='col-sm-12' id="questions">
+                <div class='input-group'>
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="button" type="button" onclick="search()">Search</button>
+                          </span>
+                    <input label="hello" type="text" class="form-control" name="search_organization" placeholder="Search by Organization" value="" id="search_organization" size="10" />
 
+                </div>
+                <!--div id="locationField">
+                    <input id="autocomplete" placeholder="Enter your address"
+                           onFocus="geolocate()" type="text"></input>
+                </div>-->
+
+
+                <div id="locationField" class='input-group'>
+                          <span  class="input-group-btn">
+                              <button class="btn btn-default" type="button" type="button" onclick="search2()">Search</button>
+                          </span>
+                    <input label="hello" id="autocomplete" type="text" class="form-control" name="search_organization" placeholder="Search by Address/City" value="" size="10" />
+                </div>
+                <div class='input-group'>
+                              <span class="input-group-btn">
+                                  <button class="btn btn-default" type="button" type="button" onclick="search3()">Search</button>
+                              </span>
+                    <input label="hello" type="text" class="form-control" name="search_email" placeholder="Search by Username" value="" id="search_email" size="10" />
+                </div>
+            </div>
         </div>
         <div id="map"></div>
     </div>
 
+    <!--END NEW MAP-->
 
+    <!-- START FILTER DROPDOWN
+
+    <div class="row" id="tools">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Search Filters</h3>
+                    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+                </div>
+                <div class="panel-body">
+                    <div id="company_filter">
+                        <h5>Member Organizations</h5>
+                        <button>Organization 1</button>
+                        <button>Organization 2</button>
+                        <button>Organization 3</button>
+                    </div>
+                    <hr>
+                    <div id="type_filter">
+                        <h5>Type of Pollinator</h5>
+                        <button>Organization 1</button>
+                        <button>Organization 2</button>
+                        <button>Organization 3</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>-->
     <!--START PARTNER SCROLLER-->
     <div class="container-fluid">
         <div class="row" id="sponsor_counter">
@@ -418,26 +372,13 @@
             <div class="col-md-12 overflow" id="header_cover"></div>
         </div>
     </div>
-
-
     <!-- Start of Standard Page Content-->
 
     <div class="container main">
 
         <div class="row">
             <div class="col-md-8">
-                <h2><div class="heading-content">American Public Gardens Association<span id="secondary_title">MPGC PARTNER</span></div></h2>
-                <p class="lead">American Public Gardens Association serves public gardens and advances them as leaders, advocates, and innovators.
-                </p>
-                <!--<button class="btn btn-default" type="button" type="button" onclick="search2()">Show Pollinator List</button>-->
-                <div class="row" style="margin-top:50px">
-                    <div id="list" class="col-md-12">
-
-                    </div>
-
-
-                </div>
-                <!--START DATA TABLE-->
+                <h2><div class="heading-content">MPGC PARTNERS<span id="secondary_title">Powered by S.H.A.R.E</span></div></h2>
 
                 <div class="row hidden">
                     <!--GOOGLE RESULTS TABLE-->
@@ -472,17 +413,139 @@
 
                 <!--END DATA TABLE-->
 
+
+                <div class="row" id="partners_section">
+                <div class="col-md-4 portfolio-item">
+                    <a>
+                        <img class="img-responsive" src="logo/kab.png" alt="">
+                    </a>
+                    <h3 id="textarea">
+                        <a href="http://www.kab.org/">Keep America Beautiful<p class="counterarea" id="counter"></p></a>
+                    </h3>
+                    <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                </div>
+                <div class="col-md-4 portfolio-item">
+                    <a>
+                        <img class="img-responsive" src="logo/kidsgardening.png" alt="">
+                    </a>
+                    <h3>
+                        <a href="http://www.kidsgardening.org/">Kids Gardening<p class="counterarea" id="counter1"></p></a>
+                    </h3>
+                    <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                </div>
+                <div class="col-md-4 portfolio-item">
+                    <a>
+                        <img class="img-responsive" src="logo/lbj.png" alt="">
+                    </a>
+                    <h3>
+                        <a href="http://www.wildflower.org/"> LBJ Wildflower Center<p class="counterarea" id="counter2"></p></a>
+                    </h3>
+                    <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                </div>
+
+            </div>
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a>
+                            <img class="img-responsive" src="logo/monarch.png" alt="">
+                        </a>
+                        <h3 id="textarea">
+                            <a href="www.monarchwatch.org/">Monarch Watch<p class="counterarea" id="counter"></p></a>
+                        </h3>
+                        <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a>
+                            <img class="img-responsive" src="logo/monarchjoint.png" alt="">
+                        </a>
+                        <h3>
+                            <a href="http://www.monarchjointventure.org/">Monarch Joint Venture<p class="counterarea" id="counter1"></p></a>
+                        </h3>
+                        <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a>
+                            <img class="img-responsive" src="logo/neef.png" alt="">
+                        </a>
+                        <h3>
+                            <a href="http://www.neefusa.org">NEEF<p class="counterarea" id="counter2"></p></a>
+                        </h3>
+                        <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a>
+                            <img class="img-responsive" src="logo/nfws.png" alt="">
+                        </a>
+                        <h3 id="textarea">
+                            <a href="http://www.fws.gov/">US Fish and Wildlife Service<p class="counterarea" id="counter"></p></a>
+                        </h3>
+                        <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a>
+                            <img class="img-responsive" src="logo/ngc.png" alt="">
+                        </a>
+                        <h3>
+                            <a href="http://www.gardenclub.org/">National Garden Clubs<p class="counterarea" id="counter1"></p></a>
+                        </h3>
+                        <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a>
+                            <img class="img-responsive" src="logo/nrpga.png" alt="">
+                        </a>
+                        <h3>
+                            <a href="www.nrpa.org//">National Recreation and Parks Association<p class="counterarea" id="counter2"></p></a>
+                        </h3>
+                        <!--<button id="maplink" class="btn btn-success"><a>All Sites</a></button-->
+
+                    </div>
+
+                </div>
+                <!--Start Pagnation-->
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <ul class="pagination">
+                            <li>
+                                <a href="partners.html#partners_section">&laquo;</a>
+                            </li>
+                            <li>
+                                <a href="partners.html#partners_section">1</a>
+                            </li>
+                            <li class="active">
+                                <a href="partners_2.html#partners_section">2</a>
+                            </li>
+                            <li>
+                                <a href="partners_3.html#partners_section">3</a>
+                            </li>
+                            <li>
+                                <a href="partners_3.html#partners_section">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div> <!-- end .main .col-sm-8 -->
 
             <!-- Sidebar -->
             <div class="col-sm-4" id="sidebar_right">
-                <img id="logo_main" src="logo/apga.png">
+                <img id="logo_main" src="logo/mpgc.png">
                 <h3>Ways to Explore the Map</h3>
                 <div>
-                    <a role="button" class="btn btn_1 btn-1 btn-sep icon-list" href="templates_hold/searchv2.html">List Search</a>
+                    <a role="button" class="btn btn_1 btn-1 btn-sep icon-list" href="search.html">List Search</a>
                     <a role="button" class="btn btn_1 btn-2 btn-sep icon-building" href="partners.html">BY PARTNER</a>
-                    <a role="button" class="btn btn_1 btn-3 btn-sep icon-search" href="templates_hold/searchv2.html">By City</a>
-                    <a role="button" class="btn btn_1 btn-4 btn-sep icon-email" href="templates_hold/searchv2.html">By Email</a>
+                    <a role="button" class="btn btn_1 btn-3 btn-sep icon-search" href="search.html">By City</a>
+                    <a role="button" class="btn btn_1 btn-4 btn-sep icon-email" href="search.html">By Username</a>
                 </div>
             </div>  <!-- end .col-sm-4.sidebar -->
 
@@ -521,10 +584,10 @@
                 </div>
                 <div class="col-sm-6">
                     <ul class="nav" role="navigation">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="about.htm">About</a></li>
-                        <li><a href="research_consulting.htm">Science & Consulting</a></li>
-                        <li><a href="donate.htm">Donate</a></li>
+                        <li><a href="index.html">Map</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="register">Register</a></li>
                     </ul>
                 </div>
             </div> <!-- end .container -->
@@ -542,47 +605,18 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+<!--CARTODB SCRIPT-->
 <script src="js/app.js"></script>
+<script type="text/javascript" src="js/googleauto.js"></script>
 
-<script>
-    var sql = new cartodb.SQL({ user: 'massimpact' });
-    sql.execute("SELECT * FROM mgpc_basemap_copy where referring_organization like 'American Public Garden Association'")
-            .done(function(data) {
-                // do nothing
-                for (var i = 0; i < data.total_rows; i++) {
-                    $('#list').append("<div class='city_result'><h3>" +
-                            data.rows[i].organization_name +
-                            "<p id='website_results'>"+
-                            data.rows[i].url +
-                            "</p></h3>" +
-                            data.rows[i].city +
-                            " "+
-                            data.rows[i].organization_description +
-                            "</h5></span>"+
-                            "</div></h5>");
-                }
-            })
-            .error(function(errors) {
-                // do nothing
-            })
-</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQav82qqHPZc7A7C2Ui8YjWwaHXJoImEk&libraries=places&callback=initAutocomplete"
+        async defer></script>
 
-<script>
-    var sql = new cartodb.SQL({ user: 'massimpact' });
-    sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'American Public Garden Association'")
-            .done(function(data) {
-                // do nothing
-                for (var i = 0; i < data.total_rows; i++) {
-                    $('#countertotal').append("<div class='large_font'>" +
-                            data.rows[i].count +
-                            "</div><h2 class='center_font'>Sites Registered</h2>");
-                }
+<script src="js/cartodbsql_search_final.js"></script>
+<script type="text/javascript" src="js/cartodb_total_overall.js"></script>
 
-            })
-            .error(function(errors) {
-                // do nothing
-            })
-</script>
 
 </body>
 </html>
@@ -590,7 +624,6 @@
 <!-- SCRIPTS -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="P2/js/init.js"></script>
 <script src="js/bootstrap.js"></script>

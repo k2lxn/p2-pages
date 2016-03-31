@@ -85,7 +85,7 @@ function search2() {
 
 function search3() {
 
-    input_username = $("#search_email").val();
+    input_username = $( "#search_email").val();
     console.log(input_username);
 
     var sql = new cartodb.SQL({ user: 'massimpact' });

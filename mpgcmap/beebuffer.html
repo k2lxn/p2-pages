@@ -40,8 +40,8 @@
 
             // change the query for the first layer
             var subLayerOptions = {
-                sql: "SELECT * FROM mgpc_basemap where referring_organization like 'The Bee Buffer Project'",
-                cartocss: "#mgpc_basemap {marker-fill: #ffce54; marker-width: 10; marker-line-color: white; marker-line-width: 0;}"
+                sql: "SELECT * FROM mpgc_submissions_final where referring_organization like 'The Bee Buffer Project'",
+                cartocss: "#mpgc_submissions_final {marker-fill: #ffce54; marker-width: 10; marker-line-color: white; marker-line-width: 0;}"
             }
 
             cartodb.createLayer(map, layerUrl,{
@@ -358,7 +358,7 @@
                     </li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="templates_hold/searchv2.html">Search</a></li>
-                    <li><a href="partnersv2.html">Partners</a></li>
+                    <li><a href="partners.html">Partners</a></li>
                     <li><a href="register.html">Register</a></li>
                 </ul>
             </div>
@@ -381,40 +381,39 @@
 
 
     <!--START PARTNER SCROLLER-->
+    <!--START PARTNER SCROLLER-->
     <div class="container-fluid">
         <div class="row" id="sponsor_counter">
             <div class="col-md-12" id="sponsor_logo_horizontal">
                 <div class="responsive col-sm-12 col-xs-12">
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/aib.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/american.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/americanhort.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/apga.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/asta.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/beebuffer.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/bff.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/cpl.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/epa.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/kab.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/kidsgardening.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/lbj.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/monarch.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/monarchjoint.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/mpgc.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/mpgc_logo.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/neef.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/NFWS.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/ngc.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/nrpga.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/nwf.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/pollinator.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/nwf.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/saf.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/smithsonian.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/suzuki.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/usda.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/usfs.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/whc.png"></a></div>
-                    <div id="logo_vertical"><a href="/partners/pollinator"><img src="logo/wildones.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.americainbloom.org/"><img src="logo/aib.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.ahs.org/"><img src="logo/american.png"></a></div>
+                    <div id="logo_vertical"><a href="http://americanhort.org/"><img src="logo/americanhort.png"></a></div>
+                    <div id="logo_vertical"><a href="https://publicgardens.org/"><img src="logo/apga.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.amseed.org/"><img src="logo/asta.png"></a></div>
+                    <div id="logo_vertical"><a href="http://beebuffer.com/"><img src="logo/beebuffer.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.pollinator.org/bff"><img src="logo/bff.png"></a></div>
+                    <div id="logo_vertical"><a href="http://captainplanetfoundation.org/"><img src="logo/cpl.png"></a></div>
+                    <div id="logo_vertical"><a href="http://epa.gov"><img src="logo/epa.png"></a></div>
+                    <div id="logo_vertical"><a href="https://www.kab.org/"><img src="logo/kab.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.kidsgardening.org/"><img src="logo/kidsgardening.png"></a></div>
+                    <div id="logo_vertical"><a href="https://www.wildflower.org/"><img src="logo/lbj.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.monarchwatch.org/"><img src="logo/monarch.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.monarchjointventure.org/"><img src="logo/monarchjoint.png"></a></div>
+                    <div id="logo_vertical"><a href="http://millionpollinatorgardens.org"/><img src="logo/mpgc.png"></a></div>
+                    <div id="logo_vertical"><a href="https://www.neefusa.org/"><img src="logo/neef.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.fws.gov/"><img src="logo/NFWS.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.gardenclub.org/"><img src="logo/ngc.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.nrpa.org/"><img src="logo/nrpga.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.nwf.org/"><img src="logo/nwf.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.pollinator.org/"><img src="logo/pollinator.png"></a></div>
+                    <div id="logo_vertical"><a href="https://safnow.org/"><img src="logo/saf.png"></a></div>
+                    <div id="logo_vertical"><a href="http://naturalhistory.si.edu/"><img src="logo/smithsonian.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.davidsuzuki.org/"><img src="logo/suzuki.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.usda.gov/wps/portal/usda/usdahome"><img src="logo/usda.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.fs.fed.us/"><img src="logo/usfs.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.wildlifehc.org/"><img src="logo/whc.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.wildones.org/"><img src="logo/wildones.png"></a></div>
                 </div>
             </div>
             <div class="col-md-12 overflow" id="header_cover"></div>
@@ -429,7 +428,7 @@
 
         <div class="row">
             <div class="col-md-8">
-                <h2><div class="heading-content">US Bee Buffer Project<span id="secondary_title">MGPC PARTNER</span></div></h2>
+                <h2><div class="heading-content">US Bee Buffer Project<span id="secondary_title">MPGC PARTNER</span></div></h2>
                 <p class="lead">The U.S. Bee Buffer Project works with farmers, ranchers and orchardists to establish foraging habitat for honey bees on small plots of land in agricultural areas.
 
                 </p>
@@ -483,10 +482,10 @@
                 <img id="logo_main" src="logo/beebuffer.png">
                 <h3>Ways to Explore the Map</h3>
                 <div>
-                    <a role="button" class="btn btn_1 btn-1 btn-sep icon-list" href="searchv2.html">List Search</a>
-                    <a role="button" class="btn btn_1 btn-2 btn-sep icon-building" href="partnersv2.html">By Org</a>
-                    <a role="button" class="btn btn_1 btn-3 btn-sep icon-search" href="searchv2.html">By City</a>
-                    <a role="button" class="btn btn_1 btn-4 btn-sep icon-email" href="searchv2.html">By Email</a>
+                    <a role="button" class="btn btn_1 btn-1 btn-sep icon-list" href="search.html">List Search</a>
+                    <a role="button" class="btn btn_1 btn-2 btn-sep icon-building" href="partners.html">BY PARTNER</a>
+                    <a role="button" class="btn btn_1 btn-3 btn-sep icon-search" href="search.html">By City</a>
+                    <a role="button" class="btn btn_1 btn-4 btn-sep icon-email" href="search.html">By Email</a>
                 </div>
             </div>  <!-- end .col-sm-4.sidebar -->
 

@@ -19,14 +19,14 @@ function search() {
     console.log(input_org);
 
     var sql = new cartodb.SQL({ user: 'massimpact' });
-    sql.getBounds("SELECT * FROM mpgc_submissions_final where organization_name ilike '" + input_org +
+    sql.getBounds("SELECT * FROM mpgc_submissions_final where organization_name like '" + input_org +
         "'").done(function(bounds) {
         map.fitBounds(bounds)
         // restricts the map view to the given bounds
         map.setMaxBounds(bounds)
     });
 
-    sql.execute("SELECT * FROM mpgc_submissions_final where organization_name ilike '" + input_org + "'")
+    sql.execute("SELECT * FROM mpgc_submissions_final where organization_name like '" + input_org + "'")
         .done(function(data) {
             // do nothing
             for (var i = 0; i < data.total_rows; i++) {
@@ -49,13 +49,9 @@ function search2() {
     input_city = $( "#locality").val();
     console.log(input_city);
 
-    input_state = $( "#administrative_area_level_1").val();
-    console.log(input_state);
-
     var sql = new cartodb.SQL({ user: 'massimpact' });
-
-
-    sql.getBounds("SELECT * FROM mpgc_submissions_final WHERE ((CITY iLIKE '" + input_city + "')) AND ((state_province iLIKE '" + input_state + "'))").done(function(bounds2) {
+    sql.getBounds("SELECT * FROM mpgc_submissions_final where city ilike '" + input_city +
+        "'").done(function(bounds2) {
         map.fitBounds(bounds2)
         // restricts the map view to the given bounds
         //map.setMaxBounds(bounds2) (Enabling this will lock in search area to bounds
@@ -85,18 +81,18 @@ function search2() {
 
 function search3() {
 
-    input_username = $("#search_email").val();
+    input_username = $( "#username").val();
     console.log(input_username);
 
     var sql = new cartodb.SQL({ user: 'massimpact' });
-    sql.getBounds("SELECT * FROM mpgc_submissions_final where username ilike '" + input_username +
+    sql.getBounds("SELECT * FROM mpgc_submissions_final where city ilike '" + input_city +
         "'").done(function(bounds2) {
         map.fitBounds(bounds2)
         // restricts the map view to the given bounds
         //map.setMaxBounds(bounds2) (Enabling this will lock in search area to bounds
     });
 
-    sql.execute("SELECT * FROM mpgc_submissions_final where username like '" + input_username +
+    sql.execute("SELECT * FROM mpgc_submissions_final where city like '" + input_city +
             "'")
         .done(function(data) {
             // do nothing

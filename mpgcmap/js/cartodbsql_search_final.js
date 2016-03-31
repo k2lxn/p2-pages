@@ -118,7 +118,7 @@ function search3() {
         })
 }
 // CartoDB SQL API Call
-$.getJSON("https://massimpact.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM mpgc_basemap", function(data) {
+$.getJSON("https://massimpact.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM mpgc_submissions_final", function(data) {
     var geojson = L.geoJson(data, {
         onEachFeature: function (feature, layer) {
             // Add a popup or any other layer-related action

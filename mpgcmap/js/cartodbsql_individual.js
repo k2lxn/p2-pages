@@ -15,8 +15,8 @@ function init(){
 
     // change the query for the first layer
     var subLayerOptions = {
-        sql: "SELECT * FROM mgpc_basemap where referring_organization like 'American Public Garden Association'",
-        cartocss: "#mgpc_basemap {marker-fill: #109DCD; marker-width: 5; marker-line-color: white; marker-line-width: 0;}"
+        sql: "SELECT * FROM mpgc_submissions_final where referring_organization like 'American Public Garden Association'",
+        cartocss: "#mpgc_submissions_final {marker-fill: #109DCD; marker-width: 5; marker-line-color: white; marker-line-width: 0;}"
     }
 
     cartodb.createLayer(map, layerUrl,{
