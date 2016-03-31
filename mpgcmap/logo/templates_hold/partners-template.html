@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MPGC Participating Organizations</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/bootstrap/3-col-portfolio.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--Style for Page-->
+    <style>
+        html, body, #container {
+            height: 100%;
+            width: 100%;
+            overflow: show;
+            font-family:'Roboto Slab',sans-serif;
+        }
+
+        body {
+            padding-top: 50px;
+        }
+
+        #map {
+            width: auto;
+            height: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.55);
+        }
+
+        #sidebar {
+            width: 500px;
+            height: 100%;
+            max-width: 100%;
+            float: left;
+            -webkit-transition: all 0.25s ease-out;
+            -moz-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+        }
+
+        .navbar .navbar-brand {
+            font-weight: bold;
+            font-size: 25px;
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background-image: linear-gradient(to bottom, #2b6988 0%, #1f4b61 100%);
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #fff;
+        }
+
+        .nav-pills > .active > a,
+        .nav-pills > .active > a:hover,.nav-pills > li > a:hover {
+            text-decoration: none;
+            font-weight: bold;
+            border-radius:0px;
+            border-bottom-width: 4px;
+            border-bottom-style: solid;
+            border-bottom-color: #FF6600;
+            color: #000 !important;
+            background-color: transparent !important;
+            margin-left:30px;
+        }
+
+        /* ADDED CSS - UNIQUE TO PAGE */
+
+        #maplink{
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            color:white;
+        }
+
+        #maplink a{
+            color:white;
+        }
+
+        .counterarea {
+            font-size:.5em!important;
+            display: inline;
+            padding:5px;
+            background-color:#FF6600;
+            color:white;
+            border-radius:20px;
+            margin-left:10px;
+            margin-top:-10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-icon-container">
+                <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
+                <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-line-chart"></i></a>
+            </div>
+            <a class="navbar-brand" href="#">Million Pollinator Garden Challenge</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group has-feedback">
+                </div>
+            </form>
+            <ul class="nav navbar-nav">
+                <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;About</a></li>
+                <li class="dropdown">
+                    <a id="toolsDrop" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-globe white"></i>&nbsp;&nbsp;Explore the Map <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/map/locationsearch.html" data-toggle="collapse" data-target=".navbar-collapse.in" id="full-extent-btn"><i class="fa fa-search"></i>&nbsp;&nbsp;Search By Location</a></li>
+                        <li><a href="/map/dataanalysis.html" data-toggle="collapse" data-target=".navbar-collapse.in" id="legend-btn"><i class="fa fa-line-chart "></i>&nbsp;&nbsp;Data Analysis</a></li>
+                        <li><a href="/map/partners.html" data-toggle="collapse" data-target=".navbar-collapse.in" id="legend-btn"><i class="fa fa-building"></i>&nbsp;&nbsp;Search by Partner</a></li>
+                        <li class="divider hidden-xs"></li>
+                        <li><a class="typeform-share link" href="https://massimpacttechnology.typeform.com/to/m5r8vW" data-toggle="collapse" data-target=".navbar-collapse.in" id="login-btn" data-mode="1" target="_blank"><i class="fa fa-user"></i>&nbsp;&nbsp;Register</a>
+                            <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="downloadDrop" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-cloud-download white"></i>&nbsp;&nbsp;Additional Resources <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="data/boroughs.geojson" download="boroughs.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;MPGC Homepage</a></li>
+                        <li><a href="data/subways.geojson" download="subways.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp; Image Library</a></li>
+                        <li><a href="data/DOITT_THEATER_01_13SEPT2010.geojson" download="theaters.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Video Library</a></li>
+                        <li><a href="data/DOITT_MUSEUM_01_13SEPT2010.geojson" download="museums.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Window Box Project</a></li>
+                    </ul>
+                </li>
+                <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="list-btn"><i class="fa fa-list white"></i>&nbsp;&nbsp;Show/Hide Data</a></li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">MPGC Participating Organizations
+                <small id="countertotal">&nbsp;Pollinators Registered</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3 id="textarea">
+                <a href="http://www.wildlifehc.org/">Monarch Joint Venture<p class="counterarea" id="counter"></p></a>
+            </h3>
+            <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+            <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="http://www.wildlifehc.org/">Bee Friendly Farming<p class="counterarea" id="counter1"></p></a>
+            </h3>
+            <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+            <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="http://www.wildlifehc.org/">David Suzuki Foundation<p class="counterarea" id="counter2"></p></a>
+            </h3>
+            <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+            <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="http://www.wildlifehc.org/">National Wildlife Federation<p class="counterarea" id="counter3"></a>
+            </h3>
+            <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+            <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="http://www.wildlifehc.org/">American Public Gardens Association<p class="counterarea" id="counter4"></a>
+            </h3>
+            <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+            <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="http://www.wildlifehc.org/">Bee Buffer<p class="counterarea" id="counter5"></a>
+            </h3>
+            <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+            <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+        </div>
+    </div>
+
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="http://www.wildlifehc.org/">Pollinator Partnership<p class="counterarea" id="counter6"></a>
+            </h3>
+            <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+            <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="http://www.wildlifehc.org/">Pollinator Partnership<p class="counterarea" id="counter7"></a>
+            </h3>
+            <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+            <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+        </div>
+        <<div class="col-md-4 portfolio-item">
+        <a href="#">
+            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+        </a>
+        <h3>
+            <a href="http://www.wildlifehc.org/">Pollinator Partnership<p class="counterarea" id="counter8"></a>
+        </h3>
+        <p>We partner with corporations, their employees, fellow conservation organizations, government agencies and community members to recognize and encourage wildlife habitat projects for conservation and education.</p>
+        <button id="maplink" class="btn btn-success"><a href="/map/orgs/whc.html">See Their Pollinators</a></button>
+
+    </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js" type="text/javascript"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--Counter Script from CartoDB-->
+    <script>
+        var sql = new cartodb.SQL({ user: 'massimpact' });
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter1').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter2').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter3').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter4').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter5').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter6').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter7').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#counter8').append("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+        sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'Monarch Joint Venture'")
+                .done(function(data) {
+                    // do nothing
+                    for (var i = 0; i < data.total_rows; i++) {
+                        $('#countertotal').prepend("<span>" +
+                                data.rows[i].count +
+                                "</span>");
+                    }
+                })
+                .error(function(errors) {
+                    // do nothing
+                })
+    </script>
+
+</body>
+
+</html>

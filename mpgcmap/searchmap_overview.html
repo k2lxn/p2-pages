@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>MPGC Map | Pollinator Partnership</title>
+
+	<!-- Bootstrap -->
+	<link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="css/mapcss.css" rel="stylesheet">
+
+	<!--CartoDB Mapping CSS and Scripts-->
+
+	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+	<!--Stylesheet for Hover 3D-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style_hover.css">
+
+
+	<!-- Page styles -->
+	<style>
+		h3 {
+			margin-top: 30px;
+		}
+		small {
+			margin-bottom: 20px;
+		}
+
+		.container-tall{
+			margin-top:50px;
+		}
+
+		.guide-thumb {
+			max-width: 90%;
+			text-align: center;
+		}
+		.guide-thumb > figcaption {
+			font-size: 18px;
+			color: #CCC;
+			background: #333;
+			text-align: center;
+			padding: 10px 0;
+			margin: 15px 0 50px;
+		}
+		.guide-thumb > figcaption > a {
+			color: inherit;
+		}
+		.guide-thumb > figcaption > a:hover,
+		.guide-thumb > figcaption > a:focus {
+			text-decoration: none;
+			color: #f6bb42;
+		}
+
+		/*CUSTOM MAP CSS*/
+
+		#map {
+			width: 100%;
+			height: 500px;
+			padding: 0;
+			margin: 0;
+			margin-top:-20px!important;
+
+		}
+		#searchbox{
+			background-color:#fafafa;
+			opacity: 0.9;
+			position: relative;
+			top: 30px;
+			left: 100px;
+			width: auto;
+			height: auto;
+			padding: 0px;
+			display: inline-block;
+			z-index: 9000;
+			max-width:400px;
+			border-radius:10px;
+
+		}
+		.form-control{
+			height:39px!important;
+		}
+
+		.input-group{
+			margin:10px;
+
+		}
+
+		h3.center{
+			margin-top:0px!important;
+			padding-top:5px!important;
+			background-color:#ffce54;
+			text-align:center;
+			padding-bottom:10px;
+			padding-top:10px!important;
+			border-top-left-radius:10px;
+			border-top-right-radius:10px;
+		}
+		div#results{
+			background: #FFF;
+		}
+		div#form-group h4{
+			margin:5px;
+
+
+		}
+
+		div#registerlist{
+			background-color: #d2eaef;
+			opacity: 0.8;
+			position: relative;
+			top: 10px;
+			left: 50px;
+			width: auto;
+			height: auto;
+			padding: 10px;
+			display: block;
+			z-index: 9000;
+			margin-right:800px;
+
+		}
+		div#registerlist{
+			background: #FFF;
+		}
+
+		div#registerlist2{
+			background-color: #d2eaef;
+			opacity: 0.8;
+			position: relative;
+			top: 10px;
+			left: 50px;
+			width: auto;
+			height: auto;
+			padding: 10px;
+			display: block;
+			z-index: 9000;
+			margin-right:800px;
+
+		}
+		#questions{
+			margin-bottom:20px;
+		}
+
+		/*CSS FOR THE DROPDOWN PANEL*/
+		.panel-heading span {
+			margin-top: -20px;
+			font-size: 15px;
+		}
+		.row#tools{
+			padding-top: 20px!important;
+			padding: 0 10px;
+			background: rgba(255,206,84,0.8);
+		}
+		.clickable {
+			cursor: pointer;
+		}
+
+		.single-item{
+			display:inline;
+		}
+		#logo_main{
+			height:150px;
+			margin-bottom:20px;
+		}
+		#counter1{
+			font-size:40px;
+		}
+		#counter_container{
+			text-align:center;
+		}
+		h1#counter1{
+			line-height:5px;;
+		}
+		#company_section{
+			margin-top:40px;
+		}
+		.panel-body button {
+			padding: 5px;
+			margin-right: 10px;
+		}
+
+		/*CSS FOR ICON/INPUT BOX*/
+		#icon_area{
+			padding-top: 50px;
+			padding-bottom: 100px;
+			width: 100%;
+			padding-right:0;
+		}
+
+		#icon-wrapper{
+			width:100%;
+			float:left;
+			height:300px;
+			margin-left:auto;
+			maring-right:auto;
+			display:block;
+
+		}
+
+		.icons {
+			width:25%;
+			float:left;
+			position:relative;
+		}
+		.icons2 {
+			width:25%;
+			float:left;
+			position:relative;
+			margin-left:25%;
+		}
+		.icons3 {
+			width:25%;
+			float:left;
+			position:relative;
+			margin-left:50%;
+		}
+		.icons4 {
+			width:25%;
+			float:left;
+			position:relative;
+			margin-left:75%;
+		}
+
+		.icon-slide-container{
+			height:150px;
+			overflow:hidden;
+			text-align: left;
+			position: absolute;
+			float: left;
+			width: 150px;
+			left: 50%;
+			margin-left: -150px;
+		}
+
+		.slide-icon{
+			width:150px;
+			height:auto;
+			position:absolute;
+			margin-top:-150px;
+			-webkit-transition:.4s ease;
+			-moz-transition:.4s ease;
+			-ms-transition:.4s ease;
+			-o-transition:.4s ease;
+			transition:.4 ease;
+		}
+
+		.slide-icon:hover{
+			position:absolute;
+			margin-top:0;
+		}
+
+		@media only screen and (max-width: 1300px) {
+			#icon-wrapper{
+				width:100%;
+				float:left;
+				height:170px;
+			}
+			.icon-slide-container {
+				height: 200px;
+				overflow: hidden;
+				text-align: left;
+				position: absolute;
+				float: left;
+				width: 200px;
+				left: 50%;
+				margin-left: -100px;
+			}
+			.slide-icon {
+				width: 200px;
+				height: auto;
+				position: absolute;
+				margin-top: -200px;
+			}
+		}
+
+		@media only screen and (max-width: 1000px) {
+			#home-social-container{
+				margin-right: 0;
+				margin-left: 0;
+				width: 100%;
+				padding: 0;
+				float: left;
+				left: 0;
+			}
+		}
+
+		@media only screen and (max-width: 840px) {
+			#icon-wrapper{
+				width:100%;
+				float:left;
+				height:650px;
+			}
+
+			.icon-slide-container {
+				height: 300px;
+				overflow: hidden;
+				text-align: left;
+				position: absolute;
+				float: left;
+				width: 300px;
+				left: 50%;
+				margin-left: -150px;
+			}
+
+			.slide-icon {
+				width: 300px;
+				height: auto;
+				position: absolute;
+				margin-top: -300px;
+			}
+			.icons {
+				width: 50%;
+				float: left;
+				position: relative;
+			}
+			.icons2 {
+				width: 50%;
+				float: left;
+				position: relative;
+				margin-left: 50%;
+			}
+			.icons3 {
+				width: 50%;
+				float: left;
+				position: relative;
+				margin-left: 0%;
+				margin-top: 350px;
+			}
+			.icons4 {
+				width: 50%;
+				float: left;
+				position: relative;
+				margin-left: 50%;
+			}
+		}
+
+		@media only screen and (max-width: 650px) {
+			#icon-wrapper {
+				height: 400px;
+			}
+			#section{
+				width: 90%;
+				padding-left:5%;
+				padding-right:5%;
+			}
+			.slide-icon {
+				width: 200px;
+				height: auto;
+				position: absolute;
+				margin-top: -200px;
+			}
+			.icon-slide-container {
+				height: 200px;
+				width: 200px;
+				left: 50%;
+				margin-left: -100px;
+			}
+			.icons3 {
+				width: 50%;
+				position: relative;
+				margin-left: 0%;
+				margin-top: 230px;
+			}
+		}
+
+		@media only screen and (max-width: 570px) {
+			#icon-wrapper {
+				height: 300px;
+			}
+			.slide-icon {
+				width: 150px;
+				height: auto;
+				position: absolute;
+				margin-top: -150px;
+			}
+			.icon-slide-container {
+				height: 150px;
+				width: 150px;
+				left: 50%;
+				margin-left: -75px;
+			}
+			.icons3 {
+				width: 50%;
+				float: left;
+				margin-left: 0%;
+				margin-top: 190px;
+			}
+		}
+
+
+
+
+
+
+	</style>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+
+	<!-- Site Navigation
+    ======================================================================= -->
+	<nav class="site-header navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div id="top-bar">
+				<div class="row">
+					<div class="col-sm-5 hidden-xs">
+						<h4><i class="fa fa-calendar"></i> Pollinator Week</h4>
+						<div id="counter" data-date="June 20, 2016">
+							<div class="timer-col">
+								<span id="days"></span>
+								<span class="timer-type">d</span>
+							</div>
+							<div class="timer-col">
+								<span id="hours"></span>
+								<span class="timer-type">h</span>
+							</div>
+							<div class="timer-col">
+								<span id="minutes"></span>
+								<span class="timer-type">m</span>
+							</div>
+							<div class="timer-col">
+								<span id="seconds"></span>
+								<span class="timer-type">s</span>
+							</div>
+						</div> <!-- end #counter -->
+					</div>
+
+					<!-- Google Search -->
+					<div class="col-sm-2 hidden-xs google-search-container">
+						<script>
+							(function() {
+								var cx = '002964769701314051310:upsfmgvjvqw';
+								var gcse = document.createElement('script');
+								gcse.type = 'text/javascript';
+								gcse.async = true;
+								gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+										'//cse.google.com/cse.js?cx=' + cx;
+								var s = document.getElementsByTagName('script')[0];
+								s.parentNode.insertBefore(gcse, s);
+							})();
+						</script>
+						<gcse:searchbox-only></gcse:searchbox-only>
+					</div>
+
+					<!-- Social Links/Call to Action -->
+					<div class="col-sm-5">
+						<ul class="call-to-action">
+							<li><a href="donate.htm">Donate Now</a></li>
+							<li><a href="takeaction.htm">Join Us</a></li>
+						</ul>
+
+						<ul class="social-links vert-center">
+							<li>
+								<a href="http://www.facebook.com/ThePollinatorPartnership" target="_blank"><i class="fa fa-facebook-square"></i></a>
+							</li>
+							<li>
+								<a href="http://twitter.com/Pollinators" target="_blank"><i class="fa fa-twitter-square"></i></a>
+							</li>
+							<li>
+								<a href="http://www.youtube.com/user/PollinatorPartners" target="_blank"><i class="fa fa-youtube-square"></i></a>
+							</li>
+							<li>
+								<a href="https://plus.google.com/u/0/+PollinatorOrg/about" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+							</li>
+						</ul>
+					</div>
+
+				</div> <!-- end .row -->
+			</div><!-- end #top-bar -->
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar"
+						aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"><img src="Images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
+			</div>
+
+			<div id="navbar" class="navbar-collapse collapse" aria-expanded="false"
+				 style="height: 1px;">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="about.htm" class="dropdown-toggle" data-toggle="dropdown"
+						   role="button" aria-haspopup="true" aria-expanded="false">
+							Who we are
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<div class="dropdown-foot">
+								<span></span>
+								<span></span>
+							</div>
+							<li><a href="about.htm">About us</a></li>
+							<li><a href="wherewework.htm">Where we work</a></li>
+							<li><a href="pollination.htm">What are Pollinators?</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="programs.htm">Our programs</a>
+					</li>
+					<li>
+						<a href="guides.htm">Planting guides</a>
+					</li>
+					<li>
+						<a href="takeaction.htm">Get involved</a>
+					</li>
+					<li>
+						<a href="usefulresources.htm">Learning center</a>
+					</li>
+					<li class="dropdown">
+						<a href="shop.htm" class="dropdown-toggle" data-toggle="dropdown"
+						   role="button" aria-haspopup="true" aria-expanded="false">
+							Stuff
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<div class="dropdown-foot">
+								<span></span>
+								<span></span>
+							</div>
+							<li><a href="beesmartapp.htm">App</a></li>
+							<li><a href="books.htm">Books</a></li>
+							<li><a href="brochures.htm">Brochures</a></li>
+							<li><a href="cards.htm">Cards</a></li>
+							<li><a href="pamphlets.htm">Pamphlets</a></li>
+							<li><a href="posters.htm">Posters</a></li>
+							<li><a href="beesmart_give.htm">School Garden Kit</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="nappc/index.html">NAPPC</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- End Site Navigation -->
+
+	<!-- Start Page Header -->
+	<div class="page-header" style="background-image: url(Images/hummingbirds/Broadtailed-Hummingbird-David-Inouye-banner.png)" title="https://www.flickr.com/photos/bmc_ecology/8591713625">
+		<div class="container container-tall">
+			<h1>Million Pollinator Garden Challenge Map</h1>
+		</div>
+	</div>
+
+	<div class="double-border"></div>
+
+	<!-- optional Page Navigation (for anchor links) -->
+	<nav id="page-navbar" class="navbar navbar-static-top navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<div class="dropdown">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+						Hummingbirds:
+					</button>
+				</div>
+			</div>
+			<div id="page-nav" class="navbar-collapse collapse" aria-expanded="false">
+				<ul class="nav navbar-nav">
+					<li class="hidden-xs">
+						<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+						Hummingbirds:
+					</li>
+					<li><a href="#species">Distribution</a></li>
+					<li><a href="#basics">Basic Facts</a></li>
+					<li><a href="#threats">Threats</a></li>
+					<li><a href="#hummingbird_guides">Land Management Guides</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- Main page content -->
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-12" id="searchbox">
+			<h3 class="center">Search For Your Pollinator</h3>
+			<div class='col-sm-12' id="questions">
+				<div class='input-group'>
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="button" type="button" onclick="search()">Search</button>
+                          </span>
+					<input label="hello" type="text" class="form-control" name="search_organization" placeholder="Search by Organization" value="" id="search_organization" size="10" />
+
+				</div>
+				<div class='input-group'>
+                          <span class="input-group-btn">
+                              <button class="btn btn-default" type="button" type="button" onclick="search2()">Search</button>
+                          </span>
+					<input label="hello" type="text" class="form-control" name="search_organization" placeholder="Search by City" value="" id="search_city" size="10" />
+				</div>
+				<div class='input-group'>
+                              <span class="input-group-btn">
+                                  <button class="btn btn-default" type="button" type="button" onclick="search3()">Search</button>
+                              </span>
+					<input label="hello" type="text" class="form-control" name="search_email" placeholder="Search by Email" value="" id="search_email" size="10" />
+				</div>
+
+			</div>
+		</div>
+		<div id="map"></div>
+	</div>
+
+	<div class="row" id="tools">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Search Filters</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+				</div>
+				<div class="panel-body">
+					<div id="company_filter">
+						<h5>Member Organizations</h5>
+						<button>Organization 1</button>
+						<button>Organization 2</button>
+						<button>Organization 3</button>
+					</div>
+					<hr>
+					<div id="type_filter">
+						<h5>Type of Pollinator</h5>
+						<button>Organization 1</button>
+						<button>Organization 2</button>
+						<button>Organization 3</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Start of Standard Page Content-->
+	<div class="container main">
+		<div class="row">
+			<div class="col-sm-8">
+				<h2><div class="heading-content">Million Pollinator Garden Challenge<span id="secondary_title">Powered by S.H.A.R.E</span></div></h2>
+				<p class="lead">Welcome to the Million Pollinator Garden Challenge Map powered by the Pollinator Partnership.  </p>
+
+				<p>Register your pollinator habitat below. It is free and easy! Explore other pollinator friendly SHARE landscapes all over the globe! See if your favorite organization is participating by looking for their logo to the right.</p>
+
+			</div> <!-- end .main .col-sm-8 -->
+
+			<!-- Sidebar -->
+			<div class="col-sm-4">
+				<h3>MPGC Partners</h3>
+
+				<div class="single-item">
+					<div><img src="logo/sharelogo.png"></div>
+					<div><img src="logo/Hort.jpg"></div>
+					<div><img src="logo/APGA_Combo-logo-Web.png"></div>
+					<div><img src="logo/NWF.jpg"></div>
+					<div><img src="logo/ASTA_logo.png"></div>
+					<div><img src="logo/KG-ResourceLogo_4c.jpg"></div>
+					<div><img src="logo/NGA2015_4c.jpg"></div>
+					<div><img src="logo/logowhy.png"></div>
+					<div><img src="logo/aba.png"></div>
+					<div><img src="logo/pollinator.png"></div>
+					<div><img src="logo/wild.png"></div>
+					<div><img src="logo/lbj.png"></div>
+					<div><img src="logo/NEEF.png"></div>
+					<div><img src="logo/cpl.png"></div>
+					<div><img src="logo/saf.png"></div>
+					<div><img src="logo/AFE.png"></div>
+					<div><img src="logo/AIB.png"></div>
+					<div><img src="logo/HGSA.png"></div>
+					<div><img src="logo/KAB.png"></div>
+
+				</div>
+			</div>  <!-- end .col-sm-4.sidebar -->
+
+		</div>  <!-- end .main > .row -->
+		<div class="row">
+			<div id="counter_container" class="col-md-6 col-md-offset-3">
+				<img id="logo_main" src="logo/mpgc-logo.png">
+				<h1 id="counter1"></h1>
+				<h2>Pollinators Registered</h2>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8" id="icon_area">
+				<div id="icon-wrapper">
+					<a href="map.html">
+						<div class="icons">
+							<div class="icon-slide-container">
+								<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/view-map.jpg">
+							</div>
+						</div>
+					</a>
+
+					<a href="kite-map.php">
+						<div class="icons2">
+							<div class="icon-slide-container">
+								<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/add-beach.jpg">
+							</div>
+						</div>
+					</a>
+
+					<a href="location.php">
+						<div class="icons3">
+							<div class="icon-slide-container">
+								<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/view-all.jpg">
+							</div>
+						</div>
+					</a>
+
+					<a href="feedback.html">
+						<div class="icons4">
+							<div class="icon-slide-container">
+								<img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/feedback.jpg">
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row" id="company_section">
+			<div class='col-md-10 col-md-offset-1 company_container'>
+				<h1>Search the Map by Organization</h1>
+				<ul>
+					<li>
+						<a class='normal' href='#'>
+							<svg viewBox='0 0 80 76' x='0px' y='0px'>
+								<g>
+									<path d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'></path>
+								</g>
+							</svg>
+						</a>
+						<div class='info'>
+							<h3>Single-origin coffee whatever</h3>
+							<p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut jean shorts.</p>
+						</div>
+					</li>
+					<li>
+						<a class='normal' href='#'>
+							<svg viewBox='0 0 80 76' x='0px' y='0px'>
+								<g>
+									<path d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'></path>
+								</g>
+							</svg>
+						</a>
+						<div class='info'>
+							<h3>Single-origin coffee whatever</h3>
+							<p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut jean shorts.</p>
+						</div>
+					</li>
+					<li>
+						<a class='normal' href='#'>
+							<svg viewBox='0 0 80 76' x='0px' y='0px'>
+								<g>
+									<path d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'></path>
+								</g>
+							</svg>
+						</a>
+						<div class='info'>
+							<h3>Single-origin coffee whatever</h3>
+							<p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut jean shorts.</p>
+						</div>
+					</li>
+					<li>
+						<a class='normal' href='#'>
+							<svg viewBox='0 0 80 76' x='0px' y='0px'>
+								<g>
+									<path d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'></path>
+								</g>
+							</svg>
+						</a>
+						<div class='info'>
+							<h3>Single-origin coffee whatever</h3>
+							<p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut jean shorts.</p>
+						</div>
+					</li>
+					<li>
+						<a class='normal' href='#'>
+							<svg viewBox='0 0 80 76' x='0px' y='0px'>
+								<g>
+									<path d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'></path>
+								</g>
+							</svg>
+						</a>
+						<div class='info'>
+							<h3>Single-origin coffee whatever</h3>
+							<p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut jean shorts.</p>
+						</div>
+					</li>
+					<li>
+						<a class='normal' href='#'>
+							<svg viewBox='0 0 80 76' x='0px' y='0px'>
+								<g>
+									<path d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'></path>
+								</g>
+							</svg>
+						</a>
+						<div class='info'>
+							<h3>Single-origin coffee whatever</h3>
+							<p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut jean shorts.</p>
+						</div>
+					</li>
+					<li>
+						<a class='normal' href='#'>
+							<svg viewBox='0 0 80 76' x='0px' y='0px'>
+								<g>
+									<path d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'></path>
+								</g>
+							</svg>
+						</a>
+						<div class='info'>
+							<h3>Single-origin coffee whatever</h3>
+							<p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut jean shorts.</p>
+						</div>
+					</li>
+					<li>
+						<a class='normal' href='#'>
+							<svg viewBox='0 0 80 76' x='0px' y='0px'>
+								<g>
+									<path d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'></path>
+								</g>
+							</svg>
+						</a>
+						<div class='info'>
+							<h3>Single-origin coffee whatever</h3>
+							<p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut jean shorts.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> <!-- end .content.main -->
+
+	<!-- End Body Content -->
+
+	<!-- Site Footer
+    ============================================================= -->
+	<footer class="footer">
+		<div class="row">
+			<div class="container">
+				<div class="col-sm-4">
+					<h4>Pollinator <span class="highlight">Partnership</span></h4>
+					<p>A non-profit 501(c)3 organization-- the largest in the world dedicated exclusively to the protection and promotion of pollinators and their ecosystems.</p>
+					<p><a href="PDFs/GRANTAWARDANDGIFTACCEPTANCEPOLICY0213.pdf">Our Giving Policy &nbsp;<i class="fa fa-angle-right"></i></a></p>
+				</div>
+				<div class="col-sm-4">
+					<h4>Twitter <span class="highlight">Feeds</span></h4>
+					<div class="twitter-widget" data-tweets-count="2"></div>
+				</div>
+				<div class="col-sm-4">
+					<h4>Contact <span class="highlight">Us</span></h4>
+					<p><a href="mailto:info@pollinator.org" target="_blank">info@pollinator.org</a></p>
+					<p>423 Washington Street, 5th Floor<br>San Francisco, CA, 94111</p>
+					<p>1(415)362-1137</p>
+				</div>
+			</div> <!-- end .container -->
+		</div> <!-- end .row -->
+		<div class="row well">
+			<div class="container">
+				<div class="col-sm-6">
+					<p id="copyright">© 1996-2016 Pollinator Partnership</p>
+				</div>
+				<div class="col-sm-6">
+					<ul class="nav" role="navigation">
+						<li><a href="/">Home</a></li>
+						<li><a href="about.htm">About</a></li>
+						<li><a href="research_consulting.htm">Science & Consulting</a></li>
+						<li><a href="donate.htm">Donate</a></li>
+					</ul>
+				</div>
+			</div> <!-- end .container -->
+		</div> <!-- end .row -->
+	</footer>
+
+</div> <!-- end #wrapper -->
+
+<!--CartoDB Custom Body Scripts-->
+
+<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+
+<!--For Image Slider Slick-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+	var layer;
+	var input;
+	var map;
+	function main() {
+
+		var layerUrl = 'https://massimpact.cartodb.com/api/v2/viz/66c931f2-ebb0-11e5-9219-0e5db1731f59/viz.json';
+
+		cartodb.createVis('map', layerUrl)
+				.on('done', function(vis, layer) {
+
+					map = vis.getNativeMap().setView([39,-98],4);
+
+				});
+
+	}
+	function search() {
+		input_org = $( "#search_organization").val();
+		console.log(input_org);
+
+		var sql = new cartodb.SQL({ user: 'massimpact' });
+		sql.getBounds("SELECT * FROM mgpc_basemap_copy where organization_name like '" + input_org +
+				"'").done(function(bounds) {
+			map.fitBounds(bounds)
+			// restricts the map view to the given bounds
+			map.setMaxBounds(bounds)
+		});
+
+		sql.execute("SELECT * FROM mgpc_basemap_copy where organization_name like '" + input_org + "'")
+				.done(function(data) {
+					// do nothing
+					for (var i = 0; i < data.total_rows; i++) {
+						$('#registerlist').append("<div class='entry'><h4><span>" +
+								data.rows[i].organization_name +
+								"</span></h4><h5>" +
+								data.rows[i].city +
+								","+
+								data.rows[i].state_province +
+								"</div></h5>");
+					}
+				})
+				.error(function(errors) {
+					// do nothing
+				})
+	}
+
+	function search2() {
+
+		input_city = $( "#search_city").val();
+		console.log(input_city);
+
+		var sql = new cartodb.SQL({ user: 'massimpact' });
+		sql.getBounds("SELECT * FROM mgpc_basemap_copy where city ilike '" + input_city +
+				"'").done(function(bounds2) {
+			map.fitBounds(bounds2)
+			// restricts the map view to the given bounds
+			//map.setMaxBounds(bounds2) (Enabling this will lock in search area to bounds
+		});
+
+		sql.execute("SELECT * FROM mgpc_basemap_copy where city like '" + input_city +
+						"'")
+				.done(function(data) {
+					// do nothing
+					for (var i = 0; i < data.total_rows; i++) {
+						$('#registerlist').append("<div class='entry'><h4><span>" +
+								data.rows[i].organization_name +
+								"</span></h4><h5>" +
+								data.rows[i].city +
+								"<img src='/http://pollinator.org/images/logos/monarchpartnership.png'>"+
+								data.rows[i].referring_logo +"'>"+
+								"</div></h5>");
+					}
+					for (var i = 0; i < data.total_rows; i++) {
+						$('#registerlist2').append("<img class='entry'><img src='" +
+								data.rows[i].referring_logo +
+								"</span></h4><h5>" +
+								data.rows[i].lat +
+								"<img src='https://pollinator.org/"+
+								data.rows[i].long +"'>"+
+								"</img></h5>");
+					}
+				})
+				.error(function(errors) {
+					// do nothing
+				})
+	}
+	// CartoDB SQL API Call
+	$.getJSON("https://massimpact.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM mpgc_basemap", function(data) {
+		var geojson = L.geoJson(data, {
+			onEachFeature: function (feature, layer) {
+				// Add a popup or any other layer-related action
+				layer.bindPopup("<h2>" + feature.properties.name + "</h2><hr><p>Population: " + feature.properties.pop_max + "</p>");
+			}
+		});
+		markers.addLayer(geojson);
+
+		// Build the map
+		var map = L.map('map', {maxZoom: 1}).fitBounds(markers.getBounds());
+		baseLayer.addTo(map);
+		markers.addTo(map);
+	});
+
+
+	window.onload = main;
+
+</script>
+
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		$('.panel-heading span.clickable').on("click", function (e) {
+			if ($(this).hasClass('panel-collapsed')) {
+				// expand the panel
+				$(this).parents('.panel').find('.panel-body').slideDown();
+				$(this).removeClass('panel-collapsed');
+				$(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+			}
+			else {
+				// collapse the panel
+				$(this).parents('.panel').find('.panel-body').slideUp();
+				$(this).addClass('panel-collapsed');
+				$(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+			}
+		});
+	});
+
+</script>
+<script>
+	var sql = new cartodb.SQL({ user: 'massimpact' });
+	sql.execute("SELECT COUNT(*) FROM nwf_locations")
+			.done(function(data) {
+				// do nothing
+				for (var i = 0; i < data.total_rows; i++) {
+					$('#counter1').append("<div><span>" +
+							data.rows[i].count +
+							"</span></div></br>");
+				}
+			})
+			.error(function(errors) {
+				// do nothing
+			})
+</script>
+
+<script>
+
+	// - Noel Delgado | @pixelia_me
+
+
+	var nodes  = document.querySelectorAll('li'),
+			_nodes = [].slice.call(nodes, 0);
+
+	var getDirection = function (ev, obj) {
+		var w = obj.offsetWidth,
+				h = obj.offsetHeight,
+				x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
+				y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1)),
+				d = Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
+
+		return d;
+	};
+
+	var addClass = function ( ev, obj, state ) {
+		var direction = getDirection( ev, obj ),
+				class_suffix = "";
+
+		obj.className = "";
+
+		switch ( direction ) {
+			case 0 : class_suffix = '-top';    break;
+			case 1 : class_suffix = '-right';  break;
+			case 2 : class_suffix = '-bottom'; break;
+			case 3 : class_suffix = '-left';   break;
+		}
+
+		obj.classList.add( state + class_suffix );
+	};
+
+	// bind events
+	_nodes.forEach(function (el) {
+		el.addEventListener('mouseover', function (ev) {
+			addClass( ev, this, 'in' );
+		}, false);
+
+		el.addEventListener('mouseout', function (ev) {
+			addClass( ev, this, 'out' );
+		}, false);
+	});
+</script>
+
+</body>
+</html>
+
+<!-- SCRIPTS -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="P2/js/init.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/custom-js.js"></script>
+<script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+
+
+<!-- Google Custom Search styles -->
+<style>
+	.google-search-container {
+		padding: 0;
+	}
+	table.gsc-search-box td {
+		padding: 0;
+	}
+	td.gsc-search-button {
+		padding: 0;
+		margin:0;
+	}
+	input.gsc-search-button,
+	input.gsc-search-button-v2 {
+		width: 26px;
+		height: 26px;
+		padding: 5px;
+		margin: 1px 0 0;
+		background-color: #292929;
+		border: 1px solid #292929;
+	}
+	input.gsc-search-button:hover,
+	input.gsc-search-button:focus,
+	input.gsc-search-button-v2:hover,
+	input.gsc-search-button-v2:focus {
+		background-color: #292929;
+		border: 1px solid #fff;
+	}
+	form.gsc-search-box {
+		margin-top: 3px;
+	}
+</style>
