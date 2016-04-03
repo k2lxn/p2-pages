@@ -1,3 +1,11 @@
+
+// Load state proclamation thumbnail & caption and change links to PDF
+function switchStateName(state) {
+	// Update caption
+	$('#current-state').html( state + ' proclaims June 20 - 26, 2016 Pollinator Week!');
+}
+
+
 /* * * * * * * * *
  * ON  READY * * *
  * * * * * * * * */
@@ -11,11 +19,11 @@ $(document).ready(function(){
 		});
 	});
 
+	// Add onclick functions to all the ul li's in #proclamations
+	// Pass in the name of the class, which should be the state name formatted for display
+	$('#proclamations ul li').click( function() {
+		switchStateName( $( this ).attr('class') ); 
+	});
+	
 }); 
 
-
-/*
- else {
-				$('#proclamations-btn span').switchClass('fa-chevron-circle-up','fa-chevron-circle-down');
-			}
-		*/	
