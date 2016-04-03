@@ -46,19 +46,24 @@ sizeThumbnails();
 
 // Darken background images. Takes a DOM element and a number between 0 - 1 
 function addBGTint(elem,tint) {
-	var bg = elem.attr("style");
-	var img_location = bg.match(/url\(+(.)+\)/)[0];
-	// Get substring from style attr: everything before 'background-image'
-	var start_background_image_substr = bg.indexOf("background-image");
-	// Reset style attribute
-	var style = bg.substring(0,start_background_image_substr);
-	style += "background-image: linear-gradient(to right,rgba(0,0,0," + tint.toString() +"), rgba(0,0,0,"+tint.toString()+")), " + img_location;
-	elem.attr("style",style);
-}
-function removeBGTint(elem) {
-	var bg = elem.attr("style");
-	var img_location = bg.match(/url\(+(.)+\)/)[0];
-	var style = "background-image: " + img_location;
+	var style="";
+	if ( elem.attr("style") !== undefined ) {
+		var curr_style = elem.attr("style");
+		if ( curr_style.match(/url\(+(.)+\)/) ) {
+			var img_location = curr_style.match(/url\(+(.)+\)/)[0];
+			var new_bg_style = "background-image: linear-gradient(to right,rgba(0,0,0," + tint.toString()+"), rgba(0,0,0,"+tint.toString()+")), "+img_location;
+			var start_bg = curr_style.indexOf("background-image");
+			if ( start_bg > 0 ) {    // Append new background-image to end
+				curr_style = curr_style.substring(0,start_bg);
+				style = curr_style + new_bg_style;
+			}	else { // Append new background-image to front
+				curr_style = curr_style.substring(curr_style.indexOf(";"));
+				style = new_bg_style + curr_style;
+			}
+		} else {
+			style = curr_style;
+		}	
+	}
 	elem.attr("style",style);
 }
 

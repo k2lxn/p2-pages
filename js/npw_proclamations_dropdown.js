@@ -10,13 +10,18 @@ function switchStateName(elem) {
 	$('#proclamations a').attr("href", new_url); 
 	
 	// Update thumbnail image
-	var bg = $('#proclamations span.thumb-sm').attr("style");
-	var img_location = bg.match(/url\(+(.)+\)/)[0];
-	// Get substring from style attr: everything before 'background-image'
-	var start_background_image_substr = bg.indexOf("background-image");
-	// Reset style attribute
-	var style = bg.substring(0,start_background_image_substr);
-	style += "background-image:url(Images/NPW/2016/proc_" + state + ".png)";	
+	var style = "";
+	var curr_style = $('#proclamations span.thumb-sm').attr("style");
+	var img_location = curr_style.match(/url\(+(.)+\)/)[0];
+	var new_bg_style = "background-image:url(Images/NPW/2016/proc_" + state + ".png)";
+	var start_bg = curr_style.indexOf("background-image");
+	if ( start_bg > 0 ) {    // Append new background-image to end (Chrome)
+		curr_style = curr_style.substring(0,start_bg);
+		style = curr_style + new_bg_style;
+	}	else { // Append new background-image to front (Firefox)
+		curr_style = curr_style.substring(curr_style.indexOf(";"));
+		style = new_bg_style + curr_style;
+	}
 	$('#proclamations span.thumb-sm').attr("style", style);
 }
 
