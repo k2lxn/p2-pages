@@ -104,3 +104,51 @@ a.btn-download {
 .thumb-sm {
  	width: 100%;
 }
+
+
+
+/*  Proclamations Dropdown */
+#proclamations.btn {
+	width: 100%;
+	padding: 5px 15px;
+	white-space: normal;
+}
+@media only screen and (min-width: 550px) {
+	#proclamations.btn {
+		/*width: 80%;
+		margin-left: 10%;*/
+	}	
+}
+#proclamations h4, #proclamations span {
+	display: inline-block;
+}
+#proclamations.btn h4 {
+	max-width: 88%;
+}
+#proclamations span {
+	float: right;
+	position: relative;
+	top: 5px;
+	font-size: 150%;
+}
+@media only screen and (max-width: 455px) {
+	#proclamations span {
+		top: 12px;
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
