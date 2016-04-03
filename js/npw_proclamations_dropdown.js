@@ -16,6 +16,7 @@ $(document).ready(function(){
 		$('#proclamations').slideToggle(400, function() {
 			$('#proclamations-btn span').toggleClass('fa-chevron-circle-down');
 			$('#proclamations-btn span').toggleClass('fa-chevron-circle-up');
+			sizeThumbnails();
 		});
 	});
 
@@ -25,5 +26,11 @@ $(document).ready(function(){
 		switchStateName( $( this ).attr('class') ); 
 	});
 	
+	// Add tint to proclamation thumb on hover
+	$('#proclamations span.thumb-sm').hover(
+		function() { addBGTint( $(this), .3 ) },
+		function() { addBGTint( $(this), 0 )}		
+	);
+
 }); 
 
