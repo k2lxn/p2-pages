@@ -253,11 +253,22 @@
         		<p> Please take a moment to sign and mail the letter below to your governor. Your effort is making Pollinator Week 2016 a great success!</p>
         		<br>
         	
-        	<button id="proclamations" class="btn" aria-label="See state proclamations">
+        	<button id="proclamations-btn" class="btn" aria-label="See state proclamations">
         		<h4>Has your Governor made a proclamation?</h4>
         		<span class="fa fa-chevron-circle-down" aria-hidden="true"></span>
         	</button>
-        	
+        	<div id="proclamations" style="display:none;">
+        		<p>Pollinator Week 2016 proclamations by state:</p>
+        		<ul>
+        			<li>AR</li>
+        			<li>DE</li>
+        			<li>MD</li>
+        			<li>MI</li>
+        			<li>MT</li>
+        			<li>TN</li>
+        		</ul>
+        		<img src="Images/hummingbird_guide_CA_thumb.png" alt="">
+        	</div>
         		
         	<h3>How should you contact your Governor?</h3> 
         		<h3>1. Write</h3>
@@ -598,6 +609,8 @@
     <script src="js/custom-js.js"></script>
     <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
     <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+    <!-- Page specific functions -->
+    <script src="js/npw_proclamations_dropdown.js"></script>
     
     <!-- Google Custom Search styles -->
 <style>
