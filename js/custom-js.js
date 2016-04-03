@@ -1,58 +1,11 @@
-// Darken background images. Takes a DOM element and a number between 0 - 1 
-function addBGTint(elem,tint) {
-	var bg = elem.attr("style");
-	var img_location = bg.match(/url\(+(.)+\)/)[0];
-	var style = "background-image: linear-gradient(to right,rgba(0,0,0," + tint.toString() +"), rgba(0,0,0,"+tint.toString()+")), " + img_location;
-	elem.attr("style",style);
-}
-function removeBGTint(elem) {
-	var bg = elem.attr("style");
-	var img_location = bg.match(/url\(+(.)+\)/)[0];
-	var style = "background-image: " + img_location;
-	elem.attr("style",style);
-}
+
 
 /* Variables */
 var navHeight = $("div#top-bar").height() + $("div.navbar-header").height(); 
 
 
+/* Functions */
 
-/* * * * * * * * *
- * ON  READY * * *
- * * * * * * * * */
-$(document).ready(function(){
-	
-	// Push content up above footer
-	$('.main').css('padding-bottom', $('.footer').height()); 
-	
-	// Anchor Links
-	$('a[href^="#"]').click(function(){
-		var target = $(this.hash);
-		target = target.length ? target : $('[name= ' + this.hash.slice(1) + ']');
-		if(target.length) {
-			var scrollTo = target.offset().top - 30;
-			scrollTo = $(window).width() <= 768 ? scrollTo : scrollTo - navHeight;
-			$('html, body').animate({
-				scrollTop: scrollTo
-			}, 1000);
-		}
-	});
-	
-	// Add hover function to thumbnails
-	if ($('.resources-thumb').length) {
-		$('div.resources-thumb > a').hover(
-			function() { addBGTint( $(this).prev(), .75 ) },
-			function() { addBGTint( $(this).prev(), .3 )}		
-		);
-	}
-}); 
-
-
-
-/* * * * * * * * *
- * RESIZE  * * * *
- * * * * * * * * */
- 
 // Move footer down when page resizes
 var bumpIt = function() {  
   	$('.main').css('padding-bottom', $('.footer').height());
@@ -91,6 +44,66 @@ var sizeThumbnails = function() {
 	
 sizeThumbnails();
 
+// Darken background images. Takes a DOM element and a number between 0 - 1 
+function addBGTint(elem,tint) {
+	var bg = elem.attr("style");
+	var img_location = bg.match(/url\(+(.)+\)/)[0];
+	// Get substring from style attr: everything before 'background-image'
+	var start_background_image_substr = bg.indexOf("background-image");
+	// Reset style attribute
+	var style = bg.substring(0,start_background_image_substr);
+	style += "background-image: linear-gradient(to right,rgba(0,0,0," + tint.toString() +"), rgba(0,0,0,"+tint.toString()+")), " + img_location;
+	elem.attr("style",style);
+}
+function removeBGTint(elem) {
+	var bg = elem.attr("style");
+	var img_location = bg.match(/url\(+(.)+\)/)[0];
+	var style = "background-image: " + img_location;
+	elem.attr("style",style);
+}
+
+
+
+/* * * * * * * * *
+ * ON  READY * * *
+ * * * * * * * * */
+$(document).ready(function(){
+	
+	// Push content up above footer
+	$('.main').css('padding-bottom', $('.footer').height()); 
+	
+	// Anchor Links
+	$('a[href^="#"]').click(function(){
+		var target = $(this.hash);
+		target = target.length ? target : $('[name= ' + this.hash.slice(1) + ']');
+		if(target.length) {
+			var scrollTo = target.offset().top - 30;
+			scrollTo = $(window).width() <= 768 ? scrollTo : scrollTo - navHeight;
+			$('html, body').animate({
+				scrollTop: scrollTo
+			}, 1000);
+		}
+	});
+	
+	// Size thumbnails
+	sizeInlineImages();
+	sizeThumbnails();
+	
+	// Add hover function to thumbnails
+	if ($('.resources-thumb').length) {
+		$('div.resources-thumb > a').hover(
+			function() { addBGTint( $(this).prev(), .75 ) },
+			function() { addBGTint( $(this).prev(), .3 )}		
+		);
+	}
+}); 
+
+
+
+/* * * * * * * * *
+ * RESIZE  * * * *
+ * * * * * * * * */
+ 
 $(window).resize(function() {
 	didResize = true;	
 });
