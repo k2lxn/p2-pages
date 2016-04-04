@@ -11,108 +11,8 @@
     <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
-    
     <!-- Page styles -->
-    <style type="text/css">
-			#title-img {
-				width: 98%;
-				float: left;
-				padding: 0 15px;
-				position: relative;
-				top: -40px;
-				z-index: 1000;
-			}
-			#special-header h3 {
-				float: left;
-				font-size: 2em;
-				width: 100%;
-				text-align: center;
-				margin-top: -30px;
-				padding-top: 10px;
-				color: #5f5f5f;	
-			}
-			@media only screen and (max-width: 370px) {
-				#add-event {
-					border-radius: 0;
-					padding: 7.5px 10px; 
-				}
-			}
-			@media only screen and (min-width: 550px) {
-				#title-img {
-					width: 260px;
-					box-sizing: content-box;
-				}
-				#special-header h3 {
-					width: 205px;
-					/*line-height: 1.5; */
-					margin-top: 0;
-					margin-left: 15px;
-				}
-			}
-			@media only screen and (min-width: 768px) and (max-width: 995px) {
-				#special-header h3 {
-					font-size: 1.5em;
-					margin-left: 0;
-				}
-			}
-			@media only screen and (min-width: 995px) {
-				#page-nav ul li:nth-of-type(2) {
-					margin-left: 50px;
-				}
-			}
-			@media only screen and (min-width: 1200px) {
-				#title-img {
-					width: 360px;
-				}
-				#special-header h3 {
-					width: auto;
-					margin-top: 50px;
-					margin-left: 40px;
-				}
-				#page-nav ul li:nth-of-type(2) {
-					margin-left: 100px;
-				}
-			}
-			iframe {
-				margin: 15px 0;
-			}
-			ul.fa-ul > li {
-				font-size: 120%;
-				margin-left: 15px;
-			}
-			ul.fa-ul > li > a {
-				/*color: #303030;*/
-				color: #bd0097;
-				font-weight: bold;
-				font-size: 110%;
-				font-style: italic;	
-			}
-			ul.fa-ul > li > a:hover {
-				text-decoration: underline;
-			} 
-			.col-xs-4.sticker {
-      	min-width: 200px;
-      }
-      a.btn-download {
-      	margin-top: 10px;
-      }
-      #res-inst {
-      	padding-right: 0;
-      }
-      @media only screen and (max-width: 650px) {
-      	.col-xs-4.sticker {
-      		padding: 0 5px;
-      	}
-      	#res-inst, #res-fbshare {
-      		width: 100%;
-      		margin-bottom: 30px;
-      		padding: 0 15px;
-      	}
-      }
-      .thumb-sm {
-      	width: 100%;
-      }
-    </style>
+		<link href="css/custom/pollinator_week_2016.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -336,6 +236,7 @@
           	<h4 style="color:#fff">Hosting a Pollinator Week event?</h4>
           	<a id="add-event" class="btn btn-link inverse" href="http://goo.gl/forms/sySfzj1GDV" target="_blank">Add your event to the map  <i class="fa fa-arrow-right"></i></a>
           </div>
+          <p class="text-center"><small>If you'd like to register an event in Canada, please email <a href="mailto:info@pollinator.org" target="_blank">info@pollinator.org</a></small></p>
           
           <iframe src="https://www.google.com/maps/d/embed?mid=zLy9LwozVA6g.klOg0i4p1hBk" width="100%" height="400px"></iframe>
           
@@ -351,6 +252,27 @@
         		<p>Many states require in-state requests for events such as Pollinator Week to be officially proclaimed. Thanks to wonderful citizens like you, all 50 states declared Pollinator Week in 2015!</p>
         		<p> Please take a moment to sign and mail the letter below to your governor. Your effort is making Pollinator Week 2016 a great success!</p>
         		<br>
+        	
+        	<button id="proclamations-btn" class="btn" aria-label="See state proclamations">
+        		<h4>Has your Governor made a proclamation?</h4>
+        		<span class="fa fa-chevron-circle-down" aria-hidden="true"></span>
+        	</button>
+        	<div id="proclamations" style="display:none;">
+        		<ul>
+        			<li class="Arkansas">AR</li>
+        			<li class="Delaware">DE</li>
+        			<li class="Maryland">MD</li>
+        			<li class="Michigan">MI</li>
+        			<li class="Montana">MT</li>
+        			<li class="Tennessee">TN</li>
+        		</ul>
+        		<p id="current-state" class="lead">Tennessee proclaims June 20 - 26, 2016 Pollinator Week!</p>
+        		<a href="PDFs/NPW/2016/Proclamations/Tennessee_2016.pdf" target="_blank">
+        			<span class="thumb-sm" style="background-image:url(Images/NPW/2016/proc_Tennessee.png);"></span>  
+        		</a>
+        		<a class="btn btn-download" href="PDFs/NPW/2016/Proclamations/Tennessee_2016.pdf" target="_blank">View <i class="fa fa-search"></i></a> 		
+        	</div>
+        		
         	<h3>How should you contact your Governor?</h3> 
         		<h3>1. Write</h3>
 							<ul class="fa-ul">
@@ -487,7 +409,7 @@
       				</div>
       				<div class="col-sm-4">
       					<h4>2016 Pollinator Week Poster</h4>
-      					<p>This year's poster, <em>Trees for Bees</em>, by artist [Someone McSomebody], is a beautiful reminder of the many trees you can include in your pollinator-friendly habitat.</p>
+      					<p>This year's poster, <em>Trees for Bees</em>, by artist <a href="http://www.natalya.com/" target="_blank">Natalya Zahn</a>, is a beautiful reminder of the many trees you can include in your pollinator-friendly habitat.</p>
       					<p>View or purchase any of our posters by clicking below:</p>
       					<a class="btn btn-link" href="posters.htm">Order  <i class="fa fa-arrow-right"></i></a>
       				</div>
@@ -690,6 +612,8 @@
     <script src="js/custom-js.js"></script>
     <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
     <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+    <!-- Page specific functions -->
+    <script src="js/npw_proclamations_dropdown.js"></script>
     
     <!-- Google Custom Search styles -->
 <style>
