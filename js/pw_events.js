@@ -5,11 +5,17 @@
  * * * * * * * * */
 $(document).ready(function(){ 
 	var sql = new cartodb.SQL({ user: 'pollinatorpartner' });
+	var last_state = "";  // For labeling sections by State
 	sql.execute("SELECT * FROM pollinator_week")
   	.done(function(data) {
     	console.log(data.rows);
     	
     	for (let event of data.rows) {
+    		// check to see if new state section neccessary
+    		if (event.state !== last_state) {
+    			$('#events_list').append("<h2>"+event.state+"</h2>");
+    		}
+    		
     		// Create Event Title button
     		$('#events_list').append(
     			"<button class='event-item btn'>"
@@ -36,7 +42,8 @@ $(document).ready(function(){
     			+ event.state + ", "+ event.zip +"</p>"
     			+ "</div></div>"
     		);
-    		// Add onclick function to Event Title button (button.event-item)
+    		
+    		last_state = event.state;
     	}
     	
   	})
