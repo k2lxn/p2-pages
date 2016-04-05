@@ -11,7 +11,8 @@ module.exports = function(grunt) {
         },
         files: {
         	// destination file and source file
-          "css/custom/custom-bootstrap.css": "css/custom/custom-bootstrap.less" 
+          "css/custom/custom-bootstrap.css": "css/custom/custom-bootstrap.less",
+          "css/custom/pw_events_2016.css": "css/custom/pw_events_2016.less"  
         }
       }
     },
