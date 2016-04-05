@@ -1,15 +1,5 @@
-
-
-	#special-header h3 {
-		font-size: 1em;
-	}
-}
-
-
-
-
-
-/* ************************** */
+@import "../bootstrap/less/variables.less";
+@import "custom-variables.less";
 
 #title-img {
 	width: 98%;
@@ -202,7 +192,42 @@ a.btn-download {
 	}	
 }
 
-
+/* popups */
+div.cartodb-popup.v2 {
+	div.cartodb-popup-content-wrapper {
+  	background-color: #efefef;
+	}
+	div.cartodb-popup-content {
+		h3 {
+			color: #fff;
+			padding: 7px;
+			background: @brand-primary;
+			border-radius: 3px;
+			margin-bottom: 10px;
+		}
+		h4 {
+			color: @gray-dark;
+			margin-bottom: 7px;
+		}
+	}
+	h2 {
+		font-family: @font-family-serif;
+		font-size: 18px;
+		color: @gray-dark;
+		text-transform: capitalize;
+		margin-bottom: 7px;
+		max-height: 50px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	p {
+		font-family: @font-family-serif;
+	}
+	.jspContainer:before,
+	.jspContainer:after {
+		background: none;
+	}
+}
 
 
 
