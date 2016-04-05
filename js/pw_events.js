@@ -13,8 +13,14 @@ $(document).ready(function(){
     		// Create Event Title button
     		$('#events_list').append(
     			"<button class='event-item btn'>"
-    			+ "<h4>"+event.event_name+"</h4>"
+    			+ "<h3>"+event.event_name+"</h3>"
     			+ "<span class='fa fa-chevron-circle-down'></span>"
+    			+ "<div class='row'>"
+    			+ "<div class='col-sm-6'><h4>"+event.city+"</h4></div>"
+    			+ "<div class='col-sm-6'>"
+    			+ "<h4>"+event.date+"</h4>"
+    			+ "<h4>"+event.time+"</h4></div>"
+    			+ "</div>"
     			+ "</button>"
     		);
     		// Create dropdown
@@ -22,6 +28,12 @@ $(document).ready(function(){
     			"<div id='"+ event.cartodb_id + "' class='row event-info'>"
     			+ "<div class='col-sm-6'>"
     			+ "<p>"+event.description+"</p>"
+    			+ "<p>"+event.more_info+"</p>"
+    			+ "</div><div class='col-sm-6'>"
+    			+ "<p class='label'>Location</p>"
+    			+ "<p>"+event.location+"<br>"
+    			+ event.city +"<br>"
+    			+ event.state + ", "+ event.zip +"</p>"
     			+ "</div></div>"
     		);
     		// Add onclick function to Event Title button (button.event-item)
