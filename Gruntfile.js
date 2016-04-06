@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     },
     watch: {
       styles: {
-        files: ['css/custom/*.less'], // which files to watch
+        files: ['css/custom/*.less', 'pollinatorweek/css/*.less'], // which files to watch
         tasks: ['less'],
         options: {
           nospawn: true
