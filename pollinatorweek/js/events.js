@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var last_state = "";  // For labeling sections by State
 	
 	/* Build the navigation */
-	sql.execute("SELECT state FROM pollinator_week")
+	sql.execute("SELECT state FROM pollinator_week_test")
 		.done(function(data) {
 			console.log(data.rows);
 		})
@@ -18,7 +18,7 @@ $(document).ready(function(){
  	 });
 	
 	/*  Build the list */
-	sql.execute("SELECT * FROM pollinator_week")
+	sql.execute("SELECT * FROM pollinator_week_test")
   	.done(function(data) {
     	console.log(data.rows);
     	
