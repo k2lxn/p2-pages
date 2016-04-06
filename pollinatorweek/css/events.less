@@ -1,3 +1,6 @@
+@import "../../css/bootstrap/less/variables.less";
+@import "../../css/custom/custom-variables.less";
+
 #title-img {
 	width: 98%;
 	padding: 0 15px;
@@ -61,16 +64,35 @@
 
 
 /* Event Listings */
-.event-item {
+.event-item.btn {
 	display: block;
 	width: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	text-align: left;
-	h3, h4, span {
+	background: #efefef;
+	border-radius: 6px;
+	h2, h4, span {
 		display: inline-block;
+	}
+	h2 {
+		margin: 5px 0;
+		font-size: 18px;
+		color: @gray-dark;
+		white-space: normal;
+		max-width: 90%;
+	}
+	h4 {
+		color: @gray-lighter;
+		margin-right: 15px;
+	}
+	span.fa {
+		float: right;
+		font-size: 150%;
 	}
 	.row {
 		margin: 0;
+		background: @gray-dark;
+		border-radius: 3px;
 	}
 }
 
@@ -82,6 +104,12 @@
 	}
 }
 
+@media only screen and (max-width: 450px) {
+	.container.main {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
 
 
 
