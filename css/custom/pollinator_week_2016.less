@@ -194,14 +194,11 @@ a.btn-download {
 
 /* popups */
 div.cartodb-popup.v2 {
-	div.cartodb-popup-content-wrapper {
-  	background-color: #efefef;
-	}
 	div.cartodb-popup-content {
 		h3 {
-			color: #fff;
+			color: @gray-lighter;
 			padding: 7px;
-			background: @brand-primary;
+			background: @gray-dark;
 			border-radius: 3px;
 			margin-bottom: 10px;
 		}
@@ -216,9 +213,6 @@ div.cartodb-popup.v2 {
 		color: @gray-dark;
 		text-transform: capitalize;
 		margin-bottom: 7px;
-		max-height: 50px;
-		overflow: hidden;
-		text-overflow: ellipsis;
 	}
 	p {
 		font-family: @font-family-serif;
@@ -229,8 +223,26 @@ div.cartodb-popup.v2 {
 	}
 }
 
-
-
+/* hover popup */
+div.cartodb-tooltip {
+	width: 250px;
+	max-width: 250px;	
+	h2 {
+		font-family: @font-family-serif;
+		font-size: 16px;
+		font-weight: bold;
+		margin: 5px 0;
+		line-height: 1.4;
+	}
+	h3 {
+		font-size: 11px;
+		margin: 5px 0;
+		padding: 5px;
+		background: @gray-dark;
+		color: @gray-lighter;
+		border-radius: 2px;
+	}
+}
 
 
 
