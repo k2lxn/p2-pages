@@ -1,7 +1,6 @@
 
 window.onload = function() { 
 	cartodb.createVis('map', 'https://pollinatorpartner.cartodb.com/api/v2/viz/82b577dc-f87a-11e5-9a9c-0e5db1731f59/viz.json');
-	detectUserLocation();
 }		
 
 function mapToPosition(position) {
