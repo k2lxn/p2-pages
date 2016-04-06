@@ -6,12 +6,24 @@
 $(document).ready(function(){ 
 	var sql = new cartodb.SQL({ user: 'pollinatorpartner' });
 	var last_state = "";  // For labeling sections by State
+	
+	/* Build the navigation */
+	sql.execute("SELECT state FROM pollinator_week")
+		.done(function(data) {
+			console.log(data.rows);
+		})
+		.error(function(errors) {
+    	// errors contains a list of errors
+   	 console.log("errors:" + errors);
+ 	 });
+	
+	/*  Build the list */
 	sql.execute("SELECT * FROM pollinator_week")
   	.done(function(data) {
     	console.log(data.rows);
     	
     	for (let event of data.rows) {
-    		// check to see if new state section neccessary
+    		// check to see if new state section necessary
     		if (event.state !== last_state) {
     			$('#events_list').append("<h2>"+event.state+"</h2>");
     		}
