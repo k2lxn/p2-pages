@@ -1,7 +1,29 @@
 
-window.onload = function() { 
+/* * * ON  READY * * */
+$(document).ready(function(){
 	cartodb.createVis('map', 'https://pollinatorpartner.cartodb.com/api/v2/viz/82b577dc-f87a-11e5-9a9c-0e5db1731f59/viz.json');
-}		
+});	
+
+/* * * ON  LOAD * * */	
+$(window).load(function() {
+	alert("window loaded");
+	// Shrink on click popups for small screens
+	if ( $(window).width() < 450 ) {
+		$('div.cartodb-popup.v2').attr("style","width:220px"); // NOTE: cartoDB still overrides this
+	}
+});
+
+
+/* * * RESIZE * * */
+$(window).resize(function() {
+	if ( $(window).width() < 450 ) {
+		$('div.cartodb-popup.v2').attr("style","width:220px");
+	}	else {
+		$('div.cartodb-popup.v2').attr("style","width:300px");
+	}
+});
+
+
 
 function mapToPosition(position) {
   lon = position.coords.longitude;
