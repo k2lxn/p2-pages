@@ -39,16 +39,16 @@ $(document).ready(function(){
     		);
     		// Create dropdown
     		$('#events_list').append(
-    			"<div id='"+ event.cartodb_id + "' class='row event-info'>"
-    			+ "<div class='col-sm-8'>"
+    			"<div id='"+ event.cartodb_id + "' class='event-info'>"
+    			+ "<div class='row'><div class='col-sm-8'>"
     			+ "<h4>Description</h4><p>"+event.description+"</p>"
-    			+ "<p>"+event.more_info+"</p></div>"
+    			+ "<p><i>"+event.more_info+"</i></p></div>"
     			+ "<div class='col-sm-4'>"
     			+ "<h4>Time</h4><p>"+event.date+", "+event.time+"</p>"
     			+ "<h4>Location</h4><p>"+event.location+"<br>"
     			+ event.city +"<br>"
     			+ event.state + ", "+ event.zip +"</p>"
-    			+ "</div></div>"
+    			+ "</div></div></div>"
     		);
     		
     		last_state = event.state;
