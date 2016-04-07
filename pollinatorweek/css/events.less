@@ -151,6 +151,20 @@
 	border-bottom: 1px solid @gray-light;
 }
 
+a.to-top {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	background: @gray-base;
+	color: @gray-lighter;
+	padding: 7px 15px;
+	border-radius: 2px;
+	z-index: 1500;
+}
+a.to-top:hover {
+	color: @brand-primary;
+}
+
 @media only screen and (max-width: 450px) {
 	.container.main {
 		padding-left: 15px;

@@ -130,11 +130,22 @@ $(document).ready(function(){
    	 console.log("errors:" + errors);
  	 });
  	
+ 	// Hide 'to-top' button initially
+ 	$('a.to-top').hide();
+ 	// Hide it on click too
+ 	$('a.to-top').click(function(){$(this).hide();});
+ 	
+ 	/* Add onclick function to States navigation */ 
+ 	$(document).on('click', '#states-nav a', function(){
+ 		//alert("clicked");
+ 		$('a.to-top').show();
+ 	});
+ 	
  	/* Add onclick function to Event Title button (button.event-item) */ 
  	$(document).on('click', '.event-item', function(){
  		$(this).next('.event-info').slideToggle();	
  	});
-
+	
 });
 
 
@@ -144,5 +155,16 @@ $(document).ready(function(){
 			$(this).children('span').toggleClass('fa-chevron-circle-up');
 		}
 */
+
+
+
+
+
+
+
+
+
+
+
 
 
