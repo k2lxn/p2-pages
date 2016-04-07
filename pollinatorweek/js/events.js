@@ -31,15 +31,11 @@ $(document).ready(function(){
     		// Create Event Title button
     		$('#events_list').append(
     			"<button class='event-item btn'>"
-    			+ "<h2>"+event.event_name+"</h2>"
-    			+ "<span class='fa fa-chevron-circle-down'></span>"
-    			+ "<div class='row'>"
-    			+ "<div class='col-xs-6'><h4><span class='highlight'>"+event.city+"</span></h4></div>"
-    			+ "<div class='col-xs-6'>"
-    			+ "<h4>"+event.date.replace(/\/2016/,"")+",</h4>"
-    			+ "<h4>"+event.time+"</h4></div>"
-    			+ "</div>"
-    			+ "</button>"
+    			+ "<div class='row'><h2>"+event.event_name+"</h2>"
+    			+ "<span class='fa fa-chevron-circle-down'></span></div>"
+    			+ "<div class='row'><h3>"+event.city
+    			+ "<span class='highlight'>"+event.date.replace(/\/2016/,"")+"</span>"
+    			+ "</h3></div></button>"		
     		);
     		// Create dropdown
     		$('#events_list').append(

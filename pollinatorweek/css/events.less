@@ -67,11 +67,11 @@
 .event-item.btn {
 	display: block;
 	width: 100%;
+	max-width: 650px;
 	margin-bottom: 20px;
 	text-align: left;
 	background: #efefef;
-	border-radius: 6px;
-	h2, h4, span {
+	h2, h3, span {
 		display: inline-block;
 	}
 	h2 {
@@ -81,18 +81,25 @@
 		white-space: normal;
 		max-width: 90%;
 	}
-	h4 {
+	h3 {
+		font-size: 13px;
 		color: @gray-lighter;
-		margin-right: 15px;
+		white-space: normal;
+		background: @gray-dark;
+		padding: 7px 15px;
+		margin: 5px 0 0;
+		border-radius: 3px;
+		.highlight {
+			margin-left: 15px;
+		}
 	}
 	span.fa {
-		float: right;
+		position: absolute;
+		right: 0;
 		font-size: 150%;
 	}
 	.row {
 		margin: 0;
-		background: @gray-dark;
-		border-radius: 3px;
 	}
 }
 
