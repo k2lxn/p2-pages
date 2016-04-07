@@ -437,11 +437,19 @@ img.pull-right {
 			margin-right: -15px;	
 			padding-left: 0;
 		}
+		li {
+			@media (max-width: 768px) {
+				margin-right: 10px;
+			}
+		}
 	}	
 	.btn {
 		border-radius: 20px;	
 		margin-bottom: @padding-large-vertical;
 		margin-top: @padding-large-vertical;
+		@media (max-width: 768px) {
+			margin: 4px 0;
+		}
 	}
 }
 
