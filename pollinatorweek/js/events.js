@@ -1,3 +1,64 @@
+var state_abbreviations = {
+    'Alabama': 'AL',
+    'Alaska': 'AK',
+    'American Samoa': 'AS',
+    'Arizona': 'AZ',
+    'Arkansas': 'AR',
+    'California': 'CA',
+    'Colorado': 'CO',
+    'Connecticut': 'CT',
+    'Delaware': 'DE',
+    'District of Columbia': 'DC',
+    'Federated States Of Micronesia': 'FM',
+    'Florida': 'FL',
+    'Georgia': 'GA',
+    'Guam': 'GU',
+    'Hawaii': 'HI',
+    'Idaho': 'ID',
+    'Illinois': 'IL',
+    'Indiana': 'IN',
+    'Iowa': 'IA',
+    'Kansas': 'KS',
+    'Kentucky': 'KY',
+    'Louisiana': 'LA',
+    'Maine': 'ME',
+    'Marshall Islands': 'MH',
+    'Maryland': 'MD',
+    'Massachusetts': 'MA',
+    'Michigan': 'MI',
+    'Minnesota': 'MN',
+    'Mississippi': 'MS',
+    'Missouri': 'MO',
+    'Montana': 'MT',
+    'Nebraska': 'NE',
+    'Nevada': 'NV',
+    'New Hampshire': 'NH',
+    'New Jersey': 'NJ',
+    'New Mexico': 'NM',
+    'New York': 'NY',
+    'North Carolina': 'NC',
+    'North Dakota': 'ND',
+    'Northern Mariana Islands': 'MP',
+    'Ohio': 'OH',
+    'Oklahoma': 'OK',
+    'Oregon': 'OR',
+    'Palau': 'PW',
+    'Pennsylvania': 'PA',
+    'Puerto Rico': 'PR',
+    'Rhode Island': 'RI',
+    'South Carolina': 'SC',
+    'South Dakota': 'SD',
+    'Tennessee': 'TN',
+    'Texas': 'TX',
+    'Utah': 'UT',
+    'Vermont': 'VT',
+    'Virgin Islands': 'VI',
+    'Virginia': 'VA',
+    'Washington': 'WA',
+    'West Virginia': 'WV',
+    'Wisconsin': 'WI',
+    'Wyoming': 'WY'
+  }
 
 
 /* * * * * * * * *
@@ -10,7 +71,13 @@ $(document).ready(function(){
 	/* Build the navigation */
 	sql.execute("SELECT DISTINCT state FROM pollinator_week")
 		.done(function(data) {
-			console.log(data.rows);
+			console.log(data.rows);	
+			for (let state of data.rows) {
+				$('#states-nav').append(
+					"<li><a href='#"+state.state.replace(/\s/g,"-")
+					+"'>"+state_abbreviations[state.state]+"</a></li>"
+				);
+			}
 		})
 		.error(function(errors) {
     	// errors contains a list of errors
@@ -20,14 +87,14 @@ $(document).ready(function(){
 	/*  Build the list */
 	sql.execute("SELECT * FROM pollinator_week ORDER BY state,city,zip")
   	.done(function(data) {
-    	console.log(data.rows);
-    	
+    	//console.log(data.rows); 	
     	for (let event of data.rows) {
     		// check to see if new state section necessary
     		if (event.state !== last_state) {
     			$('#events_list').append(
     				"<div class='divider'></div>"
-    				+ "<h3>"+event.state+"</h3>"
+    				+ "<h3 id="+event.state.replace(/\s/g,"-")
+    				+">"+event.state+"</h3>"
     				);
     		}
     		
@@ -50,7 +117,7 @@ $(document).ready(function(){
     			+ "<h4>Time</h4><p>"+event.date+", "+event.time+"</p>"
     			+ "<h4>Location</h4><p>"+event.location+"<br>"
     			+ event.city +"<br>"
-    			+ event.state + ", "+ event.zip +"</p>"
+    			+ state_abbreviations[event.state] + ", "+ event.zip +"</p>"
     			+ "</div></div></div>"
     		);
     		
