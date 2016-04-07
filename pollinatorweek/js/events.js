@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var last_state = "";  // For labeling sections by State
 	
 	/* Build the navigation */
-	sql.execute("SELECT state FROM pollinator_week")
+	sql.execute("SELECT DISTINCT state FROM pollinator_week")
 		.done(function(data) {
 			console.log(data.rows);
 		})
@@ -18,14 +18,17 @@ $(document).ready(function(){
  	 });
 	
 	/*  Build the list */
-	sql.execute("SELECT * FROM pollinator_week")
+	sql.execute("SELECT * FROM pollinator_week ORDER BY state,city,zip")
   	.done(function(data) {
     	console.log(data.rows);
     	
     	for (let event of data.rows) {
     		// check to see if new state section necessary
     		if (event.state !== last_state) {
-    			$('#events_list').append("<h3>"+event.state+"</h3>");
+    			$('#events_list').append(
+    				"<div class='divider'></div>"
+    				+ "<h3>"+event.state+"</h3>"
+    				);
     		}
     		
     		// Create Event Title button
