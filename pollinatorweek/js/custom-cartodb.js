@@ -6,7 +6,6 @@ $(document).ready(function(){
 
 /* * * ON  LOAD * * */	
 $(window).load(function() {
-	alert("window loaded");
 	// Shrink on click popups for small screens
 	if ( $(window).width() < 450 ) {
 		$('div.cartodb-popup.v2').attr("style","width:220px"); // NOTE: cartoDB still overrides this
