@@ -78,7 +78,7 @@ $(document).ready(function(){
 	$('.main').css('padding-bottom', $('.footer').height()); 
 	
 	// Anchor Links
-	$('a[href^="#"]').click(function(){
+	$(document).on('click', 'a[href^="#"]', function(){ // for anchors inserted programmatically
 		var target = $(this.hash);
 		target = target.length ? target : $('[name= ' + this.hash.slice(1) + ']');
 		if(target.length) {
