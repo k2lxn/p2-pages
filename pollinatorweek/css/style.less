@@ -113,7 +113,6 @@ a.btn-download {
  	width: 100%;
 }
 
-
 /*  Proclamations Dropdown */
 #proclamations-btn.btn {
 	
@@ -278,6 +277,28 @@ div.cartodb-tooltip {
 }
 
 
-
+#pw-activities {
+	a {
+		display: block;
+	}	
+	.col-xs-4 {
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+		a {
+			vertical-align: top;
+			@media (max-width: 500px) {
+				display: inline-block;
+				width: 40%;
+			}
+		}	
+		a:nth-of-type(2) {
+			margin-left: 10px;
+		}
+		a:hover h4 {
+			color: @brand-primary;
+		}
+	}
+}
 
 
