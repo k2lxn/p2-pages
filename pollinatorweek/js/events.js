@@ -72,10 +72,10 @@ $(document).ready(function(){
 	sql.execute("SELECT DISTINCT state FROM pollinator_week")
 		.done(function(data) {
 			console.log(data.rows);	
-			for (state of data.rows) {
+			for (var i=0; i < data.rows.length; i++) {
 				$('#states-nav').append(
-					"<li><a href='#"+state.state.replace(/\s/g,"-")
-					+"'>"+state_abbreviations[state.state]+"</a></li>"
+					"<li><a href='#"+data.rows[i].state.replace(/\s/g,"-")
+					+"'>"+state_abbreviations[data.rows[i].state]+"</a></li>"
 				);
 			}
 		})
@@ -87,10 +87,10 @@ $(document).ready(function(){
 	/*  Build the list */
 	sql.execute("SELECT * FROM pollinator_week ORDER BY state,city,zip")
   	.done(function(data) {
-    	//console.log(data.rows); 	
-    	for (event of data.rows) {
-    		// check to see if new state section necessary
-    		if (event.state !== last_state) {
+    	console.log(data.rows); 	
+    	for (var i=0; i < data.rows.length; i++) {
+    		var event = data.rows[i];
+    		if (event.state !== last_state) { // Check to see if new state section necessary
     			$('#events_list').append(
     				"<div class='divider'></div>"
     				+ "<h3 id="+event.state.replace(/\s/g,"-")
