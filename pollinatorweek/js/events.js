@@ -72,7 +72,7 @@ $(document).ready(function(){
 	sql.execute("SELECT DISTINCT state FROM pollinator_week")
 		.done(function(data) {
 			console.log(data.rows);	
-			for (let state of data.rows) {
+			for (state of data.rows) {
 				$('#states-nav').append(
 					"<li><a href='#"+state.state.replace(/\s/g,"-")
 					+"'>"+state_abbreviations[state.state]+"</a></li>"
@@ -88,7 +88,7 @@ $(document).ready(function(){
 	sql.execute("SELECT * FROM pollinator_week ORDER BY state,city,zip")
   	.done(function(data) {
     	//console.log(data.rows); 	
-    	for (let event of data.rows) {
+    	for (event of data.rows) {
     		// check to see if new state section necessary
     		if (event.state !== last_state) {
     			$('#events_list').append(
