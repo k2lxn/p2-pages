@@ -663,7 +663,11 @@ p {
 }
 p.lead{
 	font-family: @font-family-sans-serif;
+	font-size: 18px;
 	font-weight: 400;
+	@media (min-width: @screen-sm) {
+		font-size: 21px;
+	}
 }
 
 .main {
