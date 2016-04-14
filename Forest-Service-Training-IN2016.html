@@ -11,7 +11,31 @@
     <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
-
+		<!-- Page styles -->
+		<style>
+			.light-box {
+				width: 100%;
+				max-width: 400px;
+				margin: 0 auto;
+			}
+			.light-box > h3 {
+				line-height: 1.4;
+				max-width: 300px;
+				margin: 0 auto;
+			}
+			#logos > img {
+				max-width: 150px;
+				max-height: 90px;
+				margin: 10px;
+			}
+			@media only screen and (max-width: 768px) {
+				#logos > img {
+					max-height: 80px;
+					max-width: 130px;
+				}
+			}
+		</style>
+		
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -211,14 +235,14 @@
       	</div>  <!-- end .col-sm-9 -->
           
         <!-- Sidebar -->
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar text-center" id="logos">
         	<img src="Images/Logos/forestservice.gif" alt="U.S. Forest Service logo">    
-        	<img src="Images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo">	
+        	<img src="Images/P2.jpg" alt="Pollinator Partnership logo">	
         </div>  <!-- end .col-sm-3 -->
       </div> <!-- end .row --> 
       
       <div class="row">
-      	<div class="col-sm-9">
+      	<div class="col-sm-9" style="margin-top:20px;">
       		<p><strong>Dear Participant:</strong><p>
       		<p>
       		The USDA Forest Service’s Eastern Region is partnering with the Pollinator Partnership (P2) to develop and execute pollinator training workshops coinciding with Pollinator Week June 20-26, 2016. These workshops will focus on the importance of pollinators, the threats they currently face, and actions to help support them.
