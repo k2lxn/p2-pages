@@ -626,7 +626,34 @@ div.resources-thumb {
 	}
 }
 
-
+.table {
+	border: 1px solid @gray-light;
+	h4 {
+		margin: 5px 0 0;
+	}
+	.row {
+		width: 100%;
+		margin: 0;
+		box-sizing: border-box;
+		div {
+			padding: 5px 5px 5px 15px;
+			color: @gray-base;
+		}
+		div:nth-of-type(2n) {
+			border-left: 1px solid @gray-light;
+			white-space: normal;
+		}
+	}
+	.row:nth-of-type(2n) {
+		background: @gray-lighter;
+	}
+	.row.heading {
+		background: @gray-base;
+		h4, p {
+		 color: #fff;
+		} 
+	}
+}
 
 
 /* ==================================================
