@@ -7,8 +7,9 @@ var navHeight = $("div#top-bar").height() + $("div.navbar-header").height();
 /* Functions */
 
 // Move footer down when page resizes
-var bumpIt = function() {  
-  	$('.main').css('padding-bottom', $('.footer').height());
+var bumpIt = function() { 
+		var padding_bottom =  $('.footer').height() + 60;
+  	$('.main').css('padding-bottom', padding_bottom);
 	},
 	didResize = false;
 
@@ -75,7 +76,7 @@ function addBGTint(elem,tint) {
 $(document).ready(function(){
 	
 	// Push content up above footer
-	$('.main').css('padding-bottom', $('.footer').height()); 
+	bumpIt();
 	
 	// Anchor Links
 	$(document).on('click', 'a[href^="#"]', function(){ // for anchors inserted programmatically
@@ -111,7 +112,11 @@ $(document).ready(function(){
  
 $(window).resize(function() {
 	didResize = true;	
+	bumpIt();
+	sizeInlineImages();
+	sizeThumbnails();
 });
+
 
 setInterval(function() {
 	if(didResize){
