@@ -8,7 +8,7 @@ var navHeight = $("div#top-bar").height() + $("div.navbar-header").height();
 
 // Move footer down when page resizes
 var bumpIt = function() { 
-		var padding_bottom =  $('.footer').height() + 60;
+		var padding_bottom =  $('.footer').height();
   	$('.main').css('padding-bottom', padding_bottom);
 	},
 	didResize = false;
