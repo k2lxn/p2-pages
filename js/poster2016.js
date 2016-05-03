@@ -10,9 +10,9 @@ var poster_key = {
 	'8': 'Eastern Redbud'
 }
 
-/* * * ON READY * * */
+/* * * ON LOAD * * */
 
-$(document).ready(function(){
+$(window).load(function(){
 	var poster_height = $("#poster").height();
 	var poster_width = $("#poster").width();
 	
@@ -29,43 +29,35 @@ $(document).ready(function(){
 	$("#7").css({left: '11%', top: '78%'});
 	$("#8").css({right: '3%', top: '80%'});
 	
-	// Add pop-ups
-	var content_width = $("#info-window").width();
-	
-	for (var marker in poster_key) {
+	// Add pop-ups	
+	for (marker in poster_key) {
 		if(poster_key.hasOwnProperty(marker)) {
 			console.log(marker+": "+poster_key[marker]);
+			var id = "#"+marker;
+			$(id).hover(
+				function(){
+					// Update content from poster_key hash
+					$("#info-window").html(poster_key[this.id]);
+					
+					// Position the info-window
+					var marker_position = $(this).position();
+					var left = marker_position.left;
+					var top = marker_position.top;
+					if ( parseInt(this.id) % 2 === 0){
+						left = left - ($("#info-window").width() + 35);
+						$("#info-window").css({left: left, right: 'auto', top: top});
+					} else {
+						left = left + 50;
+						$("#info-window").css({left: left, right: 'auto', top: top});
+					}
+					$("#info-window").toggle();
+				},
+				function(){
+					$("#info-window").toggle();
+				}
+			);
 		}	
-	}
-/*	
-	$('.tree-mark').hover(
-		function(){
-			// Get content from poster_key hash and size info-window
-			$("#info-window").html(poster_key[this.id]);
-			content_width = $("#info-window").width(); 
-			alert("content_width: "+content_width);
-			$("#info-window").width(content_width + 20);  // Add extra width for padding
-			
-			// Position info-window
-			var marker_position = $(this).position();
-			var left = marker_position.left + 50;
-			var top = marker_position.top;
-			if ( parseInt(this.id) % 2 === 0){
-				var right = $("#markers-container").width() - left + content_width;
-				$("#info-window").css({left: 'auto', right: right, top: top});
-			} else {
-				$("#info-window").css({left: left, right: 'auto', top: top});
-			}
-			
-			// Display
-			$("#info-window").toggle(); },
-			
-		function(){
-			$("#info-window").toggle();
-			$("#info-window").width(content_width);  // Remove width to avoid duplicate padding
-	});
-	
-*/	
+	}	
 });
 
 
