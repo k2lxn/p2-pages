@@ -6,11 +6,23 @@
 	position: absolute;
 	width: 95%;
 	min-height: 1px;
-	background-color: rgba(0,0,0,0.4);
+	/*background-color: rgba(0,0,0,0.4);*/
+}
+
+#info-window {
+	text-transform: uppercase;
+	font-family: sans-serif;
+	background-color: rgba(0,0,0,0.8);
+	color: #fff;
+	box-sizing: border-box;
+	width: fit-content;
+	padding: 10px;
+	display: none;
+	position: absolute;
 }
 
 .tree-mark {
-	color: #555;
+	color: #222;
 	background-color: #ccc;
 	box-sizing: border-box;
 	padding: 10px;
