@@ -1,0 +1,1 @@
+body{position:relative}#poster{width:100%;display:inline-block}#markers-container{position:absolute;width:95%;min-height:1px}#info-window{background-color:rgba(0,0,0,0.8);box-sizing:border-box;padding:10px;position:absolute;z-index:500}.tree-mark{color:#222;background-color:#ccc;box-sizing:border-box;padding:10px;width:40px;text-align:center;border-radius:30px;position:absolute}

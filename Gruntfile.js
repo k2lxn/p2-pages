@@ -15,7 +15,8 @@ module.exports = function(grunt) {
           "css/custom/pw_events_2016.css": "css/custom/pw_events_2016.less",
           "css/custom/pollinator_week_2016.css": "css/custom/pollinator_week_2016.less",
           "pollinatorweek/css/style.css": "pollinatorweek/css/style.less",
-          "pollinatorweek/css/events.css": "pollinatorweek/css/events.less",  
+          "pollinatorweek/css/events.css": "pollinatorweek/css/events.less", 
+          "css/custom/poster2016.css": "css/custom/poster2016.less" 
         }
       }
     },
