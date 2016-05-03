@@ -10,13 +10,15 @@ var poster_key = {
 	'8': 'Eastern Redbud'
 }
 
+// var trees = ajax object?? with all tree data mapped to tree name?
+// including images??
+
 /* * * ON LOAD * * */
 
 $(window).load(function(){
+	// Size the poster overlay to match poster size (600:950)
 	var poster_height = $("#poster").height();
 	var poster_width = $("#poster").width();
-	
-	// Size the poster overlay to match poster size (600:950)
 	$("#markers-container").height(poster_height);
 	
 	// Position markers
@@ -28,8 +30,8 @@ $(window).load(function(){
 	$("#6").css({right: '12%', top: '63%'});
 	$("#7").css({left: '11%', top: '78%'});
 	$("#8").css({right: '3%', top: '80%'});
-	
-	// Add pop-ups	
+
+/*	// Add pop-ups	
 	for (marker in poster_key) {
 		if(poster_key.hasOwnProperty(marker)) {
 			console.log(marker+": "+poster_key[marker]);
@@ -57,7 +59,8 @@ $(window).load(function(){
 				}
 			);
 		}	
-	}	
+	}
+	*/	
 });
 
 
