@@ -54,41 +54,16 @@ $(window).load(function(){
 					}
 				}
 				// Display info-window
-				$("#info-window").toggle();
+				$("#info-window").css('display','block');
 			});
 		}
 	}
 	
-/*	// Add pop-ups	
-	for (marker in poster_key) {
-		if(poster_key.hasOwnProperty(marker)) {
-			console.log(marker+": "+poster_key[marker]);
-			var id = "#"+marker;
-			$(id).hover(
-				function(){
-					// Update content from poster_key hash
-					$("#info-window").html(poster_key[this.id]);
-					
-					// Position the info-window
-					var marker_position = $(this).position();
-					var left = marker_position.left;
-					var top = marker_position.top;
-					if ( parseInt(this.id) % 2 === 0){
-						left = left - ($("#info-window").width() + 35);
-						$("#info-window").css({left: left, right: 'auto', top: top});
-					} else {
-						left = left + 50;
-						$("#info-window").css({left: left, right: 'auto', top: top});
-					}
-					$("#info-window").toggle();
-				},
-				function(){
-					$("#info-window").toggle();
-				}
-			);
-		}	
-	}
-	*/	
+	// Close info-window pop-up
+	$(".close-window").click(function(){
+		$(this).parent().toggle();
+	});
+	
 });
 
 
