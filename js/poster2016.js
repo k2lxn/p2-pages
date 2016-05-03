@@ -22,15 +22,43 @@ $(window).load(function(){
 	$("#markers-container").height(poster_height);
 	
 	// Position markers
-	$("#1").css({left: '11%', top: '28%'});
-	$("#2").css({right: '8%', top: '25%'});
-	$("#3").css({left: '11%', top: '48%'});
-	$("#4").css({right: '11%', top: '45%'});
-	$("#5").css({left: '13%', top: '65%'});
-	$("#6").css({right: '12%', top: '63%'});
+	$("#1").css({left: '9%', top: '28%'});
+	$("#2").css({right: '6%', top: '25%'});
+	$("#3").css({left: '9%', top: '48%'});
+	$("#4").css({right: '9%', top: '45%'});
+	$("#5").css({left: '11%', top: '65%'});
+	$("#6").css({right: '10%', top: '63%'});
 	$("#7").css({left: '11%', top: '78%'});
 	$("#8").css({right: '3%', top: '80%'});
 
+	// Trigger info popup when any marker is clicked
+	for (marker in poster_key) {
+		if(poster_key.hasOwnProperty(marker)) {
+			var id = "#"+marker;
+			$(id).click(function(){
+				var marker_position = $(this).position();
+				var left = marker_position.left;
+				var top = marker_position.top;
+				// Position info-window horizontally centered for small screens
+				if($(window).width() <= 768) { 
+					top = top + 48;
+					$("#info-window").css({left: 'auto', top: top});
+				} else {
+				// Position info-window relative to marker for large screens
+					if ( parseInt(this.id) % 2 === 0){
+						left = left - ($("#info-window").width() + 35);
+						$("#info-window").css({left: left, top: top});
+					} else {
+						left = left + 50;
+						$("#info-window").css({left: left, top: top});
+					}
+				}
+				// Display info-window
+				$("#info-window").toggle();
+			});
+		}
+	}
+	
 /*	// Add pop-ups	
 	for (marker in poster_key) {
 		if(poster_key.hasOwnProperty(marker)) {
@@ -69,5 +97,5 @@ $(window).load(function(){
 $(window).resize(function() {
 	// Size the poster overlay to match poster size
 	var poster_height = $("#poster").height();
-	$("#markers-container").height(poster_height);
+	$("#markers-container").height(poster_height);	
 });
