@@ -71,9 +71,9 @@ function addBGTint(elem,tint) {
 
 
 /* * * * * * * * *
- * ON  READY * * *
+ * ON  LOAD * * *
  * * * * * * * * */
-$(document).ready(function(){
+$(window).load(function(){
 	
 	// Push content up above footer
 	bumpIt();
