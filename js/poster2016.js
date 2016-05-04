@@ -13,6 +13,9 @@ var poster_key = {
 // var trees = ajax object?? with all tree data mapped to tree name?
 // including images??
 
+var curr_info = "1";  // Track what is displayed in #info-window
+var last_info = "0";
+
 /* * * ON LOAD * * */
 
 $(window).load(function(){
@@ -30,12 +33,15 @@ $(window).load(function(){
 	$("#6").css({right: '10%', top: '63%'});
 	$("#7").css({left: '11%', top: '78%'});
 	$("#8").css({right: '3%', top: '80%'});
-
+	
+	
 	// Trigger info popup when any marker is clicked
+	var id = "";
 	for (marker in poster_key) {
 		if(poster_key.hasOwnProperty(marker)) {
-			var id = "#"+marker;
+			id = "#"+marker;
 			$(id).click(function(){
+				// Position popup
 				var marker_position = $(this).position();
 				var left = marker_position.left;
 				var top = marker_position.top;
@@ -54,11 +60,25 @@ $(window).load(function(){
 					}
 				}
 				// Display info-window
-				$("#info-window").css('display','block');
+				var my_id = $(this).attr("id");
+				last_info = curr_info;
+				curr_info = my_id;
+				//alert("last_info: "+last_info+", curr_info: "+curr_info);
+				if ( last_info === curr_info ) {
+					$("#info-window").toggle();
+				} else {
+					$("#info-window").css('display','block');	
+				}
 			});
 		}
 	}
 	
+	// Indicate active marker
+	$(".tree-mark").click(function(){
+		$(".tree-mark").not(this).removeClass("active");
+		$(this).toggleClass("active");	
+	});
+			
 	// Close info-window pop-up
 	$(".close-window").click(function(){
 		$(this).parent().toggle();
