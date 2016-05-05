@@ -12,6 +12,31 @@ var poster_key = {
 
 // var trees = ajax object?? with all tree data mapped to tree name?
 // including images??
+var trees = {
+	'Bigleaf Maple': {'latin': 'Acer macrophyllum (Sapindaceae)',
+										'distribution': 'Western United States and Canada, from British Columbia to California',
+										'pollinators': 'Insect pollinators include bees, flies, and beetles.',
+										'habitat': 'A large deciduous tree growing in moist woods, forests, and canyons',
+										'height': '60-100 feet', 
+										'IUCN_status': 'Not yet assessed',
+										'NatureServe_status': 'G5 - Secure',
+										'NatureServe_url': 'http://explorer.natureserve.org/servlet/NatureServe?searchName=Acer+macrophyllum',
+										'encyclopedia_url': 'http://www.eol.org/pages/582252/overview'
+										}
+}
+
+
+/* * * Functions * * */
+function update_popup(id) {
+	var item = poster_key[id];
+	// DEV ONLY -- JUST TREES
+	var data = trees[item]? trees[item] : "hang tight";
+	console.log(data);
+	
+	var popup = $("#info-window");
+	popup.children("h2:first-of-type").html(item);
+}
+
 
 var curr_info = "1";  // Track what is displayed in #info-window
 var last_info = "0";
@@ -41,6 +66,8 @@ $(window).load(function(){
 		if(poster_key.hasOwnProperty(marker)) {
 			id = "#"+marker;
 			$(id).click(function(){
+				// Load data
+				update_popup($(this).attr("id"));
 				// Position popup
 				var marker_position = $(this).position();
 				var left = marker_position.left;
