@@ -122,11 +122,13 @@ img#poster {
 	background-color: @brand-primary;
 }
 
-p ~ img {
-	border-radius:4px;
-	@media (max-width: 414px) {
-		width: 100%;
-	}
+#related-projects {
+	img {
+		border-radius:4px;
+		@media (max-width: 414px) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 }
 img#bft-honey {
 	width: 190px;
@@ -134,9 +136,36 @@ img#bft-honey {
 		width: 100%;
 	}
 }
-img#ROW-logo {
-	width: 200px;
-	@media (max-width: 450px) {
-		width: 100%;
+	img#ROW-logo {
+		width: 200px;
+		@media (max-width: 450px) {
+			width: 100%;
+		}
+	}
+}
+
+#credits {
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	img {
+		display: block;
+		width: 120px;
+		height: 171px;
+		margin: 10px auto;
+		border-radius: 3px;
+		@media (max-width: @screen-md) and (min-width: 374px) {
+			float: left;
+			margin-right: 20px;
+		}
+	}
+	p {
+		@media (max-width: @screen-md) {
+			margin: 10px;
+		}
+		@media (max-width: @screen-sm) {
+			text-align: left;
+		}
 	}
 }
