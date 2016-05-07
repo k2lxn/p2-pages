@@ -154,7 +154,6 @@ img#bft-honey {
 		width: 120px;
 		height: 171px;
 		margin: 10px auto;
-		border-radius: 3px;
 		@media (max-width: @screen-md) and (min-width: 374px) {
 			float: left;
 			margin-right: 20px;
@@ -167,5 +166,13 @@ img#bft-honey {
 		@media (max-width: @screen-sm) {
 			text-align: left;
 		}
+	}
+}
+img {
+	border-radius: 3px;
+}
+.img-sm, .figure-sm {
+	@media (max-width: 550px) {
+		margin-bottom: 20px;
 	}
 }
