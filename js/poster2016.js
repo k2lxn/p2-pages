@@ -15,8 +15,8 @@ var poster_key = {
 var trees = {
 	'Bigleaf Maple': [['latin', 'Acer macrophyllum (Sapindaceae)'],
 										['Geographic Distribution', 'Western United States and Canada, from British Columbia to California'],
-										['Pollinators', 'Insect pollinators include bees, flies, and beetles.'],
 										['Habitat', 'A large deciduous tree growing in moist woods, forests, and canyons'],
+										['Pollinators', 'Insect pollinators include bees, flies, and beetles.'],		
 										['Mature height', '60-100 feet'], 
 										['Bloom period', 'Late March to June'],
 										['IUCN threat status', 'Not yet assessed'],
@@ -26,8 +26,8 @@ var trees = {
 									],
 	'Tulip Tree': [['latin', 'Liriodendron tulipifera (Magnoliaceae)'],
 								['Geographic Distribution', 'Eastern United States and Canada, from Vermont, west through southern Ontario, south to Louisiana, and east to northern Florida. State tree of Indiana and Tennessee'],
-								['Pollinators', 'Nectar and pollen attract miscellaneous flies, beetles, honey bees, bumble bees, and other long-tongued bees. Ruby-throated Hummingbirds also visit for nectar. Some self-pollination.'],
 								['Habitat', 'This tall, deciduous, long-lived broadleaf tree is a shade-tolerant pioneer species.'],
+								['Pollinators', 'Nectar and pollen attract miscellaneous flies, beetles, honey bees, bumble bees, and other long-tongued bees. Ruby-throated Hummingbirds also visit for nectar. Some self-pollination.'],
 								['Mature height', '70-150 feet'], 
 								['Bloom period', 'April to June'],
 								['IUCN threat status', 'Lower Risk/least concern (LR/lc). It is very sensitive to high ozone concentrations.'],
@@ -37,8 +37,8 @@ var trees = {
 							],
 	'Northern Catalpa': [['latin', 'Catalpa speciosa (Bignoniaceae)'],
 								['Geographic Distribution','Native range was from southern Indiana and southern Illinois, south to southern Tennessee and eastern Arkansas. Now widely naturalized in northern and eastern U.S. and Ontario, Canada.'],
-								['Pollinators', 'Bees and moths.'],
 								['Habitat', 'This perennial deciduous tree prefers moist, deep, well-drained soil, but adapts to dry or wet soils. Areas with a history of disturbance are preferred.'],
+								['Pollinators', 'Bees and moths.'],
 								['Mature height', '50-90 feet'], 
 								['Bloom period', 'Late spring to early summer'],
 								['IUCN threat status', 'Not yet assessed.'],
@@ -48,8 +48,8 @@ var trees = {
 							],
 	'Black Willow': [['latin', 'Salix nigra (Salicaceae)'],
 								['Geographic Distribution','Eastern United States, adjacent parts of Canada, and Mexico'],
-								['Pollinators', 'Insects, especially bees and flies.'],
 								['Habitat', 'This short-lived deciduous tree is most common on river margins, streambanks and meadows where it occupies the lower, wetter, and often less sandy sites.'],
+								['Pollinators', 'Insects, especially bees and flies.'],
 								['Mature height', '30-90 feet'], 
 								['Bloom period', 'February through late June'],
 								['IUCN threat status', 'Not yet assessed.'],
@@ -59,8 +59,8 @@ var trees = {
 							],
 	'Southern Crabapple': [['latin', 'Malus angustifolia (Rosaceae)'],
 								['Geographic Distribution','Throughout southeastern United States from southern Virginia, south to northern Florida, west to Louisiana, and north to Arkansas.'],
-								['Pollinators', 'Insects, especially bees.'],
 								['Habitat', 'This deciduous small tree grows in moist woods, woodland borders, stream banks, fence rows, and old fields.'],
+								['Pollinators', 'Insects, especially bees.'],
 								['Mature height', '20-35 feet'], 
 								['Bloom period', 'March through May'],
 								['IUCN threat status', 'Not yet assessed.'],
@@ -70,8 +70,8 @@ var trees = {
 							],
 	'Staghorn Sumac': [['latin', 'Rhus typhina (Anacardiaceae)'],
 								['Geographic Distribution','Eastern North America, from Quebec and Maine, west to northern Minnesota, south to western Tennessee and northern Alabama, and east to northern Georgia.'],
-								['Pollinators', 'Insects, including short-tongued bees, wasps, and flies.'],
 								['Habitat', 'This deciduous small tree is found in forest edges and disturbed sites on dry soils.'],
+								['Pollinators', 'Insects, including short-tongued bees, wasps, and flies.'],
 								['Mature height', '15-50 feet'], 
 								['Bloom period', 'April to July'],
 								['IUCN threat status', 'Not yet assessed.'],
@@ -81,8 +81,8 @@ var trees = {
 							],
 	'Flowering Dogwood': [['latin', 'Cornus florida (Cornaceae)'],
 								['Geographic Distribution','Eastern North America, from southwestern Maine, west to southern Ontario and central Michigan, central Illinois, Missouri, eastern Kansas, eastern Oklahoma, and eastern Texas, south to Nuevo León and Veracruz in eastern Mexico, and east to central Florida.'],
-								['Pollinators', 'Insects, including bees, wasps, flies, skippers, and beetles.'],
 								['Habitat', 'This deciduous multi-branched small tree is found in eastern deciduous and southern coniferous forests, floodplaines, ravines, and along fencerows.'],
+								['Pollinators', 'Insects, including bees, wasps, flies, skippers, and beetles.'],
 								['Mature height', '15-30 feet'], 
 								['Bloom period', 'March through June'],
 								['IUCN threat status', 'Not yet assessed.'],
@@ -92,8 +92,8 @@ var trees = {
 							],
 	'Eastern Redbud': [['latin', 'Cercis canadensis (Fabaceae)'],
 								['Geographic Distribution','Eastern and south-central United States, southward to northern Mexico.'],
-								['Pollinators', 'Insects, including bees, wasps, flies, butterflies, skippers, and beetles.'],
 								['Habitat', 'This small, short-lived deciduous tree is found in forest understory in moist rich woods, along the banks of streams, and abandoned farmlands.'],
+								['Pollinators', 'Insects, including bees, wasps, flies, butterflies, skippers, and beetles.'],
 								['Mature height', '15-30 feet'], 
 								['Bloom period', 'March through May'],
 								['IUCN threat status', 'Lower Risk/least concerned (LR/lc)'],
@@ -116,15 +116,6 @@ function update_popup(id) {
 	popup.children("h2:first-of-type").html(item);
 	popup.children("h3:first-of-type").html("<em>"+data[0][1]+"</em>");
 	// Iterate through bullet point data and build main popup content
-	/*for(var i=1; i < data.length; i++;) {
-	//	popup.children(".row:nth-of-type"+i+" :nth-of-type("+i+")").html(data[i][0]);
-	//	popup.children(":nth-child("+i+")").html(data[i][1]);
-	}*/
-	
-	// Go through each .row in popup; 
-	// go through each column?? (i++)
-	// put in the data at index i
-	// i++
 	var data_index = 1;
 	popup.children(".row").each(function(row) {
 		$(this).find(".col-sm-6").each(function(heading){
