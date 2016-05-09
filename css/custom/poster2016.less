@@ -122,6 +122,27 @@ img#poster {
 	background-color: @brand-primary;
 }
 
+div[id^="anchor"] {
+	color: #fff;
+	background-color: @brand-primary;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 40px;
+	text-align: center;
+	border-radius: 30px;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	left: -50px;
+	top: 40px;
+	@media (max-width: @screen-sm) {
+		margin: 30px auto 5px;
+		left: 0;
+		top: 0;
+	}
+}
+div[id^="anchor"]:first-of-type {
+	margin-top: -20px;
+}
 
 .tree-info {
 	img.tree-thumb {
