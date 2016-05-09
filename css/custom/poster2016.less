@@ -122,6 +122,99 @@ img#poster {
 	background-color: @brand-primary;
 }
 
+
+.tree-info {
+	img.tree-thumb {
+		height: 120px;
+		display: inline-block;
+		@media (max-width: 413px) {
+			height: 100px;
+		}
+	}
+	.name-slug {
+		height: 120px;
+		display: inline-block;
+		background-color: #efefef;
+		vertical-align: bottom;
+		width: 70%;
+		margin-left: 15px;
+		border-radius: 3px;
+		@media (min-width: @screen-md) {
+			width: 80%;
+		}
+		@media (max-width: 500px) {
+			margin-left: 5px;
+		}
+		@media (max-width: 413px) {
+			height: 100px;
+			width: 68%;
+		}
+		h2 {
+			font-size: 20px;
+			width: fit-content;
+			margin-left: 15px;
+			@media (max-width: 413px) {
+				font-size: 18px;
+				margin-top: 10px;
+			}
+		}
+		h3 {
+			font-size: 15px;
+			margin-left: 15px;
+			margin-top: 10px;
+			line-height: 1.35;
+			@media (max-width: 413px) {
+				font-size: 13px;
+				margin-top: 5px;
+			}
+		}
+	}
+	.row:first-of-type {
+		margin-left: 0;
+		margin-bottom: 15px;
+	}
+	.tree-imgs{
+		margin-bottom: 20px;
+		img, span {
+			width: 45%;
+			max-width: 450px;
+			margin-right: 10px;
+		}
+		span {
+			min-height: 100px;
+			background-size: cover;
+			display: inline-block; 
+			vertical-align: bottom;
+			border-radius: 3px;
+		}
+	}
+	.basic-facts {
+		background-color: #8a8a8a;
+		margin-left: 0;
+		margin-right: 0;
+		h4 {
+			margin-bottom: 5px;
+		}
+		p {
+			color: @gray-lighter;
+			line-height: 1.3;
+		}
+		a {
+			color: @gray-lighter;
+			text-decoration: underline;
+		}
+	}
+	.basic-facts:nth-of-type(4) {
+		border-radius: 3px 3px 0 0;
+		padding-top: 15px;
+	}
+	.basic-facts:last-of-type {
+		border-radius: 0 0 3px 3px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+
 #related-projects {
 	img {
 		border-radius:4px;

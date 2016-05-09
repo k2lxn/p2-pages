@@ -203,6 +203,8 @@ $(window).load(function(){
 		$(this).parent().toggle();
 	});
 	
+	// Size encyclopedic tree images
+	$(".tree-imgs span").height($(".tree-imgs img").height());
 });
 
 
@@ -212,4 +214,7 @@ $(window).resize(function() {
 	// Size the poster overlay to match poster size
 	var poster_height = $("#poster").height();
 	$("#markers-container").height(poster_height);	
+	
+	// Size encyclopedic tree images
+	$(".tree-imgs span").height($(".tree-imgs img").height());
 });
