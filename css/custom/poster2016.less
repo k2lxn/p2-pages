@@ -134,21 +134,25 @@ div[id^="anchor"] {
 	margin-bottom: 5px;
 	left: -50px;
 	top: 40px;
-	@media (max-width: @screen-sm) {
+	@media (min-width: 390px) and (max-width: @screen-sm) {
 		margin: 30px auto 5px;
 		left: 0;
 		top: 0;
+	}
+	@media (max-width: 390px) {
+			top: 45px;
+			left: 0;
 	}
 }
 div[id^="anchor"]:first-of-type {
 	margin-top: -20px;
 }
 
-.tree-info {
-	img.tree-thumb {
+.tree-info, .bee-info {
+	img.thumb {
 		height: 120px;
 		display: inline-block;
-		@media (max-width: 413px) {
+		@media (max-width: 475px) {
 			height: 100px;
 		}
 	}
@@ -161,30 +165,35 @@ div[id^="anchor"]:first-of-type {
 		margin-left: 15px;
 		border-radius: 3px;
 		@media (min-width: @screen-md) {
-			width: 80%;
+			width: 75%;
 		}
-		@media (max-width: 500px) {
+		@media (max-width: 510px) {
 			margin-left: 5px;
 		}
-		@media (max-width: 413px) {
+		@media (max-width: 475px) {
 			height: 100px;
 			width: 68%;
 		}
+		@media (max-width: 390px) {
+			width: 100%;
+			margin-top: 10px;
+		}
 		h2 {
 			font-size: 20px;
-			width: fit-content;
 			margin-left: 15px;
-			@media (max-width: 413px) {
+			margin-right: 15px;
+			@media (max-width: 475px) {
 				font-size: 18px;
-				margin-top: 10px;
+				margin-top: 15px;
 			}
 		}
 		h3 {
 			font-size: 15px;
 			margin-left: 15px;
 			margin-top: 10px;
+			margin-right: 15px;
 			line-height: 1.35;
-			@media (max-width: 413px) {
+			@media (max-width: 475px) {
 				font-size: 13px;
 				margin-top: 5px;
 			}
@@ -193,6 +202,10 @@ div[id^="anchor"]:first-of-type {
 	.row:first-of-type {
 		margin-left: 0;
 		margin-bottom: 15px;
+		@media (max-width: 390px) {
+			margin-left: -15px;
+			text-align: center;
+		}
 	}
 	.tree-imgs{
 		margin-bottom: 20px;
@@ -225,15 +238,20 @@ div[id^="anchor"]:first-of-type {
 			text-decoration: underline;
 		}
 	}
-	.basic-facts:nth-of-type(4) {
-		border-radius: 3px 3px 0 0;
-		padding-top: 15px;
-	}
 	.basic-facts:last-of-type {
 		border-radius: 0 0 3px 3px;
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
+}
+
+.tree-info .basic-facts:nth-of-type(4) {
+	border-radius: 3px 3px 0 0;
+	padding-top: 15px;
+}
+.bee-info .basic-facts:nth-of-type(3) {
+	border-radius: 3px 3px 0 0;
+	padding-top: 15px;
 }
 
 #related-projects {
