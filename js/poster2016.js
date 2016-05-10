@@ -12,95 +12,95 @@ var poster_key = {
 
 // var trees = ajax object?? with all tree data mapped to tree name?
 // including images??
-var trees = {
-	'Bigleaf Maple': [['latin', 'Acer macrophyllum (Sapindaceae)'],
-										['Geographic Distribution', 'Western United States and Canada, from British Columbia to California'],
+var poster_data = {
+	'Bigleaf Maple': { 'latin': 'Acer macrophyllum (Sapindaceae)',
+										 'facts': [['Geographic Distribution', 'Western United States and Canada, from British Columbia to California'],
 										['Habitat', 'A large deciduous tree growing in moist woods, forests, and canyons'],
 										['Pollinators', 'Insect pollinators include bees, flies, and beetles.'],		
 										['Mature height', '60-100 feet'], 
 										['Bloom period', 'Late March to June'],
 										['IUCN threat status', 'Not yet assessed'],
-										['NatureServe conservation status', 'G5 - Secure'],
-										['NatureServe_param', 'Acer+macrophyllum'],
-										['encyclopedia_index', '582252']
-									],
-	'Tulip Tree': [['latin', 'Liriodendron tulipifera (Magnoliaceae)'],
-								['Geographic Distribution', 'Eastern United States and Canada, from Vermont, west through southern Ontario, south to Louisiana, and east to northern Florida. State tree of Indiana and Tennessee'],
+										['NatureServe conservation status', 'G5 - Secure']],
+										'NatureServe_param': 'Acer+macrophyllum',
+										'encyclopedia_index': '582252'
+									},
+	'Tulip Tree': { 'latin': 'Liriodendron tulipifera (Magnoliaceae)',
+								  'facts': [['Geographic Distribution', 'Eastern United States and Canada, from Vermont, west through southern Ontario, south to Louisiana, and east to northern Florida. State tree of Indiana and Tennessee'],
 								['Habitat', 'This tall, deciduous, long-lived broadleaf tree is a shade-tolerant pioneer species.'],
 								['Pollinators', 'Nectar and pollen attract miscellaneous flies, beetles, honey bees, bumble bees, and other long-tongued bees. Ruby-throated Hummingbirds also visit for nectar. Some self-pollination.'],
 								['Mature height', '70-150 feet'], 
 								['Bloom period', 'April to June'],
 								['IUCN threat status', 'Lower Risk/least concern (LR/lc). It is very sensitive to high ozone concentrations.'],
-								['NatureServe conservation status', 'G5 - Secure'],
-								['NatureServe_param', 'Liriodendron+tulipifera'],
-								['encyclopedia_index', '1155834']
-							],
-	'Northern Catalpa': [['latin', 'Catalpa speciosa (Bignoniaceae)'],
-								['Geographic Distribution','Native range was from southern Indiana and southern Illinois, south to southern Tennessee and eastern Arkansas. Now widely naturalized in northern and eastern U.S. and Ontario, Canada.'],
+								['NatureServe conservation status', 'G5 - Secure']],
+								'NatureServe_param': 'Liriodendron+tulipifera',
+								'encyclopedia_index': '1155834'
+							 },
+	'Northern Catalpa': { 'latin': 'Catalpa speciosa (Bignoniaceae)',
+								'facts': [['Geographic Distribution','Native range was from southern Indiana and southern Illinois, south to southern Tennessee and eastern Arkansas. Now widely naturalized in northern and eastern U.S. and Ontario, Canada.'],
 								['Habitat', 'This perennial deciduous tree prefers moist, deep, well-drained soil, but adapts to dry or wet soils. Areas with a history of disturbance are preferred.'],
 								['Pollinators', 'Bees and moths.'],
 								['Mature height', '50-90 feet'], 
 								['Bloom period', 'Late spring to early summer'],
 								['IUCN threat status', 'Not yet assessed.'],
-								['NatureServe conservation status', 'G4 - Apparently Secure',{'Indiana': 'Rare'}],
-								['NatureServe_param','Catalpa+speciosa'],
-								['encyclopedia_index', '58033']
-							],
-	'Black Willow': [['latin', 'Salix nigra (Salicaceae)'],
-								['Geographic Distribution','Eastern United States, adjacent parts of Canada, and Mexico'],
+								['NatureServe conservation status', 'G4 - Apparently Secure',{'Indiana': 'Rare'}]],
+								'NatureServe_param': 'Catalpa+speciosa',
+								'encyclopedia_index': '580333'
+							},
+	'Black Willow': {'latin': 'Salix nigra (Salicaceae)',
+								'facts': [['Geographic Distribution','Eastern United States, adjacent parts of Canada, and Mexico'],
 								['Habitat', 'This short-lived deciduous tree is most common on river margins, streambanks and meadows where it occupies the lower, wetter, and often less sandy sites.'],
 								['Pollinators', 'Insects, especially bees and flies.'],
 								['Mature height', '30-90 feet'], 
 								['Bloom period', 'February through late June'],
 								['IUCN threat status', 'Not yet assessed.'],
-								['NatureServe conservation status', 'G5 - Secure'],
-								['NatureServe_param', 'Salix+nigra'],
-								['encyclopedia_index', '585446']
-							],
-	'Southern Crabapple': [['latin', 'Malus angustifolia (Rosaceae)'],
-								['Geographic Distribution','Throughout southeastern United States from southern Virginia, south to northern Florida, west to Louisiana, and north to Arkansas.'],
+								['NatureServe conservation status', 'G5 - Secure']],
+								'NatureServe_param': 'Salix+nigra',
+								'encyclopedia_index': '585446'
+							},
+	'Southern Crabapple': {'latin': 'Malus angustifolia (Rosaceae)',
+								'facts': [['Geographic Distribution','Throughout southeastern United States from southern Virginia, south to northern Florida, west to Louisiana, and north to Arkansas.'],
 								['Habitat', 'This deciduous small tree grows in moist woods, woodland borders, stream banks, fence rows, and old fields.'],
 								['Pollinators', 'Insects, especially bees.'],
 								['Mature height', '20-35 feet'], 
 								['Bloom period', 'March through May'],
 								['IUCN threat status', 'Not yet assessed.'],
-								['NatureServe conservation status', 'G5 - Secure',{'Florida':'threatened','Illinois':'Endangered','Kentucky':'Special Concern'}],
-								['NatureServe_param', 'Malus+angustifolia+var.+angustifolia'],
-								['encyclopedia_index', '633293']
-							],
-	'Staghorn Sumac': [['latin', 'Rhus typhina (Anacardiaceae)'],
-								['Geographic Distribution','Eastern North America, from Quebec and Maine, west to northern Minnesota, south to western Tennessee and northern Alabama, and east to northern Georgia.'],
+								['NatureServe conservation status', 'G5 - Secure',{'Florida':'threatened','Illinois':'Endangered','Kentucky':'Special Concern'}]],
+								'NatureServe_param': 'Malus+angustifolia+var.+angustifolia',
+								'encyclopedia_index': '633293'
+							},
+	'Staghorn Sumac': {'latin': 'Rhus typhina (Anacardiaceae)',
+								'facts': [['Geographic Distribution','Eastern North America, from Quebec and Maine, west to northern Minnesota, south to western Tennessee and northern Alabama, and east to northern Georgia.'],
 								['Habitat', 'This deciduous small tree is found in forest edges and disturbed sites on dry soils.'],
 								['Pollinators', 'Insects, including short-tongued bees, wasps, and flies.'],
 								['Mature height', '15-50 feet'], 
 								['Bloom period', 'April to July'],
 								['IUCN threat status', 'Not yet assessed.'],
-								['NatureServe conservation status', 'G5 - Secure'],
-								['NatureServe_param', 'Rhus+typhina'],
-								['encyclopedia_index', '485569']
-							],
-	'Flowering Dogwood': [['latin', 'Cornus florida (Cornaceae)'],
-								['Geographic Distribution','Eastern North America, from southwestern Maine, west to southern Ontario and central Michigan, central Illinois, Missouri, eastern Kansas, eastern Oklahoma, and eastern Texas, south to Nuevo León and Veracruz in eastern Mexico, and east to central Florida.'],
+								['NatureServe conservation status', 'G5 - Secure']],
+								'NatureServe_param': 'Rhus+typhina',
+								'encyclopedia_index': '485569'
+							},
+	'Flowering Dogwood': {'latin': 'Cornus florida (Cornaceae)',
+								'facts': [['Geographic Distribution','Eastern North America, from southwestern Maine, west to southern Ontario and central Michigan, central Illinois, Missouri, eastern Kansas, eastern Oklahoma, and eastern Texas, south to Nuevo León and Veracruz in eastern Mexico, and east to central Florida.'],
 								['Habitat', 'This deciduous multi-branched small tree is found in eastern deciduous and southern coniferous forests, floodplaines, ravines, and along fencerows.'],
 								['Pollinators', 'Insects, including bees, wasps, flies, skippers, and beetles.'],
 								['Mature height', '15-30 feet'], 
 								['Bloom period', 'March through June'],
 								['IUCN threat status', 'Not yet assessed.'],
-								['NatureServe conservation status', 'G5 - Secure',{'Maine':'Endangered','New York':'Exploitably Vulnerable','Vermont':'Threatened'}],
-								['NatureServe_param', 'Cornus+florida'],
-								['encyclopedia_index', '582707']
-							],
-	'Eastern Redbud': [['latin', 'Cercis canadensis (Fabaceae)'],
-								['Geographic Distribution','Eastern and south-central United States, southward to northern Mexico.'],
+								['NatureServe conservation status', 'G5 - Secure',{'Maine':'Endangered','New York':'Exploitably Vulnerable','Vermont':'Threatened'}]],
+								'NatureServe_param': 'Cornus+florida',
+								'encyclopedia_index': '582707'
+							},
+	'Eastern Redbud': { 'latin': 'Cercis canadensis (Fabaceae)',
+								'facts': [['Geographic Distribution','Eastern and south-central United States, southward to northern Mexico.'],
 								['Habitat', 'This small, short-lived deciduous tree is found in forest understory in moist rich woods, along the banks of streams, and abandoned farmlands.'],
 								['Pollinators', 'Insects, including bees, wasps, flies, butterflies, skippers, and beetles.'],
 								['Mature height', '15-30 feet'], 
 								['Bloom period', 'March through May'],
 								['IUCN threat status', 'Lower Risk/least concerned (LR/lc)'],
-								['NatureServe conservation status', 'G5 - Secure',{'Ontario':'Presumed Extirpated','Connecticut':'Special Concern','New Jersey':'Endangered'}],
-								['NatureServe_param', 'Cercis+canadensis'],
-								['encyclopedia_index', '640323']
-							]										
+								['NatureServe conservation status', 'G5 - Secure',{'Ontario':'Presumed Extirpated','Connecticut':'Special Concern','New Jersey':'Endangered'}]],
+								'NatureServe_param': 'Cercis+canadensis',
+								'encyclopedia_index': '640323'
+							}										
 }
 
 
@@ -126,12 +126,108 @@ function update_popup(id) {
 			data_index++;
 		});
 	});
-
 }
 
+function build_facts(id,cutoff) {
+	var item = poster_key[id];
+	var facts = poster_data[item]["facts"];
+	var html_output= "";
+	for( var i=0; i < cutoff; i++ ) {
+		if (i % 2 === 0) { //If the index is even, start the row
+			html_output = html_output + "<div class='row basic-facts'>" ;
+		}	
+		html_output = html_output + "<div class='col-sm-6'>"
+			+ "<h4>"+facts[i][0]+"</h4>"
+      + "<p>"+facts[i][1]+"</p>"
+      + "</div>";	
+		if (i % 2 === 1 || i === cutoff - 1) { // If the index is odd, end the row
+			html_output = html_output + "</div>"
+		}
+	}
+	return html_output;
+}
+
+function update_popup(id,container) {
+	container.empty();
+	
+	// Build header
+	var item = poster_key[id];
+	container.append("<h2>"+item+"</h2>");
+	var latin_name = poster_data[item]["latin"];
+	
+	// Build basic facts
+	container.append("<h3><em>"+latin_name+"</h3></em>");
+	var basic_facts = build_facts(id,6);
+	container.append(basic_facts);
+	
+	// Add NatureServe link 
+	container.append(
+	"<div class='row basic-facts'><div class='col-sm-6'>"
+	+ "<h4>"+poster_data[item]["facts"][6][0]+"</h4>"
+	+ "<p>"+poster_data[item]["facts"][6][1]+"</p>"
+	+"</div></div>"
+	);
+	
+	// Encyclopedia of Life
+	container.append(
+		"<div class='row basic-facts'><div class='col-xs-12'>"
+		+ "<a href='http://www.eol.org/pages/"+poster_data[item]['encyclopedia_index']+"/overview' target='_blank' >"
+		+ "<i>Encyclopedia of Life</i> overview <i class='fa fa-angle-right'></i></a></div></div>"
+	);
+	
+	// Anchor link to info below
+}
 
 var curr_info = "1";  // Track what is displayed in #info-window
 var last_info = "0";
+
+
+/* * * READY * * */
+$(document).ready(function(){
+	// Trigger info popup when any marker is clicked
+	var id = "";
+	for (marker in poster_key) {
+		if(poster_key.hasOwnProperty(marker)) {
+			id = "#"+marker;
+			$(id).click(function(){
+			
+				// Load data
+				//update_popup($(this).attr("id")); 
+				var popup = $("#info-window");
+				update_popup($(this).attr("id"), popup);
+				
+				// Position popup
+				var marker_position = $(this).position();
+				var left = marker_position.left;
+				var top = marker_position.top;
+				// Position info-window horizontally centered for small screens
+				if($(window).width() <= 768) { 
+					top = top + 48;
+					popup.css({left: 'auto', top: top});
+				} else {
+				// Position info-window relative to marker for large screens
+					if ( parseInt(this.id) % 2 === 0){
+						left = left - (popup.width() + 35);
+						popup.css({left: left, top: top});
+					} else {
+						left = left + 50;
+						popup.css({left: left, top: top});
+					}
+				}
+				
+				// Display info-window
+				var my_id = $(this).attr("id");
+				last_info = curr_info;
+				curr_info = my_id;
+				if ( last_info === curr_info ) {
+					popup.toggle();
+				} else {
+					popup.css('display','block');	
+				}
+			});
+		}
+	}
+});
 
 /* * * ON LOAD * * */
 
@@ -150,48 +246,7 @@ $(window).load(function(){
 	$("#6").css({right: '10%', top: '63%'});
 	$("#7").css({left: '11%', top: '78%'});
 	$("#8").css({right: '3%', top: '80%'});
-	
-	
-	// Trigger info popup when any marker is clicked
-	var id = "";
-	for (marker in poster_key) {
-		if(poster_key.hasOwnProperty(marker)) {
-			id = "#"+marker;
-			$(id).click(function(){
-				// Load data
-				update_popup($(this).attr("id"));
-				// Position popup
-				var marker_position = $(this).position();
-				var left = marker_position.left;
-				var top = marker_position.top;
-				// Position info-window horizontally centered for small screens
-				if($(window).width() <= 768) { 
-					top = top + 48;
-					$("#info-window").css({left: 'auto', top: top});
-				} else {
-				// Position info-window relative to marker for large screens
-					if ( parseInt(this.id) % 2 === 0){
-						left = left - ($("#info-window").width() + 35);
-						$("#info-window").css({left: left, top: top});
-					} else {
-						left = left + 50;
-						$("#info-window").css({left: left, top: top});
-					}
-				}
-				// Display info-window
-				var my_id = $(this).attr("id");
-				last_info = curr_info;
-				curr_info = my_id;
-				//alert("last_info: "+last_info+", curr_info: "+curr_info);
-				if ( last_info === curr_info ) {
-					$("#info-window").toggle();
-				} else {
-					$("#info-window").css('display','block');	
-				}
-			});
-		}
-	}
-	
+		
 	// Indicate active marker
 	$(".tree-mark").click(function(){
 		$(".tree-mark").not(this).removeClass("active");
