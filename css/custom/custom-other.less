@@ -267,8 +267,9 @@ ul.vert-center {   // For centering text within ul li
 	margin: 0;
 	border-bottom: 3px solid @brand-primary;
 	h1 {
-		padding-top: (@navbar-height * 2) + 47px;
-		text-align: right;
+		//padding-top: (@navbar-height * 2) + 47px;
+		margin-top: (@navbar-height * 2) + 65px;
+		float: right;
 		color: white;
 	}
 }
@@ -670,6 +671,12 @@ h4,
 h5,
 h6{	
 	color:@gray-base;
+}
+
+h1.h1-inverted {
+	color: #fff;
+	background-color: rgba(0,0,0,0.65);
+	padding: 5px 10px;
 }
 
 h3,h4 {
