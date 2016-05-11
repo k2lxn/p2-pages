@@ -263,16 +263,8 @@ function update_popup(id,container) {
 	
 	// Build basic facts
 	container.append("<h3><em>"+latin_name+"</h3></em>");
-	var basic_facts = build_facts(id,6);
+	var basic_facts = build_facts(id);
 	container.append(basic_facts);
-	
-	// Add NatureServe link 
-	container.append(
-	"<div class='row basic-facts'><div class='col-sm-6'>"
-	+ "<h4>"+poster_data[item]["facts"][6][0]+"</h4>"
-	+ "<p>"+poster_data[item]["facts"][6][1]+"</p>"
-	+"</div></div>"
-	);
 	
 	// Encyclopedia of Life
 	container.append(
@@ -317,13 +309,18 @@ $(document).ready(function(){
 					popup.css({left: 'auto', top: top});
 				} else {
 				// Position info-window relative to marker for large screens
-					if ( parseInt(this.id) % 2 === 0){
-						left = left - (popup.width() + 35);
-						popup.css({left: left, top: top});
+					//console.log(this.id+" char code is "+ this.id.charCodeAt(0));
+					if ( this.id.charCodeAt(0) % 2 === 0 ){ // i.e. right side marker
+						if ( left > (popup.width() + 35) ) {
+							left = left - (popup.width() + 35);
+						} else {
+							left = 0;
+							top = top + 45;
+						}
 					} else {
 						left = left + 50;
-						popup.css({left: left, top: top});
 					}
+					popup.css({left: left, top: top});
 				}
 				
 				// Display info-window
@@ -440,10 +437,18 @@ $(window).load(function(){
 	$("#6").css({right: '10%', top: '63%'});
 	$("#7").css({left: '11%', top: '78%'});
 	$("#8").css({right: '3%', top: '80%'});
+	$("#a").css({left: '16%', top: '18%'});
+	$("#b").css({right: '24%', top: '15%'});
+	$("#c").css({left: '23%', top: '35%'});
+	$("#d").css({right: '20%', top: '30%'});
+	$("#e").css({left: '24%', top: '60%'});
+	$("#f").css({right: '26%', top: '57%'});
+	$("#g").css({left: '29%', top: '76%'});
+	$("#h").css({right: '24%', top: '82%'});
 		
 	// Indicate active marker
-	$(".tree-mark").click(function(){
-		$(".tree-mark").not(this).removeClass("active");
+	$(".marker").click(function(){
+		$(".marker").not(this).removeClass("active");
 		$(this).toggleClass("active");	
 	});
 			
