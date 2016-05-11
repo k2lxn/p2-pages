@@ -14,6 +14,7 @@ var poster_key = {
 // including images??
 var poster_data = {
 	'Bigleaf Maple': { 'latin': 'Acer macrophyllum (Sapindaceae)',
+										'blurb' : "This rapidly growing, towering deciduous tree is the second most abundant tree in the Pacific Northwest. Its distinctive 5-lobed leaves can reach over a foot in length and width, turning a brilliant yellow-gold in autumn. Flowers are green-yellow and scented. They appear before the leaves—from March, at low elevations and in the southern part of the range, to June, at high elevations and in the north. Pollination usually occurs within 2 to 4 weeks after the buds burst. According to radicalbotany.com, the solitary bee, <i>Osmia laeta</i> (synonym: <i>Osmia aglaia</i>), likely uses the bigleaf maple for food and habitat.",	
 										 'facts': [['Geographic Distribution', 'Western United States and Canada, from British Columbia to California'],
 										['Habitat', 'A large deciduous tree growing in moist woods, forests, and canyons'],
 										['Pollinators', 'Insect pollinators include bees, flies, and beetles.'],		
@@ -25,6 +26,7 @@ var poster_data = {
 										'encyclopedia_index': '582252'
 									},
 	'Tulip Tree': { 'latin': 'Liriodendron tulipifera (Magnoliaceae)',
+										'blurb' : "Also known as Yellow Poplar, this handsome eastern hardwood holds the record for tallest eastern deciduous tree in North America. It produces large, saucer-shaped blossoms that attract plentiful insects and wildlife with its nectar. <i>Liriodendron tulipifera</i> has a six-petal flower, yellowish green at margin to deep orange at the center. Trees flower at 15 to 20 years and may continue producing flowers for 200 years. Flowering period is 2 to 6 weeks. Each flower is receptive for 12 to 24 hours. Evidence of tulip tree pollen movement by the bufflehead mason bee, <i>Osmia bucephala</i>, was found during a study by Kraemer & Favi (2005), in which they found pollen of this tree in the nest provisions of the mason bee.",	
 								  'facts': [['Geographic Distribution', 'Eastern United States and Canada, from Vermont, west through southern Ontario, south to Louisiana, and east to northern Florida. State tree of Indiana and Tennessee'],
 								['Habitat', 'This tall, deciduous, long-lived broadleaf tree is a shade-tolerant pioneer species.'],
 								['Pollinators', 'Nectar and pollen attract miscellaneous flies, beetles, honey bees, bumble bees, and other long-tongued bees. Ruby-throated Hummingbirds also visit for nectar. Some self-pollination.'],
@@ -36,6 +38,7 @@ var poster_data = {
 								'encyclopedia_index': '1155834'
 							 },
 	'Northern Catalpa': { 'latin': 'Catalpa speciosa (Bignoniaceae)',
+										'blurb' : "This large deciduous tree is popular as an ornamental tree due to its abundant and beautiful bell-shaped blossoms. It is also recognizable by its large, heart-shaped leaves. Flowers of <i>Catalpa speciosa</i> occur in large clusters of showy, white, bell-shaped corollas with yellow, orange, or purple interior spotting or streaking. Flowers are good for honey production. In a study by Stephenson & Thomas (1977), flowers of northern catalpa were effectively pollinated during the day by the bumble bee, <i>Bombus bimaculatus</i>, and the carpenter bee, <i>Xylocopa virginica</i>, and during the night by <i>Geometridae, Ctenuchidae, Noctuidae</i>, and <i>Lasiocampidae</i> moths.",
 								'facts': [['Geographic Distribution','Native range was from southern Indiana and southern Illinois, south to southern Tennessee and eastern Arkansas. Now widely naturalized in northern and eastern U.S. and Ontario, Canada.'],
 								['Habitat', 'This perennial deciduous tree prefers moist, deep, well-drained soil, but adapts to dry or wet soils. Areas with a history of disturbance are preferred.'],
 								['Pollinators', 'Bees and moths.'],
@@ -47,6 +50,7 @@ var poster_data = {
 								'encyclopedia_index': '580333'
 							},
 	'Black Willow': {'latin': 'Salix nigra (Salicaceae)',
+										'blurb' : "A fast-growing but short-lived tree, Black Willow grows into more of a traditional “tree” shape than any other of North America’s 90+ willow species. Requiring particularly damp soil conditions for seed germination, it often grows in stands near waterways and floodplains. <i>Salix nigra</i> trees produce many-flowered catkins at the time of or immediately preceding leafing out. In a study by Ostaff, et al. (2015), two syrphid flower flies and six andrenid bees, including <i>Andrena dunningi</i>, were seen visiting flowers and carrying pollen from black willow.",
 								'facts': [['Geographic Distribution','Eastern United States, adjacent parts of Canada, and Mexico'],
 								['Habitat', 'This short-lived deciduous tree is most common on river margins, streambanks and meadows where it occupies the lower, wetter, and often less sandy sites.'],
 								['Pollinators', 'Insects, especially bees and flies.'],
@@ -58,6 +62,7 @@ var poster_data = {
 								'encyclopedia_index': '585446'
 							},
 	'Southern Crabapple': {'latin': 'Malus angustifolia (Rosaceae)',
+										'blurb' : "Designated a shrub or small tree, crabapple is a common and valuable native species, popular with many types of wildlife for its nectar, pollen, and fruit. <i>Malus angustifolia</i> produces profuse fragrant pink flowers in early spring. Honey bees, <i>Apis mellifera</i>, are a frequent flower visitor.",
 								'facts': [['Geographic Distribution','Throughout southeastern United States from southern Virginia, south to northern Florida, west to Louisiana, and north to Arkansas.'],
 								['Habitat', 'This deciduous small tree grows in moist woods, woodland borders, stream banks, fence rows, and old fields.'],
 								['Pollinators', 'Insects, especially bees.'],
@@ -69,6 +74,7 @@ var poster_data = {
 								'encyclopedia_index': '633293'
 							},
 	'Staghorn Sumac': {'latin': 'Rhus typhina (Anacardiaceae)',
+										'blurb' : "Sumac is an open-spreading shrub with velvety, antler-like branches and shaggy, compound leaves. Fruit of the sumac flower develops as distinctively furry, crimson-colored clusters, and can be boiled into a tea that resembles the flavor of raspberry lemonade. Carpenter bees create tunnel nests in the pith, causing little damage. A study by Stubbs, et al. (1992) lists the orange-belted bumble bee, <i>Bombus ternarius</i>, as a flower-visitor of staghorn sumac.",
 								'facts': [['Geographic Distribution','Eastern North America, from Quebec and Maine, west to northern Minnesota, south to western Tennessee and northern Alabama, and east to northern Georgia.'],
 								['Habitat', 'This deciduous small tree is found in forest edges and disturbed sites on dry soils.'],
 								['Pollinators', 'Insects, including short-tongued bees, wasps, and flies.'],
@@ -80,6 +86,7 @@ var poster_data = {
 								'encyclopedia_index': '485569'
 							},
 	'Flowering Dogwood': {'latin': 'Cornus florida (Cornaceae)',
+										'blurb' : "Considered one of the most magnificent of North America’s native flowering trees, this small, wide-crowned tree blooms early each spring with long-lasting small yellow flowers clustered into inflorescences that are surrounded by four large white or pink bracts. In a study by Rhoades, et al. (2011), flowers of <i>Cornus florida</i> were visited mostly by andrenid and halictid bees, and most commonly by the halictid bee, <i>Lasioglossum imitatum</i>. ",
 								'facts': [['Geographic Distribution','Eastern North America, from southwestern Maine, west to southern Ontario and central Michigan, central Illinois, Missouri, eastern Kansas, eastern Oklahoma, and eastern Texas, south to Nuevo León and Veracruz in eastern Mexico, and east to central Florida.'],
 								['Habitat', 'This deciduous multi-branched small tree is found in eastern deciduous and southern coniferous forests, floodplaines, ravines, and along fencerows.'],
 								['Pollinators', 'Insects, including bees, wasps, flies, skippers, and beetles.'],
@@ -91,6 +98,7 @@ var poster_data = {
 								'encyclopedia_index': '582707'
 							},
 	'Eastern Redbud': { 'latin': 'Cercis canadensis (Fabaceae)',
+										'blurb' : "A member of the pea family, redbud can be found as an under-story species in open woods. It is typically one of the first to bloom in spring, erupting in bright pink flowers that cover the branches in tightly packed clusters. In a study by Cane & Payne (1988), the blueberry bee, <i>Habropoda laboriosa</i>, visits eastern redbud for nectar and pollen.",
 								'facts': [['Geographic Distribution','Eastern and south-central United States, southward to northern Mexico.'],
 								['Habitat', 'This small, short-lived deciduous tree is found in forest understory in moist rich woods, along the banks of streams, and abandoned farmlands.'],
 								['Pollinators', 'Insects, including bees, wasps, flies, butterflies, skippers, and beetles.'],
@@ -227,6 +235,51 @@ $(document).ready(function(){
 			});
 		}
 	}
+	
+	// Build Trees section 
+	var tree_keys = ['1','2','3','4','5','6','7','8'];
+	for (id in tree_keys) {
+		id++;
+		// Insert marker with anchor id
+		$("#trees-container").append("<div id='anchor-"+id+"'>"+id+"</div>");
+		// Create a new .tree-info div as a container
+		$("#trees-container").append("<div class='tree-info'>");	
+			
+		// Build header
+		var tree = poster_key[id];
+		var data = poster_data[tree];
+		var thumbnail = tree.replace(" ","_").toLowerCase();
+		var container = $("#trees-container > .tree-info:last-child");
+		container.append(
+				"<div class='row'>"
+			+ "<img src='Images/posters/2016/"+thumbnail+"_thumb.png' class='thumb' alt=''>"
+			+ "<div class='name-slug'><h2>"+tree+"</h2>"
+			+ "<h3>"+data['latin']+"</h3></div>"
+			+ "</div>"
+		);
+		
+		// Add blurb
+		container.append(
+			"<div class='row'><div class='col-xs-12'><p>"+ data['blurb'] +"</p></div></div>"
+		);
+		
+		// Add images
+		container.append(
+			"<div class='row tree-imgs text-center'><div class='col-xs-12'>"
+			+ "<img src='Images/posters/2016/"+thumbnail+"_leaf.jpg' alt='' />"
+			+ "<span style='background-image:url(Images/posters/2016/"+thumbnail+".jpg);'></span>"
+			+"</div></div>"
+		);
+		
+		// Add basic facts
+		container.append(build_facts(id,7));		
+		// Add Encyclopedia of Life link
+		container.append(
+			"<div class='row basic-facts'><div class='col-xs-12'>"
+			+ "<a href='http://www.eol.org/pages/"+poster_data[tree]['encyclopedia_index']+"/overview' target='_blank' >"
+			+ "<i>Encyclopedia of Life</i> overview <i class='fa fa-angle-right'></i></a></div></div>"
+		);
+	}
 });
 
 /* * * ON LOAD * * */
@@ -259,7 +312,9 @@ $(window).load(function(){
 	});
 	
 	// Size encyclopedic tree images
-	$(".tree-imgs span").height($(".tree-imgs img").height());
+	$(".tree-imgs span").each(function() {
+		$(this).height($(this).prev("img").height());
+	});
 });
 
 
@@ -271,5 +326,7 @@ $(window).resize(function() {
 	$("#markers-container").height(poster_height);	
 	
 	// Size encyclopedic tree images
-	$(".tree-imgs span").height($(".tree-imgs img").height());
+	$(".tree-imgs span").each(function() {
+		$(this).height($(this).prev("img").height());
+	});	
 });
