@@ -8,7 +8,14 @@ var poster_key = {
 	'6': 'Staghorn Sumac',
 	'7': 'Flowering Dogwood',
 	'8': 'Eastern Redbud',
-	'a': 'Bufflehead Mason Bee'
+	'a': 'Mason Bee',
+	'b': 'Bufflehead Mason Bee',
+	'c': 'Two-spotted Bumble Bee',
+	'd': 'Mining Bee',
+	'e': 'Western Honey Bee',
+	'f': 'Orange-belted Bumble Bee',
+	'g': 'Sweat Bee',
+	'h': 'Blueberry Bee'
 }
 
 // var trees = ajax object?? with all tree data mapped to tree name?
@@ -120,7 +127,86 @@ var poster_data = {
 								['NatureServe conservation status', 'G5 - Secure']],
 								'NatureServe_param': 'Osmia+bucephala',
 								'encyclopedia_index': '2753381'
-							}										
+							},
+	'Mason Bee': { 'latin': 'Osmia laeta (Megachilidae)',
+										'blurb' : "<i>Osmia laeta</i> is a generally illusive species that still requires more research to better understand its preferences and behavior. This bee and its close relatives have been found to be very effective pollinators for commercial raspberries and blackberries.",
+								'facts': [['Geographic Distribution','California and Oregon west of the crests of the Sierra Nevada and Cascade mountain ranges.'],
+								['Habitat', 'Nests in pithy stems and artificial substrates. Nesting areas include feral bramble thickets and other unplowed vegetation.'],
+								['Size', 'Female - length 8.5-9 mm.'],
+								['Identification', 'A small bee with a green metallic sheen with rich overtones of blue and purple.'], 
+								['Plants Commonly Visited', 'A variety of flowers, being partial to <i>Rubus</i>.'],
+								['NatureServe conservation status', 'G4 - Apparently Secure']],
+								'NatureServe_param': 'Osmia+aglaia',
+								'encyclopedia_index': '2753439'
+							},
+	'Two-spotted Bumble Bee': { 'latin': 'Bombus bimaculatus (Apidae)',
+										'blurb' : "The Bufflehead Mason Bee is not extensively studied but has been observed flying low to the ground in woodland habitats. These bees resemble small bumble bees but, like other mason bees, collect pollen on their under abdomen.",
+								'facts': [['Geographic Distribution','Eastern North America, Ontario to Florida and as far west as Mississippi.'],
+								['Habitat', 'Meadows or gardens with a diversity of flowers.'],
+								['Size', 'Medium-sized bumble bee. Queen - length 17-22 mm, abdomen 8.5-10 mm wide. Worker - length 11-16 mm abdomen 5-6.5 mm. Male – length 13-14.5 mm, abdomen 6-6.5 mm wide.'],
+								['Identification', 'Thorax predominantly yellow, with a dark spot in the middle, abdomen yellow at the top segment, black below.'], 
+								['Plants Commonly Visited', '<i>Asclepias, Aster, Baptisia, Catalpa, Monarda, Penstemon, Rosa, Solidago, Vicia.</i>'],
+								['IUCN threat status', 'Least Concern'],
+								['NatureServe conservation status', 'G5 - Secure']],
+								'NatureServe_param': 'Bombus+bimaculatis',
+								'encyclopedia_index': '1065374'
+							},
+	'Mining Bee': { 'latin': 'Andrena dunningi (Andrenidae)',
+										'blurb' : "The female bees dig their nests in the ground by pushing the soil to the surface as they back out of the hole. They use their abdomen and legs to move the soil. They often find protected locations to nest such as areas on a slope or under a partially exposed tree root.",
+								'facts': [['Geographic Distribution','Eastern Canada and United States. Minnesota to Quebec and the New England states, south to North Carolina.'],
+								['Habitat', 'Nests in ground with loose earth'],
+								['Size', 'Female - length 10-13 mm, abdomen 3-4.5 mm wide. Male - length 8-12 mm, abdomen 2-3 mm wide.'],
+								['Identification', 'Hairy yellow shoulders, dark brown to reddish-brown body.'], 
+								['Plants Commonly Visited', '<i>Claytonia, Crataegus, Ribes, Rubus, Salix, Taraxacum</i>, and <i>Viburnum</i>.'],
+								['NatureServe conservation status', 'Not yet ranked']],
+								'NatureServe_param': 'Andrena+dunningi',
+								'encyclopedia_index': '1018230'
+							},
+	'Western Honey Bee': { 'latin': 'Apis mellifera (Apidae)',
+										'blurb' : "Honey bees are the primary pollinators for many plant species. The combined high mortality of colonies due to Varroa mite and tracheal mite infestations, and Colony Collapse Disorder in North America, has caused significant concern for the health of managed populations.",
+								'facts': [['Geographic Distribution','Worldwide. Native to Europe, western Asia, and Africa.'],
+								['Habitat', 'Nests in hollow trees or man-made structures.'],
+								['Size', '1-2 cm'],
+								['Identification', 'Red/brown with black bands and orange yellow rings on abdomen.'], 
+								['Plants Commonly Visited', 'Pollen and nectar collected from a wide variety of blooming flowers.'],
+								['NatureServe conservation status', 'Not yet ranked']],
+								'NatureServe_param': 'Apis+mellifera',
+								'encyclopedia_index': '1045608'
+							},
+	'Orange-belted Bumble Bee': { 'latin': 'Bombus ternarius (Apidae)',
+										'blurb' : "These bumble bees have a complex social structure with a queen and many other female workers, all of whom can sting. But don’t worry; these bees are not aggressive, unless they’re defending their nest. Each bee in the colony has a specific duty and the group acts efficiently as one unit.",
+								'facts': [['Geographic Distribution','Across much of Canada and the eastern United States.'],
+								['Habitat', 'Nests underground close to or within woodlands and wetlands.'],
+								['Size', 'Small-sized bumble bee. Queen - length 17-19 mm, abdomen 8.5-9 mm wide. Worker - length 8-13. mm abdomen 4.5-5.5 mm. Male – length 9.5-13 mm, abdomen 4.5-5.5 mm wide.'],
+								['Identification', 'The anterior and posterior thorax and the first and fourth abdominal segments are yellow, abdominal segments 2 to 3 are orange, and the terminal segments are black.'], 
+								['Plants Commonly Visited', '<i>Asclepias, Claytonia, Cornus, Eupatorium, Rhododendron, Rhus, Rubus, Solidago, Symphyotrichum, Taraxacum, Trifolium</i>, and <i>Vaccinium</i>'],
+								['IUCN threat status', 'Least Concern'],
+								['NatureServe conservation status', 'G5 - Secure']],
+								'NatureServe_param': 'Bombus+ternarius',
+								'encyclopedia_index': '1065334'
+							},
+	'Sweat Bee': { 'latin': 'Lasioglossum imitatum (Halictidae)',
+										'blurb' : "This 'sweat bee' is named such because they are attracted to the salt in human sweat. <i>Lasioglossum imitatum</i> is a member of the largest of all bee genera along with 1,700 other species.",
+								'facts': [['Geographic Distribution','Eastern United States.'],
+								['Habitat', 'Nests in flat ground with loose, sandy soils.'],
+								['Size', 'Female - length 3.5-5 mm. Male - length 4 mm.'],
+								['Identification', 'Head and thorax bluish-green.'], 
+								['Plants Commonly Visited', '<i>Aster, Ceanothus, Chrysanthemum, Cornus, Daucus, Erigeron, Eupatorium, Fagopyrum, Hydrangea, Lotus, Melilotus, Pyraeantha, Rhus,</i> and <i>Solidago</i>.'],
+								['NatureServe conservation status', 'Not yet ranked']],
+								'NatureServe_param': 'lasioglossum+imitatum',
+								'encyclopedia_index': '2743768'
+							},
+	'Blueberry Bee': { 'latin': 'Habropoda laboriosa (Apidae)',
+										'blurb' : "This 'sweat bee' is named such because they are attracted to the salt in human sweat. <i>Lasioglossum imitatum</i> is a member of the largest of all bee genera along with 1,700 other species.",
+								'facts': [['Geographic Distribution','Southeastern United States.'],
+								['Habitat', 'Solitary ground-nester that digs tunnels in the soil. Abundant in blueberry orchards throughout its range.'],
+								['Size', 'Female - length 15.5-16 mm, abdomen 6.5-7 mm wide. Male - length 13-14 mm, abdomen 6-6.5 mm wide.'],
+								['Identification', 'Hairy yellow shoulders, black body.'], 
+								['Plants Commonly Visited', '<i>Cercis, Cirsium, Gelsemium, Lupinus, Malus, Prunus</i>, and <i>Vaccinium</i>.'],
+								['NatureServe conservation status', 'Not yet ranked']],
+								'NatureServe_param': 'Habropoda+laboriosa+aglaia',
+								'encyclopedia_index': '1045745'
+							}
 }
 
 
@@ -299,7 +385,7 @@ $(document).ready(function(){
 	}
 	
 	// Build Pollinators section
-	var bee_keys = ['a'];
+	var bee_keys = ['a','b','c','d','e','f','g','h'];
 	for (x in bee_keys) {
 		var id = bee_keys[x];
 		// Insert marker with anchor id
