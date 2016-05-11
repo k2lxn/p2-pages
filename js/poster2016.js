@@ -7,7 +7,8 @@ var poster_key = {
 	'5': 'Southern Crabapple',
 	'6': 'Staghorn Sumac',
 	'7': 'Flowering Dogwood',
-	'8': 'Eastern Redbud'
+	'8': 'Eastern Redbud',
+	'a': 'Bufflehead Mason Bee'
 }
 
 // var trees = ajax object?? with all tree data mapped to tree name?
@@ -108,6 +109,17 @@ var poster_data = {
 								['NatureServe conservation status', 'G5 - Secure',{'Ontario':'Presumed Extirpated','Connecticut':'Special Concern','New Jersey':'Endangered'}]],
 								'NatureServe_param': 'Cercis+canadensis',
 								'encyclopedia_index': '640323'
+							},
+	'Bufflehead Mason Bee': { 'latin': 'Osmia bucephala (Megachilidae)',
+										'blurb' : "The Bufflehead Mason Bee is not extensively studied but has been observed flying low to the ground in woodland habitats. These bees resemble small bumble bees but, like other mason bees, collect pollen on their under abdomen.",
+								'facts': [['Geographic Distribution','British Columbia and the Yukon to Nova Scotia and the New England states, south to southern New Mexico and California in the West. Widespread in the East.'],
+								['Habitat', 'Nests in dead wood, holes in wood blocks or pithy stems.'],
+								['Size', 'Female - length 15-16 mm. Male - length 13-14 mm.'],
+								['Identification', 'Black, with vague bluish reflections above.'], 
+								['Plants Commonly Visited', '<i>Aesculus, Baptisia, Cercis, Dentaria, Dicentra, Erythronium, Liriodendron, Mertensia</i> and <i>Viola</i>.'],
+								['NatureServe conservation status', 'G5 - Secure']],
+								'NatureServe_param': 'Osmia+bucephala',
+								'encyclopedia_index': '2753381'
 							}										
 }
 
@@ -136,11 +148,11 @@ function update_popup(id) {
 	});
 }
 
-function build_facts(id,cutoff) {
+function build_facts(id) {
 	var item = poster_key[id];
 	var facts = poster_data[item]["facts"];
 	var html_output= "";
-	for( var i=0; i < cutoff; i++ ) {
+	for( var i=0; i < facts.length; i++ ) {
 		if (i % 2 === 0) { //If the index is even, start the row
 			html_output = html_output + "<div class='row basic-facts'>" ;
 		}	
@@ -148,7 +160,7 @@ function build_facts(id,cutoff) {
 			+ "<h4>"+facts[i][0]+"</h4>"
       + "<p>"+facts[i][1]+"</p>"
       + "</div>";	
-		if (i % 2 === 1 || i === cutoff - 1) { // If the index is odd, end the row
+		if (i % 2 === 1 || i === facts.length - 1) { // If the index is odd, end the row
 			html_output = html_output + "</div>"
 		}
 	}
@@ -243,8 +255,8 @@ $(document).ready(function(){
 	
 	// Build Trees section 
 	var tree_keys = ['1','2','3','4','5','6','7','8'];
-	for (id in tree_keys) {
-		id++;
+	for (x in tree_keys) {
+		var id = tree_keys[x];
 		// Insert marker with anchor id
 		$("#trees-container").append("<div id='anchor-"+id+"'>"+id+"</div>");
 		// Create a new .tree-info div as a container
@@ -277,11 +289,49 @@ $(document).ready(function(){
 		);
 		
 		// Add basic facts
-		container.append(build_facts(id,7));		
+		container.append(build_facts(id));		
 		// Add Encyclopedia of Life link
 		container.append(
 			"<div class='row basic-facts'><div class='col-xs-12'>"
 			+ "<a href='http://www.eol.org/pages/"+poster_data[tree]['encyclopedia_index']+"/overview' target='_blank' >"
+			+ "<i>Encyclopedia of Life</i> overview <i class='fa fa-angle-right'></i></a></div></div>"
+		);
+	}
+	
+	// Build Pollinators section
+	var bee_keys = ['a'];
+	for (x in bee_keys) {
+		var id = bee_keys[x];
+		// Insert marker with anchor id
+		$("#bees-container").append("<div id='anchor-"+id+"'>"+id+"</div>");
+		// Create a new .bee-info div as a container
+		$("#bees-container").append("<div class='bee-info'>");	
+		
+		// Build header
+		var bee = poster_key[id];
+		var data = poster_data[bee];
+		var thumbnail = bee.replace(/\s/g,"_").toLowerCase();
+		var container = $("#bees-container > .bee-info:last-child");
+		container.append(
+				"<div class='row'>"
+			+ "<a href='Images/posters/2016/"+thumbnail+"_full.jpg' target='_blank' >"
+			+ "<img src='Images/posters/2016/"+thumbnail+"_thumb.png' class='thumb' alt=''></a>"
+			+ "<div class='name-slug'><h2>"+bee+"</h2>"
+			+ "<h3>"+data['latin']+"</h3></div>"
+			+ "</div>"
+		);
+		
+		// Add blurb
+		container.append(
+			"<div class='row'><div class='col-xs-12'><p>"+ data['blurb'] +"</p></div></div>"
+		);
+		
+		// Add basic facts
+		container.append(build_facts(id));		
+		// Add Encyclopedia of Life link
+		container.append(
+			"<div class='row basic-facts'><div class='col-xs-12'>"
+			+ "<a href='http://www.eol.org/pages/"+data['encyclopedia_index']+"/overview' target='_blank' >"
 			+ "<i>Encyclopedia of Life</i> overview <i class='fa fa-angle-right'></i></a></div></div>"
 		);
 	}
