@@ -140,7 +140,7 @@ var poster_data = {
 								'encyclopedia_index': '2753439'
 							},
 	'Two-spotted Bumble Bee': { 'latin': 'Bombus bimaculatus (Apidae)',
-										'blurb' : "The Bufflehead Mason Bee is not extensively studied but has been observed flying low to the ground in woodland habitats. These bees resemble small bumble bees but, like other mason bees, collect pollen on their under abdomen.",
+										'blurb' : "A widely-distributed species in the eastern United States, this bee has a medium-long tongue and visits a wide range of flowers for nectar and pollen. They typically nest below ground, and they are strong flyers and may forage up to 2 miles away from their nest. This species name refers to the two distinctive yellow markings on the abdomen.",
 								'facts': [['Geographic Distribution','Eastern North America, Ontario to Florida and as far west as Mississippi.'],
 								['Habitat', 'Meadows or gardens with a diversity of flowers.'],
 								['Size', 'Medium-sized bumble bee. Queen - length 17-22 mm, abdomen 8.5-10 mm wide. Worker - length 11-16 mm abdomen 5-6.5 mm. Male – length 13-14.5 mm, abdomen 6-6.5 mm wide.'],
