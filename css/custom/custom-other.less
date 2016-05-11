@@ -43,6 +43,21 @@ p, ul, ol {
 	hyphens: auto;
 }
 
+a.to-top {
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	background: @gray-base;
+	color: @gray-lighter;
+	padding: 7px 15px;
+	border-radius: 2px;
+	z-index: 1500;
+}
+a.to-top:hover {
+	color: @brand-primary;
+}
+
 .navbar-header {
 	z-index: 1000;
 }

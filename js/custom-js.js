@@ -69,16 +69,20 @@ function addBGTint(elem,tint) {
 }
 
 
+/* * * ON READY * * */
+$(document).ready(function(){
+ 	
+ 	
+});
 
-/* * * * * * * * *
- * ON  LOAD * * *
- * * * * * * * * */
+
+/* * *  ON  LOAD * * */
 $(window).load(function(){
 	
 	// Push content up above footer
 	bumpIt();
 	
-	// Anchor Links
+	// Smooth scrolling to Anchor Links
 	$(document).on('click', 'a[href^="#"]', function(){ // for anchors inserted programmatically
 		var target = $(this.hash);
 		target = target.length ? target : $('[name= ' + this.hash.slice(1) + ']');
@@ -90,6 +94,16 @@ $(window).load(function(){
 			}, 1000);
 		}
 	});
+
+ 	// Hide 'to-top' button on click too
+ 	$(document).on('click', 'a.to-top', function(){
+
+ 		$('a.to-top').hide();
+ 	});
+ 	// Add onclick function to all anchor links
+ 	$(document).on('click', "a[href^='#']:not(.to-top)", function(){
+ 		$('a.to-top').show();
+ 	});
 	
 	// Size thumbnails
 	sizeInlineImages();
@@ -106,10 +120,7 @@ $(window).load(function(){
 
 
 
-/* * * * * * * * *
- * RESIZE  * * * *
- * * * * * * * * */
- 
+/* * * RESIZE  * * */
 $(window).resize(function() {
 	didResize = true;	
 	bumpIt();
@@ -129,9 +140,7 @@ setInterval(function() {
 
 
 
-/* * * * * * * * *
- * SCROLL  * * * *
- * * * * * * * * */
+/* * * SCROLL * * */
  
 // Hide/show toggle button on scroll
 var position, direction, previous;
