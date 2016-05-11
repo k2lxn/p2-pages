@@ -184,6 +184,11 @@ function update_popup(id,container) {
 	);
 	
 	// Anchor link to info below
+	container.append(
+		"<div class='row basic-facts'><div class='col-xs-12'>"
+		+ "<a href='#anchor-"+id+"'>"
+		+ "Learn more below <i class='fa fa-angle-down'></i></a></div></div>"
+	);
 }
 
 var curr_info = "1";  // Track what is displayed in #info-window
