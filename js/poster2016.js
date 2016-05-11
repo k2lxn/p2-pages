@@ -262,7 +262,7 @@ function update_popup(id,container) {
 	var latin_name = poster_data[item]["latin"];
 	
 	// Build basic facts
-	container.append("<h3><em>"+latin_name+"</h3></em>");
+	container.append("<h3><em>"+latin_name+"</em></h3>");
 	var basic_facts = build_facts(id);
 	container.append(basic_facts);
 	
@@ -354,7 +354,7 @@ $(document).ready(function(){
 				"<div class='row'>"
 			+ "<img src='Images/posters/2016/"+thumbnail+"_thumb.png' class='thumb' alt=''>"
 			+ "<div class='name-slug'><h2>"+tree+"</h2>"
-			+ "<h3>"+data['latin']+"</h3></div>"
+			+ "<h3><em>"+data['latin']+"</em></h3></div>"
 			+ "</div>"
 		);
 		
@@ -400,7 +400,7 @@ $(document).ready(function(){
 			+ "<a href='Images/posters/2016/"+thumbnail+"_full.jpg' target='_blank' >"
 			+ "<img src='Images/posters/2016/"+thumbnail+"_thumb.png' class='thumb' alt=''></a>"
 			+ "<div class='name-slug'><h2>"+bee+"</h2>"
-			+ "<h3>"+data['latin']+"</h3></div>"
+			+ "<h3><em>"+data['latin']+"</em></h3></div>"
 			+ "</div>"
 		);
 		
