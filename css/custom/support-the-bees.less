@@ -1,15 +1,33 @@
 @import "../../css/bootstrap/less/variables.less";
 @import "../../css/custom/custom-variables.less";
 
+.page-header {
+	background-color: #951F11;
+	h1 {
+		font-size: 200%;
+		margin-right: 15px;
+	}
+}
+
+.heading-content {
+	font-size: 90%;
+	display: inline-block;
+	margin-left: 15px;
+}	
+h2 img {
+	display: inline-block;
+	width: 150px;
+}
+
 form input[type='submit'] {
   background-color: @brand-primary;
 	border: 2px solid @brand-primary; 
-	border-radius: 20px;
+	border-radius: 30px;
 	color: #fff;
 	padding: 7.5px 22px;
 				
 	font-family: @font-family-sans-serif;
-	font-size: 100%;
+	font-size: 160%;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 }
@@ -43,7 +61,7 @@ h3 {
 	padding: 5px 20px;
 }
 
-.col-sm-8 img {
+.col-sm-8 > img {
 	width: 80%;
 	margin-left: 10%;
 }
