@@ -3,7 +3,7 @@
 function switchStateName(elem) {
 	var state = elem.attr("class");
 	// Update caption
-	$('#current-state').html( state + ' proclaims June 20 - 26, 2016 Pollinator Week!');
+	$('#current-state').html( state.replace("_"," ") + ' proclaims June 20 - 26, 2016 Pollinator Week!');
 	
 	// Update link to PDF
 	var new_url = "../PDFs/NPW/2016/Proclamations/" + state + "_2016.pdf";
