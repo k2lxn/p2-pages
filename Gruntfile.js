@@ -17,13 +17,14 @@ module.exports = function(grunt) {
           "pollinatorweek/css/style.css": "pollinatorweek/css/style.less",
           "pollinatorweek/css/events.css": "pollinatorweek/css/events.less", 
           "css/custom/poster2016.css": "css/custom/poster2016.less",
-          "css/custom/support-the-bees.css": "css/custom/support-the-bees.less" 
+          "css/custom/support-the-bees.css": "css/custom/support-the-bees.less",
+          "support-the-bees/css/index.css": "support-the-bees/css/index.less" 
         }
       }
     },
     watch: {
       styles: {
-        files: ['css/custom/*.less', 'pollinatorweek/css/*.less'], // which files to watch
+        files: ['css/custom/*.less', 'pollinatorweek/css/*.less', 'support-the-bees/css/*.less'], // which files to watch
         tasks: ['less'],
         options: {
           nospawn: true

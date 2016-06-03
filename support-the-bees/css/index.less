@@ -1,0 +1,116 @@
+@import "../../css/bootstrap/less/variables.less";
+@import "../../css/custom/custom-variables.less";
+
+.page-header {
+	background-color: #951F11;
+	h1 {
+		font-size: 260%;
+		margin-right: 15px;
+		@media (max-width:380px) {
+			font-size: 200%;
+			float: none;
+			text-align: center;
+		}
+	}
+}
+
+.heading-content {
+	font-size: 90%;
+	display: inline-block;
+	margin-left: 15px;
+	@media (max-width: 520px) {
+		font-size: 80%;
+		display: block;
+		margin: 15px auto 0;
+	} 
+}	
+h2 img {
+	display: inline-block;
+	width: 150px;
+	@media (max-width: 520px) {
+		display: block;
+		margin: 0 auto;
+	} 
+}
+
+form input[type='submit'] {
+  background-color: @brand-primary;
+	border: 2px solid @brand-primary; 
+	border-radius: 30px;
+	color: #fff;
+	padding: 7.5px 22px;
+				
+	font-family: @font-family-sans-serif;
+	font-size: 160%;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}
+form input[type='submit']:hover,
+form input[type='submit']:focus {
+	background-color: @brand-secondary;
+	border-color: @brand-secondary;
+}
+
+form:first-of-type input[type='submit'] {
+	position: relative;
+	top: -120px;
+}
+
+.form-bg {
+	height: 200px;
+}
+.form-bg:first-of-type {
+	background: linear-gradient(to right, rgba(255,255,255,0),rgba(255,255,255,0.7)),
+		url(../../Images/monarch_sunflower_600x450.jpg);
+	background-size: cover;
+}
+.form-bg:nth-of-type(2) {
+	background: linear-gradient(to left, rgba(255,255,255,0),rgba(255,255,255,0.7)),
+		url(../../Images/bee_buds_600x400.jpg);
+	background-size: cover;
+}
+
+.fa-ul {
+	list-style-position: outside;
+	li {
+		font-size: 110%;
+	}
+	i.fa-li {
+		top: 7px;
+	}
+	a {
+		color: #bd0097;
+  	font-weight: bold;	
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+.main h3 {
+	display: inline-block;
+	clear: both;
+	margin-top: 40px;
+}
+h3:first-of-type {
+	margin-top: 0;
+}
+.main .sidebar h3 {
+	margin-left: 20px;
+}
+
+.light-box img {
+	padding: 5px 20px;
+}
+
+.col-sm-8 > img {
+	width: 80%;
+	margin-left: 10%;
+}
+
+.footer-buffer {
+	height: 40px;
+	@media (min-width: @screen-sm) {
+		height: 120px;
+	}
+}
