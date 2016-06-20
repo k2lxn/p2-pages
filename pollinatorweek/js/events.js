@@ -58,7 +58,7 @@ var state_abbreviations = {
     'West Virginia': 'WV',
     'Wisconsin': 'WI',
     'Wyoming': 'WY',
-    'Ontario': 'Canada'
+    'Canada': 'Canada'
   }
 
 
@@ -72,13 +72,31 @@ $(document).ready(function(){
 	/* Build the navigation */
 	sql.execute("SELECT DISTINCT state FROM pollinator_week")
 		.done(function(data) {
-			console.log(data.rows);	
+			data.rows.sort(function(a,b){
+				if (a.state > b.state) {
+					return 1;
+				}
+				if (a.state < b.state) {
+					return -1;
+				}
+				return 0;
+			});
+			//console.log(data.rows);
+			
+			for (var i=0; i < data.rows.length; i++) { // Remove Canada link
+				if (data.rows[i].state === "Canada") {
+					data.rows.splice(i,1);
+				}
+			}
+			// Construct unordered list
 			for (var i=0; i < data.rows.length; i++) {
 				$('#states-nav').append(
 					"<li><a href='#"+data.rows[i].state.replace(/\s/g,"-")
 					+"'>"+state_abbreviations[data.rows[i].state]+"</a></li>"
 				);
 			}
+			// Add Canada link back in
+			$('#states-nav').append("<li><a href='#Canada'>Canada</a></li>");
 		})
 		.error(function(errors) {
     	// errors contains a list of errors
