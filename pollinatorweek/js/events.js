@@ -57,7 +57,8 @@ var state_abbreviations = {
     'Washington': 'WA',
     'West Virginia': 'WV',
     'Wisconsin': 'WI',
-    'Wyoming': 'WY'
+    'Wyoming': 'WY',
+    'Ontario': 'Canada'
   }
 
 
