@@ -12,7 +12,46 @@ footer {
 .home {
 	.page-header {
 		position: relative;
-		height: 80%;
-		min-height: 300px;
+		height: 60%;
+		min-height: 200px;
 	}	
+	.lead-block {
+		background: url(../../Images/wave-high_no-fade.png) repeat #fafafa;
+		border-bottom: #e8e8e8 1px solid;
+		padding: 15px 0;
+		.navbar {
+			width: 100%;
+			min-height: 0;
+			margin-top: 20px;
+			background-color: #fff;
+			border: 1px solid @gray-lighter;
+			border-radius: 0;
+			padding: 0;
+			a {
+				float: right;
+				font-size: 100%;
+				font-weight: 300;
+				padding: 7px 20px;
+			}
+		}
+		.btn {
+			margin-bottom: 15px;
+		}
+	}
+	
+}
+
+.slug-square {
+	border: 1px solid @gray-lighter;
+	border-bottom-color: @brand-primary;
+	float: left;
+	padding: 9px 20px;
+	
+	font-family: @font-family-sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+a:hover h4 {
+	color: @brand-primary;
 }
