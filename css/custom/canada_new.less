@@ -13,11 +13,45 @@ footer {
 	width: 130px;
 }
 
+.spacer {
+	width: 100px;
+	height: 2px;
+	background-color: @gray-lighter;
+	position: relative;
+}
+
 .home {
 	.page-header {
 		position: relative;
 		height: 60%;
 		min-height: 200px;
+		text-align: right;
+		.container {
+			height: 100%;
+		}
+		h1 {
+			font-family: @font-family-sans-serif;
+			text-transform: uppercase;
+			font-size: 30px;
+			font-weight: 400;
+			letter-spacing: 0.5em;
+			clear: both;
+			padding-bottom: 15px;
+		}
+		h2 {
+			clear: both;
+			padding-top: 15px;
+			font-family: @font-family-sans-serif;
+			text-transform: uppercase;
+			font-size: 100%;
+			letter-spacing: 0.2em;
+			line-height: 1.5em;
+			color: #fff;
+		}
+		.spacer {
+			clear: both;
+			float: right;
+		}
 	}	
 	.lead-block {
 		background: url(../../Images/wave-high_no-fade.png) repeat #fafafa;
