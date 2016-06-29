@@ -26,6 +26,12 @@ footer {
 		height: 60%;
 		min-height: 200px;
 		text-align: right;
+		background-size: cover;
+		background-position: right center;
+		@media (max-width: @screen-xs) {
+			background-position: left center;
+			text-align: left;
+		}
 		.container {
 			height: 100%;
 		}
