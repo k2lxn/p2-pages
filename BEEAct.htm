@@ -11,7 +11,28 @@
     <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
-
+    <!-- Page styles -->
+		<style>
+			#roadsides-manual-thumb {
+				display: block;
+				margin: 0 auto;
+			}
+			@media only screen and (min-width: 600px) {
+				#roadsides-manual-thumb {
+					float: left;
+					margin-right: 30px;
+				}
+			}
+			@media only screen and (min-width: 1200px){
+				#roadsides-manual-thumb {
+					width: 200px;
+				}
+			}
+			.btn.btn-download {
+				margin: 30px 10px;
+			}
+		</style>
+		
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -202,61 +223,19 @@
     
     <!-- Main page content -->
     <div class="container main">
-      <div class="row">
-        <div class="col-sm-8">
-          <h2><div class="heading-content">Section heading</div></h2>
-            	
-          <p class="lead">Headline or lead paragraph</p>
-          
-          <figure class="figure-sm pull-right" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;">
-          	<figcaption>This is a <em>small</em> captioned image</figcaption>
-          </figure> 
-          <p>
-            	<!--	<img src="Images/pwprogram1.jpg" class="img-sm pull-left" alt=""> -->
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <h2>Heading 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-           <!-- <img src="Images/pwprogram1.jpg" class="img-lg" alt="">		-->
-            <span class="img-sm pull-left" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;"></span>
-            		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
-          </p>
-          <h3>Heading 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-          
-          <figure class="figure-lg" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;">
-          	<figcaption>This is a <em>large</em> inline image</figcaption>
-          </figure> 
-        </div>
-          
-            <!-- Sidebar -->
-           <div class="col-sm-4 sidebar">
-            	<h3>ALL PROGRAMS</h3>
-            	<ul>
-            		<li>
-            			<a href="#">
-            				<button type="button" class="btn">NAPPC</button> 	
-            			</a>
-            		</li>                	
-           			<li>
-            			<a href="#">
-            				<button type="button" class="btn">Bee Friendly Farming</button> 	
-            			</a>
-            		</li>
-            		<li>
-            			<a href="#">
-            				<button type="button" class="btn">Get Certified</button> 	
-            			</a>
-            		</li>
-				</ul>
-            </div>
-        </div>
+    	<h2>
+    		<div class="heading-content">Maintaining Roadsides for Pollinators</div>
+    	</h2>
+    	<div class="row">
+    		<div class="col-xs-12 col-md-8">
+    			<img id="roadsides-manual-thumb" src="Images/Roadsides_manual_thumb.jpg" alt="">
+    			<div class="text-center">
+    				<a class="btn btn-download">View <i class="fa fa-search"></i></a>
+    				<a class="btn btn-download"><i class="fa fa-download"></i></a>
+    			</div>
+    			<p>This <i>Technical Manual for Maintaining Roadsides for Pollinators</i> covers establishment, restoration, management and maintenance for pollinators along roadsides. This resource can be used as a comprehensive guide for State Department of Transportation (DOTs) managers and staff. </p>
+    		</div>
+    	</div> <!-- end .row -->
     </div>
    
     <!-- Site Footer
