@@ -19,13 +19,14 @@ module.exports = function(grunt) {
           "css/custom/poster2016.css": "css/custom/poster2016.less",
           "css/custom/canada_new.css": "css/custom/canada_new.less",
           "css/custom/support-the-bees.css": "css/custom/support-the-bees.less",
-          "support-the-bees/css/index.css": "support-the-bees/css/index.less" 
+          "support-the-bees/css/index.css": "support-the-bees/css/index.less",
+          "nappc/css/nappc.css": "nappc/css/nappc.less" 
         }
       }
     },
     watch: {
       styles: {
-        files: ['css/custom/*.less', 'pollinatorweek/css/*.less', 'support-the-bees/css/*.less'], // which files to watch
+        files: ['css/custom/*.less', 'pollinatorweek/css/*.less', 'support-the-bees/css/*.less','nappc/css/*.less'], // which files to watch
         tasks: ['less'],
         options: {
           nospawn: true
