@@ -5,6 +5,7 @@
 	background: linear-gradient(darken(@nappc-primary,10%), darken(@nappc-secondary, 5%));
 	border-bottom-color: @nappc-primary;
 	img {
+		width: 120px;
 		position: absolute;
 		bottom: 10px; 
 		right: 15px;
@@ -50,3 +51,39 @@
 .sidebar .btn {
 	background-color: @nappc-secondary;
 }
+
+
+#conference-header {	
+	img {
+		width: 100%;
+		@media (min-width: 612px) {
+			float: left;
+			width: 200px;
+			margin-right: 20px;
+		}
+	}
+	h3 {
+		font-size: 20px;
+		margin: 0;
+		@media (max-width: 612px) {
+			margin-top: 20px;
+		}
+	}
+	h4 {
+		line-height: 1.5;
+	}
+	h4:first-of-type {
+		font-size: 16px;
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
