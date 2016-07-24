@@ -2,7 +2,8 @@
 @import "../../css/custom/custom-variables.less";
 
 .page-header {
-	background-color: @nappc-primary;
+	background: linear-gradient(darken(@nappc-primary,10%), darken(@nappc-secondary, 5%));
+	border-bottom-color: @nappc-primary;
 	img {
 		position: absolute;
 		bottom: 10px; 
@@ -31,4 +32,21 @@
 			font-size: 16px;
 		}
 	}
+}
+
+.call-to-action li {
+	background-color: @nappc-primary;
+}
+
+#page-nav ul li:first-of-type, #page-navbar .dropdown button {
+	background-color: @nappc-primary;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-nav>li>a:focus {
+	color: @nappc-primary;
+	background-color: lighten(@nappc-secondary, 38%);
+}
+
+.sidebar .btn {
+	background-color: @nappc-secondary;
 }
