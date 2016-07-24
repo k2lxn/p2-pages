@@ -53,6 +53,44 @@
 }
 
 
+#home-header {
+	background-image: url("../Images/home_header.png");
+	background-size: cover;
+	min-height: 200px;
+	@media (max-width: 415px) {
+		background-position: center top;
+	}
+	h1 {
+		font-family: @font-family-sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		letter-spacing: 0.15em;
+		color: #fff;
+		background-color: rgba(0,0,0,0.5);
+		text-align: center;
+		margin:0;
+		padding: 10px 0 5px;
+	}
+	h3 {
+		color: #fff;
+		text-align: right;
+		margin: 30px;
+		small {
+			color: #fff;
+		}
+	}
+	img {
+		width: 120px;
+		margin-left: 30px;
+		position: relative;
+		top: 50px;
+		@media (max-width: 415px) {
+			top: 30px;
+		}
+	}
+}
+
+
 #conference-header {	
 	img {
 		width: 100%;
@@ -77,6 +115,10 @@
 	}	
 }
 
+
+.main h2 .heading-content {
+	border-bottom-color: #f15c44;
+}
 
 
 
