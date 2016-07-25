@@ -120,7 +120,28 @@
 	border-bottom-color: #f15c44;
 }
 
-
+#conference-info {   // For the homepage sidebar top
+	h3 {
+		line-height: 1.5;
+		@media (max-width: @screen-md) {
+			text-align: center;
+		}	
+		@media (max-width: @screen-sm) {
+			font-size: 16px;
+			margin-top: 5px;
+		}
+	}
+	h3:first-of-type {
+		font-size: 22px;
+		margin-top: 10px;
+		@media (min-width: @screen-md) {
+			margin-top: 40px;
+		}
+		@media (max-width: @screen-sm) {
+			font-size: 20px;
+		}
+	}
+}
 
 
 
