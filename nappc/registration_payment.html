@@ -13,6 +13,14 @@
     <link href="../css/font-awesome.css" rel="stylesheet">
     <!-- Page styles -->
     <link href="css/nappc.css" rel="stylesheet">
+    <style>
+    	.main ul li {
+    		margin-bottom: 5px;
+    	}
+    	.gray.row {
+    		padding: 5px 0 15px;
+    	}
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -213,57 +221,56 @@
     <div class="container main">
       <div class="row">
         <div class="col-sm-8">
-          <h2><div class="heading-content">Section heading</div></h2>
-            	
-          <p class="lead">Headline or lead paragraph</p>
+        	<h2 id="registration"><div class="heading-content">Payment</div></h2>
+					<h4>NAPPC 2016 Conference Registration Fees</h4>
+					<ul>
+            <li>EARLY BIRD ends August 26: <strong>$325</strong></li>
+            <li>REGULAR ends September 23: <strong>$400</strong></li>
+            <li>LATE ends October 7: <strong>$450</strong></li>
+            <li>Optional Field Trip: <strong>$50 Donation</strong></li>
+          </ul>
+          <br>
           
-          <figure class="figure-sm pull-right" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;">
-          	<figcaption>This is a <em>small</em> captioned image</figcaption>
-          </figure> 
-          <p>
-            	<!--	<img src="Images/pwprogram1.jpg" class="img-sm pull-left" alt=""> -->
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <h2>Heading 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-           <!-- <img src="Images/pwprogram1.jpg" class="img-lg" alt="">		-->
-            <span class="img-sm pull-left" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;"></span>
-            		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
-          </p>
-          <h3>Heading 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-          
-          <figure class="figure-lg" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;">
-          	<figcaption>This is a <em>large</em> inline image</figcaption>
-          </figure> 
+          <div class="gray row">
+          <!-- Paypal button -->
+          <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="WGX85MLQAK9US">
+						<input type="hidden" name="on0" value="Early Bird Pricing">
+						<h4>Early Bird Pricing</h4>
+						<select name="os0">
+							<option value="Registration Only">Registration Only $325.00 USD</option>
+							<option value="Regist. + Field Trip">Regist. + Field Trip $375.00 USD</option>
+						</select>
+						<input type="hidden" name="currency_code" value="USD">
+						<input type="image" src="http://pollinator.org/Images/register_btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form>
+					</div>
+
+					<br><br>
+					<p>If you plan to pay for your registration fee via check, please print this page and mail it in along with your check to:</p>
+					<p>Pollinator Partnership<br>
+						423 Washington Street, 5th Floor<br>
+						San Francisco, CA 94111 
+					</p>
+					<br>
+					<h3>Thank you!</h3>
+					<p class="lead">We are looking forward to seeing you at the NAPPC Conference! You will receive an email shortly confirming your registration.</p>
+					<br><br>
         </div>
           
         <!-- Sidebar -->
         <div class="col-sm-4 sidebar">
-          <h3>ALL PROGRAMS</h3>
-          <ul>
-            <li>
-            	<a href="#">
-            		<button type="button" class="btn">NAPPC</button> 	
-            	</a>
-            </li>                	
-           	<li>
-            	<a href="#">
-            		<button type="button" class="btn">Bee Friendly Farming</button> 	
-            	</a>
-            </li>
-            <li>
-            	<a href="#">
-            		<button type="button" class="btn">Get Certified</button> 	
-            	</a>
-            </li>
-				  </ul>
+          <div class="row white">
+        		<img src="Images/nappc2016_600x420.jpg" alt="NAPPC 2016 Conference logo">
+          </div>
+          <div class="row white">
+          	<h4 class="text-center">16th Annual NAPPC International Conference</h4>
+          	<h3 class="text-center">October 18-20, 2016</h3>
+          	<h3 class="text-center">USDA APHIS<br>4700 River Road<br>Riverdale, MD 20737</h3>	
+          	<br>
+          </div>
         </div>
         
     	</div>
