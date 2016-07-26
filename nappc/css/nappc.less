@@ -42,7 +42,10 @@
 #page-nav ul li:first-of-type, #page-navbar .dropdown button {
 	background-color: @nappc-primary;
 }
-
+#page-nav ul li a.active {
+	background-color: lighten(@nappc-secondary, 15%);
+	color: #fff;
+}
 .navbar-default .navbar-nav>li>a:hover, .navbar-nav>li>a:focus {
 	color: @nappc-primary;
 	background-color: lighten(@nappc-secondary, 38%);
