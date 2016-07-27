@@ -676,15 +676,32 @@ div.resources-thumb {
 			border-left: 1px solid @gray-light;
 			white-space: normal;
 		}
+		.row {
+			border-top: 1px solid @gray-light;
+			margin-left: -5px;
+		}
+		.row:first-child {
+			border-top: none;
+		}
+		.row:nth-of-type(2n) {
+			background-color: #fff;
+		}
+		div:nth-of-type(2n) .row {
+			border-left: none;
+		}
 	}
 	.row:nth-of-type(2n) {
 		background: @gray-lighter;
 	}
 	.row.heading {
 		background: @gray-base;
-		h4, p {
+		border-top: 1px solid @gray-lighter;	
+		div, h4, p {
 		 color: #fff;
 		} 
+	}
+	.row:first-child.heading {
+		border-top: none;
 	}
 }
 
