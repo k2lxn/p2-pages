@@ -21,7 +21,6 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/map_custom.css"/>
 
-
     <!-- Page styles -->
     <style>
         h3 {
@@ -273,7 +272,7 @@
                           <span  class="input-group-btn">
                               <button class="btn btn-default" type="button" type="button" onclick="search2()">Search</button>
                           </span>
-                    <input label="hello" id="autocomplete" type="text" class="form-control" name="search_organization" placeholder="By Location" value="" size="10" />
+                    <input label="hello" id="autocomplete" type="text" class="form-control" name="search_organization" placeholder="By Location" value="" id="search_location" size="10" />
                 </div>
                 <div id="register_button">
                     <a type="button" id="general_button" class="btn btn-std center_font" href="register_updated.php">Register Today</a>
@@ -316,7 +315,11 @@
                     <div id="logo_vertical"><a href="http://www.usda.gov/wps/portal/usda/usdahome"><img src="logo/usda.png"></a></div>
                     <div id="logo_vertical"><a href="http://www.fs.fed.us/"><img src="logo/usfs.png"></a></div>
                     <div id="logo_vertical"><a href="http://www.wildlifehc.org/"><img src="logo/whc.png"></a></div>
-                    <div id="logo_vertical"><a href="http://www.wildones.org/"><img src="logo/wildones.png"></a></div><div id="logo_vertical"><a href="http://www.ngb.org/"><img src="logo/ngb.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.wildones.org/"><img src="logo/wildones.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.ngb.org/"><img src="logo/ngb.png"></a></div>
+                    <div id="logo_vertical"><a href="http://www.dar.org/"><img src="logo/DAR.png"></a></div>
+                    <div id="logo_vertical"><a href="http://growitmobile.com/"><img src="logo/growit.png"></a></div>
+                    <!--FOR ADDING NEW SLIDE-->
 
                 </div>
             </div>
@@ -417,6 +420,11 @@
                             <img style="height:50px!important;margin-top:25px;margin-bottom:25px" src="logo/whc.png" alt="...">
                         </a>
                     </div>
+                    <div class="col-xs-6 col-sm-4 max_100">
+                        <a href="growit.html" class="thumbnail">
+                            <img style="height:50px!important;margin-top:25px;margin-bottom:25px" src="logo/growit.png" alt="...">
+                        </a>
+                    </div>
 
                 </div>
                 <div class="center_font bottom_space">
@@ -513,7 +521,6 @@
 <script src="js/custom-js.js"></script>
 <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
 <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
-
 
 <!-- Google Custom Search styles -->
 <style>
