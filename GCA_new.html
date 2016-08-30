@@ -11,7 +11,32 @@
     <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Page styles -->
+		<style>
+			.thumb-md {
+				width: 80%;
+				margin: 10px auto;
+			}
+			@media (min-width:400px) and (max-width: 768px) {
+				.thumb-md {	
+					float:left;
+					width: 40%;
+					margin: 0 10px 30px -10px;
+				}
+				.col-sm-4, .col-sm-3 {
+					clear: left;
+				}
+				.meta-data ~ p {
+					margin-top: 0;
+				}
+			}	
+			.meta-data ~ p {
+				margin-top: 10px;
+			}
 
+		</style>
+		
+		
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -209,7 +234,7 @@
         </div>
           
         <!-- Sidebar -->
-        <div class="col-sm-3 sidebar">
+        <div id="browse" class="col-sm-3 sidebar">
           <ul>
             <li>
             	<a href="SHARE">
@@ -224,17 +249,17 @@
           </ul>
           <ul>
           	<li>
-            	<a href="#2016">
+            	<a href="#fellows-2016">
             		<button type="button" class="btn">2016 Fellows</button> 	
             	</a>
             </li>
             <li>
-            	<a href="#2015">
+            	<a href="#fellows-2015">
             		<button type="button" class="btn">2015 Fellows</button> 	
             	</a>
             </li>
             <li>
-            	<a href="#2014">
+            	<a href="#fellows-2014">
             		<button type="button" class="btn">2014 Fellows</button> 	
             	</a>
             </li>
@@ -243,86 +268,103 @@
     	</div>   <!-- end .row -->
     	
     	<!-- 2016 -->
-    	<div class="row">
+    	<div id="fellows-2016" class="row">
     		<div class="col-sm-9">
     			<h2>The Garden Club of America (GCA) Board of Associates Centennial Pollinator
 2016 Fellows</h2>
     		</div>
     	</div>
     	<div class="row">
-    		<div class="col-sm-3">
-    			<img src="Images/People/Hamutahl_Cohen.jpg" alt="Hamutahl Cohen portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Hamutahl_Cohen.jpg);"></div>
     			<h4>Hamutahl Cohen</h4>
-    			<p>University of California, Santa Cruz, Does landscape and plant diversity impact microbiome variation and pathogen (<i>Osmia lignaria</i>)?</p>
+    			<div class="meta-data">University of California, Santa Cruz</div> 
+    			<p>Does landscape and plant diversity impact microbiome variation and pathogen (<i>Osmia lignaria</i>)?</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/Rebecca_Dalton.jpg" alt="Rebecca Dalton portrait">
-    			<h4>Rebecca Dalton</h4>
-    			<p>Duke University, Assessing mechanisms of coexistence between two spring ephemerals under a changing climate</p>
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Rebecca_Dalton.jpg);"></div>
+    			<h4 class="inline-block">Rebecca Dalton</h4>
+    			<div class="meta-data">Duke University</div> 
+    			<p>Assessing mechanisms of coexistence between two spring ephemerals under a changing climate</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/Laura_Figueroa.jpg" alt="Laura Figueroa portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Laura_Figueroa.jpg);"></div>
     			<h4>Laura Figueroa</h4>
-    			<p>Cornell University, Pathogen Transmission in Plant-Pollinator Networks</p>
+    			<div class="meta-data">Cornell University</div> 
+    			<p>Pathogen Transmission in Plant-Pollinator Networks</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/Danny_Minahan.jpg" alt="Danny Minahan portrait">
+    	</div>
+    	<div class="row">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Danny_Minahan_bg.png);"></div>
     			<h4>Danny Minahan</h4>
-    			<p>University of Wisconsin – Madison, Effects of Pollen Protein on the Foraging Dynamics of Honey Bees and Bumble Bees: Implications for Ensuring Suitable Forage Through Time</p>
+    			<div class="meta-data">University of Wisconsin – Madison</div> 
+    			<p>Effects of Pollen Protein on the Foraging Dynamics of Honey Bees and Bumble Bees: Implications for Ensuring Suitable Forage Through Time</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/Beth_Morrison.jpg" alt="Beth Morrison portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Beth_Morrison.jpg);"></div>
     			<h4>Beth Morrison</h4>
-    			<p>Stanford University, Changes in plant-pollinator network structure in the face of agricultural development: Implications for conservation and evolutionary diversity</p>
+    			<div class="meta-data">Stanford University</div> 
+    			<p>Changes in plant-pollinator network structure in the face of agricultural development: Implications for conservation and evolutionary diversity</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/Michael_Smith.jpg" alt="Michael L. Smith portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Michael_Smith.jpg);"></div>
     			<h4>Michael L. Smith</h4>
-    			<p>Cornell University, How worker honey bees detect their colony's size</p>
+    			<div class="meta-data">Cornell University</div> 
+    			<p>How worker honey bees detect their colony's size</p>
     		</div>
     	</div>  <!-- end .row -->
     	
     	<!-- 2015 -->
-    	<div class="row">
+    	<div id="fellows-2015" class="row">
     		<div class="col-sm-9">
     			<h2>The Garden Club of America (GCA) Board of Associates Centennial Pollinator
 2015 Fellows</h2>
     		</div>
     	</div>
     	<div class="row">
-    		<div class="col-sm-3">
-    			<img src="Images/People/Bennett,-Meghan.jpg" alt="Meghan Bennett portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Meghan_Bennett.jpg);"></div>
     			<h4>Meghan Bennett</h4>
-    			<p>North Dakota State University, Determining the roles of significant environmental factors on development and emergence rhythms of the alfalfa leafcutting bee, <i>Megachile rotundata</i></p>
+    			<div class="meta-data">North Dakota State University</div> 
+    			<p>Determining the roles of significant environmental factors on development and emergence rhythms of the alfalfa leafcutting bee, <i>Megachile rotundata</i></p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/HarrisBrittanyPhoto.jpg" alt="Brittany Harris portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Brittany_Harris.jpg);"></div>
     			<h4>Brittany Harris</h4>
-    			<p>Florida International University, Pesticides and pollination of imperiled plants in the Lower Florida Keys</p>
+    			<div class="meta-data">Florida International University</div> 
+    			<p>Pesticides and pollination of imperiled plants in the Lower Florida Keys</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/PHOTO_Majewska.jpg" alt="Ania Majewska portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Ania_Majewska_bg.png);"></div>
     			<h4>Ania Majewska</h4>
-    			<p>University of Georgia, Tropical milkweed (<i>Asclepias curassavica</i>), monarch migration and disease risk</p>
+    			<div class="meta-data">University of Georgia</div> 
+    			<p>Tropical milkweed (<i>Asclepias curassavica</i>), monarch migration and disease risk</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/GPardee_GCAPollinatorFellowship_Headshot.jpg" alt="Gabriella Pardee portrait">
+    	</div>
+    	<div class="row">	
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Gabriella_Pardee.jpg);"></div>
     			<h4>Gabriella Pardee</h4>
-    			<p>Dartmouth College, Climate change and pollination mutualisms: Understanding the consequences of early snowmelt and frost events on plants, pollinators, and their interactions</p>
+    			<div class="meta-data">Dartmouth College</div> 
+    			<p>Climate change and pollination mutualisms: Understanding the consequences of early snowmelt and frost events on plants, pollinators, and their interactions</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/Savoy-Burke,Grace.jpg" alt="Grace Savoy-Burke portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Grace_Savoy-Burke.jpg);"></div>
     			<h4>Grace Savoy-Burke</h4>
-    			<p>University of Delaware, Investigating Native Bee Diversity and Genetic Structure in Mid-Atlantic Woodlands</p>
+    			<div class="meta-data">University of Delaware</div> 
+    			<p>Investigating Native Bee Diversity and Genetic Structure in Mid-Atlantic Woodlands</p>
     		</div>
-    		<div class="col-sm-3">
-    			<img src="Images/People/Slominski-Head-Shot.jpg" alt="Anthony Slominski portrait">
+    		<div class="col-sm-4">
+    			<div class="thumb-md" style="background-image:url(Images/People/Anthony_Slominski.jpg);"></div>
     			<h4>Anthony Slominski</h4>
-    			<p>Montana State University, The effects of climate-driven shifts in phenology, pollinator body size, and pollinator lifespan on plant-pollinator interactions and plant and pollinator reproductive success</p>
+    			<div class="meta-data">Montana State University</div> 
+    			<p>The effects of climate-driven shifts in phenology, pollinator body size, and pollinator lifespan on plant-pollinator interactions and plant and pollinator reproductive success</p>
     		</div>
     	</div>  <!-- end .row -->
     	
-    	<div class="row">
+    	<!-- 2014 -->
+    	<div id="fellows-2014" class="row">
     		<div class="col-sm-9">
     			<h2>The Garden Club of America (GCA) Board of Associates Centennial Pollinator
 2014 Fellows</h2>
@@ -330,26 +372,32 @@
 			</div>
 			<div class="row">	
     		<div class="col-sm-3">
-    			<img src="Images/People/Gardner_photo.jpg" alt="Elliot Gardner portrait">
+    			<div class="thumb-md" style="background-image:url(Images/People/Elliot_Gardner_bg.png);"></div>
     			<h4>Elliot Gardner</h4>
-    			<p>Northwestern University, Pollination biology of <i>Artocarpus</i> (Moraceae)</p>
+    			<div class="meta-data">Northwestern University</div> 
+    			<p>Pollination biology of <i>Artocarpus</i> (Moraceae)</p>
     		</div>
     		<div class="col-sm-3">
-    			<img src="Images/People/palmer-young.portrait.jpg" alt="Evan Palmer-Young portrait">
+    			<div class="thumb-md" style="background-image:url(Images/People/Evan_Palmer-Young_bg.png);"></div>
     			<h4>Evan Palmer-Young</h4>
-    			<p>University of Massachusetts Amherst, Synergistic anti-parasitic effects of nectar compounds in bumblebee diets</p>
+    			<div class="meta-data">University of Massachusetts Amherst</div>
+    			<p>Synergistic anti-parasitic effects of nectar compounds in bumblebee diets</p>
     		</div>
     		<div class="col-sm-3">
-    			<img src="Images/People/Photo-ALGER.jpg" alt="Evan Palmer-Young portrait">
+    			<div class="thumb-md" style="background-image:url(Images/People/Samantha_Alger_bg.png);"></div>
     			<h4>Samantha Alger</h4>
-    			<p>University of Vermont, RNA viruses: prevalence, transmission, and effect on native bumble bees in Vermont</p>
+    			<div class="meta-data">University of Vermont</div> 
+    			<p>RNA viruses: prevalence, transmission, and effect on native bumble bees in Vermont</p>
     		</div>
     		<div class="col-sm-3">
-    			<img src="Images/People/Ponisio-headshot.jpg" alt="Evan Palmer-Young portrait">
+    			<div class="thumb-md" style="background-image:url(Images/People/Lauren_Ponisio.jpg);"></div>
     			<h4>Lauren Ponisio</h4>
-    			<p>University of California, Berkeley, Fire severity and the assembly of pollinator communities</p>
+    			<div class="meta-data">University of California, Berkeley</div> 
+    			<p>Fire severity and the assembly of pollinator communities</p>
     		</div>
     	</div>   <!-- end .row -->
+    	
+    	<a class="to-top" href="#browse"><i class="fa fa-angle-up"></i> top</a>
     	
     </div>
    
@@ -403,6 +451,7 @@
     <script src="P2/js/init.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom-js.js"></script>
+    <script src="js/top_button.js"></script>
     <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
     <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
     
