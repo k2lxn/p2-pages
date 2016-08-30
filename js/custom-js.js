@@ -27,6 +27,7 @@ var sizeInlineImages = function() {
 sizeInlineImages();	
 
 /* .thumb-sm: max-width:300; max-height:225; */
+/* .thumb-md: max-width:500; max-height:375; */
 var sizeThumbnails = function() {
 		$('.thumb-sm').height(function() { 
 			var curr_width = $( this ).width();
@@ -36,6 +37,17 @@ var sizeThumbnails = function() {
 			} else {
 				$(this).width(300);
 				return 225;
+			}
+		});
+		
+		$('.thumb-md').height(function() { 
+			var curr_width = $( this ).width();
+			var new_height = curr_width * (3/4);
+			if( new_height < 375 ) {
+				return new_height;
+			} else {
+				$(this).width(500);
+				return 375;
 			}
 		});
 		
