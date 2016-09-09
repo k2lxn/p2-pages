@@ -475,7 +475,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        Hummingbirds:
+                        MPGC Map
                     </button>
                 </div>
             </div>
@@ -489,6 +489,7 @@
                     <li><a href="search.html">Search</a></li>
                     <li><a href="partners.html#partners_section">Partners</a></li>
                     <li><a href="register_edit.php#form">Edit</a></li>
+                    <li><a href="../SHARE.htm">S.H.A.R.E.</a></li>
                 </ul>
             </div>
         </div>
