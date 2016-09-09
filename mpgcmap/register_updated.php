@@ -541,7 +541,7 @@
 
         <div class="row">
             <div class="col-md-8" style="padding-bottom:50px">
-                <h2><div class="heading-content">Register Your Site Today<span id="secondary_title">Powered by S.H.A.R.E</span></div></h2>
+                <h2><div class="heading-content">Register Your Site Today<span id="secondary_title"><a href="../SHARE.htm">Powered by S.H.A.R.E</a></span></div></h2>
                 <p class="lead">*Denotes a Required Field </p>
 
                 <a class="btn btn-primary btn-lg register" href="register_edit.php#form">Click Here to Edit Existing Site</a>

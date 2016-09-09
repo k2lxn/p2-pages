@@ -501,7 +501,7 @@
 
         <div class="row">
             <div class="col-md-8" style="padding-bottom:50px">
-                <h2><div class="heading-content">Edit Your SHARE Site<span id="secondary_title">Powered by S.H.A.R.E</span></div></h2>
+                <h2><div class="heading-content">Edit Your SHARE Site<span id="secondary_title"><a href="../SHARE.htm">Powered by S.H.A.R.E</a></span></div></h2>
                 <p class="lead">Please fill out the form below with the updated information for your site. Please note that if an email address was not provided when your site was registered we will be unable to edit the entry, and a new site will be created. If you would like to delete your site, please <a href="malto:info@poillinator.org">click here</a> to get in contact with our support team</p>
 
                 <a class="btn btn-primary btn-lg register" href="register_updated.php#form">Click Here to Create New Site</a>
