@@ -363,7 +363,7 @@
                     <!-- Social Links/Call to Action -->
                     <div class="col-sm-5">
                         <ul class="call-to-action">
-                            <li><a href="donate.htm">Donate Now</a></li>
+                            <li><a href="../donate.htm">Donate Now</a></li>
                             <li><a href="../takeaction.htm">Join Us</a></li>
                         </ul>
 
@@ -414,7 +414,7 @@
                             </div>
                             <li><a href="../about.htm">About us</a></li>
                             <li><a href="../wherewework.htm">Where we work</a></li>
-                            <li><a href="pollination.htm">What are Pollinators?</a></li>
+                            <li><a href="../pollination.htm">What are Pollinators?</a></li>
                         </ul>
                     </li>
                     <li>
@@ -843,10 +843,10 @@
                 </div>
                 <div class="col-sm-6">
                     <ul class="nav" role="navigation">
-                        <li><a href="/">Home</a></li>
+                        <li><a href="http://pollinator.org">Home</a></li>
                         <li><a href="../about.htm">About</a></li>
-                        <li><a href="research_consulting.htm">Science & Consulting</a></li>
-                        <li><a href="donate.htm">Donate</a></li>
+                        <li><a href="../research_consulting.htm">Science & Consulting</a></li>
+                        <li><a href="../donate.htm">Donate</a></li>
                     </ul>
                 </div>
             </div> <!-- end .container -->
