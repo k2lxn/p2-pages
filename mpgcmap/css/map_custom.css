@@ -448,8 +448,41 @@ button#maplink {
 }
 
 
+#listlink{
+    text-align: center!important;
+}
 
+#inline_sub_menu{
+    display:inline;
+    color:white;
+}
+#inline_sub_menu:hover{
+    display:inline;
+    background-color:#f6bb42;
+}
 
+#register_sub_menu{
+     background-color: green;
+     color: white!important;
+     border-radius:10px;
+ }
+
+#register_sub_menu:hover {
+    background-color: green!important;
+    color: white!important;
+    border-radius:10px;
+}
+
+#register_sub_menu a{
+    color: white!important;
+}
+#register_sub_menu a:hover{
+    color: #f6bb42!important;
+}
+
+#register_button{
+    text-align: center;
+}
 
 
 
