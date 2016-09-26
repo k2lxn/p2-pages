@@ -412,6 +412,14 @@ ul.vert-center {   // For centering text within ul li
 		width: 100%;
 		margin: 10px 0;
 	}
+	.btn {
+		position: absolute;
+		top: 30%;
+		left: 30px;
+		@media (max-width: 650px) and (min-width: 365px) {
+			left: 60px;
+		}
+	}
 }
 .figure-lg > figcaption {
 	padding-left: 5%;
@@ -1048,6 +1056,11 @@ ul.nav-tabs {
 	font-weight: 700;
 	letter-spacing: .07em;
 	font-size: 12px;
+}
+.btn-primary.btn-lg {
+	font-size: 18px;
+	letter-spacing: .12em;
+	margin: 5px 0;
 }
 #content {
 	padding-top: 5px;
