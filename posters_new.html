@@ -11,6 +11,22 @@
     <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Page styles -->
+    <style>
+    	/*.main .row:first-of-type {
+    		margin-top: 30px;
+    	}*/
+    	.main .row {
+    		margin-top: 10px;
+    		margin-bottom: 10px;
+    	}
+    	.main .img-thumbnail {
+    		margin-top: 20px;
+    	}
+    	div.resources-thumb a.invert {
+    		background-color: rgba(0,0,0,0.5);
+    	}
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -180,10 +196,79 @@
     <div class="container main">
       <div class="row">
         <div class="col-sm-9">
-          <h2><div class="heading-content">Section heading</div></h2>
-            	
-          <p class="lead">Headline or lead paragraph</p>
+          <h2><div class="heading-content">Posters</div></h2>   	
+          <p class="lead">Pollinator Partnership posters are free, but we do ask for the cost of shipping and handling. Place your order below.</p>
+          <small>POSTERS ARE FOR EDUCATIONAL PURPOSES ONLY AND ARE NOT INTENDED FOR RESALE. POSTERS MAY NOT BE SOLD, REPRODUCED OR DISTRIBUTED WITHOUT THE EXPRESS WRITTEN CONSENT OF POLLINATOR PARTNERSHIP.</small>
           
+          <div class="row">
+          	<div class="col-sm-6">
+          		<a href="poster2016">
+          			<img src="Images/posters/2016/preview.png" class="img-thumbnail" alt="">
+          		</a>	
+          	</div>
+          	<div class="col-sm-6">
+          		<h3>Trees for Bees (2016)</h3>
+          		<p>Poster size is 24" W x 38" H</p>
+          		<h4>Sold Out</h4>
+          		<br><br>
+          		<a href="poster2016">Learn more about the featured trees & bees, and about the artist <i class="fa fa-angle-right"></i></a>
+          	</div>
+          </div>  <!-- end .row -->
+          <div class="row">
+          	<div class="col-sm-6">
+          		<a href="orchidposter">
+          			<img src="Images/orchidposter/orchidposter3.jpg" class="img-thumbnail" alt="">
+          		</a>	
+          	</div>
+          	<div class="col-sm-6">
+          		<h3>Native Orchids Need Their Pollinators (2014)</h3>
+          		<p>Order your 2014 Native Orchids poster below. Poster size is 36" W x 24" H.</p>
+          		<form class="paypal-dropdown" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="ZUBSHQ7PNS444">
+								<input type="hidden" name="on0" value="Quantity">
+								<h4>Quantity</h4>
+								<select name="os0">
+									<option value="1 Poster">1 Poster $13.00 USD</option>
+									<option value="3 Posters">3 Posters $24.00 USD</option>
+									<option value="6 Posters">6 Posters $36.00 USD</option>
+									<option value="9 Posters">9 Posters $40.00 USD</option>
+									<option value="50 Posters">50 Posters $60.00 USD</option>
+								</select>
+								<input type="hidden" name="currency_code" value="USD">
+								<input type="image" src="http://pollinator.org/Images/register_btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+							</form>
+          		<a href="orchidposter">Learn all about the orchids, pollinators, artist, sponsors and more! <i class="fa fa-angle-right"></i></a>
+          	</div>
+          </div>  <!-- end .row -->
+          <div class="row">
+          	<div class="col-sm-6">
+          		<a href="discoveryposter2013">
+          			<img src="Images/WonderofDiscoveryPoster.jpg" class="img-thumbnail" alt="">
+          		</a>	
+          	</div>
+          	<div class="col-sm-6">
+          		<h3>The Wonder of Discovery (2013)</h3>
+          		<p>The Wonder of Discovery – Pollinators All Around 2013 poster debuts pollinator scenes artist Carolyn Vibbert. Vibbert’s approach includes a bold, simple color palette and scenes full of action. Take time to discover the bees, hummingbirds, bats, butterflies, moths &ndash; and another vital player in the world of pollinators: <i>people</i> &ndash; in this poster.</p>
+          		<form class="paypal-dropdown" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="EJ2MZD6L76CX6">
+								<input type="hidden" name="on0" value="Quantity">
+								<h4>Quantity</h4>
+								<select name="os0">
+									<option value="1 Poster">1 Poster $13.00 USD</option>
+									<option value="3 Posters">3 Posters $24.00 USD</option>
+									<option value="6 Posters">6 Posters $36.00 USD</option>
+									<option value="9 Posters">9 Posters $40.00 USD</option>
+								</select>
+								<input type="hidden" name="currency_code" value="USD">
+								<input type="image" src="http://pollinator.org/Images/register_btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+							</form>
+							<a href="discoveryposter2013">Learn more about the poster <i class="fa fa-angle-right"></i></a>
+          	</div>
+          </div>  <!-- end .row -->
         </div>
           
         <!-- Sidebar -->
@@ -231,7 +316,7 @@
     		</div>
     		<div class="col-xs-6 col-sm-4 resources-thumb">	
     			<span style="background-image:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(Images/posters/westbee_thumb.png);" class="resources-thumb"></span>
-    			<a href="wbbposter.htm" class="vert-center">Bumble Bees of the Western U.S.</a>
+    			<a href="wbbposter.htm" class="vert-center invert">Bumble Bees of the Western U.S.</a>
     		</div>
     		<div class="col-xs-6 col-sm-4 resources-thumb">	
     			<span style="background-image:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(Images/posters/2012_pathways_thumb.png);" class="resources-thumb"></span>
@@ -305,7 +390,9 @@
 	   
     <!-- SCRIPTS -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <!-- DEV ONLY -->
+    <script src="../jquery-3.1.0.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="P2/js/init.js"></script>
     <script src="js/bootstrap.js"></script>
