@@ -94,9 +94,22 @@ $(window).load(function(){
 	// Push content up above footer
 	bumpIt();
 	
+	// Offset page scroll by height of nav bar if URL goes to an anchor
+	if(window.location.href.match(/\#/)) {
+		var target = $(window.location.href.substr(window.location.href.indexOf('#')));  // Get anchor from end of URL
+		target = target.length ? target : $('[name= ' + this.hash.slice(1) + ']');
+		if(target.length) {
+			var scrollTo = target.offset().top - 30;
+			scrollTo = $(window).width() <= 768 ? scrollTo : scrollTo - navHeight;
+			$('html, body').animate({
+				scrollTop: scrollTo
+			}, 1000);
+		}
+	}
+	
 	// Smooth scrolling to Anchor Links
 	$(document).on('click', 'a[href^="#"]', function(){ // for anchors inserted programmatically
-		var target = $(this.hash);
+		var target = $(this.hash);  // Get anchor from end of URL
 		target = target.length ? target : $('[name= ' + this.hash.slice(1) + ']');
 		if(target.length) {
 			var scrollTo = target.offset().top - 30;
