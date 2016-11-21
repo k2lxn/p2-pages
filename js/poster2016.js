@@ -197,7 +197,7 @@ var poster_data = {
 								'encyclopedia_index': '2743768'
 							},
 	'Blueberry Bee': { 'latin': 'Habropoda laboriosa (Apidae)',
-										'blurb' : "This 'sweat bee' is named such because they are attracted to the salt in human sweat. <i>Lasioglossum imitatum</i> is a member of the largest of all bee genera along with 1,700 other species.",
+										'blurb' : "These bees are such efficient pollinators of blueberry flowers because they utilize \"buzz pollination\". This is when bees vibrate when visiting a flower to release more tightly stored pollen. This is often necessary in flowers that are tubular or urn-shaped.",
 								'facts': [['Geographic Distribution','Southeastern United States.'],
 								['Habitat', 'Solitary ground-nester that digs tunnels in the soil. Abundant in blueberry orchards throughout its range.'],
 								['Size', 'Female - length 15.5-16 mm, abdomen 6.5-7 mm wide. Male - length 13-14 mm, abdomen 6-6.5 mm wide.'],
