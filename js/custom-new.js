@@ -6,6 +6,16 @@ var navHeight = $("div#top-bar").height() + $("div.navbar-header").height();
 
 /* Functions */
 
+// Move footer down when page resizes
+var bumpIt = function() { 
+		var padding_bottom =  $('.footer').height();
+  	$('.main').css('padding-bottom', padding_bottom);
+	},
+	didResize = false;
+
+bumpIt();
+
+
 // Set height of inline images
 var sizeInlineImages = function() {
 		$('.img-sm').height($('.img-sm').width() * (2/3));
