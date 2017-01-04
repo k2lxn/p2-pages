@@ -5,59 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>MPGC Map | Bee Buffer Project</title>
+    <title>MPGC Map | Pollinator Partnership</title>
+
+    <script type="text/javascript" src="resources/jquery/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 
     <!-- Bootstrap -->
-    <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+    <link href="resources/css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/mapcss.css" rel="stylesheet">
-    <link href="css/map_custom.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    <link href="resources/css/mapcss.css" rel="stylesheet">
+    <link href="resources/css/map_custom.css" rel="stylesheet">
 
     <!--CartoDB Mapping CSS and Scripts-->
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
-    <!--script src="js/cartodbsql_individual.js"></script-->
-    <link rel="stylesheet" type="text/css" href="css/map_custom.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="resources/css/cartodb-style.css" />
+    <!--script src="resources/js/cartodbsql_individual.js"></script-->
+    <link rel="stylesheet" type="text/css" href="resources/css/map_custom.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick.css"/>
 
-    <script>
+    <!-- Individual JS for Companies-->
 
-        var map;
-        function init(){
-            // initiate leaflet map
-            map = new L.Map('map', {
-                center: [40,-98],
-                zoom: 4
-            })
+    <script type="text/javascript" src="resources/js/organization/ind-org.js"></script>
 
-            L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
-            }).addTo(map);
 
-            var layerUrl = 'https://massimpact.cartodb.com/api/v2/viz/305a2256-f2a5-11e5-9cc8-0e674067d321/viz.json';
-
-            // change the query for the first layer
-            var subLayerOptions = {
-                sql: "SELECT * FROM mpgc_submissions_final where referring_organization like 'The Bee Buffer Project'",
-                cartocss: "#mpgc_submissions_final {marker-fill: #ffce54; marker-width: 10; marker-line-color: white; marker-line-width: 0;}"
-            }
-
-            cartodb.createLayer(map, layerUrl,{
-                        scrollwheel:false,
-                        cartodb_logo:false,
-                    })
-                    .addTo(map)
-                    .on('done', function(layer) {
-                        layer.getSubLayer(0).set(subLayerOptions);
-                    }).on('error', function() {
-                //log the error
-            });
-        }
-    </script>
     <!-- Page styles -->
     <style>
+
+        @import url(https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css);
+
         h3 {
             margin-top: 30px;
         }
@@ -159,11 +137,17 @@
         #searchbox{
             position: absolute;
         }
-        #map{
-        width:95%;
-        margin-left:2.5%}
 
-        
+        /*Counter CSS*/
+
+        #counter_ind{
+            background-color: #FFCE54;
+            border-radius: 5px;
+            color: white;
+            display: inline;
+            margin-left: 10px;
+            padding: 5px;
+        }
 
 
         /*HOVER ON THUMBNAILS*/
@@ -346,7 +330,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        Hummingbirds:
+                        MPGC Map:
                     </button>
                 </div>
             </div>
@@ -357,7 +341,7 @@
                         <a id="inline_sub_menu" href="index.html">MPGC Map</a>
                     </li>
                     <li id="register_sub_menu"><a href="register_updated.php#form">Register</a></li>
-                    <li><a href="search.html">Search</a></li>
+                    <li><a href="advancedsearch.htmlsearch.html">Search</a></li>
                     <li><a href="partners.html#partners_section">Partners</a></li>
                     <li><a href="register_edit.php#form">Edit</a></li>
                 </ul>
@@ -370,18 +354,8 @@
     <!-- Main page content -->
     <!-- START MAP SECTION-->
 
-    <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12" id="searchbox">
-            <h3 class="center">Bee Buffer Project</h3>
-            <span id="countertotal"></span>
 
-        </div>
-        <div id="map"></div>
-    </div>
-
-
-    <!--START PARTNER SCROLLER-->
-    <!--START PARTNER SCROLLER-->
+    <!--START PARTNER SCROLLER-
     <div class="container-fluid">
         <div class="row" id="sponsor_counter">
             <div class="col-md-12" id="sponsor_logo_horizontal">
@@ -416,80 +390,47 @@
                     <div id="logo_vertical"><a href="http://www.wildones.org/"><img src="logo/wildones.png"></a></div><div id="logo_vertical"><a href="http://www.ngb.org/"><img src="logo/ngb.png"></a></div><div id="logo_vertical"><a href="http://www.dar.org/"><img src="logo/DAR.png"></a></div><div id="logo_vertical"><a href="http://growitmobile.com/"><img src="logo/growit.png"></a></div>
                 </div>
             </div>
-            <div class="col-md-12 overflow" id="header_cover"></div>
+            <div class="col-md-12 col-xs-12 overflow" id="header_cover"></div>
         </div>
     </div>
-
 
 
     <!-- Start of Standard Page Content-->
 
     <div class="container main">
+        <input type="hidden" value="The Bee Buffer Project" id='sql_link' class='sql_link'>
+        <input type="hidden" value="The Bee Buffer Project" id='sql_input_1' class='sql_input_1'>
+        <input type="hidden" value="Bee Buffer Project," id='sql_input_2' class='sql_input_2'>
 
         <div class="row">
             <div class="col-md-8">
-                <h2><div class="heading-content">US Bee Buffer Project<span id="secondary_title">MPGC PARTNER</span></div></h2>
-                <p class="lead">The U.S. Bee Buffer Project works with farmers, ranchers and orchardists to establish foraging habitat for honey bees on small plots of land in agricultural areas.
-
+                <h2><div class="heading-content">Bee Buffer Project<span id="countertotal"></span></div></h2>
+                <p class="lead">Bee Buffer Project serves public gardens and advances them as leaders, advocates, and innovators.
                 </p>
-                <!--<button class="btn btn-default" type="button" type="button" onclick="search2()">Show Pollinator List</button>-->
-                <div class="row" style="margin-top:50px">
-                    <div id="list" class="col-md-12">
 
-                    </div>
-
-
-                </div>
-                <!--START DATA TABLE-->
-
-                <div class="row hidden">
-                    <!--GOOGLE RESULTS TABLE-->
-                    <table id="address">
-                        <tr>
-                            <td class="label">Street address</td>
-                            <td class="slimField"><input class="field" id="street_number"
-                                                         disabled="true"></input></td>
-                            <td class="wideField" colspan="2"><input class="field" id="route"
-                                                                     disabled="true"></input></td>
-                        </tr>
-                        <tr>
-                            <td class="label">City</td>
-                            <td class="wideField" colspan="3"><input name="search_organization" class="field" id="locality"
-                                                                     disabled="true"></input></td>
-                        </tr>
-                        <tr>
-                            <td class="label">State</td>
-                            <td class="slimField"><input class="field"
-                                                         id="administrative_area_level_1" disabled="true"></input></td>
-                            <td class="label">Zip code</td>
-                            <td class="wideField"><input class="field" id="postal_code"
-                                                         disabled="true"></input></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Country</td>
-                            <td class="wideField" colspan="3"><input class="field"
-                                                                     id="country" disabled="true"></input></td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!--END DATA TABLE-->
-
-            </div> <!-- end .main .col-sm-8 -->
-
-            <!-- Sidebar -->
-            <div class="col-sm-4" id="sidebar_right">
-                <img id="logo_main" src="logo/beebuffer.png">
-                <h3>Dig Deeper</h3>
-                <div>
-                    <a role="button" class="btn btn_1 btn-1 btn-sep icon-list" href="http://millionpollinatorgardens.org/">MPGC</a>
-                    <a role="button" class="btn btn_1 btn-2 btn-sep icon-building" href="http://pollinator.org/pollinators.htm">Why Pollinators</a>
-                    <a role="button" class="btn btn_1 btn-3 btn-sep icon-search" href="http://pollinator.org/guides.htm">Planting Guides</a>
-                    <a role="button" class="btn btn_1 btn-4 btn-sep icon-email" href="search.html">By Email</a>
-                </div>
-            </div>  <!-- end .col-sm-4.sidebar -->
-
+            </div>
+            <div class="col-md-4">
+                <a href="#"><img src="logo/beebuffer.png"></a>
+            </div><!-- end .main .col-sm-12 -->
         </div>  <!-- end .main > .row -->
+        <div class="row" id="map"></div>
+
+
+        <div class="row">
+            <h2><div class="heading-content">List of Publically Available Members<span id="secondary_title"></span></div></h2>
+            <table id="org_list" class="display" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>City</th>
+                    <th>State/Province</th>
+                    <th>Country</th>
+                    <th>Description</th>
+                    <th>Referring Organization</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
 
     </div> <!-- end .content.main -->
 
@@ -538,68 +479,30 @@
 
 <!--CartoDB Custom Body Scripts-->
 
-<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+<script src="resources/js/cartodbjs.js"></script>
 
 <!--For Image Slider Slick-->
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-<script src="js/app.js"></script>
+<script type="text/javascript" src="resources/slick/slick.min.js"></script>
+<script src="resources/js/app.js"></script>
+
+<script type="text/javascript" src="resources/js/organization/state_count.js"></script>
 
 <script>
-    var sql = new cartodb.SQL({ user: 'massimpact' });
-    sql.execute("SELECT * FROM mgpc_basemap_copy where referring_organization like 'The Bee Buffer Project'")
-            .done(function(data) {
-                // do nothing
-                for (var i = 0; i < data.total_rows; i++) {
-                    $('#list').append("<div class='city_result'><h3>" +
-                            data.rows[i].organization_name +
-                            "<p id='website_results'>"+
-                            data.rows[i].url +
-                            "</p></h3>" +
-                            data.rows[i].city +
-                            " "+
-                            data.rows[i].organization_description +
-                            "</h5></span>"+
-                            "</div></h5>");
-                }
-            })
-            .error(function(errors) {
-                // do nothing
-            })
+
 </script>
 
-<script>
-    var sql = new cartodb.SQL({ user: 'massimpact' });
-    sql.execute("SELECT COUNT(*) FROM mgpc_basemap_copy WHERE referring_organization iLIKE 'The Bee Buffer Project'")
-            .done(function(data) {
-                // do nothing
-                for (var i = 0; i < data.total_rows; i++) {
-                    $('#countertotal').append("<div class='large_font'>" +
-                            data.rows[i].count +
-                            "</div><h2 class='center_font'>Sites Registered</h2>");
-                }
-
-            })
-            .error(function(errors) {
-                // do nothing
-            })
-</script>
 
 </body>
 </html>
 
-<!-- SCRIPTS -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../P2/js/init.js"></script>
-<script src="../js/bootstrap.js"></script>
-<script src="../js/custom-js.js"></script>
-<script src="../P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
-<script src="../P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+<script src="resources/js/init.js"></script>
+<script src="resources/js/bootstrap.js"></script>
+<script src="resources/js/custom-js.js"></script>
+<script src="resources/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+<script src="resources/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+
 
 
 <!-- Google Custom Search styles -->

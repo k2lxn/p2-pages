@@ -8,18 +8,18 @@
     <title>MPGC Map | Pollinator Partnership</title>
 
     <!-- Bootstrap -->
-    <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+    <link href="resources/css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/mapcss.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    <link href="resources/css/mapcss.css" rel="stylesheet">
 
     <!--CartoDB Mapping CSS and Scripts-->
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="resources/css/cartodb-style.css" />
 
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/map_custom.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/map_custom.css"/>
 
 
     <!-- Page styles -->
@@ -502,7 +502,7 @@
         <div class="row">
             <div class="col-md-8" style="padding-bottom:50px">
                 <h2><div class="heading-content">Edit Your SHARE Site<span id="secondary_title"><a href="../SHARE.htm">Powered by S.H.A.R.E</a></span></div></h2>
-                <p class="lead">Please fill out the form below with the updated information for your site. Please note that if an email address was not provided when your site was registered we will be unable to edit the entry, and a new site will be created. If you would like to delete your site, please <a href="malto:info@poillinator.org">click here</a> to get in contact with our support team</p>
+                <p class="lead">Please fill out the form below with the updated information for your site. Please note that if an email address was not provided when your site was registered we will be unable to edit the entry, and a new site will be created. If you would like to delete your site, please <a href="mailto:info@poillinator.org">click here</a> to get in contact with our support team</p>
 
                 <a class="btn btn-primary btn-lg register" href="register_updated.php#form">Click Here to Create New Site</a>
 
@@ -560,7 +560,7 @@
                                <div class="ss-q-help ss-secondary-text" dir="auto">This is the name that we will use to display your site on the SHARE Map</div></label>
                            <input type="text" name="entry.1553647671" value="" class="ss-q-short stored" id="entry_1553647671" dir="auto" aria-label="displayname" aria-required="true" required="" title="">
                            <div class="error-message" id="390707824_errorMessage"></div>
-                           <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                        </div></div></div>
 
                             <!--DESCRIPTION-->
@@ -572,7 +572,7 @@
                                <div class="ss-q-help ss-secondary-text" dir="auto">Please provide a short description of your pollinator site, your organization or anything that you would like other SHARE users to know about your site. </div></label>
                            <textarea name="entry.1205797193" rows="8" cols="0" class="ss-q-long stored" id="entry_1205797193" dir="auto" aria-label="Description Please provide a short description of your pollinator site, your organization or anything that you would like other SHARE users to know about your site.  "></textarea>
                            <div class="error-message" id="1019650435_errorMessage"></div>
-                           <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                        </div></div></div>
 
                              <!--WEBSITE-->
@@ -584,7 +584,7 @@
                                <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                            <input type="text" name="entry.508366367" value="" class="ss-q-short stored" id="entry_508366367" dir="auto" aria-label="Website  " title="">
                            <div class="error-message" id="836937721_errorMessage"></div>
-                           <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                        </div></div></div>
 
 
@@ -603,7 +603,7 @@
                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                                Upload Image
                            </button>
-                           <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
 
 
                        </div>
@@ -618,7 +618,7 @@
                                        <div class="ss-q-help ss-secondary-text" dir="auto">ie. <a href="https://www.google.com/url?q=https://youtu.be/xW_AsV7k42o&amp;sa=D&amp;ust=1460585864055000&amp;usg=AFQjCNFJOROC_KyDa4V24SCVMCfXQKRj5g">https://youtu.be/xW_AsV7k42o</a></div></label>
                                    <input type="text" name="entry.1958133231" value="" class="ss-q-short" id="entry_1958133231" dir="auto" aria-label="Youtube URL ie. https://youtu.be/xW_AsV7k42o " title="">
                                    <div class="error-message" id="1928594125_errorMessage"></div>
-                                   <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                </div></div></div>
 
                        <!--END YOUTUBE AREA-->
@@ -646,7 +646,7 @@
                                        <div class="ss-q-help ss-secondary-text" dir="auto">Address, City, State, Zip, Country</div></label>
                                    <input type="text" name="entry.963686522" value="" class="ss-q-short stored" id="autocomplete" id="entry_963686522" dir="auto" aria-label="Location Address, City, State, Zip, Country " aria-required="true" required="" title="">
                                    <div class="error-message" id="1851421797_errorMessage"></div>
-                                   <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                </div>
                                <!--FORM LOCATION FIELD-->
 
@@ -668,7 +668,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" id="route" name="entry.1236654309" value="" class="ss-q-short" id="locality" id="entry_1236654309" dir="auto" aria-label="Address  " title="">
                                                <div class="error-message" id="1925924362_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                            </div></div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
@@ -679,7 +679,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" name="entry.1932770363" value="" class="ss-q-short" id="locality" id="entry_1932770363" dir="auto" id="locality" aria-label="City  " aria-required="true" required="" title="">
                                                <div class="error-message" id="1749700097_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                            </div></div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
@@ -690,7 +690,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" name="entry.1578063307" value="" class="ss-q-short" id="administrative_area_level_1" id="entry_1578063307" dir="auto" aria-label="State/Province  " aria-required="true" required="" title="">
                                                <div class="error-message" id="2025509706_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                            </div></div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
@@ -700,7 +700,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" name="entry.1246372804" value="" class="ss-q-short" id="postal_code" id="entry_1246372804" dir="auto" aria-label="Zip Code  " title="">
                                                <div class="error-message" id="63721695_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                            </div></div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
@@ -710,7 +710,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" name="entry.571678429" value="" class="ss-q-short" id="country" id="entry_571678429" dir="auto" aria-label="Country  " title="">
                                                <div class="error-message" id="1755492525_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                            </div></div></div>
                                </div>
                                <!--END FINE TUNE UPDATE-->
@@ -857,7 +857,7 @@
 
 <!--CartoDB Custom Body Scripts-->
 
-<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+<script src="resources/js/cartodbjs.js"></script>
 
 <!--For Image Slider Slick-->
 
@@ -865,17 +865,17 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
-<script src="js/app.js"></script>
-<script type="text/javascript" src="js/googleauto.js"></script>
-<script type="text/javascript" src="js/imageupload.js"></script>
+<script src="resources/js/app.js"></script>
+<script type="text/javascript" src="resources/js/googleauto.js"></script>
+<script type="text/javascript" src="resources/js/imageupload.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQav82qqHPZc7A7C2Ui8YjWwaHXJoImEk&libraries=places&callback=initAutocomplete"
         async defer></script>
 
 
-<script type="text/javascript" src="js/cartodb_total_overall.js"></script>
+<script type="text/javascript" src="resources/js/cartodb_total_overall.js"></script>
 
-<script src="js/cartodbsql_search_final.js"></script>
+<script src="resources/js/cartodbsql_search_final.js"></script>
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQav82qqHPZc7A7C2Ui8YjWwaHXJoImEk&libraries=places&callback=initAutocomplete"
@@ -944,8 +944,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="P2/js/init.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/custom-js.js"></script>
+<script src="resources/js/bootstrap.js"></script>
+<script src="resources/js/custom-js.js"></script>
 <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
 <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
 

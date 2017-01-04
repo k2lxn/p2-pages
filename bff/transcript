@@ -1,0 +1,32 @@
+[16-07-15 22:51:04:672 PDT] SpreadsheetApp.getActiveRange() [0 seconds]
+[16-07-15 22:51:04:672 PDT] Range.getRow() [0 seconds]
+[16-07-15 22:51:04:672 PDT] Range.getLastRow() [0 seconds]
+[16-07-15 22:51:04:673 PDT] Range.getColumn() [0 seconds]
+[16-07-15 22:51:04:673 PDT] Range.getLastColumn() [0 seconds]
+[16-07-15 22:51:04:673 PDT] SpreadsheetApp.getActiveSpreadsheet() [0 seconds]
+[16-07-15 22:51:04:821 PDT] Starting execution
+[16-07-15 22:51:04:826 PDT] Logger.log([data!, []]) [0 seconds]
+[16-07-15 22:51:04:983 PDT] UrlFetchApp.fetch([https://maps.googleapis.com/maps/api/geocode/json?address=321%20Highland%20Ave&sensor=false&key=AIzaSyA8711hoD_S69jvxS0w3vkXfhazNwM38gA]) [0.155 seconds]
+[16-07-15 22:51:04:983 PDT] HTTPResponse.getContentText() [0 seconds]
+[16-07-15 22:51:04:986 PDT] Utilities.jsonParse([{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "321",
+               "short_name" : "321",
+               "types" : [ "street_number" ]
+       ]...) [0.002 seconds]
+[16-07-15 22:51:04:987 PDT] Logger.log([initialize loc in geocode ... loc: [object Object], []]) [0 seconds]
+[16-07-15 22:51:04:987 PDT] Logger.log([from respObj ... loc: [object Object], []]) [0 seconds]
+[16-07-15 22:51:04:988 PDT] Logger.log([lat: 38.6809379, lon: -85.18208349999999, []]) [0 seconds]
+[16-07-15 22:51:04:988 PDT] Logger.log([posting to CartoDB, []]) [0 seconds]
+[16-07-15 22:51:04:989 PDT] Logger.log([latitude && longitude present, []]) [0 seconds]
+[16-07-15 22:51:04:989 PDT] Logger.log([loc: CDB_LatLng(,38.6809379), []]) [0 seconds]
+[16-07-15 22:51:04:990 PDT] Logger.log([SQL: INSERT INTO bff_submission (timestamp,name,email,location,number,city,zip,country,displayname_organizationname,state_province,description,org_website,site_type,forage,farm_type,beekeeping_type,fo, []]...) [0 seconds]
+[16-07-15 22:51:05:093 PDT] UrlFetchApp.fetch([https://massimpact.cartodb.com/api/v1/sql, {method=post, payload={q=INSERT INTO bff_submission (timestamp,name,email,location,number,city,zip,country,displayname_organizationname,state_province,description,org, =}, =}]...) [0.103 seconds]
+[16-07-15 22:51:05:093 PDT] HTTPResponse.getContentText() [0 seconds]
+[16-07-15 22:51:05:093 PDT] Utilities.jsonParse([{"error":["syntax error at or near \",\""]}]) [0 seconds]
+[16-07-15 22:51:05:093 PDT] HTTPResponse.getContentText() [0 seconds]
+[16-07-15 22:51:05:094 PDT] Logger.log([CDB call result: {"error":["syntax error at or near \",\""]}, []]) [0 seconds]
+[16-07-15 22:51:05:095 PDT] Execution succeeded [0.269 seconds total runtime]

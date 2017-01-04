@@ -8,18 +8,25 @@
     <title>MPGC Map | Pollinator Partnership</title>
 
     <!-- Bootstrap -->
-    <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+    <link href="resources/css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/mapcss.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    <link href="resources/css/mapcss.css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!--CartoDB Mapping CSS and Scripts-->
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="resources/css/cartodb-style.css" />
 
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/map_custom.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/map_custom.css"/>
+
+    <script>
+
+    </script>
 
     <!-- Page styles -->
     <style>
@@ -54,6 +61,40 @@
             text-decoration: none;
             color: #f6bb42;
         }
+        .cartodb-searchbox{
+            width: 200px!important;
+            background-color: red;
+            float: left!important;
+            margin-left: 80px!important;
+            margin-top: 50px!important;
+        }
+
+        div.cartodb-searchbox input.text{
+            width: 150px!important;
+        }
+
+        .cartodb-zoom{
+            float: right!important;
+            margin: 20px 20px 0 20px!important;
+        }
+
+        #searchbox-text{
+            position: absolute;
+            z-index: 10;
+            height: 80px;
+            width: 300px;
+            background-color:rgba(255, 206, 84, 1);
+            margin-left: 30px;
+            margin-top: 10px;
+            text-align: center;
+            padding-top: 5px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        #searchbox-text
+
+
 
 
     </style>
@@ -227,7 +268,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        Hummingbirds:
+                        Share Map
                     </button>
                 </div>
             </div>
@@ -238,7 +279,7 @@
                         <a id="inline_sub_menu" href="index.html">MPGC Map</a>
                     </li>
                     <li id="register_sub_menu"><a href="register_updated.php#form">Register</a></li>
-                    <li><a href="search.html">Search</a></li>
+                    <li><a href="advancedsearch.html">Search</a></li>
                     <li><a href="partners.html#partners_section">Partners</a></li>
                     <li><a href="register_edit.php#form">Edit</a></li>
                     <li><a href="../SHARE.htm">S.H.A.R.E.</a></li>
@@ -250,12 +291,22 @@
 
     <!-- Main page content -->
     <!-- START MAP SECTION-->
-    <div class="row">
-        <!-- HIDE SMALL SEARCH-->
-        <div class="col-lg-3 col-md-3 col-sm-12" id="searchbox">
+    <div class="container-fluid">
+        <!--COUNTER SECTION-->
+        <div class="row" id="counter_top">
+                <h3 class="center">Pollinator Sites Registered</h3>
+                <span id="counter_overall"></span>
+        </div>
+        <!--MAP SECTION-->
+        <div class="row">
+            <div id="map" style="z-index: 1">
+                <div id="searchbox-text"><h4>Search by Address</h4></div>
+            </div>
+        </div>
+        <!-- SEARCH SECTION-->
+        <div class="row" id="searchbox-1">
             <h3 class="center">Search for Your Site</h3>
-            <span id="counter_overall"></span>
-            <div class='col-sm-12' id="questions">
+            <div class="col-lg-8 col-lg-offset-2" id="questions">
                 <div class='input-group'>
                           <span class="input-group-btn">
                               <button class="btn btn-default" type="button" type="button" onclick="search()">Search</button>
@@ -263,26 +314,19 @@
                     <input label="hello" type="text" class="form-control" name="search_organization" placeholder="By Organization or Display Name" value="" id="search_organization" size="10" />
 
                 </div>
-                <!--div id="locationField">
-                    <input id="autocomplete" placeholder="Enter your address"
-                           onFocus="geolocate()" type="text"></input>
-                </div>-->
 
-
-                <div id="locationField" class='input-group'>
+                <div id="locationField" class='input-group' style="display: none">
                           <span  class="input-group-btn">
                               <button class="btn btn-default" type="button" type="button" onclick="search2()">Search</button>
                           </span>
-                    <input label="hello" id="autocomplete" type="text" class="form-control" name="search_organization" placeholder="By Location" value="" id="search_location" size="10" />
+                    <input style="background-color: white; color: black" label="hello" id="autocomplete" type="text" class="form-control" name="search_organization" placeholder="By Location" value="" id="search_location" size="10" />
                 </div>
                 <div id="register_button">
-                    <a type="button" id="general_button" class="btn btn-std center_font" href="register_updated.php">Register Today</a>
+                    <a class="center_font" href="advancedsearch.html#search_area">Can't find your site? Try the advanced search tool</a>
                 </div>
             </div>
         </div>
-        <div id="map"></div>
     </div>
-
 
     <!--START PARTNER SCROLLER-->
     <div class="container-fluid">
@@ -324,7 +368,7 @@
 
                 </div>
             </div>
-            <div class="col-md-12 overflow" id="header_cover"></div>
+            <div class="col-md-12 col-xs-12 overflow" id="header_cover"></div>
         </div>
     </div>
 
@@ -333,16 +377,16 @@
     <div class="container main">
 
         <div class="row">
+            <!-- MPGC PARTNERS SECTION-->
             <div class="col-md-8">
                 <h2><div class="heading-content">Million Pollinator Garden Challenge<span id="secondary_title"><a href="../SHARE.htm">Powered by S.H.A.R.E</a></span></div></h2>
                 <p class="lead">Welcome to the Million Pollinator Garden Challenge Map powered by the Pollinator Partnership.  </p>
 
                 <p>Register your pollinator habitat below. It is free and easy! Explore other pollinator friendly SHARE landscapes all over the globe! See if your favorite organization is participating by looking for their logo to the right.</p>
                 <h2><div class="heading-content">MPGC Partners<span id="secondary_title"></span></div></h2>
-                <!--START DATA TABLE-->
 
                 <div class="row hidden">
-                    <!--GOOGLE RESULTS TABLE-->
+                    <!--GOOGLE AUTOFILL FORM HOLDER-->
                     <table id="address">
                         <tr>
                             <td class="label">Street address</td>
@@ -390,9 +434,6 @@
                             <img src="logo/bff.png" alt="...">
                         </a>
                     </div>
-
-                </div>
-                <div class="row" id="company_links">
                     <div class="col-xs-6 col-sm-4 max_100">
                         <a href="cpl.html" class="thumbnail">
                             <img src="logo/cpl.png" alt="...">
@@ -404,13 +445,15 @@
                         </a>
                     </div>
                     <div class="col-xs-6 col-sm-4 max_100">
+                        <a href="dar.html" class="thumbnail">
+                            <img src="logo/DAR.png" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 max_100">
                         <a href="monarchjoint.html" class="thumbnail">
                             <img src="logo/monarchjoint.png" alt="...">
                         </a>
                     </div>
-
-                </div>
-                <div class="row" id="company_links">
                     <div class="col-xs-6 col-sm-4 max_100">
                         <a href="nwf.html" class="thumbnail">
                             <img src="logo/nwf.png" alt="...">
@@ -494,32 +537,37 @@
 
 <!--CartoDB Custom Body Scripts-->
 
-<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+<script src="resources/js/cartodbjs.js"></script>
 
 <!--For Image Slider Slick-->
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="js/cartodbsql_search_final.js"></script>
-<script type="text/javascript" src="js/cartodb_total_overall.js"></script>
 
+<!--CARTODB SCRIPTS FOR MAP-->
+<script src="resources/js/cartodbsql_search_final.js"></script>
+<script type="text/javascript" src="resources/js/cartodb_total_overall.js"></script>
+
+<!--SCRIPT FOR IMAGE SCROLLER-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-<script src="js/app.js"></script>
-<script type="text/javascript" src="js/googleauto.js"></script>
+<script type="text/javascript" src="resources/slick/slick.min.js"></script>
+<script src="resources/js/app.js"></script>
 
+<!--SCRIPT FOR GOOGLE AUTOFILL-->
+<script type="text/javascript" src="resources/js/googleauto.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQav82qqHPZc7A7C2Ui8YjWwaHXJoImEk&libraries=places&callback=initAutocomplete"
-        async defer></script>
+        async deferr></script>
+
+
 
 </body>
 </html>
 
 <!-- SCRIPTS -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="P2/js/init.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/custom-js.js"></script>
+<script src="resources/js/bootstrap.js"></script>
+<script src="resources/js/custom-js.js"></script>
 <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
 <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
 
@@ -555,13 +603,3 @@
         margin-top: 3px;
     }
 </style>
-
-<!-- SQL DESIGN FOR LATER
-select
-    sum(a.count)
-from
-    (select count(*) as count from share_export
-     union all
-     select count(*) as count from nwf_locations) a
-
-   -->

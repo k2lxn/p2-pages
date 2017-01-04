@@ -8,18 +8,18 @@
     <title>MPGC Map | Pollinator Partnership</title>
 
     <!-- Bootstrap -->
-    <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+    <link href="resources/css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/mapcss.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    <link href="resources/css/mapcss.css" rel="stylesheet">
 
     <!--CartoDB Mapping CSS and Scripts-->
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="resources/css/cartodb-style.css" />
 
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/map_custom.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/map_custom.css"/>
 
     <!-- SUPER SCRIPT-->
     <script type="text/javascript">
@@ -510,7 +510,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        Hummingbirds:
+                        MPGC Map:
                     </button>
                 </div>
             </div>
@@ -542,10 +542,10 @@
         <div class="row">
             <div class="col-md-8" style="padding-bottom:50px">
                 <h2><div class="heading-content">Register Your Site Today<span id="secondary_title"><a href="../SHARE.htm">Powered by S.H.A.R.E</a></span></div></h2>
-                <p class="lead">*Denotes a Required Field </p>
+                <p class="lead" style="margin-bottom: 2px">Please fill out out the form below to register your site for the Million Pollinator Garden Challenge.</p>
 
-                <a class="btn btn-primary btn-lg register" href="register_edit.php#form">Click Here to Edit Existing Site</a>
-
+                 <p style="font-style: italic;">If you have an issue using the form, please try using a modern internet browser such as Chrome, Firefox or Safari</p>
+                 <h4><strong> * Indicates a Required Field</strong></h4>
                 <!--START DATA TABLE-->
 
 
@@ -559,10 +559,44 @@
                    <form action="https://docs.google.com/a/pollinator.org/forms/d/1SxqxTxf50Ud0pMzEZc2CgGdDUCrCfSwldpLi-wObr5w/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
                        <div class="errorbox-good" role="listitem">
 
+                            <!--START ADD YOUR CONTENT-->
+                                                   <div dir="auto" class="ss-item ss-section-header" id="content2"><div class="ss-form-entry">
+                                                           <h2 class="ss-section-title">Step 1 - Add Your Content</h2>
+                                                           <div class="ss-section-description ss-no-ignore-whitespace">This content may be used by the Pollinator Partnership or MPGC </div>
+                                                       </div></div>
+
+                                                   <!--START IMAGE UPLOAD-->
+
+                                                   <!-- Button trigger modal -->
+                                                   <div id="imagearea">
+                                                       <div id='mydiv4'></div>
+
+                                                       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                                           Upload Image
+                                                       </button>
+
+
+                                                   </div>
+
+                                                   <!--END IMAGE UPLOAD-->
+                                                   <!--START YOUTUBE-->
+                                                    <br>
+                                                   <div class="ss-form-question errorbox-good" role="listitem">
+                                                       <div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
+                                                               <label class="ss-q-item-label" for="entry_1958133231"><div class="ss-q-title">Youtube URL
+                                                                   </div>
+                                                                   <div class="ss-q-help ss-secondary-text" dir="auto">ie. <a href="https://www.google.com/url?q=https://youtu.be/xW_AsV7k42o&amp;sa=D&amp;ust=1460585864055000&amp;usg=AFQjCNFJOROC_KyDa4V24SCVMCfXQKRj5g">https://youtu.be/xW_AsV7k42o</a></div></label>
+                                                               <input type="text" name="entry.1958133231" value="" class="ss-q-short" id="entry_1958133231" dir="auto" aria-label="Youtube URL ie. https://youtu.be/xW_AsV7k42o " title="">
+                                                               <div class="error-message" id="1928594125_errorMessage"></div>
+
+                                                           </div></div></div>
+
+                                                   <!--END YOUTUBE AREA-->
+
                            <!--START TOP QUESTION SECTION-->
                            <div dir="auto" class="ss-item  ss-section-header"><div class="ss-form-entry">
-                               <h2 class="ss-section-title">About Your Site</h2>
-                               <div class="ss-section-description ss-no-ignore-whitespace"></div>
+                               <h2 class="ss-section-title">Step 2 - About Your Site</h2>
+                               <div class="ss-section-description ss-no-ignore-whitespace">This content may be used by the Pollinator Partnership or MPGC </div>
                            </div></div></div>
                             <!--GARDEN DISPLAY NAME-->
                        <div class="ss-form-question errorbox-good" role="listitem">
@@ -570,10 +604,10 @@
                            <label class="ss-q-item-label" for="entry_1553647671"><div class="ss-q-title">Garden Display Name
                                <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
                                <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-                               <div class="ss-q-help ss-secondary-text" dir="auto">This is the name that we will use to display your site on the SHARE Map</div></label>
+                               <div class="ss-q-help ss-secondary-text" dir="auto">REMEMBER this name to find your site later</div></label>
                                <input type="text" name="entry.1553647671" value="" class="ss-q-short" id="entry_1553647671" dir="auto" aria-label="displayname This is the name that we will use to display your site on the SHARE Map Please remove the &#39; from your displayname" aria-required="true" required="" pattern="^(?!^.*&#39;.*$).*$" title="Please remove the &#39; from your displayname">
                                <div class="error-message" id="390707824_errorMessage"></div>
-                           <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                        </div></div></div>
 
 
@@ -586,7 +620,7 @@
                        <div class="ss-q-help ss-secondary-text" dir="auto">Please provide a short description of your pollinator site, your organization or anything that you would like other SHARE users to know about your site. </div></label>
                        <input type="text" name="entry.1205797193" value="" class="ss-q-short" id="entry_1205797193" dir="auto" aria-label="description Please provide a short description of your pollinator site, your organization or anything that you would like other SHARE users to know about your site.  Please replace &#39;" pattern="^(?!^.*&#39;.*$).*$" title="Please replace &#39;">
                        <div class="error-message" id="1019650435_errorMessage"></div>
-                        <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                        </div></div></div>
 
                              <!--WEBSITE-->
@@ -598,7 +632,7 @@
                                <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                            <input type="text" name="entry.508366367" value="" class="ss-q-short stored" id="entry_508366367" dir="auto" aria-label="Website  " title="">
                            <div class="error-message" id="836937721_errorMessage"></div>
-                           <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                        </div></div></div>
 
 
@@ -609,43 +643,8 @@
                                    </div>
                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                   <select name="entry.700005981" id="entry_700005981" aria-label="ref_organization  " class="valid"><option value=""></option>
-                                  <option value="America in Bloom">America in Bloom</option> <option value="American Horticultural Society">American Horticultural Society</option> <option value="American Hort">American Hort</option> <option value="American Public Gardens Association">American Public Gardens Association</option> <option value="ASTA">ASTA</option> <option value="Bee Buffer Project">Bee Buffer Project</option> <option value="Bee Friendly Farming">Bee Friendly Farming</option> <option value="Captain Planet Association">Captain Planet Association</option> <option value="Daughters of the American Revolution">Daughters of the American Revolution</option> <option value="David Suzuki Foundation">David Suzuki Foundation</option> <option value="EPA">EPA</option> <option value="Keep America Beautiful">Keep America Beautiful</option> <option value="Kids Gardening">Kids Gardening</option> <option value="Lady Bird Johnson Wildflower Center">Lady Bird Johnson Wildflower Center</option> <option value="Monarch Watch">Monarch Watch</option> <option value="Monarch Joint Venture">Monarch Joint Venture</option> <option value="National Garden Bureau">National Garden Bureau</option> <option value="NEEF">NEEF</option> <option value="National Garden Clubs">National Garden Clubs</option> <option value="National Recreation and Parks Association">National Recreation and Parks Association</option> <option value="Pollinator Partnership">Pollinator Partnership</option> <option value="Smithsonian National Museum of Natural History">Smithsonian National Museum of Natural History</option> <option value="USDA">USDA</option> <option value="USFS">USFS</option> <option value="US Fish and Wildlife Service">US Fish and Wildlife Service</option> <option value="Wildlife Habitat Council">Wildlife Habitat Council</option> <option value="Wild Ones">Wild Ones</option></select><div class="required-message">This information will be displayed publically on the SHARE Map</div>
+                                  <option value="America in Bloom">America in Bloom</option> <option value="American Horticultural Society">American Horticultural Society</option> <option value="American Hort">American Hort</option> <option value="American Public Gardens Association">American Public Gardens Association</option> <option value="The Association for Garden Communicators (GWA)">The Association for Garden Communicators (GWA)</option><option value="ASTA">ASTA</option> <option value="Bee Buffer Project">Bee Buffer Project</option> <option value="Bee Friendly Farming">Bee Friendly Farming</option> <option value="Captain Planet Association">Captain Planet Association</option> <option value="Daughters of the American Revolution">Daughters of the American Revolution</option> <option value="David Suzuki Foundation">David Suzuki Foundation</option> <option value="EPA">EPA</option> <option value="Keep America Beautiful">Keep America Beautiful</option> <option value="Kids Gardening">Kids Gardening</option> <option value="Lady Bird Johnson Wildflower Center">Lady Bird Johnson Wildflower Center</option> <option value="Monarch Watch">Monarch Watch</option> <option value="Monarch Joint Venture">Monarch Joint Venture</option> <option value="National Garden Bureau">National Garden Bureau</option> <option value="National Gardening Association">National Gardening Association</option><option value="NEEF">NEEF</option> <option value="National Garden Clubs">National Garden Clubs</option> <option value="National Recreation and Parks Association">National Recreation and Parks Association</option> <option value="Pollinator Partnership">Pollinator Partnership</option> <option value="Smithsonian National Museum of Natural History">Smithsonian National Museum of Natural History</option> <option value="USDA">USDA</option> <option value="USFS">USFS</option> <option value="US Fish and Wildlife Service">US Fish and Wildlife Service</option><option value="Wild for Pollinators">Wild for Pollinators</option><option value="Wild Ones">Wild Ones</option> <option value="Wildlife Habitat Council">Wildlife Habitat Council</option></select>
                                    </div></div></div>
-
-
-                       <!--START ADD YOUR CONTENT-->
-                       <div dir="auto" class="ss-item ss-section-header" id="content2"><div class="ss-form-entry">
-                               <h2 class="ss-section-title">Add Your Content</h2>
-                               <div class="ss-section-description ss-no-ignore-whitespace">This content may be used by the Pollinator Partnership or MPGC </div>
-                           </div></div>
-
-                       <!--START IMAGE UPLOAD-->
-
-                       <!-- Button trigger modal -->
-                       <div id="imagearea">
-                           <div id='mydiv4'></div>
-
-                           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                               Upload Image
-                           </button>
-
-
-                       </div>
-
-                       <!--END IMAGE UPLOAD-->
-                       <!--START YOUTUBE-->
-                        <br>
-                       <div class="ss-form-question errorbox-good" role="listitem">
-                           <div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
-                                   <label class="ss-q-item-label" for="entry_1958133231"><div class="ss-q-title">Youtube URL
-                                       </div>
-                                       <div class="ss-q-help ss-secondary-text" dir="auto">ie. <a href="https://www.google.com/url?q=https://youtu.be/xW_AsV7k42o&amp;sa=D&amp;ust=1460585864055000&amp;usg=AFQjCNFJOROC_KyDa4V24SCVMCfXQKRj5g">https://youtu.be/xW_AsV7k42o</a></div></label>
-                                   <input type="text" name="entry.1958133231" value="" class="ss-q-short" id="entry_1958133231" dir="auto" aria-label="Youtube URL ie. https://youtu.be/xW_AsV7k42o " title="">
-                                   <div class="error-message" id="1928594125_errorMessage"></div>
-                                   <div class="required-message">This information will be displayed publically on the SHARE Map</div>
-                               </div></div></div>
-
-                       <!--END YOUTUBE AREA-->
 
                        <!--START COPY AREA-->
                        <div id='mydiv2'></div>
@@ -657,20 +656,21 @@
                        <!--START DROPDOWN-->
                            <div id="moreinfo">
                                <div dir="auto" class="ss-item  ss-section-header">
-                                       <h2 class="ss-section-title">Site Details</h2>
-                               </div>
+                                       <h2 class="ss-section-title">Step 3 - Site Details</h2>
+                                        </div>
+                                        <div class="ss-section-description ss-no-ignore-whitespace">This content may be used by the Pollinator Partnership or MPGC </div><br>
 
                                <!--START LOCATION AREA-->
                                <div class="errorbox-good" role="listitem"></div>
                                <!--FORM LOCATION FIELD-->
                                <div class="ss-form-entry" id="locationField">
-                                   <label class="ss-q-item-label" for="entry_963686522"><div class="ss-q-title">Address of Site
+                                   <label class="ss-q-item-label" for="entry_963686522"><div class="ss-q-title">Address of Site*
                                            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-                                           <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-                                       <div class="ss-q-help ss-secondary-text" dir="auto">Address, City, State, Zip, Country</div></label>
+                                          </div>
+                                       <div class="ss-q-help ss-secondary-text" dir="auto"><h4 style="color: #ffce54">Please select an address from the available options</h4></div></label>
                                    <input type="text" name="entry.963686522" value="" class="ss-q-short stored" id="autocomplete" id="entry_963686522" dir="auto" aria-label="Location Address, City, State, Zip, Country " aria-required="true" required="" title="">
                                    <div class="error-message" id="1851421797_errorMessage"></div>
-                                   <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+                                  
                                </div>
                                <!--FORM LOCATION FIELD-->
 
@@ -682,8 +682,7 @@
                                                <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                            <input type="text" name="entry.1095852240" value="" class="ss-q-short stored" id="street_number" id="entry_1095852240" dir="auto" aria-label="Street Numbner  " title="">
                                            <div class="error-message" id="1189673682_errorMessage"></div>
-                                           <div class="required-message">This information will be displayed publically on the SHARE Map
-                                           </div></div></div>
+                                           </div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
                                        <div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
@@ -692,7 +691,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" id="route" name="entry.1236654309" value="" class="ss-q-short" id="locality" id="entry_1236654309" dir="auto" aria-label="Address  " title="">
                                                <div class="error-message" id="1925924362_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+                                               
                                            </div></div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
@@ -703,7 +702,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" name="entry.1932770363" value="" class="ss-q-short" id="locality" id="entry_1932770363" dir="auto" id="locality" aria-label="City  " aria-required="true" required="" title="">
                                                <div class="error-message" id="1749700097_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+                                                 
                                            </div></div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
@@ -714,7 +713,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" name="entry.1578063307" value="" class="ss-q-short" id="administrative_area_level_1" id="entry_1578063307" dir="auto" aria-label="State/Province  " aria-required="true" required="" title="">
                                                <div class="error-message" id="2025509706_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                            </div></div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
@@ -724,7 +723,7 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" name="entry.1246372804" value="" class="ss-q-short" id="postal_code" id="entry_1246372804" dir="auto" aria-label="Zip Code  " title="">
                                                <div class="error-message" id="63721695_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
+
                                            </div></div></div>
 
                                    <div class="ss-form-question errorbox-good" role="listitem">
@@ -734,7 +733,6 @@
                                                    <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                                <input type="text" name="entry.571678429" value="" class="ss-q-short" id="country" id="entry_571678429" dir="auto" aria-label="Country  " title="">
                                                <div class="error-message" id="1755492525_errorMessage"></div>
-                                               <div class="required-message">This information will be displayed publically on the SHARE Map</div>
                                            </div></div></div>
                                </div>
                                <!--END FINE TUNE UPDATE-->
@@ -743,21 +741,21 @@
 
                                <div class="ss-form-question errorbox-good" role="listitem">
                                    <div dir="auto" class="ss-item  ss-select"><div class="ss-form-entry">
-                                           <label class="ss-q-item-label" for="entry_1414392500"><div class="ss-q-title">Type of Site
+                                           <label class="ss-q-item-label" for="entry_1414392500"><div class="ss-q-title">Type of Site*
                                                </div>
                                                <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                            <select class="stored" name="entry.1414392500" id="entry_1414392500" aria-label="type  "><option value=""></option>
                                                <option value="Corporation">Corporation</option> <option value="Faith Community">Faith Community</option> <option value="Farm">Farm</option> <option value="Home Garden">Home Garden</option> <option value="Institution">Institution</option> <option value="Nonprofit">Nonprofit</option> <option value="Right of Way (ROW)">Right of Way (ROW)</option> <option value="Rooftop Garden">Rooftop Garden</option> <option value="OTHER">OTHER</option></select>
-                                           <div class="required-message">This is a required question</div></div></div></div>
+                                           </div></div></div>
 
                                <div class="ss-form-question errorbox-good" role="listitem">
                                    <div dir="auto" class="ss-item  ss-select"><div class="ss-form-entry">
-                                           <label class="ss-q-item-label" for="entry_505488395"><div class="ss-q-title">Size of Site
+                                           <label class="ss-q-item-label" for="entry_505488395"><div class="ss-q-title">Size of Site*
                                                </div>
                                                <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
                                            <select name="entry.505488395" id="entry_505488395" aria-label="size  "><option value=""></option>
                                                <option value="Small Planter or Balcony (30 square feet or less)">Small Planter or Balcony (30 square feet or less)</option> <option value="Small Garden (30 - 100 square feet)">Small Garden (30 - 100 square feet)</option> <option value="Large Garden (100 - 1000 square feet)">Large Garden (100 - 1000 square feet)</option> <option value="Medium Yard (1/2 acre or Less)">Medium Yard (1/2 acre or Less)</option> <option value="Large Yard (1/2 - 1 acre)">Large Yard (1/2 - 1 acre)</option> <option value="Field (1 - 5 acres)">Field (1 - 5 acres)</option> <option value="Large Field (5 - 10 acres)">Large Field (5 - 10 acres)</option> <option value="Meadow or Similar">Meadow or Similar</option> <option value="Park">Park</option> <option value="Other">Other</option></select>
-                                           <div class="required-message">This is a required question</div></div></div></div>
+                                           </div></div></div>
 
 
                            </div>
@@ -765,8 +763,8 @@
 
                        <div class="errorbox-good" role="listitem">
                        <div dir="auto" class="ss-item  ss-section-header"><div class="ss-form-entry">
-                           <h2 class="ss-section-title">Tell Us About You</h2>
-                           <div class="ss-section-description ss-no-ignore-whitespace"></div>
+                           <h2 class="ss-section-title">Step 4 - Tell Us About You</h2>
+                           <div class="ss-section-description ss-no-ignore-whitespace">Your name and email address will <strong> NOT </strong>be displayed on the MPGC map </div>
                        </div></div></div>
 
                        <div class="ss-form-question errorbox-good" role="listitem">
@@ -848,7 +846,12 @@
 
             <!-- Sidebar -->
             <div class="col-sm-4" id="sidebar_right">
-                <a href="http://millionpollinatorgardens.org/"><img id="logo_main" src="logo/mpgc.png"></a>
+                <a href="http://millionpollinatorgardens.org/"><img id="logo_main" src="logo/mpgc.png"></a><br><br>
+                    <h3>Other Options</h3>
+                    <div class="col-xs-12" style="text-align: left; margin-bottom: 1em"><a href="bulk-upload.html">Submitting more than 10 sites? Click here for bluk upload options</a></div>
+                    <br>
+                    <div class="col-xs-12" style="text-align: left"><a href="register_edit.php#form">Click Here to Edit Existing Site</a></div>
+                <br><br>
                 <h3>Dig Deeper</h3>
                 <div>
                     <a role="button" class="btn btn_1 btn-1 btn-sep icon-list" href="http://millionpollinatorgardens.org/">MPGC</a>
@@ -907,7 +910,7 @@
 
 <!--CartoDB Custom Body Scripts-->
 
-<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+<script src="resources/js/cartodbjs.js"></script>
 
 <!--For Image Slider Slick-->
 
@@ -915,9 +918,9 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
-<script src="js/app.js"></script>
-<script type="text/javascript" src="js/googleauto.js"></script>
-<script type="text/javascript" src="js/imageupload.js"></script>
+<script src="resources/js/app.js"></script>
+<script type="text/javascript" src="resources/js/googleauto.js"></script>
+<script type="text/javascript" src="resources/js/imageupload.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQav82qqHPZc7A7C2Ui8YjWwaHXJoImEk&libraries=places&callback=initAutocomplete"
         async defer></script>
@@ -925,9 +928,9 @@
 <script async="" type="text/javascript" charset="UTF-8" src="//www.gstatic.com/og/_/js/k=og.og.en_US.tqOlfx8vniA.O/rt=j/t=zcms/m=ld,gl,is,id,nb,nw,sb,sd,p,vd,awd,st,lod,eld,ip,dp,cpd,bd/exm=bt,base,bn,bu,cp,el,lo,sbi,ni,sf,up,dd,aw,iw,if,gi,vi,pi,eq,uc/d=1/ed=1/rs=AA2YrTuzX2J28aKWY3sJ-hHjV7KfoL5SqA"></script>
 
 
-<script type="text/javascript" src="js/cartodb_total_overall.js"></script>
+<script type="text/javascript" src="resources/js/cartodb_total_overall.js"></script>
 
-<script src="js/cartodbsql_search_final.js"></script>
+<script src="resources/js/cartodbsql_search_final.js"></script>
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQav82qqHPZc7A7C2Ui8YjWwaHXJoImEk&libraries=places&callback=initAutocomplete"
@@ -999,8 +1002,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="P2/js/init.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/custom-js.js"></script>
+<script src="resources/js/bootstrap.js"></script>
+<script src="resources/js/custom-js.js"></script>
 <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
 <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
 

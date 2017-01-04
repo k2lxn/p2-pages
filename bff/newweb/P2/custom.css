@@ -1,0 +1,6 @@
+jQuery(document).ready(function(){
+var taburl = document.location.toString();
+if( taburl.match('#') ) {
+jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
+}
+});

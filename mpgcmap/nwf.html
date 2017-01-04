@@ -8,19 +8,19 @@
     <title>MPGC Map | National Wildlife Federation</title>
 
     <!-- Bootstrap -->
-    <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+    <link href="resources/css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/mapcss.css" rel="stylesheet">
-    <link href="css/map_custom.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    <link href="resources/css/mapcss.css" rel="stylesheet">
+    <link href="resources/css/map_custom.css" rel="stylesheet">
 
     <!--CartoDB Mapping CSS and Scripts-->
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
-    <!--script src="js/cartodbsql_individual.js"></script-->
-    <link rel="stylesheet" type="text/css" href="css/map_custom.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="resources/css/cartodb-style.css" />
+    <!--script src="resources/js/cartodbsql_individual.js"></script-->
+    <link rel="stylesheet" type="text/css" href="resources/css/map_custom.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick.css"/>
 
     <script>
 
@@ -265,7 +265,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://pollinator.org"><img src="images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
+                <a class="navbar-brand" href="/"><img src="images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
             </div>
 
             <div id="navbar" class="navbar-collapse collapse" aria-expanded="false"
@@ -345,7 +345,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        Hummingbirds:
+                        MPGC Map:
                     </button>
                 </div>
             </div>
@@ -356,7 +356,7 @@
                         <a id="inline_sub_menu" href="index.html">MPGC Map</a>
                     </li>
                     <li id="register_sub_menu"><a href="register_updated.php#form">Register</a></li>
-                    <li><a href="search.html">Search</a></li>
+                    <li><a href="advancedsearch.html">Search</a></li>
                     <li><a href="partners.html#partners_section">Partners</a></li>
                     <li><a href="register_edit.php#form">Edit</a></li>
                 </ul>
@@ -414,7 +414,7 @@
                     <div id="logo_vertical"><a href="http://www.wildones.org/"><img src="logo/wildones.png"></a></div><div id="logo_vertical"><a href="http://www.ngb.org/"><img src="logo/ngb.png"></a></div><div id="logo_vertical"><a href="http://www.dar.org/"><img src="logo/DAR.png"></a></div><div id="logo_vertical"><a href="http://growitmobile.com/"><img src="logo/growit.png"></a></div>
                 </div>
             </div>
-            <div class="col-md-12 overflow" id="header_cover"></div>
+            <div class="col-md-12 col-xs-12 overflow" id="header_cover"></div>
         </div>
     </div>
 
@@ -483,7 +483,7 @@
                     <a role="button" class="btn btn_1 btn-1 btn-sep icon-list" href="http://millionpollinatorgardens.org/">MPGC</a>
                     <a role="button" class="btn btn_1 btn-2 btn-sep icon-building" href="http://pollinator.org/pollinators.htm">Why Pollinators</a>
                     <a role="button" class="btn btn_1 btn-3 btn-sep icon-search" href="http://pollinator.org/guides.htm">Planting Guides</a>
-                    <a role="button" class="btn btn_1 btn-4 btn-sep icon-email" href="search.html">By Email</a>
+                    <a role="button" class="btn btn_1 btn-4 btn-sep icon-email" href="advancedsearch.html">By Email</a>
                 </div>
             </div>  <!-- end .col-sm-4.sidebar -->
 
@@ -536,14 +536,14 @@
 
 <!--CartoDB Custom Body Scripts-->
 
-<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+<script src="resources/js/cartodbjs.js"></script>
 
 <!--For Image Slider Slick-->
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-<script src="js/app.js"></script>
+<script type="text/javascript" src="resources/slick/slick.min.js"></script>
+<script src="resources/js/app.js"></script>
 
 
 <script>
@@ -554,7 +554,7 @@
                 for (var i = 0; i < data.total_rows; i++) {
                     $('#countertotal').append("<div class='large_font'>" +
                             data.rows[i].count +
-                            "</div><h2 class='center_font'>Sites Registered</h2>");
+                            "");
                 }
 
             })
@@ -572,8 +572,8 @@
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="P2/js/init.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/custom-js.js"></script>
+<script src="resources/js/bootstrap.js"></script>
+<script src="resources/js/custom-js.js"></script>
 <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
 <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
 

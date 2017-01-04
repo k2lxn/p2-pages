@@ -8,21 +8,21 @@
     <title>MPGC Map | Pollinator Partnership</title>
 
     <!-- Bootstrap -->
-    <link href="css/custom/custom-bootstrap.css" rel="stylesheet">
+    <link href="resources/css/custom/custom-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/mapcss.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    <link href="resources/css/mapcss.css" rel="stylesheet">
 
     <!--CartoDB Mapping CSS and Scripts-->
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
-    <link rel="stylesheet" href="css/map_custom.css" />
+    <link rel="stylesheet" href="resources/css/cartodb-style.css" />
+    <link rel="stylesheet" href="resources/css/map_custom.css" />
 
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/slick/slick.css"/>
 
     <!-- Custom CSS -->
-    <link href="css/bootstrap/3-col-portfolio.css" rel="stylesheet">
+    <link href="resources/css/bootstrap/3-col-portfolio.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -165,7 +165,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://pollinator.org"><img src="images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
+                <a class="navbar-brand" href="/"><img src="images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
             </div>
 
             <div id="navbar" class="navbar-collapse collapse" aria-expanded="false"
@@ -245,7 +245,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        Hummingbirds:
+                        MPGC Map:
                     </button>
                 </div>
             </div>
@@ -256,7 +256,7 @@
                         <a id="inline_sub_menu" href="index.html">MPGC Map</a>
                     </li>
                     <li id="register_sub_menu"><a href="register_updated.php#form">Register</a></li>
-                    <li><a href="search.html">Search</a></li>
+                    <li><a href="advancedsearch.html">Search</a></li>
                     <li><a href="partners.html#partners_section">Partners</a></li>
                     <li><a href="register_edit.php#form">Edit</a></li>
                 </ul>
@@ -268,12 +268,20 @@
     <!-- Main page content -->
     <!--START NEW MAP-->
 
-    <div class="row">
-        <!-- HIDE SMALL SEARCH-->
-        <div class="col-lg-3 col-md-3 col-sm-12" id="searchbox">
-            <h3 class="center">Search for Your Site</h3>
+    <div class="container-fluid">
+        <!--COUNTER SECTION-->
+        <div class="row" id="counter_top">
+            <h3 class="center">Pollinator Sites Registered</h3>
             <span id="counter_overall"></span>
-            <div class='col-sm-12' id="questions">
+        </div>
+        <!--MAP SECTION-->
+        <div class="row">
+            <div id="map"></div>
+        </div>
+        <!-- SEARCH SECTION-->
+        <div class="row" id="searchbox">
+            <h3 class="center">Search for Your Site</h3>
+            <div class="col-lg-12" id="questions">
                 <div class='input-group'>
                           <span class="input-group-btn">
                               <button class="btn btn-default" type="button" type="button" onclick="search()">Search</button>
@@ -281,24 +289,18 @@
                     <input label="hello" type="text" class="form-control" name="search_organization" placeholder="By Organization or Display Name" value="" id="search_organization" size="10" />
 
                 </div>
-                <!--div id="locationField">
-                    <input id="autocomplete" placeholder="Enter your address"
-                           onFocus="geolocate()" type="text"></input>
-                </div>-->
-
 
                 <div id="locationField" class='input-group'>
                           <span  class="input-group-btn">
                               <button class="btn btn-default" type="button" type="button" onclick="search2()">Search</button>
                           </span>
-                    <input label="hello" id="autocomplete" type="text" class="form-control" name="search_organization" placeholder="By Location" value="" size="10" />
+                    <input style="background-color: white; color: black" label="hello" id="autocomplete" type="text" class="form-control" name="search_organization" placeholder="By Location" value="" id="search_location" size="10" />
                 </div>
                 <div id="register_button">
                     <a type="button" id="general_button" class="btn btn-std center_font" href="register_updated.php">Register Today</a>
                 </div>
             </div>
         </div>
-        <div id="map"></div>
     </div>
 
     <!--END NEW MAP-->
@@ -366,7 +368,7 @@
                     <div id="logo_vertical"><a href="http://www.wildones.org/"><img src="logo/wildones.png"></a></div><div id="logo_vertical"><a href="http://www.ngb.org/"><img src="logo/ngb.png"></a></div><div id="logo_vertical"><a href="http://www.dar.org/"><img src="logo/DAR.png"></a></div><div id="logo_vertical"><a href="http://growitmobile.com/"><img src="logo/growit.png"></a></div>
                 </div>
             </div>
-            <div class="col-md-12 overflow" id="header_cover"></div>
+            <div class="col-md-12 col-xs-12 overflow" id="header_cover"></div>
         </div>
     </div>
     <!-- Start of Standard Page Content-->
@@ -582,7 +584,7 @@
                 <div class="col-sm-6">
                     <ul class="nav" role="navigation">
                         <li><a href="index.html">Map</a></li>
-                        <li><a href="search.html">Search</a></li>
+                        <li><a href="advancedsearch.html">Search</a></li>
                         <li><a href="partners.html#partners_section">Partners</a></li>
                         <li><a href="register">Register</a></li>
                     </ul>
@@ -595,24 +597,24 @@
 
 <!--CartoDB Custom Body Scripts-->
 
-<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+<script src="resources/js/cartodbjs.js"></script>
 
 <!--For Image Slider Slick-->
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="resources/slick/slick.min.js"></script>
 
 
 <!--CARTODB SCRIPT-->
-<script src="js/app.js"></script>
-<script type="text/javascript" src="js/googleauto.js"></script>
+<script src="resources/js/app.js"></script>
+<script type="text/javascript" src="resources/js/googleauto.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQav82qqHPZc7A7C2Ui8YjWwaHXJoImEk&libraries=places&callback=initAutocomplete"
         async defer></script>
 
-<script src="js/cartodbsql_search_final.js"></script>
-<script type="text/javascript" src="js/cartodb_total_overall.js"></script>
+<script src="resources/js/cartodbsql_search_final.js"></script>
+<script type="text/javascript" src="resources/js/cartodb_total_overall.js"></script>
 
 
 </body>
@@ -623,8 +625,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="P2/js/init.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/custom-js.js"></script>
+<script src="resources/js/bootstrap.js"></script>
+<script src="resources/js/custom-js.js"></script>
 <script src="P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
 <script src="P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
 
