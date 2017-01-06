@@ -685,6 +685,25 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
                                             </select>
                                         </div>
                                     </div>
+                                    
+                                    <!--Field Pest Management-->
+                                    <div class="question">
+                                        <label>What is your pest management program?</label>
+                                        <div class="input-group">
+                                            <select aria-label="pest_management" id="entry_688342563" name=
+                                            "entry.688342563">
+                                                <option value="">
+                                                </option>
+                                                <option value="Fully Organic">
+                                                    Fully Organic
+                                                </option>
+                                                <option value="Integrated">
+                                                    Integrated Pest Management/Integrated Vegetation Management
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
                                     <!--Field Plants Grown-->
                                     <div class="question">
                                         <label>What plants do you grow </label>
