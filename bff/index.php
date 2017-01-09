@@ -688,7 +688,7 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
                                     
                                     <!--Field Pest Management-->
                                     <div class="question">
-                                        <label>What is your pest management program?</label>
+                                        <label>What is your pest management program? <span class="label label-danger">REQUIRED</span></label>
                                         <div class="input-group">
                                             <select aria-label="pest_management" id="entry_688342563" name=
                                             "entry.688342563">
