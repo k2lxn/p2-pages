@@ -193,12 +193,39 @@
        		<h1>Take Action</h1>
        	</div> 
     </div>
+     <!-- optional Page Navigation (for anchor links) -->
+    <nav id="page-navbar" class="navbar navbar-static-top navbar-default">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<div class="dropdown">
+        			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        				Jump to:
+        			</button> 
+        		</div>
+        	</div>
+        	<div id="page-nav" class="navbar-collapse collapse" aria-expanded="false">
+        		<ul class="nav navbar-nav">
+        			<li class="hidden-xs">
+        				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        				Jump to:
+        			</li>
+            	<li><a href="#give">Give</a></li>
+            	<li><a href="#signup">Sign up</a></li>
+           		<li><a href="#volunteer">Volunteer</a></li>
+           		<li><a href="#subscribe">Subscribe</a></li>
+           		<li><a href="#follow">Follow</a></li>
+        		</ul>
+        	</div> 
+        </div>	  
+    </nav>
     
     <!-- Main page content -->
     <div class="container main">
       <div class="row">
         <div class="col-sm-6">
-          <h2><div class="heading-content">Give</div></h2>
+          <h2 id="give"><div class="heading-content">Give</div></h2>
           <p>Bees and other pollinators are threatened, but with your support the Pollinator Partnership is finding ways to help them. Your support is what makes our work for pollinators possible.</p>
           <div class="img-lg" style="background-image: url(Images/butterfly_blue_img-lg.jpg); background-size: cover;">
           	<a href="donate" class="btn btn-primary btn-lg"><i class="fa fa-heart-o"></i> Donate</a>
@@ -206,7 +233,7 @@
           
         </div>     
         <div class="col-sm-6">
-        	<h2><div class="heading-content">Sign Up</div></h2>
+        	<h2 id="signup"><div class="heading-content">Sign Up</div></h2>
         	<p>Sign up to the <strong>Pollinator Action Team</strong> and help bees and other Pollinators! Learn about Volunteer opportunities, research, events and much more!</p>
         	
         	<form method="post" action="http://oi.vresp.com?fid=2dacde493f" target="vr_optin_popup" onsubmit="window.open( 'http://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true;" >
@@ -224,13 +251,13 @@
     <!--	<span class="img-lg" style="background-image: url(Images/pwprogram1.jpg); background-size: cover;"></span>  -->
     	<div class="row">
         <div class="col-sm-6">
-          <h2><div class="heading-content">Volunteer</div></h2>
+          <h2 id="volunteer"><div class="heading-content">Volunteer</div></h2>
           <div class="img-sm pull-right" style="background-image: url(Images/volunteers_960x600.jpg); background-size: cover;"></div> 
           <p>The Pollinator Partnership welcomes and encourages highly motivated individuals to apply to  volunteer with our organization.</p>
           <p><a href="http://pollinator.org/volunteer.htm">Click here</a> to apply</p>		
         </div>     
         <div class="col-sm-6">
-        	<h2 style="clear:both;"><div class="heading-content">Subscribe</div></h2>
+        	<h2 id="subscribe" style="clear:both;"><div class="heading-content">Subscribe</div></h2>
         	<p>Subscribe to the <strong>Pollinator Listserv</strong> and you will be able to send and receive  pollinator-related messages to other individuals interested in the field.</p>
         	<p><a href="http://lists.sonic.net/mailman/listinfo/pollinator">Click here </a> to join</p>
         	<br><br>
@@ -240,7 +267,7 @@
     	</div>  <!-- end .row -->
     	<div id="follow" class="row">
     		<div class="col-xs-12">
-    			<h2><div class="heading-content">Follow</div></h2>
+    			<h2 id="follow"><div class="heading-content">Follow</div></h2>
     			<!-- Facebook, Twitter, Instagram, YouTube -->
     			<a href="http://www.facebook.com/ThePollinatorPartnership" target="_blank"><i class="fa fa-facebook-square"></i></a>
     			<a href="http://twitter.com/Pollinators" target="_blank"><i class="fa fa-twitter-square"></i></a>
