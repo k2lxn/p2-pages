@@ -14,13 +14,6 @@
     <link href="../css/font-awesome.css" rel="stylesheet">
     <!-- Page styles -->
 		<link href="css/events.css" rel="stylesheet">
-		<style>
-			@media only screen and (max-width: 602px) {
-    		#special-top-banner {
-    			display: none;
-    		}
-  		}
-		</style>
 		
 		<!-- CartoDB -->
 		<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
@@ -42,8 +35,26 @@
       <div class="container-fluid">
       	<div id="top-bar">
    				<div class="row">
-   					<div id="special-top-banner" class="col-xs-5">
-   						<h4><i class="fa fa-bullhorn"></i>  Happy Pollinator Week 2016!</h4>
+   					<div class="col-sm-5 hidden-xs">
+   						<h4><i class="fa fa-calendar"></i> Pollinator Week</h4>
+   						<div id="counter" data-date="June 19, 2017">
+   							<div class="timer-col">
+   								<span id="days"></span>
+   								<span class="timer-type">d</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="hours"></span>
+   								<span class="timer-type">h</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="minutes"></span>
+   								<span class="timer-type">m</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="seconds"></span>
+   								<span class="timer-type">s</span>
+   							</div>
+   						</div> <!-- end #counter -->
    					</div>
    					
    					<!-- Google Search -->
@@ -145,6 +156,7 @@
               	</div>
                 <li><a href="../shop">All</a></li>
                 <li><a href="../beesmartapp.htm">App</a></li>
+                <li><a href="bookmarks">Bookmarks</a></li>
                 <li><a href="../books.htm">Books</a></li>
                 <li><a href="../brochures.htm">Brochures</a></li>
                 <li><a href="../cards.htm">Cards</a></li>
