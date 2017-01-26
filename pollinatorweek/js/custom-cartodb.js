@@ -1,7 +1,7 @@
 
 /* * * ON  READY * * */
 $(document).ready(function(){
-	cartodb.createVis('map', 'https://pollinatorpartner.cartodb.com/api/v2/viz/82b577dc-f87a-11e5-9a9c-0e5db1731f59/viz.json');
+	cartodb.createVis('map', 'https://pollinatorpartner.carto.com/api/v2/viz/81d82420-e3f9-11e6-a1ed-0ee66e2c9693/viz.json');
 });	
 
 /* * * ON  LOAD * * */	
