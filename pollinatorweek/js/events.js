@@ -70,7 +70,7 @@ $(document).ready(function(){
 	var last_state = "";  // For labeling sections by State
 	
 	/* Build the navigation */
-	sql.execute("SELECT DISTINCT state FROM pollinator_week")
+	sql.execute("SELECT DISTINCT state FROM table_2017_pollinator_week")
 		.done(function(data) {
 			data.rows.sort(function(a,b){
 				if (a.state > b.state) {
@@ -104,7 +104,7 @@ $(document).ready(function(){
  	 });
 	
 	/*  Build the list */
-	sql.execute("SELECT * FROM pollinator_week ORDER BY state,city,zip")
+	sql.execute("SELECT * FROM table_2017_pollinator_week ORDER BY state,city,zip")
   	.done(function(data) {
     	console.log(data.rows); 	
     	for (var i=0; i < data.rows.length; i++) {
