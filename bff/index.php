@@ -320,7 +320,7 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
                         <!--START Brochure-->
                         <div class="col-sm-12 col-lg-6">
                             <div class="thumbnail">
-                                <div class="gallery"><a href="Images/BeeFriendlyFarmer_brochure_800x486.jpg" rel="prettyPhoto" target="_blank" title="BFF Brochure"><img src="Images/BeeFriendlyFarmer_brochure_800x486.jpg" width="100%" height="100%" alt="This is the title" /></a></div>
+                                <div class="gallery"><a href="../PDFs/Brochures/BeeFriendlyFarmer_brochure.pdf" rel="prettyPhoto" target="_blank" title="BFF Brochure"><img src="Images/BeeFriendlyFarmer_brochure_800x486.jpg" width="100%" height="100%" alt="This is the title" /></a></div>
                                 <div class="caption">
                                     <h3 class="center_only">Brochures</h3>
                                     <form class='center_only' target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -364,6 +364,23 @@ jQuery('.nav-tabs a[href=#'+taburl.split('#')[1]+']').tab('show');
                             </div>
                         </div>
                         <!--END CERTIFICATION-->
+                        <!--START HATS-->
+                        <div class="col-sm-12 col-lg-6" id="renew_view">
+                            <div class="thumbnail">
+                                <img src="photos/bff-hat.jpg" alt="..." style="width:70%;">
+                                <div class="caption">
+                                    <h3 class="center_only">Hat</h3>   
+                                    <p class="center_only">$20 each</p>      
+                                    <form class='center_only' target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+										<input type="hidden" name="cmd" value="_s-xclick">
+										<input type="hidden" name="hosted_button_id" value="HJTPTC9BWXBHL">
+										<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+										<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+									</form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END HATS-->       
 
                     </div>
                     <hr>
