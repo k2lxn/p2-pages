@@ -1,6 +1,8 @@
 @import "../../css/bootstrap/less/variables.less";
 @import "../../css/custom/custom-variables.less";
 
+@nappc-2017-accent: #273576;
+
 .page-header {
 	background: linear-gradient(darken(@nappc-primary,10%), darken(@nappc-secondary, 5%));
 	border-bottom-color: @nappc-primary;
@@ -52,17 +54,17 @@
 }
 
 .sidebar .btn {
-	background-color: @nappc-secondary;
+	background-color: lighten(@nappc-2017-accent, 25%);
 }
 
 
 #home-header {
-	background-image: url("../Images/home_header.png");
+	//background-image: url("../Images/home_header.png");
+	//background-image: url("../../Images/monarch_sunflower_600x450.jpg");
+	background-image: url("../../Images/monarchbanner_960x500.png");
 	background-size: cover;
-	min-height: 200px;
-	@media (max-width: 415px) {
-		background-position: center top;
-	}
+	min-height: 250px;
+	background-position: left center;
 	h1 {
 		font-family: @font-family-sans-serif;
 		font-weight: 700;
@@ -81,6 +83,9 @@
 		small {
 			color: #fff;
 		}
+		position: absolute;
+		bottom: 0;
+		right: 0;
 	}
 	img {
 		width: 120px;
@@ -126,8 +131,7 @@
 
 #conference-info {   // For the homepage sidebar top
 	h3 {
-		line-height: 1.5;
-		@media (max-width: @screen-md) {
+		@media (max-width: @screen-sm) {
 			text-align: center;
 		}	
 		@media (max-width: @screen-sm) {
@@ -143,6 +147,13 @@
 		}
 		@media (max-width: @screen-sm) {
 			font-size: 20px;
+		}
+	}
+	h4 {
+		font-size: 14px;
+		line-height: 1.4;
+		@media (max-width: @screen-sm) {
+			text-align: center;
 		}
 	}
 }
