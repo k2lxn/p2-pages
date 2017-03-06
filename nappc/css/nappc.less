@@ -60,11 +60,12 @@
 
 
 #home-header {
-	//background-image: url("../Images/home_header.png");
-	//background-image: url("../../Images/monarch_sunflower_600x450.jpg");
 	background-image: url("../../Images/monarchbanner_960x500.png");
 	background-size: cover;
 	min-height: 250px;
+	@media (max-width: 998px) {
+		min-height: 300px;
+	}
 	background-position: left center;
 	h1 {
 		font-family: @font-family-sans-serif;
@@ -89,12 +90,17 @@
 		right: 0;
 	}
 	img {
-		width: 120px;
-		margin-left: 30px;
-		position: relative;
+		width: 150px;
+		position: absolute;
 		top: 50px;
-		@media (max-width: 415px) {
-			top: 30px;
+		right: 30px;
+		left: auto;
+		@media (max-width: 998px) {
+			top: 90px;
+		}
+		@media (max-width: @screen-xs) {
+			right: auto;
+			left: 20px;
 		}
 	}
 }
