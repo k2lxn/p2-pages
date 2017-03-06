@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Logistics | NAPPC</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/custom/custom-bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <!-- Page styles -->
+    <link href="css/nappc_2016.css" rel="stylesheet">
+    <style>
+    	@media only screen and (max-width: 495px) {
+    		.table {
+    			width: 110%;
+    			max-width: 120%;
+    			margin-left: -15px;
+    			margin-right: -15px;
+    		}
+    		.table .row div.col-xs-2 {
+    			padding-left: 3px;
+    		}
+    	}
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div id="wrapper">
+   	
+   <!-- Site Navigation
+    ======================================================================= -->
+    <nav class="site-header navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+      	<div id="top-bar">
+   				<div class="row">
+   					<div class="col-sm-5 hidden-xs">
+   						<h4><i class="fa fa-calendar"></i> Pollinator Week</h4>
+   						<div id="counter" data-date="June 19, 2017">
+   							<div class="timer-col">
+   								<span id="days"></span>
+   								<span class="timer-type">d</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="hours"></span>
+   								<span class="timer-type">h</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="minutes"></span>
+   								<span class="timer-type">m</span>
+   							</div>
+   							<div class="timer-col">
+   								<span id="seconds"></span>
+   								<span class="timer-type">s</span>
+   							</div>
+   						</div> <!-- end #counter -->
+   					</div>
+   					
+   					<!-- Google Search -->
+   					<div class="col-sm-2 hidden-xs google-search-container">
+   						<script>
+  						(function() {
+    						var cx = '002964769701314051310:upsfmgvjvqw';
+    						var gcse = document.createElement('script');
+   							gcse.type = 'text/javascript';
+    						gcse.async = true;
+    						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    						var s = document.getElementsByTagName('script')[0];
+    						s.parentNode.insertBefore(gcse, s);
+  						})();
+							</script>
+							<gcse:searchbox-only></gcse:searchbox-only>
+   					</div>
+   					
+   					<!-- Social Links/Call to Action -->
+   					<div class="col-sm-5">
+   						<ul class="call-to-action">
+   							<li><a href="../donate.htm">Donate Now</a></li>
+   							<li><a href="../takeaction.htm">Join Us</a></li>	
+   						</ul>
+   							
+   						<ul class="social-links vert-center">
+   							<li>
+   								<a href="http://www.facebook.com/ThePollinatorPartnership" target="_blank"><i class="fa fa-facebook-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="http://twitter.com/Pollinators" target="_blank"><i class="fa fa-twitter-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="http://www.youtube.com/user/PollinatorPartners" target="_blank"><i class="fa fa-youtube-square"></i></a>
+   							</li>
+   							<li>
+   								<a href="https://plus.google.com/u/0/+PollinatorOrg/about" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+   							</li>
+   						</ul> 
+   					</div>
+   					
+   				</div> <!-- end .row -->
+   			</div><!-- end #top-bar -->
+            
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" 
+            aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>    
+          <a class="navbar-brand" href="/"><img src="../Images/PollinatorLogo-Tag2.png" alt="Pollinator Partnership logo"></a>
+      	</div>
+      	
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false"
+             style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="../about.htm" class="dropdown-toggle" data-toggle="dropdown"
+                role="button" aria-haspopup="true" aria-expanded="false">
+                Who we are
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              	<div class="dropdown-foot">
+              		<span></span>
+              		<span></span>
+              	</div>
+                <li><a href="../about.htm">About us</a></li>
+                <li><a href="../wherewework.htm">Where we work</a></li>
+                <li><a href="../pollination.htm">What are Pollinators?</a></li>
+              </ul>
+            </li> 
+            <li>
+              <a href="../programs.htm">Our programs</a>
+            </li>
+            <li>
+              <a href="../guides.htm">Planting guides</a>          
+            </li>
+            <li>
+              <a href="../takeaction.htm">Get involved</a>
+            </li>
+            <li>   
+              <a href="../usefulresources.htm">Learning center</a>
+            </li>
+            <li class="dropdown">
+              <a href="shop.htm" class="dropdown-toggle" data-toggle="dropdown"
+                	role="button" aria-haspopup="true" aria-expanded="false">
+                Stuff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+              	<div class="dropdown-foot">
+              		<span></span>
+              		<span></span>
+              	</div>
+                <li><a href="../shop">All</a></li>
+                <li><a href="../beesmartapp.htm">App</a></li>
+                <li><a href="../bookmarks">Bookmarks</a></li>
+                <li><a href="../books.htm">Books</a></li>
+                <li><a href="../brochures.htm">Brochures</a></li>
+                <li><a href="../cards.htm">Cards</a></li>
+                <li><a href="../pamphlets.htm">Pamphlets</a></li>
+                <li><a href="../posters.htm">Posters</a></li>
+                <li><a href="../beesmart_give.htm">School Garden Kit</a></li>
+                <li><a href="../seeds.html">Seeds</a></li>
+              </ul> 
+            </li>
+            <li>
+              <a href="index.html">NAPPC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Site Navigation -->
+    
+    <!-- Page Content 
+    =======================================================================-->
+    <div class="page-header">
+    	<div class="container">
+    		
+       	<h2>North American Pollinator Protection Campaign</h2>
+       	<h1>NAPPC</h1>
+       	<img src="Images/nappc_logo_nobg.png" alt="" aria-hidden="true">
+       	
+      </div> 
+    </div>
+    <!-- optional Page Navigation (for anchor links) -->
+    <nav id="page-navbar" class="navbar navbar-static-top navbar-default">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<div class="dropdown">
+        			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-nav" aria-expanded="false" aria-controls="navbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        				&nbsp;NAPPC :
+        			</button> 
+        		</div>
+        	</div>
+        	<div id="page-nav" class="navbar-collapse collapse" aria-expanded="false">
+        		<ul class="nav navbar-nav">
+        			<li class="hidden-xs">
+        				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        				&nbsp;NAPPC :
+        			</li>
+            	<li><a href="http://pollinator.org/nappc/">Home</a></li>
+            	<li><a href="registration">Registration</a></li>
+            	<li><a class="active" href="">Logistics</a></li>
+            	<li><a href="#task-forces">Task Forces</a></li>
+           		<li><a href="partners">Partners</a></li>
+        		</ul>
+        	</div> 
+        </div>	  
+    </nav>
+    
+    <!-- Main page content -->
+    <div class="container main">	
+      <div class="row">
+        <div class="col-sm-8">
+        	<!-- Conference header information -->
+    			<div id="conference-header" class="row" style="margin-top:15px;">
+    				<div class="col-xs-12">
+    				<img id="nappc-2016-logo" src="Images/nappc2016_600x420.jpg" alt="NAPPC 2016 Conference logo">
+    				<h3>16th Annual NAPPC <br>International Conference</h3>
+    				<h4>October 18-20, 2016</h4>
+    				<h4>USDA APHIS<br>4700 River Road<br>Riverdale, MD 20737</h4>
+    				</div>	
+    			</div>  <!-- end .row -->
+        </div>   <!-- end .col-sm-8 -->
+        <!-- Sidebar -->
+        <div id="browse" class="col-sm-4 sidebar">
+          <h4 class="sidebar-nav">Jump to:</h4>
+          <ul class="sidebar-nav">
+            <li>
+            	<a class="trigger-top-button" href="#agenda">Agenda &nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>                	
+           	<li>
+            	<a class="trigger-top-button" href="#locations">Locations &nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>
+            <li>
+            	<a class="trigger-top-button" href="#task-forces">Task Forces &nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>
+            <li>
+            	<a class="trigger-top-button" href="#ground-rules">Ground Rules &nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>
+            <li>
+            	<a class="trigger-top-button" href="#faq">FAQ &nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+            </li>
+				  </ul>
+        </div>
+       </div> <!-- end .row --> 
+        
+      <div class="row">
+      	<div class="col-sm-8">  
+      		<br>	
+          <h2 id="agenda" style="margin-top:0;"><div class="heading-content" style="margin-top:0;">Agenda</div></h2>
+          <h3>Wednesday, October 19th</h3>   	
+          <div class="table">
+          <div class="row-group">
+      			<div class="row heading">
+      				<div class="col-xs-2"></div>
+      				<div class="col-xs-10"><h4>Morning Speaker Session</h4></div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">8:00am</div>
+      				<div class="col-xs-10">Security and Registration / Coffee and Breakfast Pastries</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">9:00am</div>
+      				<div class="col-xs-10">NAPPC Welcome – <strong>Laurie Davies Adams</strong>, NAPPC/P2 Executive Director</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">9:05am</div>
+      				<div class="col-xs-10"><strong>Steve Shestag</strong>, P2 Chairman of the Board</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">9:10am</div>
+      				<div class="col-xs-10"><strong>Kevin Shea</strong>, USDA APHIS Administrator</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">9:20am</div>
+      				<div class="col-xs-10"><strong>Dr. Bruce Rodan</strong>, White House OSTP</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">9:40am</div>
+      				<div class="col-xs-10"><strong>Dr. David Inouye</strong>,  Rocky Mountain Biological Laboratory </div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">10:00am</div>
+      				<div class="col-xs-10"><strong>Drs. Diana Cox-Foster</strong> / <strong>James Strange</strong>, USDA ARS</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">10:15am</div>
+      				<div class="col-xs-10"><strong>Anne Kinsinger</strong>, USGS</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">10:30am</div>
+      				<div class="col-xs-10"><strong>Dr. Dennis vanEngelsdorp</strong>, Bee Informed Partnership</div>
+      			</div>
+      		</div>
+      		<div class="row-group">
+      			<div class="row heading">
+      				<div class="col-xs-2">10:45am</div>
+      				<div class="col-xs-10"><h4>Break</h4></div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">11:00am</div>
+      				<div class="col-xs-10"><strong>Rick Keigwin</strong>, US EPA</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">11:15am</div>
+      				<div class="col-xs-10"><strong>Chris Hiatt</strong>, American Honey Producers Association</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">11:30am</div>
+      				<div class="col-xs-10"><strong>Jonathan Mawdsley</strong>, Association for Fish and Wildlife Agencies</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">11:45am</div>
+      				<div class="col-xs-10"><strong>Dr. Gloria DeGrandi-Hoffman</strong>, USDA ARS</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">12:00pm</div>
+      				<div class="col-xs-10"><strong>Thelma Redick</strong>, Wildlife Habitat Council</div>
+      			</div>
+      		</div>
+      		<div class="row-group">
+      			<div class="row heading">
+      				<div class="col-xs-2">12:15pm</div>
+      				<div class="col-xs-10"><h4>Lunch</h4></div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">12:45pm</div>
+      				<div class="col-xs-10">2015 Task Force Reports</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">1:30pm</div>
+      				<div class="col-xs-10">
+      					<div class="row"><h4>Honey Bee Health Updates</h4></div>
+      					<div class="row">
+      						<strong>Elisa Bernklau, Ph.D.</strong>, Colorado State University<br>
+      						<i>Effects of Phytochemicals on longevity and pathogen resistance in honeybees</i>
+      					</div>
+      					<div class="row">
+      						<strong>Michelle L. Fearon</strong>, University of Michigan<br>
+      						<i>Changing perspectives: How pollinator community context influences honey bee virus prevalence</i>
+      					</div>
+      					<div class="row">
+      						<strong>Harmen P. Hendriksma</strong>, UC San Diego<br>
+      						<i>Testing the effects of nicotine, a natural plant metabolite found in nectar, on honey bee nosemosis</i>
+      					</div>
+      					<div class="row">
+      						<strong>David T. Peck</strong>, Cornell University<br>
+      						<i>Focused virological analysis of the Arnot Forest survivor bee population for evidence of protective Deformed Wing Virus genotypes</i>
+      					</div>
+      					<div class="row">
+      						<strong>Jonathan Snow, Ph.D.</strong>, Barnard College, Columbia University<br>
+      						<i>Development of novel Nosema infection assays for diagnostics
+</i>
+      					</div>
+      					<div class="row">
+      						<strong>Hongmei Li-Byarlay</strong>, North Carolina State University<br>
+      						<i>Investigating a new way to combat viruses with RNA-targeting biotechnology in</i> Apis mellifera
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="row-group">
+      			<div class="row heading">
+      				<div class="col-xs-2">2:30pm</div>
+      				<div class="col-xs-10"><h4>Break/Transition to Breakout Groups</h4></div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">2:45pm</div>
+      				<div class="col-xs-10">Task Force Session 1</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">4:45pm</div>
+      				<div class="col-xs-10">Wrap Up – Back to Main Room</div>
+      			</div>
+      			<div class="row heading">
+      				<div class="col-xs-2">5:00pm</div>
+      				<div class="col-xs-10"><h4>Day 1 Program Ends - Wrap Up and Instructions</h4></div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2"><br>5:30pm</div>
+      				<div class="col-xs-10">
+      					<br>
+      					<h4>Informal Get-together:</h4>
+      					<p>Holiday Inn Greenbelt<br>
+									7200 Hanover Drive<br>
+									Greenbelt, MD 20770</p>
+      				</div>
+      			</div>
+      		</div>
+      		</div>
+      		<h3>Thursday, October 20th</h3>   	
+          <div class="table">
+          <div class="row-group">
+      			<div class="row heading">
+      				<div class="col-xs-2"></div>
+      				<div class="col-xs-10"><h4>Final Day of NAPPC Member Sessions</h4></div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">8:30am</div>
+      				<div class="col-xs-10">Security</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">9:00am</div>
+      				<div class="col-xs-10">Breakfast Briefings</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">10:00am</div>
+      				<div class="col-xs-10">Report from P2 Canada – <strong>Dr. Vicki Wojcik</strong>
+</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">10:10am</div>
+      				<div class="col-xs-10">Break/Discussion with Breakfast Briefing Speakers</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">10:30am</div>
+      				<div class="col-xs-10">Task Force Session 2 (Move to Task Force Rooms)</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">11:55am</div>
+      				<div class="col-xs-10">Task Force Wrap Up (Back to Main Room)</div>
+      			</div>
+      		</div>
+      		<div class="row-group">
+      			<div class="row heading">
+      				<div class="col-xs-2">12:00pm</div>
+      				<div class="col-xs-10"><h4>Lunch</h4></div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">12:45pm</div>
+      				<div class="col-xs-10">MOU Signing with Clean Air Partners</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">1:00pm</div>
+      				<div class="col-xs-10">2016 Task Force Reports</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">2:00pm</div>
+      				<div class="col-xs-10">Evaluations and Final Wrap Up</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">2:15pm</div>
+      				<div class="col-xs-10">P2 20th Anniversary and Honorees – <strong>Laurie Davies Adams</strong></div>
+      			</div>
+      		</div>
+      		<div class="row-group">	
+      			<div class="row heading">
+      				<div class="col-xs-2"></div>
+      				<div class="col-xs-10"><h4>NAPPC Steering Committee Meeting</h4></div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">3:00pm</div>
+      				<div class="col-xs-10">Steering Committee Meeting Begins</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-xs-2">4:00pm</div>
+      				<div class="col-xs-10">Steering Committee Meeting Ends</div>
+      			</div>
+      		</div>	
+      		</div>	
+          
+          <h2 id="locations"><div class="heading-content">Locations</div></h2>
+          <br> 
+          <div class="row logistics">
+          	<div class="col-sm-6">
+          	<h3 id="hotel">Hotel</h3>
+          <p>There are a limited number of rooms reserved for the NAPPC group at the Holiday Inn Greenbelt. Visit <a href="http://www.ihg.com/holidayinn/hotels/us/en/greenbelt/wasgb/hoteldetail?qAdlt=1&qBrs=6c.hi.ex.rs.ic.cp.in.sb.cw.cv.ul.vn.ki&qChld=0&qFRA=1&qGRM=0&qGrpCd=NAP&qIta=99801505&qPSt=0&qRRSrt=rt&qRef=df&qRms=1&qRpn=1&qRpp=20&qSHp=1&qSmP=3&qSrt=sBR&qWch=0&srb_u=1&icdv=99801505" target="_blank">THIS LINK</a> for booking information or call 855-474-0792 to make a reservation. Reference group code NAP. </p>
+          		<br>
+          		<h4>Holiday Inn Greenbelt</h4>
+          		<p>7200 Hanover Drive<br>
+          		Greenbelt, MD 20770</p>
+          		<p><i class="fa fa-phone"></i> &nbsp;301-982-7000</p>
+          		<p><i class="fa fa-laptop"></i> &nbsp;<a href="http://www.ihg.com/holidayinn/hotels/us/en/greenbelt/wasgb/hoteldetail " target="_blank">Book online <i class="fa fa-angle-right"></i></a></p>
+          	</div>
+          	<div class="col-sm-6">
+          		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.1435352365766!2d-76.8843115497825!3d38.989220379456235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c17d189a44a7%3A0x3f433ac0d6e2119a!2sHoliday+Inn+Washington+D.c.-Greenbelt+Md!5e0!3m2!1sen!2sus!4v1470369770197" frameborder="0" style="border:0" allowfullscreen></iframe>
+          	</div>
+          </div>  <!-- end .row -->
+          <br>
+          
+          <div class="row logistics">	
+          	<div class="col-sm-6">
+          		<h3>OPTIONAL FIELD TRIP</h3>
+          		<div class="meta-data">Oct 18&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;9AM – 4PM</div>
+          		<h4><a href="https://www.pwrc.usgs.gov/" target="_blank">Patuxent Wildlife Research Center</a></h4>
+          		<h4>&&nbsp;&nbsp;&nbsp;<a href="https://www.ars.usda.gov/main/site_main.htm?modecode=80-42-05-40" target="_blank">USDA-ARS Bee Research Lab</a></h4>
+          		<br>
+          		<h4>* Bus transportation provided from <a href="#hotel">Holiday Inn Greenbelt Hotel</a></h4>
+          	</div>
+          	<div class="col-sm-6">
+          		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24786.57361274415!2d-76.82173399136332!3d39.053582284552114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e81c8469dac3%3A0xcaf977a6583f31a8!2sPatuxent+Wildlife+Research+Center!5e0!3m2!1sen!2sus!4v1472830653006" width="120%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+          	</div>
+          </div>  <!-- end .row -->
+          <br>
+          <div class="row logistics">
+          	<div class="col-sm-6">
+          		<h3>EVENING RECEPTION</h3>
+          		<div class="meta-data">Oct 18&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;6PM – 8PM</div>
+          		<h4>USDA Log Lodge</h4>
+          		<p>302 Log Lodge Road
+							<br>Beltsville, MD 20705
+          		</p>
+          		<p><i class="fa fa-phone"></i> &nbsp;301-504-9403</p>
+          		<h4>* Bus transportation provided from <a href="#hotel">Holiday Inn Greenbelt Hotel</a></h4>
+          		<br>
+          		<h4>Directions</h4>
+          		<p>The Log Lodge is located in Beltsville, Maryland, just off Powder Mill Road (Maryland 212), north of the Washington Beltway (Interstate 495), east of Baltimore Blvd. (U.S. 1), and west of the Baltimore- Washington Parkway (BW Parkway, Maryland 295).  Regardless of the direction you are traveling from, it is recommend that you navigate to the BW Parkway (295) north of the Washington Beltway and take the Powder Mill Road exit going west. Going west on Powder Mill Road, drive about 1.6 miles to Log Lodge Road on the left. If you find yourself on Interstate 95 north of the Washington Beltway, take the Powder Mill Road (212) exit going east.  Continue east across U.S. 1 about 1.5 miles; the Log Lodge will be on your right.  Visitor parking is available after circling past the entrance to the conference center.</p>
+          	</div>
+          	<div class="col-sm-6">
+          		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.326920045603!2d-76.87668618522481!3d39.03066494668368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c3aa8fee1f59%3A0x175d92da6cdb5ced!2s302+Log+Lodge+Rd%2C+Beltsville%2C+MD+20705!5e0!3m2!1sen!2sus!4v1472592768728" width="120%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+          	</div>
+          </div>	<!-- end .row -->	
+          <br>
+          <div class="row logistics">
+          	<div class="col-sm-6">
+          		<h3>NAPPC 2-DAY PLENARY CONFERENCE</h3>
+          <div class="meta-data">Oct 19 - 20</div>
+          		<h4>USDA Animal and Plant Health Inspection Service (APHIS) Headquarters</h4>
+          		<p>4700 River Road<br>
+								Riverdale, MD 20737</p>
+							<h4>* The Holiday Inn Greenbelt will provide a shuttle to and from APHIS.</h4>
+							<h4 style="margin-bottom:0;">** Parking at the USDA APHIS Riverdale Building:</h4>
+							<p>Plentiful free parking is available in the parking lot alongside and behind the building at 4700 River Road, Riverdale, MD. You must go through the gate off River Road or the gate off University Research Court. Push the communication button at the gate and tell the guard you are attending the NAPPC conference &ndash; the guard will open the gate. Parking anywhere else will likely get you ticketed and towed. Do not park in front of the building.</p>
+          	</div>
+          	<div class="col-sm-6">
+          		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198439.40321115477!2d-77.02941976637655!3d39.00126688372708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55d6d8394e64d2ca!2sUSDA+APHIS+-+Animal+and+Plant+Health+Inspection+Service!5e0!3m2!1sen!2sus!4v1470372259160" width="120%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+          	</div>
+          </div>   <!-- end .row -->
+          <br>
+          <div class="row logistics">
+          	<div class="col-xs-12">
+         			<h3>INFORMAL GET-TOGETHER</h3>
+          		<div class="meta-data">Oct 19&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;5:30PM – 8PM</div>
+          		<h4><a href="#hotel">Holiday Inn Greenbelt</a> - Restaurant</h4>
+          	</div>	
+          </div>  <!-- end .row -->
+  
+          
+          <h2 id="task-forces"><div class="heading-content">Task Forces</div></h2>
+          <figure class="figure-sm pull-right" style="background-image: url(Images/TaskForce2015_600x400.jpg); background-size: cover;">
+          	<figcaption>A Task Force meets at the 2015 NAPPC Conference</figcaption>
+          </figure> 
+          <p><br>Task Forces are cross discipline, short-term, project-oriented groupings designed to accomplish specific task(s). NAPPC partners will have the opportunity to provide input into groups on which they do not serve. New Task Forces will be created as needed.</p>
+          <p>The Task Forces are made up of diverse, interested parties who work to accomplish one specific pollinator related task.</p>
+          <br><br>
+					<h4>2016-2017 NAPPC Task Forces</h4>
+					<ul>
+						<li>
+							<p><strong>Bee Friendly Farming</strong> &ndash; Promote Bee Friendly Farming registration through collaboration with private agricultural and local agencies that support on-farm habitat for pollinators.</p>
+						</li>
+						<li>
+							<p><strong>Bombus Clean Stock Program</strong> &ndash; Develop effective analysis to certify clean stock in captive breeding techniques for Bombus in North America. Produce and disseminate report.</p>
+						</li>
+						<li>
+							<p><strong>Forage, Nutrition and Roadsides</strong> &ndash; Implement roadside habitat incentives including educational outreach and recognition of best practices. Expand legal supports within states for hosting honey bee hives on private landscapes.</p>
+						</li>
+						<li>
+							<p><strong>Habitat Metrics and Monitoring</strong> &ndash; Developing a method for measuring land lost and restored, keeping figures current. Work with USGS to compile and communicate current data.</p>
+						</li>
+						<li>
+							<p><strong>Honey Bee Health</strong> &ndash; Determine priority criteria for 2017 Bee Health Grants and develop a sponsorship plan to increase support and partnerships for bee health research. Develop phase two of The BeeMD APP and disseminate information about access to this online tool in the beekeeping community.</p>
+						</li>
+						<li>
+							<p><strong>Monarch Highway</strong> &ndash; Support the symbolic “monarch highway” in the central U.S. as an enhancement of the leadership that currently exists within the states along the I-35 corridor. Following their lead, provide activities and outreach enhancements including technical videos, educational poster, brochures to engage the public and demonstrate benefits to State DOTs, and the Roadsides Manager Award. </p>
+						</li>
+						<li>
+							<p><strong>Pesticide Education</strong> &ndash; Revise and develop and disseminate pesticide applicator training throughout the US and address other pressing pesticide issues. Increase interests in label clarification and simplification.</p>
+						</li>
+						<li>
+							<p><strong>Rooftop Gardens and Urban Youth</strong> &ndash; Expand pollinator gardens in urban areas and promote rooftop gardens through collaboration with American Society of Landscape Architects and others. Register urban gardens for the Million Pollinator Garden Challenge. Reach out to urban youth groups to engage them in pollinator friendly practices with support from the BeeSmart School Garden Kit Program.</p>
+						</li>
+						<li>
+							<p><strong>Vector-Born Diseases</strong> &ndash; Review document and disseminate findings that increase understanding of disease transmission mitigations and how they affect pollinator populations, develop management guidelines for municipalities, and develop publications for appropriate journals.</p>
+						</li>
+					</ul>		
+          <span class="img-lg" style="background-image: url(Images/MonarchTaskForce2015_600x400.jpg); background-size: cover;"></span>
+          <br>
+          
+          <p><strong>If you have not attended a previous NAPPC meeting, you should note:</strong></p>
+          <p>First, the emphasis is on the work of NAPPC Task Forces, each of which has a specific charge agreed upon before the Conference.  Since the NAPPC Task Force format has been responsible for many of NAPPC’s successful endeavors, the Steering Committee has determined that Task Force activity is the highest priority when we meet.  Therefore, Task Forces will meet twice: once on Wednesday and once on Thursday(Agenda).
+During these two sessions, your Task Force will envision your completed project and work through the steps to get there.  You will be asked to commit to at least one aspect in the completion of this project.  The idea is to diversify the input, mobilize maximum impact, and to spread the work over many participants.  You will be encouraged to set realistic time frames and through consistent, collaborative communication and effort, the Task Force will achieve its mission.</p>
+					<p>This year, over 100 personally invited professionals from multiple disciplines will form NAPPC.  Not all NAPPC participants share exact perspectives and approaches, but when we assemble as a NAPPC collaborative, we put aside personal and organizational agendas, we respect differing points of view and we seek to find areas of commonality in order to increase broad-based progress for pollinators.  You will see we have Republican and Democrat, Science and Industry, Agriculture and the Environment, Mexico, Canada, Brazil, Panama, Columbia, Peru, and the US, working side by side.</p>
+					<p>Your personal contribution will make a huge difference to the future of our planet.  In fact, this collaboration already reflects a very positive beginning.  Together, this unique gathering of organizations from the scientific, nonprofit, government and business worlds is strategically addressing the pollinator issue from all fronts.  We are nurturing a global, public constituency actively engaged in pollinator conservation to imbue the next generation with the principles of sustainable ecosystems. </p>
+          
+          
+          <h2 id="ground-rules"><div class="heading-content">Ground Rules</div></h2>
+          <p>The following ground rules provide a statement of how we propose to work together at the upcoming conference.  These ground rules have been reviewed and approved by the Steering Committee as part of Conference planning.  We request that you carefully review these prior to the meeting. Please call Laurie Davies Adams directly at 415.362.1137 to discuss any questions or comments you might have, or if you feel that for any reason you cannot participate in adherence to these guidelines.</p>
+          <br>
+          <h4>Communication Among Participants</h4>
+          <p>The success of all projects depend upon open communication and cooperation.  Therefore, the following guidelines will apply:</p>
+          <ul>
+          	<li>
+          		<p>Each person is asked to fully participate in the Conference deliberations.  The Task Force Chair(s) will ensure that all participants who want to contribute to discussions are allowed the time to do so. Therefore, participants are requested not to dominate the discussions; if this occurs the Task Force Chair(s) will intervene to ensure all parties have a chance to talk.</p>
+          	</li>
+          	<li>
+          		<p>The Steering Committee has identified certain subjects that have the potential to sidetrack progress on moving the Action Plan forward.  Due to the limited time we have together at the Conference, genetically modified organisms and collections versus observation will not be discussed during the Conference.</p>
+          	</li>
+          	<li>
+          		<p>Any concerns about the conduct of the deliberations or the issues being discussed should be fully aired to the Task Force Chair(s) or the Steering Committee Members in private if appropriate to ensure that the deliberations are effective and positive.  NAPPC participants should feel free to work collaboratively and openly. Please respect all perspectives. Disagreements or conflicts will be addressed as issues to be resolved rather than battles to be won.</p>
+          	</li>
+          	<li>
+          		<p>Any commitments made should not be taken lightly and follow through will be expected. Committees and Task Forces will be facilitated and recorded by volunteer participants.</p>
+          	</li>
+          </ul>
+          
+          <br>
+          <h2 id="faq"><div class="heading-content">FAQ</div></h2>
+          <h3>Media</h3>
+          <p>Members of the press, please email <a target="_blank" href="mailto:ec@pollinator.org">ec@pollinator.org</a> for more information</p>
+          <br>       
+          <h3>Security</h3>
+          <p>Please allot enough time to clear security and be prepared with a government issued ID. Please leave behind laptops, food/drink, and anything that could be considered a weapon. </p>
+          <br>       
+          <h3>Transportation</h3>
+          <p>The Holiday Inn Greenbelt will provide a shuttle to and from APHIS.</p>
+          <br> 
+          <h3>Additional Questions</h3>
+          <p>Please call Kelly Rourke at 415.362.1137 or email <a href="mailto:info@nappc.org" target="_blank">info@nappc.org</a> with any questions. Thank you and we look forward to seeing you at the 16th Annual NAPPC International Conference!</p>
+         <br><br>
+         
+          <a class="to-top" href="#browse" style="display: block;"><i class="fa fa-angle-up"></i> top</a>
+          
+        </div>  
+        
+        <div class="col-sm-4 sidebar text-center">
+        	<br><br>
+        	<img src="Images/nappc_logo_nobg.png" alt="" aria-hidden="true">
+        	<a href="sponsor">
+        		<button type="button" class="btn btn-lg">Become a Sponsor</button> 
+        	</a>	
+        </div>      
+    	</div>
+    	
+    </div>
+   
+    <!-- Site Footer
+    ============================================================= -->
+    <footer class="footer">
+        <div class="row">
+           <div class="container">
+            	<div class="col-sm-4">
+            		<h4>Pollinator <span class="highlight">Partnership</span></h4>
+            		<p>A non-profit 501(c)3 organization-- the largest in the world dedicated exclusively to the protection and promotion of pollinators and their ecosystems.</p>
+            		<p><a href="../PDFs/GRANTAWARDANDGIFTACCEPTANCEPOLICY0213.pdf">Our Giving Policy &nbsp;<i class="fa fa-angle-right"></i></a></p>
+            	</div>
+            	<div class="col-sm-4">
+            		<h4>Twitter <span class="highlight">Feeds</span></h4>
+            		<div class="twitter-widget" data-tweets-count="2"></div>
+            	</div>
+            	<div class="col-sm-4">
+            		<h4>Contact <span class="highlight">Us</span></h4>
+            		<p><a href="mailto:info@pollinator.org" target="_blank">info@pollinator.org</a></p>
+            		<p>423 Washington Street, 5th Floor<br>San Francisco, CA, 94111</p>
+            		<p>1(415)362-1137</p>
+            	</div>
+            </div> <!-- end .container -->	
+        </div> <!-- end .row -->
+        <div class="row well">
+        	<div class="container">
+            	<div class="col-sm-6">
+            		<p id="copyright">© 1996-2016 Pollinator Partnership</p>
+            	</div>
+           	<div class="col-sm-6">
+            		<ul class="nav" role="navigation">
+            			<li><a href="/">Home</a></li>
+            			<li><a href="../about.htm">About</a></li>
+            			<li><a href="../research_consulting.htm">Science & Consulting</a></li>
+            			<li><a href="../donate.htm">Donate</a></li>
+            		</ul>
+            	</div> 
+            </div> <!-- end .container -->
+        </div> <!-- end .row -->
+    </footer>
+    
+   </div> <!-- end #wrapper --> 
+	</body>
+</html>	
+	   
+    <!-- SCRIPTS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../P2/js/init.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/custom-js.js"></script>
+    <script src="../P2/js/helper-plugins.js"></script> <!-- Helper Plugins -->
+    <script src="../P2/vendor/countdown/js/jquery.countdown.min.js"></script> <!-- Jquery Timer -->
+    <script src="js/top_button.js"></script>
+    
+    <!-- Google Custom Search styles -->
+<style>
+	.google-search-container {
+		padding: 0;
+	}
+	table.gsc-search-box td {
+		padding: 0;
+	}
+	td.gsc-search-button {
+		padding: 0;
+		margin:0;
+	}
+	input.gsc-search-button,
+	input.gsc-search-button-v2 {
+		width: 26px;
+		height: 26px;
+		padding: 5px;
+		margin: 1px 0 0;
+		background-color: #292929;
+		border: 1px solid #292929;
+	}
+	input.gsc-search-button:hover,
+	input.gsc-search-button:focus,
+	input.gsc-search-button-v2:hover,
+	input.gsc-search-button-v2:focus {
+		background-color: #292929;
+		border: 1px solid #fff;
+	}
+	form.gsc-search-box {
+		margin-top: 3px;
+	}
+</style>
+
