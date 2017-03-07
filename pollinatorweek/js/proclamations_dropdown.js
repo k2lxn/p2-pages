@@ -3,17 +3,17 @@
 function switchStateName(elem) {
 	var state = elem.attr("class");
 	// Update caption
-	$('#current-state').html( state.replace(/_/g," ") + ' proclaims June 20 - 26, 2016 Pollinator Week!');
+	$('#current-state').html( state.replace(/_/g," ") + ' proclaims June 19 - 25, 2017 Pollinator Week!');
 	
 	// Update link to PDF
-	var new_url = "../PDFs/NPW/2016/Proclamations/" + state + "_2016.pdf";
+	var new_url = "../PDFs/NPW/2017/Proclamations/" + state + "_2017.pdf";
 	$('#proclamations a').attr("href", new_url); 
 	
 	// Update thumbnail image
 	var style = "";
 	var curr_style = $('#proclamations span.thumb-sm').attr("style");
 	var img_location = curr_style.match(/url\(+(.)+\)/)[0];
-	var new_bg_style = "background-image:url(../Images/NPW/2016/proc_" + state + ".png)";
+	var new_bg_style = "background-image:url(../Images/NPW/2017/proc_" + state + ".png)";
 	var start_bg = curr_style.indexOf("background-image");
 	if ( start_bg > 0 ) {    // Append new background-image to end (Chrome)
 		curr_style = curr_style.substring(0,start_bg);
